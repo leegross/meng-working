@@ -31,8 +31,6 @@ public class GetVideoFrameDataOnlyDemoActivity extends DemoBaseActivity
 
     private DroneWrapper droneWrapper;
     private Timer mTimer;
-    private double currentGimbalPitch;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,16 +39,34 @@ public class GetVideoFrameDataOnlyDemoActivity extends DemoBaseActivity
         setContentView(R.layout.activity_my_waypoints);
 
         mGLView = (MyGLSurfaceView) findViewById(R.id.surfaceview);
+        mConnectStateTextView = (TextView)findViewById(R.id.ConnectStateGsTextView);
+        mGroundStationTextView = (TextView)findViewById(R.id.GroundStationInfoTV);
+
         droneWrapper = new DroneWrapper(mGLView);
         droneWrapper.setToastCallback(getToastCallback());
+        droneWrapper.setUICallback(getUICallback());
 
         initDecoder();
 
         mGLView.setDroneWrapper(droneWrapper);
 
-        mConnectStateTextView = (TextView)findViewById(R.id.ConnectStateGsTextView);
-        mGroundStationTextView = (TextView)findViewById(R.id.GroundStationInfoTV);
+    }
 
+    private DroneWrapper.uiCallback getUICallback() {
+        DroneWrapper.uiCallback ui_callback = new DroneWrapper.uiCallback() {
+            @Override
+            public void UICallback(final String type, final String result) {
+                GetVideoFrameDataOnlyDemoActivity.this.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        if (type == "ground_station_text_view") {
+                            mGroundStationTextView.setText(result);
+                        }
+                    }
+                });
+            }
+        };
+        return ui_callback;
     }
 
     class Task extends TimerTask {
@@ -173,8 +189,6 @@ public class GetVideoFrameDataOnlyDemoActivity extends DemoBaseActivity
 
     private void initDecoder() {
         DJIDrone.getDjiCamera().setDecodeType(DJICameraDecodeTypeDef.DecoderType.Hardware);
-//        mVideoDecoder = new DJIVideoDecoder(this, surface);
-        //mVideoDecoder.setRecvDataCallBack(null);
         final Context mContext = this;
 
         mReceivedVideoDataCallBack = new DJIReceivedVideoDataCallBack(){
@@ -210,8 +224,6 @@ public class GetVideoFrameDataOnlyDemoActivity extends DemoBaseActivity
 
             @Override
             public void onResult(final DJIGimbalAttitude attitude) {
-                // TODO Auto-generated method stub
-                //Log.d(TAG, attitude.toString());
 
                 StringBuffer sb = new StringBuffer();
                 sb.append("pitch=").append(attitude.pitch).append("\n");
@@ -220,8 +232,10 @@ public class GetVideoFrameDataOnlyDemoActivity extends DemoBaseActivity
                 sb.append("yawAngle=").append(DJIDrone.getDjiGimbal().getYawAngle()).append("\n");
                 sb.append("roll adjust=").append(attitude.rollAdjust).append("\n");
 
-//              currentGimbalPitch = attitude.pitch;
-//                dw.setCurrentGimbalPitch(attitude.pitch);
+                if (dw != null) {
+                    droneWrapper.setCurrentGimbalPitch(attitude.pitch);
+
+                }
 
             }
 

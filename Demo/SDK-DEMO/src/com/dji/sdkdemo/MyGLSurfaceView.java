@@ -27,7 +27,7 @@ class MyGLSurfaceView extends GLSurfaceView {
     private double mPreviousGimbalPitch;
     private int minGimbalPitchAngle;
     private int maxGimbalPitchAngle;
-    private float mPreviousYaw;
+    private float mPreviousYaw = -1000;
 
     public MyGLSurfaceView(Context context, AttributeSet attrs){
         super(context, attrs);
@@ -136,13 +136,17 @@ class MyGLSurfaceView extends GLSurfaceView {
 
     // called by drone wrapper when we receive new orientation update
     public void onDroneOrientationUpdate() {
-//        double currentGimbalPitch = mDroneWrapper.getCurrentGimbalPitch();
-//        double thetaY = currentGimbalPitch - mPreviousGimbalPitch;
-//        rotateRectangleByTheta((float) 0, (float) thetaY);
-//        mPreviousGimbalPitch = currentGimbalPitch;
+        double currentGimbalPitch = mDroneWrapper.getCurrentGimbalPitch();
+        float thetaY = (float) (currentGimbalPitch - mPreviousGimbalPitch);
+        mPreviousGimbalPitch = currentGimbalPitch;
+
         float currentYaw = mDroneWrapper.getCurrentYaw();
+        // if this is the first time, don't rotate rectangle
+        if (mPreviousYaw == -1000){
+            mPreviousYaw = currentYaw;
+        }
         float thetaX = currentYaw - mPreviousYaw;
-        rotateRectangleByTheta(thetaX, 0);
+        rotateRectangleByTheta(thetaX, thetaY);
         mPreviousYaw = currentYaw;
     }
 
@@ -155,6 +159,10 @@ class MyGLSurfaceView extends GLSurfaceView {
 
         float[] upVector = mRenderer.getUpVector();
         float[] sideVector = mRenderer.getSideVector();
+
+        if (upVector == null || sideVector == null) {
+            return;
+        }
 
         Matrix.setRotateM(mRotationMatrixInXDirection, 0, thetaX, upVector[0], upVector[1], upVector[2]);
         Matrix.setRotateM(mRotationMatrixInYDirection, 0, thetaY, sideVector[0], sideVector[1], sideVector[2]);

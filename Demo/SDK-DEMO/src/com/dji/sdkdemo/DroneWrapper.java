@@ -33,6 +33,7 @@ public class DroneWrapper {
     private DJIGroundStationTask mTask;
     private setResultToToastCallback toastCallback;
     private MyGLSurfaceView mGLView;
+    private uiCallback mUiCallback;
 
     public DroneWrapper(MyGLSurfaceView surfaceView) {
         mGLView = surfaceView;
@@ -67,15 +68,9 @@ public class DroneWrapper {
 
                 mGLView.onDroneOrientationUpdate();
 
-//                GetVideoFrameDataOnlyDemoActivity.this.runOnUiThread(new Runnable(){
-//
-//                    @Override
-//                    public void run()
-//                    {
-//                        mGroundStationTextView.setText(sb.toString());
-//
-//                    }
-//                });
+                if (mUiCallback != null) {
+                    mUiCallback.UICallback("ground_station_text_view", sb.toString());
+                }
             }
         });
     }
@@ -114,12 +109,19 @@ public class DroneWrapper {
         toastCallback = cb;
     }
 
+    public interface uiCallback {
+        void UICallback(String type, String result);
+    }
+    public void setUICallback(uiCallback cb){
+        mUiCallback = cb;
+    }
+
     public void takeOff(){
         DJIDrone.getDjiGroundStation().oneKeyFly(new DJIGroundStationExecuteCallBack() {
             @Override
             public void onResult(DJIGroundStationTypeDef.GroundStationResult groundStationResult) {
                 String ResultsString = "take off return code =" + groundStationResult.toString();
-//                toastCallback.ToastResult(ResultsString);
+                toastCallback.ToastResult(ResultsString);
             }
         });
     }
