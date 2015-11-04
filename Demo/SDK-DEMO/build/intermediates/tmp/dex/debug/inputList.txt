@@ -1,0 +1,8 @@
+/Users/leegross/Downloads/meng-working-master/DJI-SDK-Android-V2.4.0/Demo/SDK-DEMO/build/intermediates/classes/debug
+/Users/leegross/Downloads/meng-working-master/DJI-SDK-Android-V2.4.0/Demo/SDK-DEMO/build/intermediates/pre-dexed/debug/classes-5546068f4b5cfa95303146a2e7183e3b947c85fd.jar
+/Users/leegross/Downloads/meng-working-master/DJI-SDK-Android-V2.4.0/Demo/SDK-DEMO/build/intermediates/pre-dexed/debug/eventbus-4c8b7eb7347198b9f7fb57aac5dd058b4b7098e2.jar
+/Users/leegross/Downloads/meng-working-master/DJI-SDK-Android-V2.4.0/Demo/SDK-DEMO/build/intermediates/pre-dexed/debug/mygson-2.0-3d353440aa1cbd223ce303162dfac39cb6ff7a22.jar
+/Users/leegross/Downloads/meng-working-master/DJI-SDK-Android-V2.4.0/Demo/SDK-DEMO/build/intermediates/pre-dexed/debug/pinyin4j-2.5.0-a76d33f43a08dbea6b05ff690df9f03ecec4f691.jar
+/Users/leegross/Downloads/meng-working-master/DJI-SDK-Android-V2.4.0/Demo/SDK-DEMO/build/intermediates/pre-dexed/debug/android-support-v4-be1325018676009061ee878b295680a163e1d84f.jar
+/Users/leegross/Downloads/meng-working-master/DJI-SDK-Android-V2.4.0/Demo/SDK-DEMO/build/intermediates/pre-dexed/debug/bouncycastle-171e9f2c83de5c56cadb0354a516896e0f4b9782.jar
+/Users/leegross/Downloads/meng-working-master/DJI-SDK-Android-V2.4.0/Demo/SDK-DEMO/build/intermediates/pre-dexed/debug/dji-sdk-a6c95edf12fa6ca5ed1f73d481b96fada49475dd.jar

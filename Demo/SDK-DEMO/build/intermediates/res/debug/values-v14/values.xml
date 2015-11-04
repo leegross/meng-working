@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/leegross/Downloads/meng-working-master/DJI-SDK-Android-V2.4.0/Demo/SDK-DEMO/res/values-v14/styles.xml -->
+    <eat-comment/>
+    <style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+        <!-- API 14 theme customizations can go here. -->
+    </style>
+    <style name="NoTitle" parent="android:Theme.DeviceDefault">
+		<item name="android:windowContentOverlay">@null</item>
+		<item name="android:windowActionBarOverlay">true</item>
+		<item name="android:actionBarStyle">@style/SolidActionBar</item>
+	</style>
+    <style name="SolidActionBar" parent="android:Widget.Holo.ActionBar">
+		<item name="android:background">#222222</item>
+	</style>
+</resources>

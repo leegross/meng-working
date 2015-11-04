@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <usb-accessory model="T600" manufacturer="DJI"/>
+</resources><!-- From: file:/Users/leegross/Downloads/meng-working-master/DJI-SDK-Android-V2.4.0/Lib/DJI-SDK-LIB/res/xml/accessory_filter.xml --><!-- From: file:/Users/leegross/Downloads/meng-working-master/DJI-SDK-Android-V2.4.0/Demo/SDK-DEMO/build/intermediates/exploded-aar/DJI-SDK-Android-V2.4.0.Lib/DJI-SDK-LIB/unspecified/res/xml/accessory_filter.xml -->

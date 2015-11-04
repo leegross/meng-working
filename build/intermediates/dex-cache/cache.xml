@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/leegross/Downloads/meng-working-master/DJI-SDK-Android-V2.4.0/Demo/SDK-DEMO/build/intermediates/exploded-aar/DJI-SDK-Android-V2.4.0.Lib/DJI-SDK-LIB/unspecified/libs/pinyin4j-2.5.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="58b76ee1873cb1e917c0ebfe14e73330f83a5ec2">
+        <dex dex="/Users/leegross/Downloads/meng-working-master/DJI-SDK-Android-V2.4.0/Demo/SDK-DEMO/build/intermediates/pre-dexed/debug/pinyin4j-2.5.0-a76d33f43a08dbea6b05ff690df9f03ecec4f691.jar" />
+    </item>
+    <item
+        jar="/Users/leegross/Downloads/meng-working-master/DJI-SDK-Android-V2.4.0/Demo/SDK-DEMO/build/intermediates/exploded-aar/DJI-SDK-Android-V2.4.0.Lib/DJI-SDK-LIB/unspecified/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="51671fd5d638dfc00d3e54a2c650fea6fe6713c9">
+        <dex dex="/Users/leegross/Downloads/meng-working-master/DJI-SDK-Android-V2.4.0/Demo/SDK-DEMO/build/intermediates/pre-dexed/debug/classes-5546068f4b5cfa95303146a2e7183e3b947c85fd.jar" />
+    </item>
+    <item
+        jar="/Users/leegross/Downloads/meng-working-master/DJI-SDK-Android-V2.4.0/Demo/SDK-DEMO/build/intermediates/exploded-aar/DJI-SDK-Android-V2.4.0.Lib/DJI-SDK-LIB/unspecified/libs/mygson-2.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="f72fde05619ba1d6f9e58bc5ee80110bf4e1f650">
+        <dex dex="/Users/leegross/Downloads/meng-working-master/DJI-SDK-Android-V2.4.0/Demo/SDK-DEMO/build/intermediates/pre-dexed/debug/mygson-2.0-3d353440aa1cbd223ce303162dfac39cb6ff7a22.jar" />
+    </item>
+    <item
+        jar="/Users/leegross/Downloads/meng-working-master/DJI-SDK-Android-V2.4.0/Demo/SDK-DEMO/build/intermediates/exploded-aar/DJI-SDK-Android-V2.4.0.Lib/DJI-SDK-LIB/unspecified/libs/bouncycastle.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="a9efec0f26271cb2cfe90f181282424ae0329fc5">
+        <dex dex="/Users/leegross/Downloads/meng-working-master/DJI-SDK-Android-V2.4.0/Demo/SDK-DEMO/build/intermediates/pre-dexed/debug/bouncycastle-171e9f2c83de5c56cadb0354a516896e0f4b9782.jar" />
+    </item>
+    <item
+        jar="/Users/leegross/Downloads/meng-working-master/DJI-SDK-Android-V2.4.0/Demo/SDK-DEMO/build/intermediates/exploded-aar/DJI-SDK-Android-V2.4.0.Lib/DJI-SDK-LIB/unspecified/libs/dji-sdk.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="f51dc98caf3dce41635326526d0402c4a9ffd327">
+        <dex dex="/Users/leegross/Downloads/meng-working-master/DJI-SDK-Android-V2.4.0/Demo/SDK-DEMO/build/intermediates/pre-dexed/debug/dji-sdk-a6c95edf12fa6ca5ed1f73d481b96fada49475dd.jar" />
+    </item>
+    <item
+        jar="/Users/leegross/Downloads/meng-working-master/DJI-SDK-Android-V2.4.0/Demo/SDK-DEMO/build/intermediates/exploded-aar/DJI-SDK-Android-V2.4.0.Lib/DJI-SDK-LIB/unspecified/libs/eventbus.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="c385f09de6bebe13a4b9465d5937789314ba6372">
+        <dex dex="/Users/leegross/Downloads/meng-working-master/DJI-SDK-Android-V2.4.0/Demo/SDK-DEMO/build/intermediates/pre-dexed/debug/eventbus-4c8b7eb7347198b9f7fb57aac5dd058b4b7098e2.jar" />
+    </item>
+    <item
+        jar="/Users/leegross/Downloads/meng-working-master/DJI-SDK-Android-V2.4.0/Demo/SDK-DEMO/libs/android-support-v4.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="cb6883d96005bc85b3e868f204507ea5b4fa9bbf">
+        <dex dex="/Users/leegross/Downloads/meng-working-master/DJI-SDK-Android-V2.4.0/Demo/SDK-DEMO/build/intermediates/pre-dexed/debug/android-support-v4-be1325018676009061ee878b295680a163e1d84f.jar" />
+    </item>
+
+</items>
