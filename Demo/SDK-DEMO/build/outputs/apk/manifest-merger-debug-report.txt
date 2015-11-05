@@ -184,201 +184,21 @@ ADDED from AndroidManifest.xml:90:8
 		ADDED from AndroidManifest.xml:95:13
 	android:name
 		ADDED from AndroidManifest.xml:91:13
-activity#com.dji.sdkdemo.PreviewDemoActivity
-ADDED from AndroidManifest.xml:98:9
+activity#com.dji.sdkdemo.GetVideoFrameDataOnlyDemoActivity
+ADDED from AndroidManifest.xml:99:9
 	android:screenOrientation
-		ADDED from AndroidManifest.xml:102:13
-	android:label
-		ADDED from AndroidManifest.xml:101:13
-	android:configChanges
-		ADDED from AndroidManifest.xml:100:13
-	android:theme
 		ADDED from AndroidManifest.xml:103:13
-	android:name
-		ADDED from AndroidManifest.xml:99:13
-activity#com.dji.sdkdemo.PreviewDemoHwDecodeActivity
-ADDED from AndroidManifest.xml:106:9
-	android:screenOrientation
-		ADDED from AndroidManifest.xml:110:13
 	android:label
-		ADDED from AndroidManifest.xml:109:13
+		ADDED from AndroidManifest.xml:102:13
+	android:configChanges
+		ADDED from AndroidManifest.xml:101:13
+	android:theme
+		ADDED from AndroidManifest.xml:104:13
+	android:name
+		ADDED from AndroidManifest.xml:100:13
+service#org.connectbot.service.TerminalManager
+ADDED from AndroidManifest.xml:106:9
 	android:configChanges
 		ADDED from AndroidManifest.xml:108:13
-	android:theme
-		ADDED from AndroidManifest.xml:111:13
 	android:name
 		ADDED from AndroidManifest.xml:107:13
-activity#com.dji.sdkdemo.CameraProtocolDemoActivity
-ADDED from AndroidManifest.xml:114:9
-	android:screenOrientation
-		ADDED from AndroidManifest.xml:118:13
-	android:label
-		ADDED from AndroidManifest.xml:117:13
-	android:configChanges
-		ADDED from AndroidManifest.xml:116:13
-	android:theme
-		ADDED from AndroidManifest.xml:119:13
-	android:name
-		ADDED from AndroidManifest.xml:115:13
-activity#com.dji.sdkdemo.GimbalDemoActivity
-ADDED from AndroidManifest.xml:121:9
-	android:screenOrientation
-		ADDED from AndroidManifest.xml:125:13
-	android:label
-		ADDED from AndroidManifest.xml:124:13
-	android:configChanges
-		ADDED from AndroidManifest.xml:123:13
-	android:theme
-		ADDED from AndroidManifest.xml:126:13
-	android:name
-		ADDED from AndroidManifest.xml:122:13
-activity#com.dji.sdkdemo.GsProtocolDemoActivity
-ADDED from AndroidManifest.xml:128:9
-	android:screenOrientation
-		ADDED from AndroidManifest.xml:132:13
-	android:label
-		ADDED from AndroidManifest.xml:131:13
-	android:configChanges
-		ADDED from AndroidManifest.xml:130:13
-	android:theme
-		ADDED from AndroidManifest.xml:133:13
-	android:name
-		ADDED from AndroidManifest.xml:129:13
-activity#com.dji.sdkdemo.GsProtocolJoystickDemoActivity
-ADDED from AndroidManifest.xml:135:9
-	android:screenOrientation
-		ADDED from AndroidManifest.xml:139:13
-	android:label
-		ADDED from AndroidManifest.xml:138:13
-	android:configChanges
-		ADDED from AndroidManifest.xml:137:13
-	android:theme
-		ADDED from AndroidManifest.xml:140:13
-	android:name
-		ADDED from AndroidManifest.xml:136:13
-activity#com.dji.sdkdemo.MainControllerDemoActivity
-ADDED from AndroidManifest.xml:143:9
-	android:screenOrientation
-		ADDED from AndroidManifest.xml:147:13
-	android:label
-		ADDED from AndroidManifest.xml:146:13
-	android:configChanges
-		ADDED from AndroidManifest.xml:145:13
-	android:theme
-		ADDED from AndroidManifest.xml:148:13
-	android:name
-		ADDED from AndroidManifest.xml:144:13
-activity#com.dji.sdkdemo.BatteryInfoDemoActivity
-ADDED from AndroidManifest.xml:150:9
-	android:screenOrientation
-		ADDED from AndroidManifest.xml:154:13
-	android:label
-		ADDED from AndroidManifest.xml:153:13
-	android:configChanges
-		ADDED from AndroidManifest.xml:152:13
-	android:theme
-		ADDED from AndroidManifest.xml:155:13
-	android:name
-		ADDED from AndroidManifest.xml:151:13
-activity#com.dji.sdkdemo.RangeExtenderDemoActivity
-ADDED from AndroidManifest.xml:157:9
-	android:screenOrientation
-		ADDED from AndroidManifest.xml:161:13
-	android:label
-		ADDED from AndroidManifest.xml:160:13
-	android:configChanges
-		ADDED from AndroidManifest.xml:159:13
-	android:theme
-		ADDED from AndroidManifest.xml:162:13
-	android:name
-		ADDED from AndroidManifest.xml:158:13
-activity#com.dji.sdkdemo.GsProtocolHotPointDemoActivity
-ADDED from AndroidManifest.xml:166:9
-	android:screenOrientation
-		ADDED from AndroidManifest.xml:170:13
-	android:label
-		ADDED from AndroidManifest.xml:169:13
-	android:configChanges
-		ADDED from AndroidManifest.xml:168:13
-	android:theme
-		ADDED from AndroidManifest.xml:171:13
-	android:name
-		ADDED from AndroidManifest.xml:167:13
-activity#com.dji.sdkdemo.RemoteControlDemoActivity
-ADDED from AndroidManifest.xml:174:9
-	android:screenOrientation
-		ADDED from AndroidManifest.xml:178:13
-	android:label
-		ADDED from AndroidManifest.xml:177:13
-	android:configChanges
-		ADDED from AndroidManifest.xml:176:13
-	android:theme
-		ADDED from AndroidManifest.xml:179:13
-	android:name
-		ADDED from AndroidManifest.xml:175:13
-activity#com.dji.sdkdemo.MediaSyncDemoActivity
-ADDED from AndroidManifest.xml:182:9
-	android:screenOrientation
-		ADDED from AndroidManifest.xml:186:13
-	android:label
-		ADDED from AndroidManifest.xml:184:13
-	android:configChanges
-		ADDED from AndroidManifest.xml:185:13
-	android:theme
-		ADDED from AndroidManifest.xml:187:13
-	android:name
-		ADDED from AndroidManifest.xml:183:13
-activity#com.dji.sdkdemo.ImageTransmitterDemoActivity
-ADDED from AndroidManifest.xml:190:9
-	android:screenOrientation
-		ADDED from AndroidManifest.xml:194:13
-	android:label
-		ADDED from AndroidManifest.xml:192:13
-	android:configChanges
-		ADDED from AndroidManifest.xml:193:13
-	android:theme
-		ADDED from AndroidManifest.xml:195:13
-	android:name
-		ADDED from AndroidManifest.xml:191:13
-activity#com.dji.sdkdemo.GsProtocolFollowMeDemoActivity
-ADDED from AndroidManifest.xml:198:8
-	android:screenOrientation
-		ADDED from AndroidManifest.xml:202:13
-	android:label
-		ADDED from AndroidManifest.xml:201:13
-	android:configChanges
-		ADDED from AndroidManifest.xml:200:13
-	android:theme
-		ADDED from AndroidManifest.xml:203:13
-	android:name
-		ADDED from AndroidManifest.xml:199:13
-activity#com.dji.sdkdemo.GsProtocolIocDemoActivity
-ADDED from AndroidManifest.xml:206:8
-	android:screenOrientation
-		ADDED from AndroidManifest.xml:210:13
-	android:label
-		ADDED from AndroidManifest.xml:209:13
-	android:configChanges
-		ADDED from AndroidManifest.xml:208:13
-	android:theme
-		ADDED from AndroidManifest.xml:211:13
-	android:name
-		ADDED from AndroidManifest.xml:207:13
-activity#com.dji.sdkdemo.GetVideoFrameDataOnlyDemoActivity
-ADDED from AndroidManifest.xml:214:9
-	android:screenOrientation
-		ADDED from AndroidManifest.xml:218:13
-	android:label
-		ADDED from AndroidManifest.xml:217:13
-	android:configChanges
-		ADDED from AndroidManifest.xml:216:13
-	android:theme
-		ADDED from AndroidManifest.xml:219:13
-	android:name
-		ADDED from AndroidManifest.xml:215:13
-service#org.connectbot.service.TerminalManager
-ADDED from AndroidManifest.xml:221:9
-	android:configChanges
-		ADDED from AndroidManifest.xml:223:13
-	android:name
-		ADDED from AndroidManifest.xml:222:13

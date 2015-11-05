@@ -39,16 +39,16 @@ public final class R {
 	public static final class id {
 		public static final int bold = 0x7f0c0000;
 		public static final int demi = 0x7f0c0001;
-		public static final int log_dlg_content = 0x7f0c0140;
-		public static final int log_dlg_control = 0x7f0c013d;
-		public static final int log_dlg_lock = 0x7f0c013e;
-		public static final int log_dlg_rg = 0x7f0c0141;
-		public static final int log_dlg_scroll = 0x7f0c013f;
+		public static final int log_dlg_content = 0x7f0c0021;
+		public static final int log_dlg_control = 0x7f0c001e;
+		public static final int log_dlg_lock = 0x7f0c001f;
+		public static final int log_dlg_rg = 0x7f0c0022;
+		public static final int log_dlg_scroll = 0x7f0c0020;
 		public static final int nbold = 0x7f0c0002;
 		public static final int nlight = 0x7f0c0003;
 	}
 	public static final class layout {
-		public static final int log_dialog_view = 0x7f030016;
+		public static final int log_dialog_view = 0x7f030005;
 	}
 	public static final class raw {
 		public static final int dark_1080p25 = 0x7f060000;
