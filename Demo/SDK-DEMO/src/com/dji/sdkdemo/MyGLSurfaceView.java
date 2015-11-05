@@ -4,9 +4,9 @@ import android.content.Context;
 import android.opengl.GLSurfaceView;
 import android.opengl.Matrix;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 
+import static java.lang.Math.atan;
 import static java.lang.Math.max;
 import static java.lang.Math.min;
 import static java.lang.StrictMath.toDegrees;
@@ -56,12 +56,12 @@ class MyGLSurfaceView extends GLSurfaceView {
                 float dx = x - mPreviousX;
                 float dy = y - mPreviousY;
 
-                float thetaX = (float) toDegrees(Math.atan(dx * TOUCH_SCALE_FACTOR / radius));
-                float thetaY = (float) toDegrees(Math.atan(-dy * TOUCH_SCALE_FACTOR / radius));
-                if (mDroneWrapper.getCurrentGimbalPitch() > maxGimbalPitchAngle ||
-                    mDroneWrapper.getCurrentGimbalPitch() < minGimbalPitchAngle) {
-                    thetaY = 0;
-                }
+                float thetaX = (float) toDegrees(atan(dx * TOUCH_SCALE_FACTOR / radius));
+                float thetaY = (float) toDegrees(atan(-dy * TOUCH_SCALE_FACTOR / radius));
+                thetaY = (float) min(maxGimbalPitchAngle, mDroneWrapper.getCurrentGimbalPitch() - thetaY);
+                thetaY = (float) (thetaY - mDroneWrapper.getCurrentGimbalPitch());
+                thetaY = (float) max(minGimbalPitchAngle, mDroneWrapper.getCurrentGimbalPitch() - thetaY);
+                thetaY = (float) (thetaY - mDroneWrapper.getCurrentGimbalPitch());
 
                 rotateCameraByTheta(thetaX, thetaY);
                 break;
@@ -72,9 +72,8 @@ class MyGLSurfaceView extends GLSurfaceView {
             case MotionEvent.ACTION_UP:
                 float endX = e.getX();
                 float endY = e.getY();
-                thetaX = (float) Math.atan((endX-startX) * TOUCH_SCALE_FACTOR / radius);
-                thetaY = (float) Math.atan((endY-startY) * TOUCH_SCALE_FACTOR / radius);
-                Log.d("touch", "thetaY: " + toDegrees(thetaY));
+                thetaX = (float) Math.toDegrees(atan((endX - startX) * TOUCH_SCALE_FACTOR / radius));
+                thetaY = (float) Math.toDegrees(atan((endY - startY) * TOUCH_SCALE_FACTOR / radius));
 
                 setYawAngle(thetaX);
                 setGimbalPitch(thetaY);
@@ -91,7 +90,7 @@ class MyGLSurfaceView extends GLSurfaceView {
 
     private void setGimbalPitch(float thetaY){
         double currentGimbalPitch = mDroneWrapper.getCurrentGimbalPitch();
-        int newPitchAngle = (int) currentGimbalPitch +  (int)toDegrees(thetaY);
+        int newPitchAngle = (int) (currentGimbalPitch + thetaY);
         newPitchAngle = max(minGimbalPitchAngle, newPitchAngle);
         newPitchAngle = min(maxGimbalPitchAngle, newPitchAngle);
         mDroneWrapper.setGimbalPitch(newPitchAngle);
@@ -99,7 +98,7 @@ class MyGLSurfaceView extends GLSurfaceView {
 
     private void setYawAngle(float thetaX){
         float currentYaw = mDroneWrapper.getCurrentYaw();
-        float newYawAngle = (float) (currentYaw + Math.toDegrees(thetaX));
+        float newYawAngle = currentYaw + thetaX;
         newYawAngle = (newYawAngle + 180)%360 - 180;
         mDroneWrapper.setYawAngle(newYawAngle);
     }
@@ -137,7 +136,7 @@ class MyGLSurfaceView extends GLSurfaceView {
     // called by drone wrapper when we receive new orientation update
     public void onDroneOrientationUpdate() {
         double currentGimbalPitch = mDroneWrapper.getCurrentGimbalPitch();
-        float thetaY = (float) (currentGimbalPitch - mPreviousGimbalPitch);
+        float thetaY = (float) -(currentGimbalPitch - mPreviousGimbalPitch);
         mPreviousGimbalPitch = currentGimbalPitch;
 
         float currentYaw = mDroneWrapper.getCurrentYaw();

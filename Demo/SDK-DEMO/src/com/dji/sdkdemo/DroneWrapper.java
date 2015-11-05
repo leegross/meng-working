@@ -304,7 +304,7 @@ public class DroneWrapper {
     }
 
     public double getGimbalMaxPitchAngle(){
-        return DJIDrone.getDjiGimbal().getGimbalPitchMaxAngle();
+        return 0;//DJIDrone.getDjiGimbal().getGimbalPitchMaxAngle();
     }
 
     public void setCurrentGimbalPitch(double pitch){
