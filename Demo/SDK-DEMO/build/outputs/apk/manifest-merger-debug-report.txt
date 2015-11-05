@@ -184,7 +184,7 @@ ADDED from AndroidManifest.xml:90:8
 		ADDED from AndroidManifest.xml:95:13
 	android:name
 		ADDED from AndroidManifest.xml:91:13
-activity#com.dji.sdkdemo.GetVideoFrameDataOnlyDemoActivity
+activity#com.dji.sdkdemo.TouchControllerActivity
 ADDED from AndroidManifest.xml:99:9
 	android:screenOrientation
 		ADDED from AndroidManifest.xml:103:13

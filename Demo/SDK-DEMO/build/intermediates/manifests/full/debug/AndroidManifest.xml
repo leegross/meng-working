@@ -94,7 +94,7 @@
             android:theme="@style/FullscreenTheme" >
         </activity>
         <activity
-            android:name="com.dji.sdkdemo.GetVideoFrameDataOnlyDemoActivity"
+            android:name="com.dji.sdkdemo.TouchControllerActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|keyboard"
             android:label="@string/title_activity_preview"
             android:screenOrientation="landscape"

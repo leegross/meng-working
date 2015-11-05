@@ -75,6 +75,7 @@ public class DroneWrapper {
         });
     }
 
+
     private void initMainControllerState(){
         DJIMcuUpdateStateCallBack mMcuUpdateStateCallBack = new DJIMcuUpdateStateCallBack() {
 

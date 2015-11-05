@@ -1,11 +1,5 @@
 package com.dji.sdkdemo;
 
-import java.util.Timer;
-import java.util.TimerTask;
-
-import dji.sdk.api.DJIDrone;
-import dji.sdk.api.DJIDroneTypeDef.DJIDroneType;
-import dji.sdk.interfaces.DJIDroneTypeChangedCallback;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,6 +17,13 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Timer;
+import java.util.TimerTask;
+
+import dji.sdk.api.DJIDrone;
+import dji.sdk.api.DJIDroneTypeDef.DJIDroneType;
+import dji.sdk.interfaces.DJIDroneTypeChangedCallback;
 
 @SuppressLint("ViewHolder") public class SelectDroneTypeActivity extends DemoBaseActivity
 {
@@ -129,17 +130,14 @@ import android.widget.Toast;
     private void onListItemClick(int index) {
         Intent intent = null;
 
-        intent = new Intent(SelectDroneTypeActivity.this, MainActivity.class);
+        intent = new Intent(SelectDroneTypeActivity.this, TouchControllerActivity.class);
         
         intent.putExtra("DroneType", index);
         this.startActivity(intent);
     }
     
     private static final DroneTypeInfo[] DroneTypes = {
-        new DroneTypeInfo(R.string.drone_type_title_p2v,R.string.drone_type_desc_p2v),
         new DroneTypeInfo(R.string.drone_type_title_inspire1,R.string.drone_type_desc_inspire1),
-        new DroneTypeInfo(R.string.drone_type_title_p3s, R.string.drone_type_desc_p3s),
-        new DroneTypeInfo(R.string.drone_type_title_m100, R.string.drone_type_desc_m100)
     };
 
     private  class SelectDroneTypeAdapter extends BaseAdapter {
