@@ -48,7 +48,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         mRectangle = new Rectangle(mContext);
         mSurfaceTexture = new SurfaceTexture(mRectangle.getTextureHandle());
 
-        mCenterVector = new float[]{0f, 0f, 7f, 0};
+        mCenterVector = new float[]{0f, 0f, 1f, 0};
         mUpVector = new float[]{0f, 1f, 0f, 0};
         mSideVector = new float[]{1f, 0f, 0f, 0};
 
@@ -116,6 +116,14 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
     public float[] getUpVector() {
         return mUpVector;
+    }
+
+    public void setUpVector(float[] upVector) {
+        mUpVector = upVector;
+    }
+
+    public void setSideVector(float[] sideVector){
+        mSideVector = sideVector;
     }
 
     public float[] getSideVector() {

@@ -47,7 +47,6 @@ public class DroneWrapper {
         DJIDrone.getDjiGroundStation().setYawControlMode(DJIGroundStationTypeDef.DJINavigationFlightControlYawControlMode.Navigation_Flight_Control_Yaw_Control_Angle);
     }
 
-
     private void initFlyingInfo(){
         DJIDrone.getDjiGroundStation().setGroundStationFlyingInfoCallBack(new DJIGroundStationFlyingInfoCallBack() {
 
@@ -74,7 +73,6 @@ public class DroneWrapper {
             }
         });
     }
-
 
     private void initMainControllerState(){
         DJIMcuUpdateStateCallBack mMcuUpdateStateCallBack = new DJIMcuUpdateStateCallBack() {
@@ -301,7 +299,7 @@ public class DroneWrapper {
     }
 
     public double getGimbalMinPitchAngle(){
-        return DJIDrone.getDjiGimbal().getGimbalPitchMinAngle();
+        return -90;//DJIDrone.getDjiGimbal().getGimbalPitchMinAngle();
     }
 
     public double getGimbalMaxPitchAngle(){

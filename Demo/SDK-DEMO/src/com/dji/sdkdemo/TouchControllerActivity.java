@@ -28,16 +28,12 @@ public class TouchControllerActivity extends DemoBaseActivity
 {
     private TextView mConnectStateTextView;
 
-    private DJIReceivedVideoDataCallBack mReceivedVideoDataCallBack;
-
     private TextView mGroundStationTextView;
     private MyGLSurfaceView mGLView;
     private DJIVideoDecoder mVideoDecoder = null;
 
     private DroneWrapper droneWrapper;
     private Timer mTimer;
-
-    private final int SHOWDIALOG = 2;
 
     public void showMessage(String title, String msg) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -213,7 +209,6 @@ public class TouchControllerActivity extends DemoBaseActivity
         super.onPause();
     }
 
-
     @Override
     protected void onDestroy()
     {
@@ -241,18 +236,19 @@ public class TouchControllerActivity extends DemoBaseActivity
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent e) {
-        return mGLView.onTouchEvent(e);
+        super.onTouchEvent(e);
+        mGLView.onTouchEvent(e);
+        return false;
     }
 
     private void initDecoder() {
         DJIDrone.getDjiCamera().setDecodeType(DJICameraDecodeTypeDef.DecoderType.Hardware);
         final Context mContext = this;
 
-        mReceivedVideoDataCallBack = new DJIReceivedVideoDataCallBack(){
+        DJIReceivedVideoDataCallBack mReceivedVideoDataCallBack = new DJIReceivedVideoDataCallBack() {
 
             @Override
-            public void onResult(final byte[] videoBuffer, final int size)
-            {
+            public void onResult(final byte[] videoBuffer, final int size) {
 
                 runOnUiThread(new Runnable() {
                     @Override
@@ -266,7 +262,7 @@ public class TouchControllerActivity extends DemoBaseActivity
                             mVideoDecoder = new DJIVideoDecoder(mContext, mSurface);
                         }
 
-                        DJIDrone.getDjiCamera().sendDataToDecoder(videoBuffer,size);
+                        DJIDrone.getDjiCamera().sendDataToDecoder(videoBuffer, size);
                     }
                 });
 

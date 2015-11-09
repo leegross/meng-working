@@ -1,4 +1,4 @@
-package com.dji.sdkdemo;
+package com.dji.sdkdemo.util;
 
 import android.content.Context;
 import android.graphics.Bitmap;
