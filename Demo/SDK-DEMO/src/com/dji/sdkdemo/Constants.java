@@ -13,4 +13,7 @@ public class Constants {
     public static float SURFACE__HORIZONTAL_CENTER = GL_SURFACE_WIDTH/2.0f;
     public static float SURFACE_VERTICAL_CENTER = GL_SURFACE_HEIGHT/2.0f;
     public static float TABLET_Z = .1f;
+    // used to determine whether to use an image or the stream for the texture
+    // don't forget to change code in fragment shader
+    public static boolean USE_CAMERA_STREAM = true;
 }

@@ -1,6 +1,7 @@
 package com.dji.sdkdemo;
 
 import android.content.Context;
+import android.opengl.GLES11Ext;
 import android.opengl.GLES20;
 import android.util.Log;
 
@@ -164,7 +165,7 @@ public class Hemisphere {
                 final float xRatio = x / (float) (xLength-1);
 
                 // Build our heightmap from the top down, so that our triangles are counter-clockwise.
-                final float yRatio = 1f - (y / (float) (yLength*2-2));
+                final float yRatio = y / (float) (yLength*2-2);
 
                 // Position
                 heightMapVertexData[offset++] = radius * (float) (sin(Math.PI * xRatio) * cos(2 * Math.PI * yRatio));
@@ -224,9 +225,9 @@ public class Hemisphere {
                 POSITION_ATTRIBUTE, NORMAL_ATTRIBUTE, COLOR_ATTRIBUTE, TEXTURE_ATTRIBUTE });
     }
 
-    void render(float[] mvpMatrix) {
+    void render(float[] mvpMatrix, float[] mvpProjectorMatrix) {
 
-        setProgramHandles(mvpMatrix);
+        setProgramHandles(mvpMatrix, mvpProjectorMatrix);
 
         if (vbo[0] > 0 && ibo[0] > 0) {
             GLES20.glBindBuffer(GLES20.GL_ARRAY_BUFFER, vbo[0]);
@@ -242,7 +243,7 @@ public class Hemisphere {
         }
     }
 
-    private void setProgramHandles(float[] mvpMatrix) {
+    private void setProgramHandles(float[] mvpMatrix, float[] mvpProjectorMatrix) {
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT | GLES20.GL_DEPTH_BUFFER_BIT);
 
         // Set our per-vertex program.
@@ -259,7 +260,7 @@ public class Hemisphere {
 
         // Pass in the combined matrix.
         GLES20.glUniformMatrix4fv(mvpMatrixUniform, 1, false, mvpMatrix, 0);
-        GLES20.glUniformMatrix4fv(mvpMatrixProjectorUniform, 1, false, mvpMatrix, 0);
+        GLES20.glUniformMatrix4fv(mvpMatrixProjectorUniform, 1, false, mvpProjectorMatrix, 0);
     }
 
     private void bindAttributes(){
@@ -290,7 +291,11 @@ public class Hemisphere {
         GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
 
         // Bind the texture to this unit.
-        GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, mTextureDataHandle);
+        if (Constants.USE_CAMERA_STREAM){
+            GLES20.glBindTexture(GLES11Ext.GL_TEXTURE_EXTERNAL_OES, mTextureDataHandle);
+        } else {
+            GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, mTextureDataHandle);
+        }
     }
 
     public int getTextureHandle() {

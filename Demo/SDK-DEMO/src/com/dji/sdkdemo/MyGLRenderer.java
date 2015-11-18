@@ -17,11 +17,15 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     private Rectangle mRectangle;
     // mMVPMatrix is an abbreviation for "Model View Projection Matrix"
     private final float[] mMVPMatrix = new float[16];
+    private final float[] mMVPProjectorMatrix = new float[16];
     private final float[] mProjectionMatrix = new float[16];
     private final float[] mViewMatrix = new float[16];
+    private final float[] mProjectorViewMatrix = new float[16];
+    private final float[] mCamera = new float[16];
+    private final float[] mProjector = new float[16];
+
     private float[] mRectangleRotationMatrix = new float[16];
     private final float[] mRectangleProjectionMatrix = new float[16];
-    private final float[] mCamera = new float[16];
 
     public volatile float[] mCenterVector;
     public volatile float[] mUpVector;
@@ -29,6 +33,8 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
     private float theta_camera; // rotation of camera in vertical direction
     private float phi_camera; // rotation of camera in horizontal direction
+    private float theta_projector;
+    private float phi_projector;
 
 
     private SurfaceTexture mSurfaceTexture;
@@ -60,6 +66,8 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
         theta_camera = 0;
         phi_camera = 0;
+        theta_projector = 0;
+        phi_projector = 0;
     }
 
     public void onDrawFrame(GL10 unused) {
@@ -69,7 +77,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
         // Set the camera position (View matrix)
         Matrix.setLookAtM(mViewMatrix, 0,
-                0, 0, 0, //eye
+                0, .1f, 0, //eye
                 mCenterVector[0], mCenterVector[1], mCenterVector[2], //center
                 mUpVector[0], mUpVector[1], mUpVector[2]); // up
 
@@ -87,9 +95,27 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         // rectangle rotation matrix is modified when the drone moves in MyGLSurfaceView
         Matrix.multiplyMM(mRectangleProjectionMatrix, 0, mMVPMatrix, 0, mRectangleRotationMatrix, 0);
 
+        createProjectorMatrix();
+
         // Draw triangle
         //mRectangle.draw(mRectangleProjectionMatrix);
-        mHemisphere.render(mMVPMatrix);
+        mHemisphere.render(mMVPMatrix, mMVPProjectorMatrix);
+    }
+
+    private void createProjectorMatrix(){
+        // Set the camera position (View matrix)
+        Matrix.setLookAtM(mProjectorViewMatrix, 0,
+                0, .1f, 0, //eye
+                mCenterVector[0], mCenterVector[1], mCenterVector[2], //center
+                mUpVector[0], mUpVector[1], mUpVector[2]); // up
+
+        Matrix.invertM(mProjector, 0, mProjectorViewMatrix, 0);
+        Matrix.rotateM(mProjector, 0, theta_projector, 1, 0, 0); // rotate in vertical direction about x direction
+        Matrix.rotateM(mProjector, 0, phi_projector, 0, 1, 0); // rotate in horizontal direction about y axis
+        Matrix.invertM(mProjectorViewMatrix, 0, mProjector, 0);
+
+        // Calculate the projection and view transformation
+        Matrix.multiplyMM(mMVPProjectorMatrix, 0, mProjectionMatrix, 0, mProjectorViewMatrix, 0);
     }
 
     public void onSurfaceChanged(GL10 unused, int width, int height) {
