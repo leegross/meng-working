@@ -1,7 +1,6 @@
 package com.dji.sdkdemo;
 
 import android.content.Context;
-import android.opengl.GLES11Ext;
 import android.opengl.GLES20;
 import android.util.Log;
 
@@ -120,7 +119,7 @@ public class Rectangle {
 
         //-----
         // get handle to vertex shader's vPosition member
-        int mTextCoorHandle = GLES20.glGetAttribLocation(mProgram, "a_TexCoordinate");
+        int mTextCoorHandle = GLES20.glGetAttribLocation(mProgram, "a_Texture");
 
         // Enable a handle to the rectangle vertices
         GLES20.glEnableVertexAttribArray(mTextCoorHandle);
@@ -141,7 +140,8 @@ public class Rectangle {
         GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
 
         // Bind the texture to this unit.
-         GLES20.glBindTexture(GLES11Ext.GL_TEXTURE_EXTERNAL_OES, mTextureDataHandle);
+//         GLES20.glBindTexture(GLES11Ext.GL_TEXTURE_EXTERNAL_OES, mTextureDataHandle);
+        GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, mTextureDataHandle);
         //------
 
         // get handle to shape's transformation matrix

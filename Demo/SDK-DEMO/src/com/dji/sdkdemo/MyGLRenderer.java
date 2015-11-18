@@ -33,6 +33,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
     private SurfaceTexture mSurfaceTexture;
     private Context mContext;
+    private Hemisphere mHemisphere;
 
     public MyGLRenderer(Context context) {
         mContext = context;
@@ -43,11 +44,13 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         GLES20.glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
         // Enable depth testing
-//        GLES20.glEnable(GLES20.GL_DEPTH_TEST);
+        GLES20.glEnable(GLES20.GL_DEPTH_TEST);
 
         // initialize a square
-        mRectangle = new Rectangle(mContext);
-        mSurfaceTexture = new SurfaceTexture(mRectangle.getTextureHandle());
+        //mRectangle = new Rectangle(mContext);
+        mHemisphere = new Hemisphere(mContext);
+        //mSurfaceTexture = new SurfaceTexture(mRectangle.getTextureHandle());
+        mSurfaceTexture = new SurfaceTexture(mHemisphere.getTextureHandle());
 
         mCenterVector = new float[]{0f, 0f, 1f, 1f};
         mUpVector = new float[]{0f, 1f, 0f, 1f};
@@ -62,7 +65,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     public void onDrawFrame(GL10 unused) {
 
         // Redraw background color
-        GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
+        GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT | GLES20.GL_DEPTH_BUFFER_BIT);
 
         // Set the camera position (View matrix)
         Matrix.setLookAtM(mViewMatrix, 0,
@@ -85,7 +88,8 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         Matrix.multiplyMM(mRectangleProjectionMatrix, 0, mMVPMatrix, 0, mRectangleRotationMatrix, 0);
 
         // Draw triangle
-        mRectangle.draw(mRectangleProjectionMatrix);
+        //mRectangle.draw(mRectangleProjectionMatrix);
+        mHemisphere.render(mMVPMatrix);
     }
 
     public void onSurfaceChanged(GL10 unused, int width, int height) {
