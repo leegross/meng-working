@@ -22,14 +22,11 @@ public class Rectangle {
     private ShortBuffer drawListBuffer;
     private final int mProgram;
 
-    private static final float PIXEL_RATIO = 8.0f/5.0f; // Height:Width pixel ratio
-
-
     // number of coordinates per vertex in this array
     static final int COORDS_PER_VERTEX = 3;
-    static float rect_x = 16/3f;
-    static float rect_y = 4f /  PIXEL_RATIO;
     static float rect_z = 7f;
+    static float rect_x = (float) (rect_z * Math.tan(StrictMath.toRadians(Constants.HORIZONTAL_FOV/2)));
+    static float rect_y = rect_x / Constants.ASPECT_RATIO;
     static float rectangleCoords[] = {
             -rect_x,  rect_y, rect_z,   // top left
             -rect_x, -rect_y, rect_z,   // bottom left

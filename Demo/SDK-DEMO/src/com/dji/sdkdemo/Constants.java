@@ -6,7 +6,11 @@ package com.dji.sdkdemo;
 public class Constants {
     public static int TABLET_WIDTH = 1920;
     public int TABLET_HEIGHT = 1045;
-    public static int TABLET_CENTER_X = TABLET_WIDTH/2;
-    public int TABLET_CENTER_Y = TABLET_HEIGHT/2;
-    public static float PIXEL_RATIO = 8.0f/5.0f;
+    public static float HORIZONTAL_FOV = 94;
+    public static float ASPECT_RATIO = 16f/9.0f;
+    public static float GL_SURFACE_WIDTH = 1580;
+    public static float GL_SURFACE_HEIGHT = 889;
+    public static float SURFACE__HORIZONTAL_CENTER = GL_SURFACE_WIDTH/2.0f;
+    public static float SURFACE_VERTICAL_CENTER = GL_SURFACE_HEIGHT/2.0f;
+    public static float TABLET_Z = .1f;
 }

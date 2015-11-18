@@ -7,11 +7,12 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 
 import static java.lang.Math.abs;
-import static java.lang.Math.atan;
 import static java.lang.Math.atan2;
 import static java.lang.Math.max;
 import static java.lang.Math.min;
+import static java.lang.StrictMath.tan;
 import static java.lang.StrictMath.toDegrees;
+import static java.lang.StrictMath.toRadians;
 
 /**
  * Created by leegross on 9/14/15.
@@ -19,12 +20,10 @@ import static java.lang.StrictMath.toDegrees;
 class MyGLSurfaceView extends GLSurfaceView {
 
     private final MyGLRenderer mRenderer;
-    private final float TOUCH_SCALE_FACTOR = .011f;//180f/320;
+    private final float TOUCH_SCALE_FACTOR = (float) (tan(toRadians(Constants.HORIZONTAL_FOV/2)) * Constants.TABLET_Z/Constants.SURFACE__HORIZONTAL_CENTER);//.011f;//180f/320;
     private float mPreviousX;
     private float mPreviousY;
     public float radius = 7;
-    float startX;
-    float startY;
     private DroneWrapper mDroneWrapper;
     private double mPreviousGimbalPitch;
     private int minGimbalPitchAngle;
@@ -34,6 +33,8 @@ class MyGLSurfaceView extends GLSurfaceView {
     private float[] mRectangleCenter;
     float accumulatedThetaY = 0;
     float accumulatedCameraY = 0;
+    float H_CENTER = Constants.SURFACE__HORIZONTAL_CENTER;
+    float V_CENTER = Constants.SURFACE_VERTICAL_CENTER;
 
     public MyGLSurfaceView(Context context, AttributeSet attrs){
         super(context, attrs);
@@ -63,21 +64,17 @@ class MyGLSurfaceView extends GLSurfaceView {
         switch (e.getAction()) {
             case MotionEvent.ACTION_MOVE:
 
-                float dx = (x - mPreviousX) *  TOUCH_SCALE_FACTOR;
-                float dy = y - mPreviousY;
-//                float temp = abs(mPreviousX - Constants.TABLET_CENTER_X) * TOUCH_SCALE_FACTOR/radius;
-//                float theta = (float) acos(temp);
-//                float delta = (float) (dx/cos(Math.PI/2-theta));
+                float thetaX1 = (float) atan2((x - H_CENTER) * TOUCH_SCALE_FACTOR, Constants.TABLET_Z);
+                float thetaX2 = (float) atan2((H_CENTER - mPreviousX) * TOUCH_SCALE_FACTOR, Constants.TABLET_Z);
+                float thetaX = (float) toDegrees(thetaX1 + thetaX2);
 
-//                float thetaX = (float) toDegrees(atan(delta / radius));
-                float thetaX = (float) toDegrees(atan(dx/radius));
+                float thetaY1 = (float) atan2((V_CENTER - y) * TOUCH_SCALE_FACTOR, Constants.TABLET_Z);
+                float thetaY2 = (float) atan2((mPreviousY - V_CENTER) * TOUCH_SCALE_FACTOR, Constants.TABLET_Z);
+                float thetaY = (float) toDegrees(thetaY1 + thetaY2);
 
-                float thetaY = (float) toDegrees(atan(-dy * TOUCH_SCALE_FACTOR/ radius));
+//                thetaY = clipPitchAngle(thetaY);
 
-                thetaY = clipPitchAngle(thetaY);
-
-                rotateCameraByTheta(0, thetaY);
-                accumulatedThetaY -= thetaY;
+                mRenderer.updateCameraRotationAngles(thetaY, thetaX);
                 break;
             case MotionEvent.ACTION_UP:
 
@@ -86,7 +83,7 @@ class MyGLSurfaceView extends GLSurfaceView {
                 float theta1x = (float) atan2(mRectangleCenter[2], mRectangleCenter[0]);
                 float theta2x = (float) atan2(currentCenterVector[2], currentCenterVector[0]);
                 thetaX = (float) toDegrees(theta1x - theta2x);
-//                setYawAngle(thetaX);
+                setYawAngle(thetaX);
 
                 // compute pitch angle
                 float theta1y = (float) atan2(mRectangleCenter[2], mRectangleCenter[1]);
@@ -98,7 +95,6 @@ class MyGLSurfaceView extends GLSurfaceView {
                 setGimbalPitch(thetaY);
 
                 accumulatedThetaY = 0;
-
                 break;
         }
 
@@ -109,18 +105,21 @@ class MyGLSurfaceView extends GLSurfaceView {
     }
 
     private float clipPitchAngle(float thetaY){
+        float currentGimbalPitch = (float) mDroneWrapper.getCurrentGimbalPitch();
         // Y is limited to [-90, 0] so don't move past those
-        if (mDroneWrapper.getCurrentGimbalPitch() + accumulatedThetaY > maxGimbalPitchAngle &&
-                mDroneWrapper.getCurrentGimbalPitch() + accumulatedThetaY - thetaY > maxGimbalPitchAngle) {
+        if (currentGimbalPitch + accumulatedThetaY > maxGimbalPitchAngle &&
+                currentGimbalPitch + accumulatedThetaY - thetaY > maxGimbalPitchAngle) {
             thetaY = (float) 0;
-        } else if (mDroneWrapper.getCurrentGimbalPitch() + accumulatedThetaY < minGimbalPitchAngle &&
-                mDroneWrapper.getCurrentGimbalPitch() + accumulatedThetaY - thetaY < minGimbalPitchAngle) {
+        } else if (currentGimbalPitch + accumulatedThetaY < minGimbalPitchAngle &&
+                currentGimbalPitch + accumulatedThetaY - thetaY < minGimbalPitchAngle) {
             thetaY = (float) 0;
-        } else if (mDroneWrapper.getCurrentGimbalPitch() + accumulatedThetaY - thetaY > maxGimbalPitchAngle) {
-            thetaY = (float) (mDroneWrapper.getCurrentGimbalPitch() - maxGimbalPitchAngle);
-        } else if (mDroneWrapper.getCurrentGimbalPitch() + accumulatedThetaY - thetaY < minGimbalPitchAngle) {
-            thetaY = (float) (mDroneWrapper.getCurrentGimbalPitch() - minGimbalPitchAngle);
+        } else if (currentGimbalPitch + accumulatedThetaY - thetaY > maxGimbalPitchAngle) {
+            thetaY = currentGimbalPitch + accumulatedThetaY - maxGimbalPitchAngle;
+        } else if (currentGimbalPitch + accumulatedThetaY - thetaY < minGimbalPitchAngle) {
+            thetaY = currentGimbalPitch + accumulatedThetaY - minGimbalPitchAngle;
         }
+
+        accumulatedThetaY -= thetaY;
         return thetaY;
     }
 
@@ -136,6 +135,11 @@ class MyGLSurfaceView extends GLSurfaceView {
         float currentYaw = mDroneWrapper.getCurrentYaw();
         float newYawAngle = currentYaw - thetaX;
         newYawAngle = (newYawAngle + 180)%360 - 180;
+        if (newYawAngle < -180){
+            newYawAngle += 360;
+        } else if(newYawAngle > 180){
+            newYawAngle -= 360;
+        }
         mDroneWrapper.setYawAngle(newYawAngle);
     }
 
@@ -154,16 +158,18 @@ class MyGLSurfaceView extends GLSurfaceView {
         Matrix.setRotateM(mRotationMatrixInYDirection, 0, thetaY, sideVector[0], sideVector[1], sideVector[2]);
 
         float[] centerVector = mRenderer.getCenterVector();
-        Matrix.multiplyMM(mRotationMatrix, 0, mRotationMatrixInXDirection, 0, mRotationMatrixInYDirection, 0);
+        Matrix.multiplyMM(mRotationMatrix, 0, mRotationMatrixInYDirection, 0, mRotationMatrixInXDirection, 0);
         Matrix.multiplyMV(newCenter, 0, mRotationMatrix, 0, centerVector, 0);
 
 
-//        // update up and side vectors
-//        float[] newUpVector = new float[4];
-//        float[] newSideVector = new float[4];
-//        Matrix.multiplyMV(newUpVector, 0, mRotationMatrixInXDirection, 0, upVector, 0);
-//        Matrix.multiplyMV(newSideVector, 0, mRotationMatrixInYDirection, 0, sideVector, 0);
-//
+        // update up and side vectors
+        float[] newUpVector = new float[4];
+        float[] newSideVector = new float[4];
+        Matrix.multiplyMV(newUpVector, 0, mRotationMatrix, 0, upVector, 0);
+        Matrix.multiplyMV(newSideVector, 0, mRotationMatrix, 0, sideVector, 0);
+
+//        newSideVector = new float[]{newSideVector[0] / newSideVector[3], newSideVector[1] / newSideVector[3], newSideVector[2] / newSideVector[3], 1};
+//        newUpVector = new float[]{newUpVector[0] / newUpVector[3], newUpVector[1] / newUpVector[3], newUpVector[2] / newUpVector[3], 1};
 //        mRenderer.setSideVector(newSideVector);
 //        mRenderer.setUpVector(newUpVector);
 
@@ -218,7 +224,7 @@ class MyGLSurfaceView extends GLSurfaceView {
 
         float thetaX = mPreviousYaw - currentYaw;
         float thetaY = (float) -(currentGimbalPitch - mPreviousGimbalPitch);
-        rotateRectangleByTheta(0, thetaY);
+        rotateRectangleByTheta(thetaX, thetaY);
 
         // update previous angles
         if (mPreviousYaw != NOT_INITIALIZED) {

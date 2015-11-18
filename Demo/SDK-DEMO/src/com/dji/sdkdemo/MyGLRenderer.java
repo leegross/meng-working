@@ -9,9 +9,6 @@ import android.opengl.Matrix;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
-import static java.lang.Math.sin;
-import static java.lang.Math.toRadians;
-
 /**
  * Created by leegross on 9/14/15.
  */
@@ -24,10 +21,14 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     private final float[] mViewMatrix = new float[16];
     private float[] mRectangleRotationMatrix = new float[16];
     private final float[] mRectangleProjectionMatrix = new float[16];
+    private final float[] mCamera = new float[16];
 
     public volatile float[] mCenterVector;
     public volatile float[] mUpVector;
     public volatile float[] mSideVector;
+
+    private float theta_camera; // rotation of camera in vertical direction
+    private float phi_camera; // rotation of camera in horizontal direction
 
 
     private SurfaceTexture mSurfaceTexture;
@@ -48,11 +49,14 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         mRectangle = new Rectangle(mContext);
         mSurfaceTexture = new SurfaceTexture(mRectangle.getTextureHandle());
 
-        mCenterVector = new float[]{0f, 0f, 1f, 0};
-        mUpVector = new float[]{0f, 1f, 0f, 0};
-        mSideVector = new float[]{1f, 0f, 0f, 0};
+        mCenterVector = new float[]{0f, 0f, 1f, 1f};
+        mUpVector = new float[]{0f, 1f, 0f, 1f};
+        mSideVector = new float[]{1f, 0f, 0f, 1f};
 
         Matrix.setIdentityM(mRectangleRotationMatrix, 0);
+
+        theta_camera = 0;
+        phi_camera = 0;
     }
 
     public void onDrawFrame(GL10 unused) {
@@ -65,6 +69,11 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
                 0, 0, 0, //eye
                 mCenterVector[0], mCenterVector[1], mCenterVector[2], //center
                 mUpVector[0], mUpVector[1], mUpVector[2]); // up
+
+        Matrix.invertM(mCamera, 0, mViewMatrix, 0);
+        Matrix.rotateM(mCamera, 0, theta_camera, 1, 0, 0); // rotate in vertical direction about x direction
+        Matrix.rotateM(mCamera, 0, phi_camera, 0, 1, 0); // rotate in horizontal direction about y axis
+        Matrix.invertM(mViewMatrix, 0, mCamera, 0);
 
         // Calculate the projection and view transformation
         Matrix.multiplyMM(mMVPMatrix, 0, mProjectionMatrix, 0, mViewMatrix, 0);
@@ -80,17 +89,22 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     }
 
     public void onSurfaceChanged(GL10 unused, int width, int height) {
+        float ratio = Constants.ASPECT_RATIO;
         GLES20.glViewport(0, 0, width, height);
-        GLES20.glViewport(0, 0, width, height);
-
-        float ratio = (float) width / height;
-        float FOV = 111; //field of view in degrees of the frustrum - computed given the FOV of the camera
-        double theta = toRadians(FOV/2);
-        float near = (float) (ratio/sin(theta));
 
         // this projection matrix is applied to object coordinates
         // in the onDrawFrame() method
-        Matrix.frustumM(mProjectionMatrix, 0, -ratio, ratio, -1, 1, near, 30);
+        float near = Constants.TABLET_Z;
+        frustumFoV(mProjectionMatrix, Constants.HORIZONTAL_FOV, ratio, near, 1000.0f);
+
+    }
+
+    public static void frustumFoV(float[] matrix, float horizontal_fov, float ratio, float near, float far) {
+        float right = (float) (near * Math.tan(StrictMath.toRadians(horizontal_fov/2)));
+        float left = -right;
+        float top = right/ratio;
+        float bottom = -top;
+        Matrix.frustumM(matrix, 0, left, right, bottom, top, near, far);
     }
 
     public static int loadShader(int type, String shaderCode){
@@ -140,5 +154,18 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
     public void setRectangleRotationMatrix(float[] newRotationMatrix){
         mRectangleRotationMatrix = newRotationMatrix;
+    }
+
+    public void updateCameraRotationAngles(float theta, float phi) {
+        theta_camera -= theta; // vertical directions are inverted
+        phi_camera += phi;
+    }
+
+    public float getThetaCamera(){
+        return theta_camera;
+    }
+
+    public float getPhiCamera(){
+        return phi_camera;
     }
 }

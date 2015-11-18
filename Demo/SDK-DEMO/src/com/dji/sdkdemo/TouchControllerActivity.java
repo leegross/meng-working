@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.SurfaceTexture;
 import android.os.Bundle;
-import android.view.MotionEvent;
 import android.view.Surface;
 import android.view.View;
 import android.widget.TextView;
@@ -234,13 +233,6 @@ public class TouchControllerActivity extends DemoBaseActivity
         droneWrapper.closeGs();
     }
 
-    @Override
-    public boolean dispatchTouchEvent(MotionEvent e) {
-        super.onTouchEvent(e);
-        mGLView.onTouchEvent(e);
-        return false;
-    }
-
     private void initDecoder() {
         DJIDrone.getDjiCamera().setDecodeType(DJICameraDecodeTypeDef.DecoderType.Hardware);
         final Context mContext = this;
@@ -295,15 +287,5 @@ public class TouchControllerActivity extends DemoBaseActivity
         };
 
         DJIDrone.getDjiGimbal().setGimbalUpdateAttitudeCallBack(mGimbalUpdateAttitudeCallBack);
-    }
-
-    /**
-     * @Description : RETURN BTN RESPONSE FUNCTION
-     * @author      : andy.zhao
-     * @param view
-     * @return      : void
-     */
-    public void onReturn(View view){
-        this.finish();
     }
 }
