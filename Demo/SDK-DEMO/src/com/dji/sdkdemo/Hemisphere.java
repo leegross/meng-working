@@ -64,7 +64,7 @@ public class Hemisphere {
     final int[] vbo = new int[1];
     final int[] ibo = new int[1];
 
-    float radius = 7.0f;
+    float radius = Constants.SPHERE_RADIUS;
 
     int indexCount;
 

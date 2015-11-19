@@ -5,7 +5,6 @@ import android.opengl.GLSurfaceView;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 
-import static java.lang.Math.abs;
 import static java.lang.Math.atan2;
 import static java.lang.StrictMath.tan;
 import static java.lang.StrictMath.toDegrees;
@@ -17,7 +16,7 @@ import static java.lang.StrictMath.toRadians;
 class MyGLSurfaceView extends GLSurfaceView {
 
     private final MyGLRenderer mRenderer;
-    private final float TOUCH_SCALE_FACTOR = (float) (tan(toRadians(Constants.HORIZONTAL_FOV/2)) * Constants.TABLET_Z/Constants.SURFACE__HORIZONTAL_CENTER);//.011f;//180f/320;
+    private final float TOUCH_SCALE_FACTOR = (float) (tan(toRadians(Constants.HORIZONTAL_FOV/2)) * Constants.FRUST_NEAR /Constants.SURFACE__HORIZONTAL_CENTER);//.011f;//180f/320;
     private float mPreviousX;
     private float mPreviousY;
     private DroneWrapper mDroneWrapper;
@@ -58,12 +57,12 @@ class MyGLSurfaceView extends GLSurfaceView {
         switch (e.getAction()) {
             case MotionEvent.ACTION_MOVE:
 
-                float thetaX1 = (float) atan2((x - H_CENTER) * TOUCH_SCALE_FACTOR, Constants.TABLET_Z);
-                float thetaX2 = (float) atan2((H_CENTER - mPreviousX) * TOUCH_SCALE_FACTOR, Constants.TABLET_Z);
+                float thetaX1 = (float) atan2((x - H_CENTER) * TOUCH_SCALE_FACTOR, Constants.FRUST_NEAR);
+                float thetaX2 = (float) atan2((H_CENTER - mPreviousX) * TOUCH_SCALE_FACTOR, Constants.FRUST_NEAR);
                 float thetaX = (float) toDegrees(thetaX1 + thetaX2);
 
-                float thetaY1 = (float) atan2((V_CENTER - y) * TOUCH_SCALE_FACTOR, Constants.TABLET_Z);
-                float thetaY2 = (float) atan2((mPreviousY - V_CENTER) * TOUCH_SCALE_FACTOR, Constants.TABLET_Z);
+                float thetaY1 = (float) atan2((V_CENTER - y) * TOUCH_SCALE_FACTOR, Constants.FRUST_NEAR);
+                float thetaY2 = (float) atan2((mPreviousY - V_CENTER) * TOUCH_SCALE_FACTOR, Constants.FRUST_NEAR);
                 float thetaY = (float) toDegrees(thetaY1 + thetaY2);
 
                 thetaY = clipPitchAngle(thetaY);
@@ -72,16 +71,8 @@ class MyGLSurfaceView extends GLSurfaceView {
                 break;
             case MotionEvent.ACTION_UP:
 
-                // compute yaw angle
-                thetaX = mRenderer.getPhiProjector() - mRenderer.getPhiCamera();
-                setYawAngle(thetaX);
-
-                // compute pitch angle
-                thetaY = mRenderer.getThetaProjector() - mRenderer.getThetaCamera();
-                if (abs(thetaY) > 90) {
-                    thetaY = 0;
-                }
-                setGimbalPitch(-thetaY);
+                mDroneWrapper.setYawAngle(mRenderer.getPhiCamera());
+                mDroneWrapper.setGimbalPitch((int) mRenderer.getThetaCamera());
 
                 accumulatedThetaY = 0;
                 break;
@@ -112,48 +103,12 @@ class MyGLSurfaceView extends GLSurfaceView {
         return thetaY;
     }
 
-    private void setGimbalPitch(float thetaY){
-        double currentGimbalPitch = mDroneWrapper.getCurrentGimbalPitch();
-        int newPitchAngle = (int) (currentGimbalPitch + thetaY);
-        mDroneWrapper.setGimbalPitch(newPitchAngle);
-    }
-
-    private void setYawAngle(float thetaX){
-        float currentYaw = mDroneWrapper.getCurrentYaw();
-        float newYawAngle = currentYaw - thetaX;
-        mDroneWrapper.setYawAngle(newYawAngle);
-    }
-
     // called by drone wrapper when we receive new orientation update
     public void onDroneOrientationUpdate() {
-        double currentGimbalPitch = mDroneWrapper.getCurrentGimbalPitch();
+        float currentGimbalPitch = (float) mDroneWrapper.getCurrentGimbalPitch();
         float currentYaw = mDroneWrapper.getCurrentYaw();
 
-        if (mPreviousYaw == NOT_INITIALIZED &&
-            mDroneWrapper.getCurrentLatitude() != 0 &&
-            mDroneWrapper.getCurrentLongitude() != 0
-        ){
-            mPreviousYaw = currentYaw;
-        }
-
-        if (mPreviousGimbalPitch == NOT_INITIALIZED &&
-            mDroneWrapper.getCurrentLatitude() != 0 &&
-            mDroneWrapper.getCurrentLongitude() != 0
-        ){
-            mPreviousGimbalPitch = currentGimbalPitch;
-        }
-
-        float thetaX = mPreviousYaw - currentYaw;
-        float thetaY = (float) -(currentGimbalPitch - mPreviousGimbalPitch);
-        mRenderer.updateProjectorRotationAngles(thetaY, thetaX);
-
-        // update previous anglesv
-        if (mPreviousYaw != NOT_INITIALIZED) {
-            mPreviousYaw = currentYaw;
-        }
-        if (mPreviousGimbalPitch != NOT_INITIALIZED) {
-            mPreviousGimbalPitch = currentGimbalPitch;
-        }
+        mRenderer.setProjectorRotationAngles(currentGimbalPitch, currentYaw);
     }
 
     public void setDroneWrapper(DroneWrapper droneWrapper) {

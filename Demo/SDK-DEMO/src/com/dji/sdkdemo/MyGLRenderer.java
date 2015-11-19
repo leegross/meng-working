@@ -73,13 +73,13 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     private void transformMatrix(float[] m, float theta, float phi){
         // Set the projector position (View matrix)
         Matrix.setLookAtM(mViewMatrix, 0,
-                0, .1f, 0, //eye
-                0, 0, 1, //center
+                0, .05f, 0, //eye
+                0, 0, 10, //center
                 0, 1, 0); // up
 
         Matrix.invertM(mCamera, 0, mViewMatrix, 0);
-        Matrix.rotateM(mCamera, 0, theta, 1, 0, 0); // rotate in vertical direction about x direction
-        Matrix.rotateM(mCamera, 0, phi, 0, 1, 0); // rotate in horizontal direction about y axis
+        Matrix.rotateM(mCamera, 0, phi%360, 0, 1, 0); // rotate in horizontal direction about y axis
+        Matrix.rotateM(mCamera, 0, theta%360, 1, 0, 0); // rotate in vertical direction about x direction
         Matrix.invertM(mViewMatrix, 0, mCamera, 0);
 
         // Calculate the projection and view transformation
@@ -92,7 +92,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         // this projection matrix is applied to object coordinates
         // in the onDrawFrame() method
         float ratio = Constants.ASPECT_RATIO;
-        float near = Constants.TABLET_Z;
+        float near = Constants.FRUST_NEAR;
         float fov_y = Constants.HORIZONTAL_FOV/ratio;
         perspectiveM(mProjectionMatrix, 0, fov_y, ratio, near, 1000.0f);
     }
@@ -121,7 +121,12 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
     public void updateProjectorRotationAngles(float theta, float phi) {
         theta_projector -=theta;
-        phi_camera += phi;
+        phi_projector += phi;
+    }
+
+    public void setProjectorRotationAngles(float theta, float phi) {
+        theta_projector = theta;
+        phi_projector = phi;
     }
 
     public float getThetaCamera(){

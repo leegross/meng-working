@@ -255,7 +255,7 @@ public class DroneWrapper {
 
     // sets the angle the drone is facing relative to north
     public void setYawAngle(float angle){
-        angle = (angle + 180)%360 - 180;
+        angle = -angle%360;
         if (angle < -180){
             angle += 360;
         } else if(angle > 180){
@@ -326,6 +326,6 @@ public class DroneWrapper {
     }
 
     public float getCurrentYaw(){
-        return currentYaw;
+        return -currentYaw;
     }
 }
