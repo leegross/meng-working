@@ -78,8 +78,8 @@
       <file leaf-file-name="MyGLSurfaceView.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.66480446" vertical-offset="1054" max-vertical-offset="1770">
-              <caret line="110" column="45" selection-start-line="110" selection-start-column="45" selection-end-line="110" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.6712329" vertical-offset="1221" max-vertical-offset="1830">
+              <caret line="109" column="35" selection-start-line="109" selection-start-column="35" selection-end-line="109" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -88,8 +88,8 @@
       <file leaf-file-name="DroneWrapper.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3335" max-vertical-offset="3810">
-              <caret line="318" column="19" selection-start-line="318" selection-start-column="19" selection-end-line="318" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="3079" max-vertical-offset="3915">
+              <caret line="295" column="5" selection-start-line="295" selection-start-column="5" selection-end-line="295" selection-end-column="5" />
               <folding>
                 <element signature="method#getGimbalMinPitchAngle#0;class#DroneWrapper#0" expanded="false" />
                 <element signature="method#getGimbalMaxPitchAngle#0;class#DroneWrapper#0" expanded="false" />
@@ -102,9 +102,12 @@
       <file leaf-file-name="MyGLRenderer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1407" max-vertical-offset="1980">
-              <caret line="81" column="29" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="29" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1416" max-vertical-offset="2145">
+              <caret line="166" column="38" selection-start-line="166" selection-start-column="38" selection-end-line="166" selection-end-column="38" />
+              <folding>
+                <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
+                <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -2031,7 +2034,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38441214" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38441214" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38441214" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2155,7 +2158,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1485" max-vertical-offset="2235">
           <caret line="99" column="49" selection-start-line="99" selection-start-column="49" selection-end-line="99" selection-end-column="49" />
-          <folding />
+          <folding>
+            <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2197,7 +2203,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1485" max-vertical-offset="2235">
           <caret line="99" column="49" selection-start-line="99" selection-start-column="49" selection-end-line="99" selection-end-column="49" />
-          <folding />
+          <folding>
+            <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2502,8 +2511,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3335" max-vertical-offset="3810">
-          <caret line="318" column="19" selection-start-line="318" selection-start-column="19" selection-end-line="318" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3079" max-vertical-offset="3915">
+          <caret line="295" column="5" selection-start-line="295" selection-start-column="5" selection-end-line="295" selection-end-column="5" />
           <folding>
             <element signature="method#getGimbalMinPitchAngle#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#getGimbalMaxPitchAngle#0;class#DroneWrapper#0" expanded="false" />
@@ -2514,16 +2523,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="717" max-vertical-offset="1980">
-          <caret line="81" column="29" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="29" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1416" max-vertical-offset="2145">
+          <caret line="166" column="38" selection-start-line="166" selection-start-column="38" selection-end-line="166" selection-end-column="38" />
+          <folding>
+            <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66480446" vertical-offset="1054" max-vertical-offset="1770">
-          <caret line="110" column="45" selection-start-line="110" selection-start-column="45" selection-end-line="110" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.6712329" vertical-offset="1221" max-vertical-offset="1830">
+          <caret line="109" column="35" selection-start-line="109" selection-start-column="35" selection-end-line="109" selection-end-column="35" />
           <folding />
         </state>
       </provider>

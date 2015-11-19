@@ -30,6 +30,8 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     private float theta_projector;
     private float phi_projector;
 
+    private boolean theta_camera_initialized;
+    private boolean phi_camera_initialized;
 
     private SurfaceTexture mSurfaceTexture;
     private Context mContext;
@@ -54,6 +56,8 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         phi_camera = 0;
         theta_projector = 0;
         phi_projector = 0;
+        theta_camera_initialized = false;
+        phi_camera_initialized = true;
     }
 
     public void onDrawFrame(GL10 unused) {
@@ -145,4 +149,21 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         return phi_projector;
     }
 
+    public void setInitialCameraTheta(float theta){
+        theta_camera = theta;
+        theta_camera_initialized = true;
+    }
+
+    public void setInitialCameraPhi(float phi){
+        phi_camera = phi;
+        phi_camera_initialized = false;
+    }
+
+    public boolean isCameraThetaInitialized(){
+        return theta_camera_initialized;
+    }
+
+    public boolean isCameraPhiInitailized(){
+        return phi_camera_initialized;
+    }
 }

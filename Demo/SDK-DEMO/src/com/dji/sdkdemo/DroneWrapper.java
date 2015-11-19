@@ -288,6 +288,13 @@ public class DroneWrapper {
         DJIDrone.getDjiGroundStation().stopUpdateTimer();
     }
 
+    public boolean droneUpdatesAreInitialized(){
+        if (getCurrentLongitude() != 0 && getCurrentLatitude() != 0) {
+            return true;
+        }
+        return false;
+    }
+
     public float getCurrentAltitude(){
         return currentAltitude;
     }

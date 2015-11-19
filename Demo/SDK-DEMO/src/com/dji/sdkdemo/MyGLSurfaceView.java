@@ -16,19 +16,19 @@ import static java.lang.StrictMath.toRadians;
 class MyGLSurfaceView extends GLSurfaceView {
 
     private final MyGLRenderer mRenderer;
-    private final float TOUCH_SCALE_FACTOR = (float) (tan(toRadians(Constants.HORIZONTAL_FOV/2)) * Constants.FRUST_NEAR /Constants.SURFACE__HORIZONTAL_CENTER);//.011f;//180f/320;
-    private float mPreviousX;
-    private float mPreviousY;
     private DroneWrapper mDroneWrapper;
-    private double mPreviousGimbalPitch;
-    private int minGimbalPitchAngle;
-    private int maxGimbalPitchAngle;
-    private float mPreviousYaw;
-    private final float NOT_INITIALIZED = -1000.0f;
-    float accumulatedThetaY = 0;
-    float accumulatedCameraY = 0;
+
     float H_CENTER = Constants.SURFACE__HORIZONTAL_CENTER;
     float V_CENTER = Constants.SURFACE_VERTICAL_CENTER;
+    private final float TOUCH_SCALE_FACTOR = (float) (tan(toRadians(Constants.HORIZONTAL_FOV/2)) * Constants.FRUST_NEAR /H_CENTER);//.011f;//180f/320;
+
+    private float mPreviousX;
+    private float mPreviousY;
+
+    private int minGimbalPitchAngle;
+    private int maxGimbalPitchAngle;
+    float accumulatedThetaY = 0;
+
 
     public MyGLSurfaceView(Context context, AttributeSet attrs){
         super(context, attrs);
@@ -40,9 +40,6 @@ class MyGLSurfaceView extends GLSurfaceView {
 
         // Set the Renderer for drawing on the GLSurfaceView
         setRenderer(mRenderer);
-
-        mPreviousYaw = NOT_INITIALIZED;
-        mPreviousGimbalPitch = NOT_INITIALIZED;
     }
 
     @Override
@@ -109,6 +106,13 @@ class MyGLSurfaceView extends GLSurfaceView {
         float currentYaw = mDroneWrapper.getCurrentYaw();
 
         mRenderer.setProjectorRotationAngles(currentGimbalPitch, currentYaw);
+
+        if (mDroneWrapper.droneUpdatesAreInitialized() && mRenderer.isCameraPhiInitailized()) {
+            mRenderer.setInitialCameraPhi(currentYaw);
+        }
+        if (mDroneWrapper.droneUpdatesAreInitialized() && mRenderer.isCameraThetaInitialized()) {
+            mRenderer.setInitialCameraTheta(currentGimbalPitch);
+        }
     }
 
     public void setDroneWrapper(DroneWrapper droneWrapper) {
