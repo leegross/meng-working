@@ -7,8 +7,6 @@ import android.view.MotionEvent;
 
 import static java.lang.Math.abs;
 import static java.lang.Math.atan2;
-import static java.lang.Math.max;
-import static java.lang.Math.min;
 import static java.lang.StrictMath.tan;
 import static java.lang.StrictMath.toDegrees;
 import static java.lang.StrictMath.toRadians;
@@ -22,14 +20,12 @@ class MyGLSurfaceView extends GLSurfaceView {
     private final float TOUCH_SCALE_FACTOR = (float) (tan(toRadians(Constants.HORIZONTAL_FOV/2)) * Constants.TABLET_Z/Constants.SURFACE__HORIZONTAL_CENTER);//.011f;//180f/320;
     private float mPreviousX;
     private float mPreviousY;
-    public float radius = 7;
     private DroneWrapper mDroneWrapper;
     private double mPreviousGimbalPitch;
     private int minGimbalPitchAngle;
     private int maxGimbalPitchAngle;
     private float mPreviousYaw;
     private final float NOT_INITIALIZED = -1000.0f;
-    private float[] mRectangleCenter;
     float accumulatedThetaY = 0;
     float accumulatedCameraY = 0;
     float H_CENTER = Constants.SURFACE__HORIZONTAL_CENTER;
@@ -48,7 +44,6 @@ class MyGLSurfaceView extends GLSurfaceView {
 
         mPreviousYaw = NOT_INITIALIZED;
         mPreviousGimbalPitch = NOT_INITIALIZED;
-        mRectangleCenter = new float[]{0, 0, 7, 0};
     }
 
     @Override
@@ -120,22 +115,12 @@ class MyGLSurfaceView extends GLSurfaceView {
     private void setGimbalPitch(float thetaY){
         double currentGimbalPitch = mDroneWrapper.getCurrentGimbalPitch();
         int newPitchAngle = (int) (currentGimbalPitch + thetaY);
-
-        // clip gimbal pitch between -90 and 0
-        newPitchAngle = max(minGimbalPitchAngle, newPitchAngle);
-        newPitchAngle = min(maxGimbalPitchAngle, newPitchAngle);
         mDroneWrapper.setGimbalPitch(newPitchAngle);
     }
 
     private void setYawAngle(float thetaX){
         float currentYaw = mDroneWrapper.getCurrentYaw();
         float newYawAngle = currentYaw - thetaX;
-        newYawAngle = (newYawAngle + 180)%360 - 180;
-        if (newYawAngle < -180){
-            newYawAngle += 360;
-        } else if(newYawAngle > 180){
-            newYawAngle -= 360;
-        }
         mDroneWrapper.setYawAngle(newYawAngle);
     }
 

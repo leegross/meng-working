@@ -13,6 +13,9 @@ import dji.sdk.interfaces.DJIGroundStationExecuteCallBack;
 import dji.sdk.interfaces.DJIGroundStationFlyingInfoCallBack;
 import dji.sdk.interfaces.DJIMcuUpdateStateCallBack;
 
+import static java.lang.Math.max;
+import static java.lang.Math.min;
+
 /**
  * Created by leegross on 11/3/15.
  */
@@ -233,12 +236,16 @@ public class DroneWrapper {
         });
     }
 
-    public void setGimbalPitch(final int angle){
+    public void setGimbalPitch(int angle){
+        // clip gimbal pitch between -90 and 0
+        angle = (int) max(getGimbalMinPitchAngle(), angle);
+        angle = (int) min(getGimbalMaxPitchAngle(), angle);
+        final int finalAngle = angle;
         new Thread()
         {
             public void run()
             {
-                DJIGimbalRotation mPitch = new DJIGimbalRotation(true, false,true, angle);
+                DJIGimbalRotation mPitch = new DJIGimbalRotation(true, false,true, finalAngle);
 
                 DJIDrone.getDjiGimbal().updateGimbalAttitude(mPitch,null,null);
 
@@ -247,13 +254,20 @@ public class DroneWrapper {
     }
 
     // sets the angle the drone is facing relative to north
-    public void setYawAngle(final float angle){
+    public void setYawAngle(float angle){
+        angle = (angle + 180)%360 - 180;
+        if (angle < -180){
+            angle += 360;
+        } else if(angle > 180){
+            angle -= 360;
+        }
+        final float finalAngle = angle;
         openGs();
         new Thread()
         {
             public void run()
             {
-                DJIDrone.getDjiGroundStation().sendFlightControlData(angle, 0, 0, 0, new DJIExecuteResultCallback() {
+                DJIDrone.getDjiGroundStation().sendFlightControlData(finalAngle, 0, 0, 0, new DJIExecuteResultCallback() {
                     @Override
                     public void onResult(DJIError djiError) {}
                 });
