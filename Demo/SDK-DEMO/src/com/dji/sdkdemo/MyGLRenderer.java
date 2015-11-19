@@ -103,7 +103,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     }
 
     private void createProjectorMatrix(){
-        // Set the camera position (View matrix)
+        // Set the projector position (View matrix)
         Matrix.setLookAtM(mProjectorViewMatrix, 0,
                 0, .1f, 0, //eye
                 mCenterVector[0], mCenterVector[1], mCenterVector[2], //center
@@ -191,6 +191,11 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         phi_camera += phi;
     }
 
+    public void updateProjectorRotationAngles(float theta, float phi) {
+        theta_projector -=theta;
+        phi_camera += phi;
+    }
+
     public float getThetaCamera(){
         return theta_camera;
     }
@@ -198,4 +203,13 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     public float getPhiCamera(){
         return phi_camera;
     }
+
+    public float getThetaProjector(){
+        return theta_projector;
+    }
+
+    public float getPhiProjector(){
+        return phi_projector;
+    }
+
 }

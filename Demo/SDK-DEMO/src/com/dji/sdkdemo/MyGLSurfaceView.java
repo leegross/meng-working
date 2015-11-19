@@ -2,7 +2,6 @@ package com.dji.sdkdemo;
 
 import android.content.Context;
 import android.opengl.GLSurfaceView;
-import android.opengl.Matrix;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 
@@ -72,27 +71,22 @@ class MyGLSurfaceView extends GLSurfaceView {
                 float thetaY2 = (float) atan2((mPreviousY - V_CENTER) * TOUCH_SCALE_FACTOR, Constants.TABLET_Z);
                 float thetaY = (float) toDegrees(thetaY1 + thetaY2);
 
-//                thetaY = clipPitchAngle(thetaY);
+                thetaY = clipPitchAngle(thetaY);
 
                 mRenderer.updateCameraRotationAngles(thetaY, thetaX);
                 break;
             case MotionEvent.ACTION_UP:
 
                 // compute yaw angle
-                float[] currentCenterVector = mRenderer.getCenterVector();
-                float theta1x = (float) atan2(mRectangleCenter[2], mRectangleCenter[0]);
-                float theta2x = (float) atan2(currentCenterVector[2], currentCenterVector[0]);
-                thetaX = (float) toDegrees(theta1x - theta2x);
+                thetaX = mRenderer.getPhiProjector() - mRenderer.getPhiCamera();
                 setYawAngle(thetaX);
 
                 // compute pitch angle
-                float theta1y = (float) atan2(mRectangleCenter[2], mRectangleCenter[1]);
-                float theta2y = (float) atan2(currentCenterVector[2], currentCenterVector[1]);
-                thetaY = (float) toDegrees(theta1y - theta2y);
+                thetaY = mRenderer.getThetaProjector() - mRenderer.getThetaCamera();
                 if (abs(thetaY) > 90) {
                     thetaY = 0;
                 }
-                setGimbalPitch(thetaY);
+                setGimbalPitch(-thetaY);
 
                 accumulatedThetaY = 0;
                 break;
@@ -126,6 +120,8 @@ class MyGLSurfaceView extends GLSurfaceView {
     private void setGimbalPitch(float thetaY){
         double currentGimbalPitch = mDroneWrapper.getCurrentGimbalPitch();
         int newPitchAngle = (int) (currentGimbalPitch + thetaY);
+
+        // clip gimbal pitch between -90 and 0
         newPitchAngle = max(minGimbalPitchAngle, newPitchAngle);
         newPitchAngle = min(maxGimbalPitchAngle, newPitchAngle);
         mDroneWrapper.setGimbalPitch(newPitchAngle);
@@ -141,66 +137,6 @@ class MyGLSurfaceView extends GLSurfaceView {
             newYawAngle -= 360;
         }
         mDroneWrapper.setYawAngle(newYawAngle);
-    }
-
-    private void rotateCameraByTheta(float thetaX, float thetaY){
-        float[] mRotationMatrixInXDirection = new float[16];
-        float[] mRotationMatrixInYDirection = new float[16];
-        float[] mRotationMatrix = new float[16];
-        float[] newCenter = new float[4];
-
-        float[] upVector = mRenderer.getUpVector();
-        float[] sideVector = mRenderer.getSideVector();
-
-        correctForFlippingBug(thetaY);
-
-        Matrix.setRotateM(mRotationMatrixInXDirection, 0, thetaX, upVector[0], upVector[1], upVector[2]);
-        Matrix.setRotateM(mRotationMatrixInYDirection, 0, thetaY, sideVector[0], sideVector[1], sideVector[2]);
-
-        float[] centerVector = mRenderer.getCenterVector();
-        Matrix.multiplyMM(mRotationMatrix, 0, mRotationMatrixInYDirection, 0, mRotationMatrixInXDirection, 0);
-        Matrix.multiplyMV(newCenter, 0, mRotationMatrix, 0, centerVector, 0);
-
-
-        // update up and side vectors
-        float[] newUpVector = new float[4];
-        float[] newSideVector = new float[4];
-        Matrix.multiplyMV(newUpVector, 0, mRotationMatrix, 0, upVector, 0);
-        Matrix.multiplyMV(newSideVector, 0, mRotationMatrix, 0, sideVector, 0);
-
-//        newSideVector = new float[]{newSideVector[0] / newSideVector[3], newSideVector[1] / newSideVector[3], newSideVector[2] / newSideVector[3], 1};
-//        newUpVector = new float[]{newUpVector[0] / newUpVector[3], newUpVector[1] / newUpVector[3], newUpVector[2] / newUpVector[3], 1};
-//        mRenderer.setSideVector(newSideVector);
-//        mRenderer.setUpVector(newUpVector);
-
-        mRenderer.setCenter(newCenter);
-        requestRender();
-    }
-
-    // when the camera rotates past 90 degrees, up vector flips for some reason (couldn't figure it out)
-    // so we want to flip it back whenever we pass 90 degrees.
-    private void correctForFlippingBug(float thetaY){
-        float[] upVector = mRenderer.getUpVector();
-
-        accumulatedCameraY += thetaY;
-        if (accumulatedCameraY > 90) {
-            float[] newUpVector = {0, -1, 0, 0};
-            mRenderer.setUpVector(newUpVector);
-        }
-        if (upVector[0] == 0 && upVector[1] == -1 && upVector[2] == 0 && upVector[3] == 0 && accumulatedCameraY < 90) {
-            float[] newUpVector = {0, 1, 0, 0};
-            mRenderer.setUpVector(newUpVector);
-        }
-    }
-
-    public void setDroneWrapper(DroneWrapper droneWrapper) {
-        mDroneWrapper = droneWrapper;
-        minGimbalPitchAngle = (int) mDroneWrapper.getGimbalMinPitchAngle();
-        maxGimbalPitchAngle = (int) mDroneWrapper.getGimbalMaxPitchAngle();
-    }
-
-    public MyGLRenderer getRenderer() {
-        return mRenderer;
     }
 
     // called by drone wrapper when we receive new orientation update
@@ -224,9 +160,9 @@ class MyGLSurfaceView extends GLSurfaceView {
 
         float thetaX = mPreviousYaw - currentYaw;
         float thetaY = (float) -(currentGimbalPitch - mPreviousGimbalPitch);
-        rotateRectangleByTheta(thetaX, thetaY);
+        mRenderer.updateProjectorRotationAngles(thetaY, thetaX);
 
-        // update previous angles
+        // update previous anglesv
         if (mPreviousYaw != NOT_INITIALIZED) {
             mPreviousYaw = currentYaw;
         }
@@ -235,32 +171,13 @@ class MyGLSurfaceView extends GLSurfaceView {
         }
     }
 
-    private void rotateRectangleByTheta(float thetaX, float thetaY) {
-        float[] mRotationMatrixInXDirection = new float[16];
-        float[] mRotationMatrixInYDirection = new float[16];
-        float[] mNewRectangleRotationMatrix = new float[16];
+    public void setDroneWrapper(DroneWrapper droneWrapper) {
+        mDroneWrapper = droneWrapper;
+        minGimbalPitchAngle = (int) mDroneWrapper.getGimbalMinPitchAngle();
+        maxGimbalPitchAngle = (int) mDroneWrapper.getGimbalMaxPitchAngle();
+    }
 
-        float[] mRotationMatrix = new float[16];
-
-        float[] upVector = mRenderer.getUpVector();
-        float[] sideVector = mRenderer.getSideVector();
-
-        if (upVector == null || sideVector == null) {
-            return;
-        }
-
-        Matrix.setRotateM(mRotationMatrixInXDirection, 0, thetaX, upVector[0], upVector[1], upVector[2]);
-        Matrix.setRotateM(mRotationMatrixInYDirection, 0, thetaY, sideVector[0], sideVector[1], sideVector[2]);
-
-        float[] rectangleRotationMatrix = mRenderer.getRectangleRotationMatrix();
-        Matrix.multiplyMM(mRotationMatrix, 0, mRotationMatrixInXDirection, 0, mRotationMatrixInYDirection, 0);
-        Matrix.multiplyMM(mNewRectangleRotationMatrix, 0, mRotationMatrix, 0, rectangleRotationMatrix, 0);
-
-        float[] tempVector = new float[4];
-        Matrix.multiplyMV(tempVector, 0, mRotationMatrix, 0, mRectangleCenter, 0);
-        mRectangleCenter = tempVector;
-
-        mRenderer.setRectangleRotationMatrix(mNewRectangleRotationMatrix);
-        requestRender();
+    public MyGLRenderer getRenderer() {
+        return mRenderer;
     }
 }
