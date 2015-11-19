@@ -27,7 +27,6 @@ class MyGLSurfaceView extends GLSurfaceView {
 
     private int minGimbalPitchAngle;
     private int maxGimbalPitchAngle;
-    float accumulatedThetaY = 0;
 
 
     public MyGLSurfaceView(Context context, AttributeSet attrs){
@@ -65,13 +64,13 @@ class MyGLSurfaceView extends GLSurfaceView {
                 thetaY = clipPitchAngle(thetaY);
 
                 mRenderer.updateCameraRotationAngles(thetaY, thetaX);
+
                 break;
             case MotionEvent.ACTION_UP:
 
                 mDroneWrapper.setYawAngle(mRenderer.getPhiCamera());
                 mDroneWrapper.setGimbalPitch((int) mRenderer.getThetaCamera());
 
-                accumulatedThetaY = 0;
                 break;
         }
 
@@ -82,21 +81,19 @@ class MyGLSurfaceView extends GLSurfaceView {
     }
 
     private float clipPitchAngle(float thetaY){
-        float currentGimbalPitch = (float) mDroneWrapper.getCurrentGimbalPitch();
         // Y is limited to [-90, 0] so don't move past those
-        if (currentGimbalPitch + accumulatedThetaY > maxGimbalPitchAngle &&
-                currentGimbalPitch + accumulatedThetaY - thetaY > maxGimbalPitchAngle) {
+        if (mRenderer.getThetaCamera() > maxGimbalPitchAngle &&
+                mRenderer.getThetaCamera() - thetaY > maxGimbalPitchAngle) {
             thetaY = (float) 0;
-        } else if (currentGimbalPitch + accumulatedThetaY < minGimbalPitchAngle &&
-                currentGimbalPitch + accumulatedThetaY - thetaY < minGimbalPitchAngle) {
+        } else if (mRenderer.getThetaCamera() < minGimbalPitchAngle &&
+                mRenderer.getThetaCamera() - thetaY < minGimbalPitchAngle) {
             thetaY = (float) 0;
-        } else if (currentGimbalPitch + accumulatedThetaY - thetaY > maxGimbalPitchAngle) {
-            thetaY = currentGimbalPitch + accumulatedThetaY - maxGimbalPitchAngle;
-        } else if (currentGimbalPitch + accumulatedThetaY - thetaY < minGimbalPitchAngle) {
-            thetaY = currentGimbalPitch + accumulatedThetaY - minGimbalPitchAngle;
+        } else if (mRenderer.getThetaCamera() - thetaY > maxGimbalPitchAngle) {
+            thetaY = mRenderer.getThetaCamera() - maxGimbalPitchAngle;
+        } else if (mRenderer.getThetaCamera() - thetaY < minGimbalPitchAngle) {
+            thetaY = mRenderer.getThetaCamera() - minGimbalPitchAngle;
         }
 
-        accumulatedThetaY -= thetaY;
         return thetaY;
     }
 

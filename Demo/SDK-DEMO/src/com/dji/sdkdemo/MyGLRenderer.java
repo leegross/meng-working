@@ -57,7 +57,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         theta_projector = 0;
         phi_projector = 0;
         theta_camera_initialized = false;
-        phi_camera_initialized = true;
+        phi_camera_initialized = false;
     }
 
     public void onDrawFrame(GL10 unused) {
@@ -77,8 +77,8 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     private void transformMatrix(float[] m, float theta, float phi){
         // Set the projector position (View matrix)
         Matrix.setLookAtM(mViewMatrix, 0,
-                0, .05f, 0, //eye
-                0, 0, 10, //center
+                0, .5f, 0, //eye
+                0, -.5f, 10, //center
                 0, 1, 0); // up
 
         Matrix.invertM(mCamera, 0, mViewMatrix, 0);
