@@ -173,9 +173,9 @@ public class Hemisphere {
                 heightMapVertexData[offset++] = radius * (float) cos(Math.PI * xRatio);
 
                 // normal vector
-                heightMapVertexData[offset++] = 0;
-                heightMapVertexData[offset++] = 0;
-                heightMapVertexData[offset++] = -1f;
+                heightMapVertexData[offset++] = (float) -(sin(Math.PI * xRatio) * cos(2 * Math.PI * yRatio));
+                heightMapVertexData[offset++] = (float) -(sin(Math.PI * xRatio) * sin(2 * Math.PI * yRatio));
+                heightMapVertexData[offset++] = (float) -cos(Math.PI * xRatio);
 
                 // Add some fancy colors.
                 heightMapVertexData[offset++] = xRatio;

@@ -1,10 +1,10 @@
 #extension GL_OES_EGL_image_external : require
 
-precision mediump float;       	// Set the default precision to medium. We don't need as high of a
+precision highp float;       	// Set the default precision to medium. We don't need as high of a
 								// precision in the fragment shader.
 
-//uniform sampler2D u_Texture;    // The input texture.
-uniform samplerExternalOES u_Texture;    // The input texture.
+uniform sampler2D u_Texture;    // The input texture.
+//uniform samplerExternalOES u_Texture;    // The input texture.
 
 varying vec2 v_Texture;         // The input texture.
 
@@ -19,6 +19,8 @@ varying vec3 v_Normal;         	// Interpolated normal for this fragment.
 void main()
 {
     //gl_FragColor = v_Color;
+    gl_FragColor = vec4(0, 1, 0, 1);
+
 
     vec4 pic = u_MVPMatrix_projector * vec4(v_Position, 1);
     pic = pic / pic.w;
@@ -30,6 +32,7 @@ void main()
         pic.y = 1.0f - pic.y;
 
         gl_FragColor = texture2D(u_Texture, pic.xy);
+        //gl_FragColor = vec4(0, 0, 1, 1);
     } else {
         gl_FragColor = vec4(0, 0, 0, 1);
     }

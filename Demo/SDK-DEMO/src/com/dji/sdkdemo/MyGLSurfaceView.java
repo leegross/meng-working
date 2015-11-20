@@ -6,6 +6,8 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 
 import static java.lang.Math.atan2;
+import static java.lang.Math.pow;
+import static java.lang.Math.sqrt;
 import static java.lang.StrictMath.tan;
 import static java.lang.StrictMath.toDegrees;
 import static java.lang.StrictMath.toRadians;
@@ -28,6 +30,7 @@ class MyGLSurfaceView extends GLSurfaceView {
     private int minGimbalPitchAngle;
     private int maxGimbalPitchAngle;
 
+    float mPrevDelta = 0;
 
     public MyGLSurfaceView(Context context, AttributeSet attrs){
         super(context, attrs);
@@ -50,32 +53,61 @@ class MyGLSurfaceView extends GLSurfaceView {
         float x = e.getX();
         float y = e.getY();
 
-        switch (e.getAction()) {
-            case MotionEvent.ACTION_MOVE:
+        //handle multi touch event
+        if (e.getPointerCount() > 1) {
+            float p1x = e.getX(0);
+            float p1y = e.getY(0);
+            float p2x = e.getX(1);
+            float p2y = e.getY(1);
+            switch (e.getActionMasked()) {
+                case MotionEvent.ACTION_POINTER_DOWN:
+                    break;
+                case MotionEvent.ACTION_MOVE:
+                    float delta = (float) sqrt(pow(p1x - p2x, 2) + pow(p1y - p2y, 2));
+                    float zoom_scale = (mPrevDelta - delta);
+                    mRenderer.updateZoomScale(zoom_scale);
+                    break;
+                case MotionEvent.ACTION_POINTER_UP:
+                    int i = 1 - e.getActionIndex(); // index of the finger that is left
+                    mPreviousX = e.getX(i);
+                    mPreviousY = e.getY(i);
+                    break;
+                case MotionEvent.ACTION_UP:
+                    break;
+            }
 
-                float thetaX1 = (float) atan2((x - H_CENTER) * TOUCH_SCALE_FACTOR, Constants.FRUST_NEAR);
-                float thetaX2 = (float) atan2((H_CENTER - mPreviousX) * TOUCH_SCALE_FACTOR, Constants.FRUST_NEAR);
-                float thetaX = (float) toDegrees(thetaX1 + thetaX2);
+            mPrevDelta = (float) sqrt(pow(p1x - p2x, 2.0f) + pow(p1y - p2y, 2.0f));
 
-                float thetaY1 = (float) atan2((V_CENTER - y) * TOUCH_SCALE_FACTOR, Constants.FRUST_NEAR);
-                float thetaY2 = (float) atan2((mPreviousY - V_CENTER) * TOUCH_SCALE_FACTOR, Constants.FRUST_NEAR);
-                float thetaY = (float) toDegrees(thetaY1 + thetaY2);
-
-                thetaY = clipPitchAngle(thetaY);
-
-                mRenderer.updateCameraRotationAngles(thetaY, thetaX);
-
-                break;
-            case MotionEvent.ACTION_UP:
-
-                mDroneWrapper.setYawAngle(mRenderer.getPhiCamera());
-                mDroneWrapper.setGimbalPitch((int) mRenderer.getThetaCamera());
-
-                break;
         }
+        // handle single touch event
+        else {
+            switch (e.getAction()) {
+                case MotionEvent.ACTION_MOVE:
 
-        mPreviousX = x;
-        mPreviousY = y;
+                    float thetaX1 = (float) atan2((x - H_CENTER) * TOUCH_SCALE_FACTOR, Constants.FRUST_NEAR);
+                    float thetaX2 = (float) atan2((H_CENTER - mPreviousX) * TOUCH_SCALE_FACTOR, Constants.FRUST_NEAR);
+                    float thetaX = (float) toDegrees(thetaX1 + thetaX2);
+
+                    float thetaY1 = (float) atan2((V_CENTER - y) * TOUCH_SCALE_FACTOR, Constants.FRUST_NEAR);
+                    float thetaY2 = (float) atan2((mPreviousY - V_CENTER) * TOUCH_SCALE_FACTOR, Constants.FRUST_NEAR);
+                    float thetaY = (float) toDegrees(thetaY1 + thetaY2);
+
+                    thetaY = clipPitchAngle(thetaY);
+
+                    mRenderer.updateCameraRotationAngles(thetaY, thetaX);
+
+                    break;
+                case MotionEvent.ACTION_UP:
+
+                    mDroneWrapper.setYawAngle(mRenderer.getPhiCamera());
+                    mDroneWrapper.setGimbalPitch((int) mRenderer.getThetaCamera());
+
+                    break;
+            }
+
+            mPreviousX = x;
+            mPreviousY = y;
+        }
 
         return true;
     }

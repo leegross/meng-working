@@ -21,9 +21,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     private final float[] mMVPProjectorMatrix = new float[16];
     private final float[] mProjectionMatrix = new float[16];
     private final float[] mViewMatrix = new float[16];
-    private final float[] mProjectorViewMatrix = new float[16];
     private final float[] mCamera = new float[16];
-    private final float[] mProjector = new float[16];
 
     private float theta_camera; // rotation of camera in vertical direction
     private float phi_camera; // rotation of camera in horizontal direction
@@ -36,6 +34,10 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     private SurfaceTexture mSurfaceTexture;
     private Context mContext;
     private Hemisphere mHemisphere;
+
+    private float[] look_at_center;
+    private float altitude;
+    private float zoom_scale_camera;
 
     public MyGLRenderer(Context context) {
         mContext = context;
@@ -58,6 +60,10 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         phi_projector = 0;
         theta_camera_initialized = false;
         phi_camera_initialized = false;
+
+        altitude = .5f;
+        look_at_center = new float[]{0, altitude, 10};
+        zoom_scale_camera = 0;
     }
 
     public void onDrawFrame(GL10 unused) {
@@ -65,8 +71,8 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         // Redraw background color
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT | GLES20.GL_DEPTH_BUFFER_BIT);
 
-        transformMatrix(mMVPMatrix, theta_camera, phi_camera); // transform camera matrix
-        transformMatrix(mMVPProjectorMatrix, theta_projector, phi_projector); // transform projector matrix
+        transformMatrix(mMVPMatrix, theta_camera, phi_camera, zoom_scale_camera); // transform camera matrix
+        transformMatrix(mMVPProjectorMatrix, theta_projector, phi_projector, 0); // transform projector matrix
 
         mSurfaceTexture.updateTexImage();
 
@@ -74,20 +80,39 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         mHemisphere.render(mMVPMatrix, mMVPProjectorMatrix);
     }
 
-    private void transformMatrix(float[] m, float theta, float phi){
+    private void transformMatrix(float[] m, float theta, float phi, float zoom_scale){
         // Set the projector position (View matrix)
         Matrix.setLookAtM(mViewMatrix, 0,
-                0, .5f, 0, //eye
-                0, -.5f, 10, //center
+                0, altitude, 0, //eye
+                look_at_center[0], look_at_center[1], look_at_center[2], //center
                 0, 1, 0); // up
 
+        float[] translateV = computeTranslationVector(theta, phi, zoom_scale);
+
         Matrix.invertM(mCamera, 0, mViewMatrix, 0);
-        Matrix.rotateM(mCamera, 0, phi%360, 0, 1, 0); // rotate in horizontal direction about y axis
+        Matrix.translateM(mCamera, 0, translateV[0], translateV[1], translateV[2]);
+        Matrix.rotateM(mCamera, 0, phi % 360, 0, 1, 0); // rotate in horizontal direction about y axis
         Matrix.rotateM(mCamera, 0, theta%360, 1, 0, 0); // rotate in vertical direction about x direction
         Matrix.invertM(mViewMatrix, 0, mCamera, 0);
 
         // Calculate the projection and view transformation
         Matrix.multiplyMM(m, 0, mProjectionMatrix, 0, mViewMatrix, 0);
+    }
+
+    private float[] computeTranslationVector(float theta, float phi, float zoom_scale){
+        //compute rotation matrices
+        float[] rotateThetaMatrix = new float[16];
+        float[] rotatePhiMatrix = new float[16];
+
+        Matrix.setRotateM(rotateThetaMatrix, 0, theta, 1, 0, 0);
+        Matrix.setRotateM(rotatePhiMatrix, 0, phi, 0, 1, 0);
+
+        float[] rotationMatrix = new float[16];
+        Matrix.multiplyMM(rotationMatrix, 0, rotatePhiMatrix, 0, rotateThetaMatrix, 0);
+
+        float[] translateV = new float[4];
+        Matrix.multiplyMV(translateV, 0, rotationMatrix, 0, new float[]{0, 0, zoom_scale, 1}, 0);
+        return translateV;
     }
 
     public void onSurfaceChanged(GL10 unused, int width, int height) {
@@ -165,5 +190,9 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
     public boolean isCameraPhiInitailized(){
         return phi_camera_initialized;
+    }
+
+    public void updateZoomScale(float scale) {
+        zoom_scale_camera += scale;
     }
 }
