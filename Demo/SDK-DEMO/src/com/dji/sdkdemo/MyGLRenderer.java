@@ -23,21 +23,22 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     private final float[] mViewMatrix = new float[16];
     private final float[] mCamera = new float[16];
 
-    private float theta_camera; // rotation of camera in vertical direction
-    private float phi_camera; // rotation of camera in horizontal direction
-    private float theta_projector;
-    private float phi_projector;
+    private float camera_theta; // rotation of camera in vertical direction
+    private float camera_phi; // rotation of camera in horizontal direction
+    private float projector_theta;
+    private float projector_phi;
 
-    private boolean theta_camera_initialized;
-    private boolean phi_camera_initialized;
+    private boolean camera_theta_initialized;
+    private boolean camera_phi_initialized;
 
     private SurfaceTexture mSurfaceTexture;
     private Context mContext;
     private Hemisphere mHemisphere;
 
-    private float[] look_at_center;
-    private float altitude;
-    private float zoom_scale_camera;
+    private float camera_zoom_scale;
+
+    private float[] cameraTranslationV;
+    private float[] projectorTranslationV;
 
     public MyGLRenderer(Context context) {
         mContext = context;
@@ -54,16 +55,17 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         mHemisphere = new Hemisphere(mContext);
         mSurfaceTexture = new SurfaceTexture(mHemisphere.getTextureHandle());
 
-        theta_camera = 0;
-        phi_camera = 0;
-        theta_projector = 0;
-        phi_projector = 0;
-        theta_camera_initialized = false;
-        phi_camera_initialized = false;
+        camera_theta = 0;
+        camera_phi = 0;
+        projector_theta = 0;
+        projector_phi = 0;
+        camera_theta_initialized = false;
+        camera_phi_initialized = false;
 
-        altitude = .5f;
-        look_at_center = new float[]{0, altitude, 10};
-        zoom_scale_camera = 0;
+        camera_zoom_scale = 0;
+
+        cameraTranslationV = new float[]{0, Constants.STARTING_ALTITUDE, 0, 0};
+        projectorTranslationV = new float[]{0, Constants.STARTING_ALTITUDE, 0, 0};
     }
 
     public void onDrawFrame(GL10 unused) {
@@ -71,8 +73,10 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         // Redraw background color
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT | GLES20.GL_DEPTH_BUFFER_BIT);
 
-        transformMatrix(mMVPMatrix, theta_camera, phi_camera, zoom_scale_camera); // transform camera matrix
-        transformMatrix(mMVPProjectorMatrix, theta_projector, phi_projector, 0); // transform projector matrix
+        float[] current_camera_translation = getCameraTranslationAfterTempZoom();
+
+        transformMatrix(mMVPMatrix, camera_theta, camera_phi, current_camera_translation); // transform camera matrix
+        transformMatrix(mMVPProjectorMatrix, projector_theta, projector_phi, projectorTranslationV); // transform projector matrix
 
         mSurfaceTexture.updateTexImage();
 
@@ -80,26 +84,24 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         mHemisphere.render(mMVPMatrix, mMVPProjectorMatrix);
     }
 
-    private void transformMatrix(float[] m, float theta, float phi, float zoom_scale){
+    private void transformMatrix(float[] m, float theta, float phi, float[] translationV){
         // Set the projector position (View matrix)
         Matrix.setLookAtM(mViewMatrix, 0,
-                0, altitude, 0, //eye
-                look_at_center[0], look_at_center[1], look_at_center[2], //center
+                0, 0, 0, //eye
+                0, 0, 10, //center
                 0, 1, 0); // up
 
-        float[] translateV = computeTranslationVector(theta, phi, zoom_scale);
-
         Matrix.invertM(mCamera, 0, mViewMatrix, 0);
-        Matrix.translateM(mCamera, 0, translateV[0], translateV[1], translateV[2]);
         Matrix.rotateM(mCamera, 0, phi % 360, 0, 1, 0); // rotate in horizontal direction about y axis
         Matrix.rotateM(mCamera, 0, theta%360, 1, 0, 0); // rotate in vertical direction about x direction
+        Matrix.translateM(mCamera, 0, translationV[0], translationV[1], translationV[2]);
         Matrix.invertM(mViewMatrix, 0, mCamera, 0);
 
         // Calculate the projection and view transformation
         Matrix.multiplyMM(m, 0, mProjectionMatrix, 0, mViewMatrix, 0);
     }
 
-    private float[] computeTranslationVector(float theta, float phi, float zoom_scale){
+    private float[] pendingZoom(float theta, float phi, float zoom_scale){
         //compute rotation matrices
         float[] rotateThetaMatrix = new float[16];
         float[] rotatePhiMatrix = new float[16];
@@ -113,6 +115,34 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         float[] translateV = new float[4];
         Matrix.multiplyMV(translateV, 0, rotationMatrix, 0, new float[]{0, 0, zoom_scale, 1}, 0);
         return translateV;
+    }
+
+    public float[] getCameraTranslationAfterTempZoom(){
+        float[] translation = addArrays(cameraTranslationV, pendingZoom(camera_theta, camera_phi, camera_zoom_scale));
+
+        // bound translation
+        // if we're beyond bounds for any of the dimensions, don't move
+//        float alt = translation[1];
+//        float x = translation[0];
+//        float z = translation[2];
+//        if (alt < Constants.MIN_ALTITUDE || alt > Constants.MAX_ALTITUDE ||
+//            x < -Constants.MAX_DIST || x > Constants.MAX_DIST ||
+//            z < -Constants.MAX_DIST || z > Constants.MAX_DIST) {
+//            return translationV;
+//        }
+
+        return translation;
+    }
+
+    private float[] addArrays(float[] a1, float[] a2){
+        if (a1.length != a2.length) {
+            return new float[0];
+        }
+        float[] sum = new float[a1.length];
+        for (int i = 0; i < a1.length; i++) {
+            sum[i] = a1[i] + a2[i];
+        }
+        return sum;
     }
 
     public void onSurfaceChanged(GL10 unused, int width, int height) {
@@ -144,55 +174,72 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     }
 
     public void updateCameraRotationAngles(float theta, float phi) {
-        theta_camera -= theta; // vertical directions are inverted
-        phi_camera += phi;
+        camera_theta -= theta; // vertical directions are inverted
+        camera_phi += phi;
     }
 
     public void updateProjectorRotationAngles(float theta, float phi) {
-        theta_projector -=theta;
-        phi_projector += phi;
+        projector_theta -=theta;
+        projector_phi += phi;
     }
 
     public void setProjectorRotationAngles(float theta, float phi) {
-        theta_projector = theta;
-        phi_projector = phi;
+        projector_theta = theta;
+        projector_phi = phi;
     }
 
     public float getThetaCamera(){
-        return theta_camera;
+        return camera_theta;
     }
 
     public float getPhiCamera(){
-        return phi_camera;
+        return camera_phi;
     }
 
     public float getThetaProjector(){
-        return theta_projector;
+        return projector_theta;
     }
 
     public float getPhiProjector(){
-        return phi_projector;
+        return projector_phi;
     }
 
     public void setInitialCameraTheta(float theta){
-        theta_camera = theta;
-        theta_camera_initialized = true;
+        camera_theta = theta;
+        camera_theta_initialized = true;
     }
 
     public void setInitialCameraPhi(float phi){
-        phi_camera = phi;
-        phi_camera_initialized = false;
+        camera_phi = phi;
+        camera_phi_initialized = true;
     }
 
     public boolean isCameraThetaInitialized(){
-        return theta_camera_initialized;
+        return camera_theta_initialized;
     }
 
     public boolean isCameraPhiInitailized(){
-        return phi_camera_initialized;
+        return camera_phi_initialized;
     }
 
-    public void updateZoomScale(float scale) {
-        zoom_scale_camera += scale;
+    public void updateCurrentCameraZoom(float scale) {
+        camera_zoom_scale += scale;
+    }
+
+    public float[] getCameraTranslation(){
+        return cameraTranslationV;
+    }
+
+    public void finalizeCurrentCameraZoom(){
+        cameraTranslationV = addArrays(cameraTranslationV, pendingZoom(camera_theta, camera_phi, camera_zoom_scale));
+        camera_zoom_scale = 0;
+    }
+
+    public void setProjectorTranslationV(float x, float y, float z){
+        projectorTranslationV = new float[]{x, y, z, 0};
+    }
+
+    public float[] getProjectorTranslation(){
+        return projectorTranslationV;
     }
 }

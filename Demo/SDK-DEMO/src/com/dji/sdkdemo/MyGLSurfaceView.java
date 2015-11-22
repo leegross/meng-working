@@ -7,7 +7,7 @@ import android.view.MotionEvent;
 
 import static java.lang.Math.atan2;
 import static java.lang.Math.pow;
-import static java.lang.Math.sqrt;
+import static java.lang.StrictMath.sqrt;
 import static java.lang.StrictMath.tan;
 import static java.lang.StrictMath.toDegrees;
 import static java.lang.StrictMath.toRadians;
@@ -64,15 +64,21 @@ class MyGLSurfaceView extends GLSurfaceView {
                     break;
                 case MotionEvent.ACTION_MOVE:
                     float delta = (float) sqrt(pow(p1x - p2x, 2) + pow(p1y - p2y, 2));
-                    float zoom_scale = (mPrevDelta - delta);
-                    mRenderer.updateZoomScale(zoom_scale);
+                    float zoom_scale = (mPrevDelta - delta)/10.0f;
+                    mRenderer.updateCurrentCameraZoom(zoom_scale);
                     break;
                 case MotionEvent.ACTION_POINTER_UP:
                     int i = 1 - e.getActionIndex(); // index of the finger that is left
                     mPreviousX = e.getX(i);
                     mPreviousY = e.getY(i);
-                    break;
-                case MotionEvent.ACTION_UP:
+
+                    mRenderer.finalizeCurrentCameraZoom();
+                    float[] cameraTranslationV = mRenderer.getCameraTranslation();
+                    float x_translate = cameraTranslationV[0];
+                    float y_translate = cameraTranslationV[1];
+                    float z_translate = cameraTranslationV[2];
+                    mDroneWrapper.setNewGPSCoordinates(x_translate, y_translate, z_translate);
+
                     break;
             }
 
@@ -131,15 +137,19 @@ class MyGLSurfaceView extends GLSurfaceView {
 
     // called by drone wrapper when we receive new orientation update
     public void onDroneOrientationUpdate() {
-        float currentGimbalPitch = (float) mDroneWrapper.getCurrentGimbalPitch();
+        float currentGimbalPitch = mDroneWrapper.getCurrentGimbalPitch();
         float currentYaw = mDroneWrapper.getCurrentYaw();
+        float x = mDroneWrapper.getCurrentLongitudeInMeters();
+        float y = mDroneWrapper.getCurrentAltitude();
+        float z = mDroneWrapper.getCurrentLatitudeInMeters();
 
         mRenderer.setProjectorRotationAngles(currentGimbalPitch, currentYaw);
+        mRenderer.setProjectorTranslationV(x, y, z);
 
-        if (mDroneWrapper.droneUpdatesAreInitialized() && mRenderer.isCameraPhiInitailized()) {
+        if (mDroneWrapper.droneUpdatesAreInitialized() && !mRenderer.isCameraPhiInitailized()) {
             mRenderer.setInitialCameraPhi(currentYaw);
         }
-        if (mDroneWrapper.droneUpdatesAreInitialized() && mRenderer.isCameraThetaInitialized()) {
+        if (mDroneWrapper.droneUpdatesAreInitialized() && !mRenderer.isCameraThetaInitialized()) {
             mRenderer.setInitialCameraTheta(currentGimbalPitch);
         }
     }

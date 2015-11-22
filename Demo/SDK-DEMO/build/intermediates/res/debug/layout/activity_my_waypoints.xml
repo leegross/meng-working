@@ -9,8 +9,7 @@
         android:id="@+id/surfaceView_Rl_gs"
         android:layout_width="1580px"
         android:layout_height="889px"
-        android:layout_marginBottom="0dp"
-        android:layout_toLeftOf="@+id/GroundStationInfoScrollView">
+        android:layout_marginBottom="0dp">
 
         <com.dji.sdkdemo.MyGLSurfaceView
             android:id="@+id/surfaceview"
@@ -50,7 +49,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:weightSum="1">
 
             <Button
                 android:id="@+id/TakeOff"
@@ -127,29 +127,24 @@
             <ScrollView
                 android:id="@+id/GroundStationInfoScrollView"
                 android:layout_width="fill_parent"
-                android:layout_height="80dp"
+                android:layout_height="250dp"
                 android:scrollbars="vertical"
-                android:layout_alignParentRight="true"
-                android:layout_marginTop="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_above="@+id/GroundStationInfoScrollView"
+                android:layout_toRightOf="@+id/surfaceview"
                 android:background="@drawable/selector_button"
-                android:layout_alignBottom="@+id/scrollViewGimbal">
+                android:layout_weight="0.68">
 
-                <RelativeLayout
+                <TextView
+                    android:id="@+id/GroundStationInfoTV"
                     android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:layout_marginLeft="5dp"
-                    android:orientation="vertical" >
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="GS State:"
+                    android:layout_centerInParent="true"
+                    android:textSize="14sp"
+                    />
 
-                    <TextView
-                        android:id="@+id/GroundStationInfoTV"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:textColor="@android:color/white"
-                        android:text="GS State:"
-                        android:layout_centerInParent="true"
-                        android:textSize="14sp"
-                        />
-                </RelativeLayout>
             </ScrollView>
 
 

@@ -23,14 +23,14 @@ public class DroneWrapper {
 
     // current drone parameters
     private float currentAltitude;
-    private double currentLatitude;
-    private double currentLongitude;
-    private double currentGimbalPitch;
+    private float currentLatitude;
+    private float currentLongitude;
+    private float currentGimbalPitch;
     private float currentYaw;
 
     // drone home points
-    private double homeLocationLatitude;
-    private double homeLocationLongitude;
+    private float homeLocationLatitude;
+    private float homeLocationLongitude;
     private boolean getHomePointFlag;
 
     private DJIGroundStationTask mTask;
@@ -59,12 +59,12 @@ public class DroneWrapper {
                 final StringBuffer sb = new StringBuffer();
 
                 currentAltitude = mInfo.altitude;
-                currentLatitude = mInfo.droneLocationLatitude;
-                currentLongitude = mInfo.droneLocationLongitude;
-                sb.append("Altitude = ").append(currentAltitude).append("\n");
-                sb.append("Latitude = ").append(currentLatitude).append("\n");
-                sb.append("Longitude = ").append(currentLongitude).append("\n");
-                sb.append("Yaw = ").append(mInfo.yaw).append("\n");
+                currentLatitude = (float) mInfo.droneLocationLatitude;
+                currentLongitude = (float) mInfo.droneLocationLongitude;
+                sb.append("drone altitude: ").append(currentAltitude).append("\n");
+                sb.append("drone latitude: ").append(currentLatitude).append("\n");
+                sb.append("drone longitude: ").append(currentLongitude).append("\n");
+                sb.append("drone yaw: ").append(mInfo.yaw).append("\n");
                 currentAltitude = mInfo.altitude;
                 currentYaw = mInfo.yaw;
 
@@ -82,8 +82,8 @@ public class DroneWrapper {
 
             @Override
             public void onResult(DJIMainControllerSystemState state) {
-                homeLocationLatitude = state.droneLocationLatitude;
-                homeLocationLongitude = state.droneLocationLongitude;
+                homeLocationLatitude = (float) state.homeLocationLatitude;
+                homeLocationLongitude = (float) state.homeLocationLongitude;
 
                 if (homeLocationLatitude != -1 && homeLocationLongitude != -1 && homeLocationLatitude != 0 && homeLocationLongitude != 0) {
                     getHomePointFlag = true;
@@ -123,12 +123,12 @@ public class DroneWrapper {
             @Override
             public void onResult(DJIGroundStationTypeDef.GroundStationResult groundStationResult) {
                 String ResultsString = "take off return code =" + groundStationResult.toString();
-                toastCallback.ToastResult(ResultsString);
+//                toastCallback.ToastResult(ResultsString);
             }
         });
     }
 
-    public void openGs(final double latitude, final double longitude, final float altitude, final short heading){
+    public void openGs(final float latitude, final float longitude, final float altitude, final short heading){
         if(!checkGetHomePoint()) return;
 
         DJIDrone.getDjiGroundStation().openGroundStation(new DJIGroundStationExecuteCallBack() {
@@ -136,7 +136,7 @@ public class DroneWrapper {
             @Override
             public void onResult(DJIGroundStationTypeDef.GroundStationResult result) {
                 String ResultsString = "openGS return code =" + result.toString();
-                toastCallback.ToastResult(ResultsString);
+//                toastCallback.ToastResult(ResultsString);
                 addWaypoint(latitude, longitude, altitude, heading);
             }
 
@@ -157,42 +157,87 @@ public class DroneWrapper {
         });
     }
 
-    private void addWaypoint(double latitude, double longitude, float altitude, short heading){
+//    private void addWaypoint(double latitude, double longitude, float altitude, short heading){
+//        mTask.RemoveAllWaypoint();
+//        DJIGroundStationWaypoint mWayPoint1 = new DJIGroundStationWaypoint(latitude, longitude);
+//        mWayPoint1.action.actionRepeat = 1;
+//        mWayPoint1.altitude = (currentAltitude+altitude)/2;
+//        mWayPoint1.heading = 0;
+//        mWayPoint1.actionTimeout = 10;
+//        mWayPoint1.turnMode = 1;
+//        mWayPoint1.dampingDistance = 1.5f;
+//        mWayPoint1.hasAction = true;
+//
+//        mWayPoint1.addAction(DJIGroundStationTypeDef.GroundStationOnWayPointAction.Way_Point_Action_Gimbal_Pitch, 0);
+//
+//
+//        mTask.addWaypoint(mWayPoint1);
+//
+//        DJIGroundStationWaypoint mWayPoint2 = new DJIGroundStationWaypoint(latitude, longitude);
+//        mWayPoint2.action.actionRepeat = 1;
+//        mWayPoint2.altitude = altitude;
+//        mWayPoint2.heading = 0;
+//        mWayPoint2.actionTimeout = 10;
+//        mWayPoint2.turnMode = 1;
+//        mWayPoint2.dampingDistance = 1.5f;
+//        mWayPoint2.hasAction = true;
+//
+//        mWayPoint2.addAction(DJIGroundStationTypeDef.GroundStationOnWayPointAction.Way_Point_Action_Craft_Yaw, heading);
+//
+//
+//        mTask.addWaypoint(mWayPoint2);
+//
+//        mTask.finishAction = DJIGroundStationTypeDef.DJIGroundStationFinishAction.None;
+//        mTask.movingMode = DJIGroundStationTypeDef.DJIGroundStationMovingMode.GSHeadingUsingWaypointHeading;
+//        mTask.pathMode = DJIGroundStationTypeDef.DJIGroundStationPathMode.Point_To_Point;
+//        mTask.wayPointCount = mTask.getAllWaypoint().size();
+//
+//        uploadWaypoint();
+//    }
+
+    private void addWaypoint(float latitude, float longitude, float altitude, short heading){
+        // there is a limitation that we must have two waypoints
+        // and that each waypoint must be at least 2 meters away from the previous waypoint
+        // therefore, for every waypoint we want to set, we set a midpoint along the way
+        // if the midpoint is less than two meters away from the current location,
+        // we make the drone fly two meters away and then back to where it needs to go
+        float lat_midpoint = (currentLatitude + latitude)/2.0f;
+        float long_midpoint = (currentLongitude + longitude)/2.0f;
+        float alt_midpoint = (currentAltitude+altitude)/2;
+
         mTask.RemoveAllWaypoint();
-        DJIGroundStationWaypoint mWayPoint1 = new DJIGroundStationWaypoint(latitude, longitude);
-        mWayPoint1.action.actionRepeat = 1;
-        mWayPoint1.altitude = (currentAltitude+altitude)/2;
-        mWayPoint1.heading = 0;
-        mWayPoint1.actionTimeout = 10;
-        mWayPoint1.turnMode = 1;
-        mWayPoint1.dampingDistance = 1.5f;
-        mWayPoint1.hasAction = true;
 
-        mWayPoint1.addAction(DJIGroundStationTypeDef.GroundStationOnWayPointAction.Way_Point_Action_Gimbal_Pitch, 0);
-
-
+        DJIGroundStationWaypoint mWayPoint1 = createWaypoint(lat_midpoint, long_midpoint, alt_midpoint, heading);
         mTask.addWaypoint(mWayPoint1);
 
-        DJIGroundStationWaypoint mWayPoint2 = new DJIGroundStationWaypoint(latitude, longitude);
-        mWayPoint2.action.actionRepeat = 1;
-        mWayPoint2.altitude = altitude;
-        mWayPoint2.heading = 0;
-        mWayPoint2.actionTimeout = 10;
-        mWayPoint2.turnMode = 1;
-        mWayPoint2.dampingDistance = 1.5f;
-        mWayPoint2.hasAction = true;
 
-        mWayPoint2.addAction(DJIGroundStationTypeDef.GroundStationOnWayPointAction.Way_Point_Action_Craft_Yaw, heading);
-
-
+        DJIGroundStationWaypoint mWayPoint2 = createWaypoint(latitude, longitude, altitude, heading);
         mTask.addWaypoint(mWayPoint2);
 
+        setWaypointTaskSettings();
+
+        uploadWaypoint();
+    }
+
+    private DJIGroundStationWaypoint createWaypoint(float latitude, float longitude, float altitude, float heading) {
+        DJIGroundStationWaypoint waypoint = new DJIGroundStationWaypoint(latitude, longitude);
+        waypoint.action.actionRepeat = 1;
+        waypoint.altitude = altitude;
+//        waypoint.heading = 0;
+        waypoint.actionTimeout = 10;
+        waypoint.turnMode = 1;
+        waypoint.dampingDistance = 1.5f;
+        waypoint.hasAction = false;
+
+//        waypoint.addAction(DJIGroundStationTypeDef.GroundStationOnWayPointAction.Way_Point_Action_Craft_Yaw, (int) heading);
+        return waypoint;
+    }
+
+    private void setWaypointTaskSettings(){
         mTask.finishAction = DJIGroundStationTypeDef.DJIGroundStationFinishAction.None;
         mTask.movingMode = DJIGroundStationTypeDef.DJIGroundStationMovingMode.GSHeadingUsingWaypointHeading;
         mTask.pathMode = DJIGroundStationTypeDef.DJIGroundStationPathMode.Point_To_Point;
         mTask.wayPointCount = mTask.getAllWaypoint().size();
-
-        uploadWaypoint();
     }
 
     private void uploadWaypoint(){
@@ -203,7 +248,7 @@ public class DroneWrapper {
             @Override
             public void onResult(DJIGroundStationTypeDef.GroundStationResult result) {
                 String ResultsString = "upload waypoint return code =" + result.toString();
-                toastCallback.ToastResult(ResultsString);
+//                toastCallback.ToastResult(ResultsString);
                 startTask();
             }
         });
@@ -217,12 +262,12 @@ public class DroneWrapper {
             @Override
             public void onResult(DJIGroundStationTypeDef.GroundStationResult result) {
                 String ResultsString = "start task return code =" + result.toString();
-                toastCallback.ToastResult(ResultsString);
+//                toastCallback.ToastResult(ResultsString);
             }
         });
     }
 
-    public void closeGs(){
+    public void closeGs(final float latitude, final float longitude, final float altitude, final short heading){
         if(!checkGetHomePoint()) return;
 
         DJIDrone.getDjiGroundStation().closeGroundStation(new DJIGroundStationExecuteCallBack(){
@@ -230,7 +275,8 @@ public class DroneWrapper {
             @Override
             public void onResult(DJIGroundStationTypeDef.GroundStationResult result) {
                 String ResultsString = "close gs return code =" + result.toString();
-                toastCallback.ToastResult(ResultsString);
+//                toastCallback.ToastResult(ResultsString);
+                openGs(latitude, longitude, altitude, heading);
             }
 
         });
@@ -299,40 +345,79 @@ public class DroneWrapper {
         return currentAltitude;
     }
 
-    public double getCurrentLatitude(){
+    public float getCurrentLatitude(){
         return currentLatitude;
     }
 
-    public double getCurrentLongitude(){
+    public float getCurrentLongitude(){
         return currentLongitude;
     }
 
-    public double getHomeLocationLatitude(){
+    public float getHomeLocationLatitude(){
         return homeLocationLatitude;
     }
 
-    public double getHomeLocationLongitude(){
+    public float getHomeLocationLongitude(){
         return homeLocationLongitude;
     }
 
-    public double getCurrentGimbalPitch(){
+    public float getCurrentGimbalPitch(){
         return currentGimbalPitch;
     }
 
-    public double getGimbalMinPitchAngle(){
+    public float getGimbalMinPitchAngle(){
         return -90;//DJIDrone.getDjiGimbal().getGimbalPitchMinAngle();
     }
 
-    public double getGimbalMaxPitchAngle(){
+    public float getGimbalMaxPitchAngle(){
         return 0;//DJIDrone.getDjiGimbal().getGimbalPitchMaxAngle();
     }
 
-    public void setCurrentGimbalPitch(double pitch){
+    public void setCurrentGimbalPitch(float pitch){
         currentGimbalPitch = pitch;
         mGLView.onDroneOrientationUpdate();
     }
 
     public float getCurrentYaw(){
         return -currentYaw;
+    }
+
+    // receives new coordinates in meters
+    public void setNewGPSCoordinates(float x, float y, float z) {
+        // bound parameters
+//        altitude = max(Constants.MIN_ALTITUDE, altitude);
+//        altitude = min(Constants.MAX_ALTITUDE, altitude);
+//        latitude = max(-Constants.MAX_DIST, latitude);
+//        latitude = min(Constants.MAX_DIST, latitude);
+//        longitude = max(-Constants.MAX_DIST, longitude);
+//        longitude = min(Constants.MAX_DIST, longitude);
+
+        // convert longitude and latitude to gps coordinates
+        float converted_lat = homeLocationLatitude - metersToLat(z);
+        float converted_long = homeLocationLongitude - metersToLong(x);
+
+        flyToNewWaypoint(converted_lat, converted_long, y);
+    }
+
+    private void flyToNewWaypoint(float latitude, float longitude, float altitude) {
+        closeGs(latitude, longitude, altitude, (short) 0);
+    }
+
+    private float metersToLong(float longitude_in_meters) {
+        float converted_longitude = longitude_in_meters * .000001f;
+        return converted_longitude;
+    }
+
+    private float metersToLat(float latitude_in_meters) {
+        float converted_latitude = latitude_in_meters * .000001f;
+        return converted_latitude;
+    }
+
+    public float getCurrentLongitudeInMeters(){
+        return -(currentLongitude - homeLocationLongitude)/.000001f;
+    }
+
+    public float getCurrentLatitudeInMeters(){
+        return -(currentLatitude - homeLocationLatitude)/.000001f;
     }
 }

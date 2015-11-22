@@ -17,7 +17,13 @@ public class Constants {
     public static float FRUST_NEAR = .1f;
     public static float SPHERE_RADIUS = 500f;
 
+    public static float MAX_DIST = 30;
+    public static float MIN_ALTITUDE = .2f;
+    public static float MAX_ALTITUDE = 20;
+
+    public static float STARTING_ALTITUDE = 1.1f;
+
     // used to determine whether to use an image or the stream for the texture
     // don't forget to change code in fragment shader
-    public static boolean USE_CAMERA_STREAM = false;
+    public static boolean USE_CAMERA_STREAM = true;
 }

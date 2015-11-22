@@ -112,7 +112,29 @@ public class TouchControllerActivity extends DemoBaseActivity
                     @Override
                     public void run() {
                         if (type == "ground_station_text_view") {
-                            mGroundStationTextView.setText(result);
+                            final StringBuffer sb = new StringBuffer();
+
+                            MyGLRenderer r = mGLView.getRenderer();
+                            float[] camera_translation = r.getCameraTranslationAfterTempZoom();
+                            float camera_phi = r.getPhiCamera();
+                            float camera_theta = r.getThetaCamera();
+                            sb.append("camera_x: ").append(camera_translation[0]).append("\n");
+                            sb.append("camera_y: ").append(camera_translation[1]).append("\n");
+                            sb.append("camera_z: ").append(camera_translation[2]).append("\n");
+                            sb.append("camera pitch: ").append(camera_theta).append("\n");
+                            sb.append("camera yaw: ").append(camera_phi).append("\n");
+
+                            float[] projector_translation = r.getProjectorTranslation();
+                            float projector_phi = r.getPhiProjector();
+                            float projector_theta = r.getThetaProjector();
+                            sb.append("projector_x: ").append(projector_translation[0]).append("\n");
+                            sb.append("projector_y: ").append(projector_translation[1]).append("\n");
+                            sb.append("projector_z: ").append(projector_translation[2]).append("\n");
+                            sb.append("projector pitch: ").append(projector_theta).append("\n");
+                            sb.append("projector yaw: ").append(projector_phi).append("\n");
+                            String txt = sb.toString();
+                            txt += result;
+                            mGroundStationTextView.setText(txt);
                         }
                     }
                 });
@@ -222,15 +244,15 @@ public class TouchControllerActivity extends DemoBaseActivity
     }
 
     public void addWaypoints1(View v){
-        droneWrapper.openGs(droneWrapper.getHomeLocationLatitude(), droneWrapper.getHomeLocationLongitude(), 10f, (short) 0);
+//        droneWrapper.openGs(droneWrapper.getHomeLocationLatitude(), droneWrapper.getHomeLocationLongitude(), 10f, (short) 0);
     }
 
     public void addWaypoints2(View v){
-        droneWrapper.openGs(droneWrapper.getHomeLocationLatitude(), droneWrapper.getHomeLocationLongitude(), 2f, (short) 0);
+//        droneWrapper.openGs(droneWrapper.getHomeLocationLatitude(), droneWrapper.getHomeLocationLongitude(), 2f, (short) 0);
     }
 
     public void closeGs(View v){
-        droneWrapper.closeGs();
+//        droneWrapper.closeGs();
     }
 
     private void initDecoder() {
@@ -278,7 +300,7 @@ public class TouchControllerActivity extends DemoBaseActivity
                 sb.append("roll adjust=").append(attitude.rollAdjust).append("\n");
 
                 if (dw != null) {
-                    droneWrapper.setCurrentGimbalPitch(attitude.pitch);
+                    droneWrapper.setCurrentGimbalPitch((float) attitude.pitch);
 
                 }
 
