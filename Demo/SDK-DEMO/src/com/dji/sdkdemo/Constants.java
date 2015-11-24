@@ -22,6 +22,7 @@ public class Constants {
     public static float MAX_ALTITUDE = 20;
 
     public static float STARTING_ALTITUDE = 1.1f;
+    public static float GPS_SCALE = .0000006f;
 
     // used to determine whether to use an image or the stream for the texture
     // don't forget to change code in fragment shader

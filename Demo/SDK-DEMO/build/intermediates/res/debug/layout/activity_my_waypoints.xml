@@ -67,6 +67,36 @@
                 android:onClick="takeOff"/>
 
             <Button
+                android:id="@+id/setYawButton"
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/selector_button"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:text="reset camera"
+                android:onClick="resetCamera"/>
+
+            <Button
+                android:id="@+id/CloseGsButton"
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/selector_button"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:text="stop"
+                android:onClick="closeGs"
+                android:layout_above="@+id/GroundStationInfoScrollView"
+                android:layout_toRightOf="@+id/surfaceview" />
+
+            <Button
                 android:id="@+id/AddWaypointButton1"
                 android:layout_width="150dp"
                 android:layout_height="35dp"
@@ -81,20 +111,6 @@
                 android:onClick="addWaypoints1"/>
 
             <Button
-                android:id="@+id/setYawButton"
-                android:layout_width="150dp"
-                android:layout_height="35dp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/selector_button"
-                android:textSize="14sp"
-                android:textColor="@color/white"
-                android:text="set yaw"
-                android:onClick=""/>
-
-            <Button
                 android:id="@+id/AddWaypointButton2"
                 android:layout_width="150dp"
                 android:layout_height="35dp"
@@ -107,22 +123,6 @@
                 android:textColor="@color/white"
                 android:text="add waypoints 2"
                 android:onClick="addWaypoints2"/>
-
-            <Button
-                android:id="@+id/CloseGsButton"
-                android:layout_width="150dp"
-                android:layout_height="35dp"
-                android:paddingLeft="5dp"
-                android:paddingRight="5dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/selector_button"
-                android:textSize="14sp"
-                android:textColor="@color/white"
-                android:text="close Gs"
-                android:onClick="closeGs"
-                android:layout_above="@+id/GroundStationInfoScrollView"
-                android:layout_toRightOf="@+id/surfaceview" />
 
             <ScrollView
                 android:id="@+id/GroundStationInfoScrollView"

@@ -10,6 +10,8 @@ import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
 import static android.opengl.Matrix.perspectiveM;
+import static java.lang.Math.atan2;
+import static java.lang.Math.toDegrees;
 
 /**
  * Created by leegross on 9/14/15.
@@ -34,8 +36,6 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     private SurfaceTexture mSurfaceTexture;
     private Context mContext;
     private Hemisphere mHemisphere;
-
-    private float camera_zoom_scale;
 
     private float[] cameraTranslationV;
     private float[] projectorTranslationV;
@@ -62,8 +62,6 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         camera_theta_initialized = false;
         camera_phi_initialized = false;
 
-        camera_zoom_scale = 0;
-
         cameraTranslationV = new float[]{0, Constants.STARTING_ALTITUDE, 0, 0};
         projectorTranslationV = new float[]{0, Constants.STARTING_ALTITUDE, 0, 0};
     }
@@ -73,9 +71,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         // Redraw background color
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT | GLES20.GL_DEPTH_BUFFER_BIT);
 
-        float[] current_camera_translation = getCameraTranslationAfterTempZoom();
-
-        transformMatrix(mMVPMatrix, camera_theta, camera_phi, current_camera_translation); // transform camera matrix
+        transformMatrix(mMVPMatrix, camera_theta, camera_phi, cameraTranslationV); // transform camera matrix
         transformMatrix(mMVPProjectorMatrix, projector_theta, projector_phi, projectorTranslationV); // transform projector matrix
 
         mSurfaceTexture.updateTexImage();
@@ -92,46 +88,22 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
                 0, 1, 0); // up
 
         Matrix.invertM(mCamera, 0, mViewMatrix, 0);
-        Matrix.rotateM(mCamera, 0, phi % 360, 0, 1, 0); // rotate in horizontal direction about y axis
-        Matrix.rotateM(mCamera, 0, theta%360, 1, 0, 0); // rotate in vertical direction about x direction
         Matrix.translateM(mCamera, 0, translationV[0], translationV[1], translationV[2]);
+        Matrix.rotateM(mCamera, 0, phi % 360, 0, 1, 0); // rotate in horizontal direction about y axis
+        Matrix.rotateM(mCamera, 0, theta % 360, 1, 0, 0); // rotate in vertical direction about x direction
         Matrix.invertM(mViewMatrix, 0, mCamera, 0);
 
         // Calculate the projection and view transformation
         Matrix.multiplyMM(m, 0, mProjectionMatrix, 0, mViewMatrix, 0);
     }
 
-    private float[] pendingZoom(float theta, float phi, float zoom_scale){
+    public void updateCameraZoom(float zoom_scale){
         //compute rotation matrices
-        float[] rotateThetaMatrix = new float[16];
-        float[] rotatePhiMatrix = new float[16];
-
-        Matrix.setRotateM(rotateThetaMatrix, 0, theta, 1, 0, 0);
-        Matrix.setRotateM(rotatePhiMatrix, 0, phi, 0, 1, 0);
-
-        float[] rotationMatrix = new float[16];
-        Matrix.multiplyMM(rotationMatrix, 0, rotatePhiMatrix, 0, rotateThetaMatrix, 0);
+        float[] rotationMatrix = getCameraRotationMatrix(camera_theta, camera_phi);
 
         float[] translateV = new float[4];
         Matrix.multiplyMV(translateV, 0, rotationMatrix, 0, new float[]{0, 0, zoom_scale, 1}, 0);
-        return translateV;
-    }
-
-    public float[] getCameraTranslationAfterTempZoom(){
-        float[] translation = addArrays(cameraTranslationV, pendingZoom(camera_theta, camera_phi, camera_zoom_scale));
-
-        // bound translation
-        // if we're beyond bounds for any of the dimensions, don't move
-//        float alt = translation[1];
-//        float x = translation[0];
-//        float z = translation[2];
-//        if (alt < Constants.MIN_ALTITUDE || alt > Constants.MAX_ALTITUDE ||
-//            x < -Constants.MAX_DIST || x > Constants.MAX_DIST ||
-//            z < -Constants.MAX_DIST || z > Constants.MAX_DIST) {
-//            return translationV;
-//        }
-
-        return translation;
+        cameraTranslationV = addArrays(cameraTranslationV, translateV);
     }
 
     private float[] addArrays(float[] a1, float[] a2){
@@ -222,17 +194,8 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         return camera_phi_initialized;
     }
 
-    public void updateCurrentCameraZoom(float scale) {
-        camera_zoom_scale += scale;
-    }
-
     public float[] getCameraTranslation(){
         return cameraTranslationV;
-    }
-
-    public void finalizeCurrentCameraZoom(){
-        cameraTranslationV = addArrays(cameraTranslationV, pendingZoom(camera_theta, camera_phi, camera_zoom_scale));
-        camera_zoom_scale = 0;
     }
 
     public void setProjectorTranslationV(float x, float y, float z){
@@ -241,5 +204,42 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
     public float[] getProjectorTranslation(){
         return projectorTranslationV;
+    }
+
+    public void resetCameraParameters(){
+        camera_phi = projector_phi;
+        camera_theta = projector_theta;
+        System.arraycopy( projectorTranslationV, 0, cameraTranslationV, 0, projectorTranslationV.length );
+    }
+
+    public void updateCameraRotation(float theta, float phi){
+        float[] temp = new float[16];
+        float[] currentRotationInverse = new float[16];
+
+        float[] currentRotationMatrix = getCameraRotationMatrix(camera_theta, camera_phi);
+        Matrix.invertM(currentRotationInverse, 0, currentRotationMatrix, 0);
+        float[] tempBasisRotationMatrix = getCameraRotationMatrix(theta, phi);
+
+        float[] deltaRotationMatrix = new float[16];
+        Matrix.multiplyMM(temp, 0, currentRotationMatrix, 0, tempBasisRotationMatrix, 0);
+        Matrix.multiplyMM(deltaRotationMatrix, 0, temp, 0, currentRotationInverse, 0);
+
+        float[] rotatedZ = new float[4];
+        Matrix.multiplyMV(rotatedZ, 0, deltaRotationMatrix, 0, new float[]{0, 0, 1, 0}, 0);
+
+        camera_theta += toDegrees(atan2(rotatedZ[1], rotatedZ[2]));
+        camera_phi += toDegrees(atan2(rotatedZ[0], rotatedZ[2]));
+    }
+
+    private float[] getCameraRotationMatrix(float theta, float phi){
+        float[] rotateThetaMatrix = new float[16];
+        float[] rotatePhiMatrix = new float[16];
+
+        Matrix.setRotateM(rotateThetaMatrix, 0, theta, 1, 0, 0);
+        Matrix.setRotateM(rotatePhiMatrix, 0, phi, 0, 1, 0);
+
+        float[] rotationMatrix = new float[16];
+        Matrix.multiplyMM(rotationMatrix, 0, rotatePhiMatrix, 0, rotateThetaMatrix, 0);
+        return rotationMatrix;
     }
 }

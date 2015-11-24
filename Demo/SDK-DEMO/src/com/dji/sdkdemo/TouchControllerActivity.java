@@ -115,7 +115,7 @@ public class TouchControllerActivity extends DemoBaseActivity
                             final StringBuffer sb = new StringBuffer();
 
                             MyGLRenderer r = mGLView.getRenderer();
-                            float[] camera_translation = r.getCameraTranslationAfterTempZoom();
+                            float[] camera_translation = r.getCameraTranslation();
                             float camera_phi = r.getPhiCamera();
                             float camera_theta = r.getThetaCamera();
                             sb.append("camera_x: ").append(camera_translation[0]).append("\n");
@@ -252,7 +252,11 @@ public class TouchControllerActivity extends DemoBaseActivity
     }
 
     public void closeGs(View v){
-//        droneWrapper.closeGs();
+        droneWrapper.closeGs();
+    }
+
+    public void resetCamera(View v){
+        mGLView.getRenderer().resetCameraParameters();
     }
 
     private void initDecoder() {

@@ -15,6 +15,8 @@ import dji.sdk.interfaces.DJIMcuUpdateStateCallBack;
 
 import static java.lang.Math.max;
 import static java.lang.Math.min;
+import static java.lang.Math.pow;
+import static java.lang.StrictMath.sqrt;
 
 /**
  * Created by leegross on 11/3/15.
@@ -68,7 +70,7 @@ public class DroneWrapper {
                 currentAltitude = mInfo.altitude;
                 currentYaw = mInfo.yaw;
 
-                mGLView.onDroneOrientationUpdate();
+                mGLView.onDroneLocationAndOrientationUpdate();
 
                 if (mUiCallback != null) {
                     mUiCallback.UICallback("ground_station_text_view", sb.toString());
@@ -201,9 +203,23 @@ public class DroneWrapper {
         // therefore, for every waypoint we want to set, we set a midpoint along the way
         // if the midpoint is less than two meters away from the current location,
         // we make the drone fly two meters away and then back to where it needs to go
-        float lat_midpoint = (currentLatitude + latitude)/2.0f;
-        float long_midpoint = (currentLongitude + longitude)/2.0f;
-        float alt_midpoint = (currentAltitude+altitude)/2;
+
+        // check if lat and log are at least 4 meters away from current location
+        // if they are, just give the first waypoint the midpoint coordinates
+        // otherwise, give the second waypoint an altitude that is 2 meters above the second waypoint
+        float dist = distInMeters(latitude, longitude, latitude, currentLatitude, currentLongitude, currentAltitude);
+        float lat_midpoint;
+        float long_midpoint;
+        float alt_midpoint;
+//        if (dist < 4) {
+            lat_midpoint = (currentLatitude + latitude)/2.0f;
+            long_midpoint = (currentLongitude + longitude)/2.0f;
+            alt_midpoint = (currentAltitude+altitude)/2 + 2.0f;
+//        } else {
+//            lat_midpoint = (currentLatitude + latitude)/2.0f;
+//            long_midpoint = (currentLongitude + longitude)/2.0f;
+//            alt_midpoint = (currentAltitude+altitude)/2;
+//        }
 
         mTask.RemoveAllWaypoint();
 
@@ -217,6 +233,12 @@ public class DroneWrapper {
         setWaypointTaskSettings();
 
         uploadWaypoint();
+    }
+
+    private float distInMeters(float lat1, float long1, float alt1, float lat2, float long2, float alt2){
+        float lat_diff_in_meters = (lat1 - lat2)/Constants.GPS_SCALE;
+        float long_diff_in_meters = (long1 - long2)/Constants.GPS_SCALE;
+        return (float) sqrt(pow(lat_diff_in_meters, 2.0) + pow(long_diff_in_meters, 2.0) + pow(alt1 - alt2, 2.0));
     }
 
     private DJIGroundStationWaypoint createWaypoint(float latitude, float longitude, float altitude, float heading) {
@@ -277,6 +299,20 @@ public class DroneWrapper {
                 String ResultsString = "close gs return code =" + result.toString();
 //                toastCallback.ToastResult(ResultsString);
                 openGs(latitude, longitude, altitude, heading);
+            }
+
+        });
+    }
+
+    public void closeGs(){
+        if(!checkGetHomePoint()) return;
+
+        DJIDrone.getDjiGroundStation().closeGroundStation(new DJIGroundStationExecuteCallBack(){
+
+            @Override
+            public void onResult(DJIGroundStationTypeDef.GroundStationResult result) {
+                String ResultsString = "close gs return code =" + result.toString();
+//                toastCallback.ToastResult(ResultsString);
             }
 
         });
@@ -375,7 +411,7 @@ public class DroneWrapper {
 
     public void setCurrentGimbalPitch(float pitch){
         currentGimbalPitch = pitch;
-        mGLView.onDroneOrientationUpdate();
+        mGLView.onDroneLocationAndOrientationUpdate();
     }
 
     public float getCurrentYaw(){
@@ -404,20 +440,18 @@ public class DroneWrapper {
     }
 
     private float metersToLong(float longitude_in_meters) {
-        float converted_longitude = longitude_in_meters * .000001f;
-        return converted_longitude;
+        return longitude_in_meters * Constants.GPS_SCALE;
     }
 
     private float metersToLat(float latitude_in_meters) {
-        float converted_latitude = latitude_in_meters * .000001f;
-        return converted_latitude;
+        return latitude_in_meters * Constants.GPS_SCALE;
     }
 
     public float getCurrentLongitudeInMeters(){
-        return -(currentLongitude - homeLocationLongitude)/.000001f;
+        return -(currentLongitude - homeLocationLongitude)/Constants.GPS_SCALE;
     }
 
     public float getCurrentLatitudeInMeters(){
-        return -(currentLatitude - homeLocationLatitude)/.000001f;
+        return -(currentLatitude - homeLocationLatitude)/Constants.GPS_SCALE;
     }
 }

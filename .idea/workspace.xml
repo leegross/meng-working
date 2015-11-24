@@ -69,8 +69,8 @@
       <file leaf-file-name="TouchControllerActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/TouchControllerActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1695" max-vertical-offset="4785">
-              <caret line="131" column="66" selection-start-line="131" selection-start-column="66" selection-end-line="131" selection-end-column="66" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2742" max-vertical-offset="4845">
+              <caret line="251" column="5" selection-start-line="251" selection-start-column="5" selection-end-line="251" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1341#1535#0" expanded="true" />
@@ -82,66 +82,61 @@
                 <element signature="e#3266#3267#0" expanded="true" />
                 <element signature="e#3358#3359#0" expanded="true" />
                 <element signature="e#3495#3496#0" expanded="true" />
-                <element signature="e#3623#5790#0" expanded="true" />
-                <element signature="e#3813#5764#0" expanded="true" />
-                <element signature="e#5745#5746#0" expanded="true" />
-                <element signature="e#5779#5780#0" expanded="true" />
-                <element signature="e#5940#5941#0" expanded="true" />
-                <element signature="e#5983#5984#0" expanded="true" />
-                <element signature="e#6128#6314#0" expanded="true" />
-                <element signature="e#6303#6304#0" expanded="true" />
-                <element signature="e#6590#7143#0" expanded="true" />
-                <element signature="e#6911#6940#0" expanded="true" />
-                <element signature="e#7045#7077#0" expanded="true" />
-                <element signature="e#7132#7133#0" expanded="true" />
-                <element signature="e#7576#7577#0" expanded="true" />
-                <element signature="e#7607#7608#0" expanded="true" />
-                <element signature="e#8228#8229#0" expanded="true" />
-                <element signature="e#8266#8267#0" expanded="true" />
-                <element signature="e#8921#9813#0" expanded="true" />
-                <element signature="e#9089#9786#0" expanded="true" />
-                <element signature="e#9767#9768#0" expanded="true" />
-                <element signature="e#9802#9803#0" expanded="true" />
+                <element signature="e#3623#5777#0" expanded="true" />
+                <element signature="e#3813#5751#0" expanded="true" />
+                <element signature="e#5732#5733#0" expanded="true" />
+                <element signature="e#5766#5767#0" expanded="true" />
+                <element signature="e#5927#5928#0" expanded="true" />
+                <element signature="e#5970#5971#0" expanded="true" />
+                <element signature="e#6115#6301#0" expanded="true" />
+                <element signature="e#6290#6291#0" expanded="true" />
+                <element signature="e#6577#7130#0" expanded="true" />
+                <element signature="e#6898#6927#0" expanded="true" />
+                <element signature="e#7032#7064#0" expanded="true" />
+                <element signature="e#7119#7120#0" expanded="true" />
+                <element signature="e#7563#7564#0" expanded="true" />
+                <element signature="e#7594#7595#0" expanded="true" />
+                <element signature="e#8215#8216#0" expanded="true" />
+                <element signature="e#8253#8254#0" expanded="true" />
+                <element signature="e#8634#8635#0" expanded="true" />
+                <element signature="e#8672#8673#0" expanded="true" />
+                <element signature="e#8710#8711#0" expanded="true" />
+                <element signature="e#8771#8772#0" expanded="true" />
+                <element signature="e#9005#9897#0" expanded="true" />
+                <element signature="e#9173#9870#0" expanded="true" />
+                <element signature="e#9851#9852#0" expanded="true" />
+                <element signature="e#9886#9887#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_my_waypoints.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml">
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1794" max-vertical-offset="2415">
-              <caret line="138" column="56" selection-start-line="138" selection-start-column="37" selection-end-line="138" selection-end-column="56" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DroneWrapper.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="DroneWrapper.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1009" max-vertical-offset="4335">
-              <caret line="251" column="0" selection-start-line="251" selection-start-column="0" selection-end-line="251" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.33333334" vertical-offset="2869" max-vertical-offset="4080">
+              <caret line="273" column="0" selection-start-line="273" selection-start-column="0" selection-end-line="273" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1791#2835#0" expanded="true" />
-                <element signature="e#2824#2825#0" expanded="true" />
-                <element signature="e#2949#3528#0" expanded="true" />
-                <element signature="e#3516#3517#0" expanded="true" />
-                <element signature="e#4257#4600#0" expanded="true" />
-                <element signature="e#4589#4590#0" expanded="true" />
-                <element signature="e#4821#5207#0" expanded="true" />
-                <element signature="e#5195#5196#0" expanded="true" />
+                <element signature="e#1866#2921#0" expanded="true" />
+                <element signature="e#2910#2911#0" expanded="true" />
+                <element signature="e#3035#3614#0" expanded="true" />
+                <element signature="e#3602#3603#0" expanded="true" />
+                <element signature="e#4343#4686#0" expanded="true" />
+                <element signature="e#4675#4676#0" expanded="true" />
+                <element signature="e#4907#5293#0" expanded="true" />
+                <element signature="e#5281#5282#0" expanded="true" />
                 <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
+                <element signature="method#createWaypoint#0;class#DroneWrapper#0" expanded="false" />
+                <element signature="method#setWaypointTaskSettings#0;class#DroneWrapper#0" expanded="false" />
                 <element signature="method#startTask#0;class#DroneWrapper#0" expanded="false" />
-                <element signature="e#10105#10424#0" expanded="true" />
-                <element signature="e#10413#10414#0" expanded="true" />
+                <element signature="e#11275#11594#0" expanded="true" />
+                <element signature="e#11583#11584#0" expanded="true" />
+                <element signature="method#closeGs#0;class#DroneWrapper#0" expanded="false" />
+                <element signature="method#closeGs#1;class#DroneWrapper#0" expanded="false" />
                 <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
-                <element signature="e#11295#11563#0" expanded="true" />
-                <element signature="e#11552#11553#0" expanded="true" />
+                <element signature="e#12920#13188#0" expanded="true" />
+                <element signature="e#13177#13178#0" expanded="true" />
                 <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
                 <element signature="method#resume#0;class#DroneWrapper#0" expanded="false" />
                 <element signature="method#pause#0;class#DroneWrapper#0" expanded="false" />
@@ -149,7 +144,8 @@
                 <element signature="method#getGimbalMinPitchAngle#0;class#DroneWrapper#0" expanded="false" />
                 <element signature="method#getGimbalMaxPitchAngle#0;class#DroneWrapper#0" expanded="false" />
                 <element signature="method#setCurrentGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
-                <marker date="1448235073000" expanded="false" signature="5673:7327" placeholder="..." />
+                <element signature="method#setNewGPSCoordinates#0;class#DroneWrapper#0" expanded="false" />
+                <marker date="1448327513000" expanded="false" signature="5759:7413" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -158,8 +154,8 @@
       <file leaf-file-name="MyGLSurfaceView.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2385">
-              <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1572" max-vertical-offset="2385">
+              <caret line="127" column="31" selection-start-line="127" selection-start-column="31" selection-end-line="127" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -168,28 +164,30 @@
       <file leaf-file-name="MyGLRenderer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.076923" vertical-offset="2828" max-vertical-offset="3240">
-              <caret line="240" column="0" selection-start-line="240" selection-start-column="0" selection-end-line="240" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1317" max-vertical-offset="2025">
+              <caret line="231" column="5" selection-start-line="231" selection-start-column="5" selection-end-line="231" selection-end-column="5" />
               <folding>
+                <element signature="method#onSurfaceCreated#0;class#MyGLRenderer#0" expanded="false" />
+                <element signature="method#addArrays#0;class#MyGLRenderer#0" expanded="false" />
+                <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-                <element signature="e#6759#6760#0" expanded="true" />
-                <element signature="e#6794#6795#0" expanded="true" />
-                <element signature="e#7503#7504#0" expanded="true" />
-                <element signature="e#7545#7546#0" expanded="true" />
-                <element signature="e#7589#7590#0" expanded="true" />
-                <element signature="e#7630#7631#0" expanded="true" />
-                <element signature="e#8011#8012#0" expanded="true" />
-                <element signature="e#8055#8056#0" expanded="true" />
+                <element signature="method#updateProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
+                <element signature="method#setProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
+                <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
+                <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
+                <element signature="method#setProjectorTranslationV#0;class#MyGLRenderer#0" expanded="false" />
+                <element signature="method#resetCameraParameters#0;class#MyGLRenderer#0" expanded="false" />
+                <element signature="method#updateCameraRotation#0;class#MyGLRenderer#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Constants.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Constants.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.65068495" vertical-offset="60" max-vertical-offset="525">
-              <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="540">
+              <caret line="24" column="46" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -1597,11 +1595,11 @@
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Hemisphere.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/res/raw/per_pixel_fragment_shader.glsl" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/TouchControllerActivity.java" />
-        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java" />
-        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java" />
-        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml" />
+        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java" />
+        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java" />
+        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java" />
       </list>
     </option>
   </component>
@@ -2121,14 +2119,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38441214" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38441214" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38441214" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -2218,30 +2216,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java</url>
-          <line>264</line>
-          <properties />
-          <option name="timeStamp" value="431" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java</url>
-          <line>251</line>
+          <line>273</line>
           <properties />
           <option name="timeStamp" value="467" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java</url>
-          <line>139</line>
-          <properties />
-          <option name="timeStamp" value="469" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java</url>
-          <line>218</line>
-          <properties />
-          <option name="timeStamp" value="472" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="478" />
+      <option name="time" value="487" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -2276,15 +2256,17 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1485" max-vertical-offset="2235">
           <caret line="99" column="49" selection-start-line="99" selection-start-column="49" selection-end-line="99" selection-end-column="49" />
           <folding>
+            <element signature="method#onSurfaceCreated#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#addArrays#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#6759#6760#0" expanded="true" />
-            <element signature="e#6794#6795#0" expanded="true" />
-            <element signature="e#7503#7504#0" expanded="true" />
-            <element signature="e#7545#7546#0" expanded="true" />
-            <element signature="e#7589#7590#0" expanded="true" />
-            <element signature="e#7630#7631#0" expanded="true" />
-            <element signature="e#8011#8012#0" expanded="true" />
-            <element signature="e#8055#8056#0" expanded="true" />
+            <element signature="method#updateProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#setProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#setProjectorTranslationV#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#resetCameraParameters#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#updateCameraRotation#0;class#MyGLRenderer#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2304,26 +2286,30 @@
             <element signature="e#3266#3267#0" expanded="true" />
             <element signature="e#3358#3359#0" expanded="true" />
             <element signature="e#3495#3496#0" expanded="true" />
-            <element signature="e#3623#5790#0" expanded="true" />
-            <element signature="e#3813#5764#0" expanded="true" />
-            <element signature="e#5745#5746#0" expanded="true" />
-            <element signature="e#5779#5780#0" expanded="true" />
-            <element signature="e#5940#5941#0" expanded="true" />
-            <element signature="e#5983#5984#0" expanded="true" />
-            <element signature="e#6128#6314#0" expanded="true" />
-            <element signature="e#6303#6304#0" expanded="true" />
-            <element signature="e#6590#7143#0" expanded="true" />
-            <element signature="e#6911#6940#0" expanded="true" />
-            <element signature="e#7045#7077#0" expanded="true" />
-            <element signature="e#7132#7133#0" expanded="true" />
-            <element signature="e#7576#7577#0" expanded="true" />
-            <element signature="e#7607#7608#0" expanded="true" />
-            <element signature="e#8228#8229#0" expanded="true" />
-            <element signature="e#8266#8267#0" expanded="true" />
-            <element signature="e#8921#9813#0" expanded="true" />
-            <element signature="e#9089#9786#0" expanded="true" />
-            <element signature="e#9767#9768#0" expanded="true" />
-            <element signature="e#9802#9803#0" expanded="true" />
+            <element signature="e#3623#5777#0" expanded="true" />
+            <element signature="e#3813#5751#0" expanded="true" />
+            <element signature="e#5732#5733#0" expanded="true" />
+            <element signature="e#5766#5767#0" expanded="true" />
+            <element signature="e#5927#5928#0" expanded="true" />
+            <element signature="e#5970#5971#0" expanded="true" />
+            <element signature="e#6115#6301#0" expanded="true" />
+            <element signature="e#6290#6291#0" expanded="true" />
+            <element signature="e#6577#7130#0" expanded="true" />
+            <element signature="e#6898#6927#0" expanded="true" />
+            <element signature="e#7032#7064#0" expanded="true" />
+            <element signature="e#7119#7120#0" expanded="true" />
+            <element signature="e#7563#7564#0" expanded="true" />
+            <element signature="e#7594#7595#0" expanded="true" />
+            <element signature="e#8215#8216#0" expanded="true" />
+            <element signature="e#8253#8254#0" expanded="true" />
+            <element signature="e#8634#8635#0" expanded="true" />
+            <element signature="e#8672#8673#0" expanded="true" />
+            <element signature="e#8710#8711#0" expanded="true" />
+            <element signature="e#8771#8772#0" expanded="true" />
+            <element signature="e#9005#9897#0" expanded="true" />
+            <element signature="e#9173#9870#0" expanded="true" />
+            <element signature="e#9851#9852#0" expanded="true" />
+            <element signature="e#9886#9887#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2359,15 +2345,17 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1485" max-vertical-offset="2235">
           <caret line="99" column="49" selection-start-line="99" selection-start-column="49" selection-end-line="99" selection-end-column="49" />
           <folding>
+            <element signature="method#onSurfaceCreated#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#addArrays#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#6759#6760#0" expanded="true" />
-            <element signature="e#6794#6795#0" expanded="true" />
-            <element signature="e#7503#7504#0" expanded="true" />
-            <element signature="e#7545#7546#0" expanded="true" />
-            <element signature="e#7589#7590#0" expanded="true" />
-            <element signature="e#7630#7631#0" expanded="true" />
-            <element signature="e#8011#8012#0" expanded="true" />
-            <element signature="e#8055#8056#0" expanded="true" />
+            <element signature="method#updateProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#setProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#setProjectorTranslationV#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#resetCameraParameters#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#updateCameraRotation#0;class#MyGLRenderer#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2645,10 +2633,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="885" max-vertical-offset="2415">
+          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1677" max-vertical-offset="2280">
+          <caret line="231" column="5" selection-start-line="231" selection-start-column="5" selection-end-line="231" selection-end-column="5" />
+          <folding>
+            <element signature="method#onSurfaceCreated#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#addArrays#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#updateProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#setProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#setProjectorTranslationV#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#resetCameraParameters#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#updateCameraRotation#0;class#MyGLRenderer#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1572" max-vertical-offset="2385">
+          <caret line="127" column="31" selection-start-line="127" selection-start-column="31" selection-end-line="127" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/TouchControllerActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1695" max-vertical-offset="4785">
-          <caret line="131" column="66" selection-start-line="131" selection-start-column="66" selection-end-line="131" selection-end-column="66" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="3630" max-vertical-offset="4845">
+          <caret line="251" column="5" selection-start-line="251" selection-start-column="5" selection-end-line="251" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1341#1535#0" expanded="true" />
@@ -2660,80 +2687,67 @@
             <element signature="e#3266#3267#0" expanded="true" />
             <element signature="e#3358#3359#0" expanded="true" />
             <element signature="e#3495#3496#0" expanded="true" />
-            <element signature="e#3623#5790#0" expanded="true" />
-            <element signature="e#3813#5764#0" expanded="true" />
-            <element signature="e#5745#5746#0" expanded="true" />
-            <element signature="e#5779#5780#0" expanded="true" />
-            <element signature="e#5940#5941#0" expanded="true" />
-            <element signature="e#5983#5984#0" expanded="true" />
-            <element signature="e#6128#6314#0" expanded="true" />
-            <element signature="e#6303#6304#0" expanded="true" />
-            <element signature="e#6590#7143#0" expanded="true" />
-            <element signature="e#6911#6940#0" expanded="true" />
-            <element signature="e#7045#7077#0" expanded="true" />
-            <element signature="e#7132#7133#0" expanded="true" />
-            <element signature="e#7576#7577#0" expanded="true" />
-            <element signature="e#7607#7608#0" expanded="true" />
-            <element signature="e#8228#8229#0" expanded="true" />
-            <element signature="e#8266#8267#0" expanded="true" />
-            <element signature="e#8921#9813#0" expanded="true" />
-            <element signature="e#9089#9786#0" expanded="true" />
-            <element signature="e#9767#9768#0" expanded="true" />
-            <element signature="e#9802#9803#0" expanded="true" />
+            <element signature="e#3623#5777#0" expanded="true" />
+            <element signature="e#3813#5751#0" expanded="true" />
+            <element signature="e#5732#5733#0" expanded="true" />
+            <element signature="e#5766#5767#0" expanded="true" />
+            <element signature="e#5927#5928#0" expanded="true" />
+            <element signature="e#5970#5971#0" expanded="true" />
+            <element signature="e#6115#6301#0" expanded="true" />
+            <element signature="e#6290#6291#0" expanded="true" />
+            <element signature="e#6577#7130#0" expanded="true" />
+            <element signature="e#6898#6927#0" expanded="true" />
+            <element signature="e#7032#7064#0" expanded="true" />
+            <element signature="e#7119#7120#0" expanded="true" />
+            <element signature="e#7563#7564#0" expanded="true" />
+            <element signature="e#7594#7595#0" expanded="true" />
+            <element signature="e#8215#8216#0" expanded="true" />
+            <element signature="e#8253#8254#0" expanded="true" />
+            <element signature="e#8634#8635#0" expanded="true" />
+            <element signature="e#8672#8673#0" expanded="true" />
+            <element signature="e#8710#8711#0" expanded="true" />
+            <element signature="e#8771#8772#0" expanded="true" />
+            <element signature="e#9005#9897#0" expanded="true" />
+            <element signature="e#9173#9870#0" expanded="true" />
+            <element signature="e#9851#9852#0" expanded="true" />
+            <element signature="e#9886#9887#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1794" max-vertical-offset="2415">
-          <caret line="138" column="56" selection-start-line="138" selection-start-column="37" selection-end-line="138" selection-end-column="56" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java">
+    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.076923" vertical-offset="2828" max-vertical-offset="3240">
-          <caret line="240" column="0" selection-start-line="240" selection-start-column="0" selection-end-line="240" selection-end-column="0" />
-          <folding>
-            <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#6759#6760#0" expanded="true" />
-            <element signature="e#6794#6795#0" expanded="true" />
-            <element signature="e#7503#7504#0" expanded="true" />
-            <element signature="e#7545#7546#0" expanded="true" />
-            <element signature="e#7589#7590#0" expanded="true" />
-            <element signature="e#7630#7631#0" expanded="true" />
-            <element signature="e#8011#8012#0" expanded="true" />
-            <element signature="e#8055#8056#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="540">
+          <caret line="24" column="46" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1009" max-vertical-offset="4335">
-          <caret line="251" column="0" selection-start-line="251" selection-start-column="0" selection-end-line="251" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="2869" max-vertical-offset="4080">
+          <caret line="273" column="0" selection-start-line="273" selection-start-column="0" selection-end-line="273" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1791#2835#0" expanded="true" />
-            <element signature="e#2824#2825#0" expanded="true" />
-            <element signature="e#2949#3528#0" expanded="true" />
-            <element signature="e#3516#3517#0" expanded="true" />
-            <element signature="e#4257#4600#0" expanded="true" />
-            <element signature="e#4589#4590#0" expanded="true" />
-            <element signature="e#4821#5207#0" expanded="true" />
-            <element signature="e#5195#5196#0" expanded="true" />
+            <element signature="e#1866#2921#0" expanded="true" />
+            <element signature="e#2910#2911#0" expanded="true" />
+            <element signature="e#3035#3614#0" expanded="true" />
+            <element signature="e#3602#3603#0" expanded="true" />
+            <element signature="e#4343#4686#0" expanded="true" />
+            <element signature="e#4675#4676#0" expanded="true" />
+            <element signature="e#4907#5293#0" expanded="true" />
+            <element signature="e#5281#5282#0" expanded="true" />
             <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
+            <element signature="method#createWaypoint#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="method#setWaypointTaskSettings#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#startTask#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="e#10105#10424#0" expanded="true" />
-            <element signature="e#10413#10414#0" expanded="true" />
+            <element signature="e#11275#11594#0" expanded="true" />
+            <element signature="e#11583#11584#0" expanded="true" />
+            <element signature="method#closeGs#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="method#closeGs#1;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="e#11295#11563#0" expanded="true" />
-            <element signature="e#11552#11553#0" expanded="true" />
+            <element signature="e#12920#13188#0" expanded="true" />
+            <element signature="e#13177#13178#0" expanded="true" />
             <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#resume#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#pause#0;class#DroneWrapper#0" expanded="false" />
@@ -2741,24 +2755,9 @@
             <element signature="method#getGimbalMinPitchAngle#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#getGimbalMaxPitchAngle#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setCurrentGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
-            <marker date="1448235073000" expanded="false" signature="5673:7327" placeholder="..." />
+            <element signature="method#setNewGPSCoordinates#0;class#DroneWrapper#0" expanded="false" />
+            <marker date="1448327513000" expanded="false" signature="5759:7413" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1849" max-vertical-offset="2385">
-          <caret line="144" column="0" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65068495" vertical-offset="60" max-vertical-offset="525">
-          <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>

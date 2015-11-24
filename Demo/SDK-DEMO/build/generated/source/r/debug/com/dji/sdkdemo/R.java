@@ -127,14 +127,14 @@ containing a value of this type.
         public static final int wheel_val=0x7f020016;
     }
     public static final class id {
-        public static final int AddWaypointButton1=0x7f0c000e;
-        public static final int AddWaypointButton2=0x7f0c0010;
+        public static final int AddWaypointButton1=0x7f0c0011;
+        public static final int AddWaypointButton2=0x7f0c0012;
         public static final int ButtonViewBar=0x7f0c001a;
         public static final int CancelBtn=0x7f0c001b;
-        public static final int CloseGsButton=0x7f0c0011;
+        public static final int CloseGsButton=0x7f0c000f;
         public static final int ConnectStateGsTextView=0x7f0c000c;
         public static final int DroneNodificationTextView=0x7f0c0019;
-        public static final int GroundStationInfoScrollView=0x7f0c0012;
+        public static final int GroundStationInfoScrollView=0x7f0c0010;
         public static final int GroundStationInfoTV=0x7f0c0013;
         public static final int MainTitleTextView=0x7f0c0006;
         public static final int OKBtn=0x7f0c001c;
@@ -157,7 +157,7 @@ containing a value of this type.
         public static final int scrollViewGimbal=0x7f0c000b;
         public static final int select_drone_listView=0x7f0c0016;
         public static final int select_drone_title_rl=0x7f0c0014;
-        public static final int setYawButton=0x7f0c000f;
+        public static final int setYawButton=0x7f0c000e;
         public static final int surfaceView_Rl_gs=0x7f0c0009;
         public static final int surfaceview=0x7f0c000a;
         public static final int title=0x7f0c0017;

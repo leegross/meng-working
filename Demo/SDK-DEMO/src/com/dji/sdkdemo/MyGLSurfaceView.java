@@ -64,15 +64,14 @@ class MyGLSurfaceView extends GLSurfaceView {
                     break;
                 case MotionEvent.ACTION_MOVE:
                     float delta = (float) sqrt(pow(p1x - p2x, 2) + pow(p1y - p2y, 2));
-                    float zoom_scale = (mPrevDelta - delta)/10.0f;
-                    mRenderer.updateCurrentCameraZoom(zoom_scale);
+                    float zoom_scale = (mPrevDelta - delta)/20.0f;
+                    mRenderer.updateCameraZoom(zoom_scale);
                     break;
                 case MotionEvent.ACTION_POINTER_UP:
                     int i = 1 - e.getActionIndex(); // index of the finger that is left
                     mPreviousX = e.getX(i);
                     mPreviousY = e.getY(i);
 
-                    mRenderer.finalizeCurrentCameraZoom();
                     float[] cameraTranslationV = mRenderer.getCameraTranslation();
                     float x_translate = cameraTranslationV[0];
                     float y_translate = cameraTranslationV[1];
@@ -101,6 +100,7 @@ class MyGLSurfaceView extends GLSurfaceView {
                     thetaY = clipPitchAngle(thetaY);
 
                     mRenderer.updateCameraRotationAngles(thetaY, thetaX);
+//                    mRenderer.updateCameraRotation(thetaY, thetaX);
 
                     break;
                 case MotionEvent.ACTION_UP:
@@ -136,7 +136,7 @@ class MyGLSurfaceView extends GLSurfaceView {
     }
 
     // called by drone wrapper when we receive new orientation update
-    public void onDroneOrientationUpdate() {
+    public void onDroneLocationAndOrientationUpdate() {
         float currentGimbalPitch = mDroneWrapper.getCurrentGimbalPitch();
         float currentYaw = mDroneWrapper.getCurrentYaw();
         float x = mDroneWrapper.getCurrentLongitudeInMeters();
