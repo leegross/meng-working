@@ -10,6 +10,8 @@ import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
 import static android.opengl.Matrix.perspectiveM;
+import static com.dji.sdkdemo.util.OperationsHelper.addArrays;
+import static com.dji.sdkdemo.util.OperationsHelper.floatEquals;
 import static java.lang.Math.atan2;
 import static java.lang.Math.toDegrees;
 
@@ -103,18 +105,59 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
         float[] translateV = new float[4];
         Matrix.multiplyMV(translateV, 0, rotationMatrix, 0, new float[]{0, 0, zoom_scale, 1}, 0);
-        cameraTranslationV = addArrays(cameraTranslationV, translateV);
+        if (!passPendingBoundsCheck(translateV)) {
+         return;
+        }
+        float[] temp = addArrays(cameraTranslationV, translateV);
+
+//        cameraTranslationV = temp;
+        cameraTranslationV = clipTranslationVector(temp);
     }
 
-    private float[] addArrays(float[] a1, float[] a2){
-        if (a1.length != a2.length) {
-            return new float[0];
+    private boolean passPendingBoundsCheck(float[] translateDeltaV) {
+        if (( floatEquals(cameraTranslationV[1], Constants.MIN_ALTITUDE) && cameraTranslationV[1] + translateDeltaV[1] < Constants.MIN_ALTITUDE) ||
+            ( floatEquals(cameraTranslationV[0], -Constants.MAX_DIST) && cameraTranslationV[0] + translateDeltaV[0] < -Constants.MAX_DIST) ||
+            ( floatEquals(cameraTranslationV[0], Constants.MAX_DIST) && cameraTranslationV[0] + translateDeltaV[0] > Constants.MAX_DIST) ||
+            ( floatEquals(cameraTranslationV[2], -Constants.MAX_DIST) && cameraTranslationV[2] + translateDeltaV[2] < -Constants.MAX_DIST) ||
+            ( floatEquals(cameraTranslationV[2], Constants.MAX_DIST) && cameraTranslationV[2] + translateDeltaV[2] > Constants.MAX_DIST)){
+            return false;
         }
-        float[] sum = new float[a1.length];
-        for (int i = 0; i < a1.length; i++) {
-            sum[i] = a1[i] + a2[i];
+        return true;
+    }
+
+    private float[] clipTranslationVector(float[] temp){
+        float clip_ratio;
+        if (temp[1] < Constants.MIN_ALTITUDE) {
+            clip_ratio = Constants.MIN_ALTITUDE/temp[1];
+            temp[0] = clip_ratio * temp[0];
+            temp[1] = Constants.MIN_ALTITUDE;
+            temp[2] = clip_ratio * temp[2];
         }
-        return sum;
+
+        if (temp[0] < -Constants.MAX_DIST) {
+            clip_ratio = -Constants.MAX_DIST/temp[0];
+            temp[0] =  -Constants.MAX_DIST;
+            temp[1] = clip_ratio * temp[1];
+            temp[2] = clip_ratio * temp[2];
+        } else if (temp[0] > Constants.MAX_DIST) {
+            clip_ratio = Constants.MAX_DIST/temp[0];
+            temp[0] = Constants.MAX_DIST;
+            temp[1] = clip_ratio * temp[1];
+            temp[2] = clip_ratio * temp[2];
+        }
+
+        if (temp[2] < -Constants.MAX_DIST) {
+            clip_ratio = -Constants.MAX_DIST/temp[2];
+            temp[0] = clip_ratio * temp[0];
+            temp[1] = clip_ratio * temp[1];
+            temp[2] = -Constants.MAX_DIST;
+        } else if (temp[2] > Constants.MAX_DIST) {
+            clip_ratio = Constants.MAX_DIST/temp[2];
+            temp[0] = clip_ratio * temp[0];
+            temp[1] = clip_ratio * temp[1];
+            temp[2] = Constants.MAX_DIST;
+        }
+        return temp;
     }
 
     public void onSurfaceChanged(GL10 unused, int width, int height) {

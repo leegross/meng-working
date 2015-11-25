@@ -3,8 +3,8 @@
 precision highp float;       	// Set the default precision to medium. We don't need as high of a
 								// precision in the fragment shader.
 
-//uniform sampler2D u_Texture;    // The input texture.
-uniform samplerExternalOES u_Texture;    // The input texture.
+uniform sampler2D u_Texture;    // The input texture.
+//uniform samplerExternalOES u_Texture;    // The input texture.
 
 varying vec2 v_Texture;         // The input texture.
 
@@ -35,6 +35,7 @@ void main()
         //gl_FragColor = vec4(0, 0, 1, 1);
     } else {
         gl_FragColor = vec4(0, 0, 0, 1);
+        gl_FragColor = vec4(v_Texture.x, v_Texture.y, 0, 1);
     }
 
     //gl_FragColor = texture2D(u_Texture, v_Texture);

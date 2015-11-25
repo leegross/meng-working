@@ -7,6 +7,7 @@ import android.graphics.SurfaceTexture;
 import android.os.Bundle;
 import android.view.Surface;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -257,6 +258,12 @@ public class TouchControllerActivity extends DemoBaseActivity
 
     public void resetCamera(View v){
         mGLView.getRenderer().resetCameraParameters();
+    }
+
+    public void enterScale(View v){
+        EditText editText = (EditText) findViewById(R.id.textInput);
+        float new_scale = Float.parseFloat(editText.getText().toString());
+        mGLView.updateZoomScale(new_scale);
     }
 
     private void initDecoder() {

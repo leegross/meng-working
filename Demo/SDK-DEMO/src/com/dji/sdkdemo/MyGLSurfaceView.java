@@ -32,6 +32,8 @@ class MyGLSurfaceView extends GLSurfaceView {
 
     float mPrevDelta = 0;
 
+    float scale = 100.0f;
+
     public MyGLSurfaceView(Context context, AttributeSet attrs){
         super(context, attrs);
 
@@ -42,6 +44,8 @@ class MyGLSurfaceView extends GLSurfaceView {
 
         // Set the Renderer for drawing on the GLSurfaceView
         setRenderer(mRenderer);
+
+        scale = 100.0f;
     }
 
     @Override
@@ -64,19 +68,25 @@ class MyGLSurfaceView extends GLSurfaceView {
                     break;
                 case MotionEvent.ACTION_MOVE:
                     float delta = (float) sqrt(pow(p1x - p2x, 2) + pow(p1y - p2y, 2));
-                    float zoom_scale = (mPrevDelta - delta)/20.0f;
+                    float zoom_scale = (mPrevDelta - delta)/scale;
                     mRenderer.updateCameraZoom(zoom_scale);
                     break;
                 case MotionEvent.ACTION_POINTER_UP:
                     int i = 1 - e.getActionIndex(); // index of the finger that is left
-                    mPreviousX = e.getX(i);
-                    mPreviousY = e.getY(i);
+                    if (i == 0) {
+                        mPreviousX = p1x;
+                        mPreviousY = p1y;
+                    } else {
+                        mPreviousX = p2x;
+                        mPreviousY = p2y;
+                    }
 
                     float[] cameraTranslationV = mRenderer.getCameraTranslation();
                     float x_translate = cameraTranslationV[0];
                     float y_translate = cameraTranslationV[1];
                     float z_translate = cameraTranslationV[2];
-                    mDroneWrapper.setNewGPSCoordinates(x_translate, y_translate, z_translate);
+                    float heading = mRenderer.getPhiCamera();
+                    mDroneWrapper.setNewGPSCoordinates(x_translate, y_translate, z_translate, heading);
 
                     break;
             }
@@ -162,5 +172,9 @@ class MyGLSurfaceView extends GLSurfaceView {
 
     public MyGLRenderer getRenderer() {
         return mRenderer;
+    }
+
+    public void updateZoomScale(float new_scale) {
+        scale = new_scale;
     }
 }

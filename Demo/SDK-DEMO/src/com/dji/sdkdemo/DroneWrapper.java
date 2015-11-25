@@ -214,7 +214,7 @@ public class DroneWrapper {
 //        if (dist < 4) {
             lat_midpoint = (currentLatitude + latitude)/2.0f;
             long_midpoint = (currentLongitude + longitude)/2.0f;
-            alt_midpoint = (currentAltitude+altitude)/2 + 2.0f;
+            alt_midpoint = altitude + 2.0f;
 //        } else {
 //            lat_midpoint = (currentLatitude + latitude)/2.0f;
 //            long_midpoint = (currentLongitude + longitude)/2.0f;
@@ -245,19 +245,19 @@ public class DroneWrapper {
         DJIGroundStationWaypoint waypoint = new DJIGroundStationWaypoint(latitude, longitude);
         waypoint.action.actionRepeat = 1;
         waypoint.altitude = altitude;
-//        waypoint.heading = 0;
+        waypoint.heading = (short) heading;
         waypoint.actionTimeout = 10;
         waypoint.turnMode = 1;
         waypoint.dampingDistance = 1.5f;
-        waypoint.hasAction = false;
+        waypoint.hasAction = true;
 
-//        waypoint.addAction(DJIGroundStationTypeDef.GroundStationOnWayPointAction.Way_Point_Action_Craft_Yaw, (int) heading);
+        waypoint.addAction(DJIGroundStationTypeDef.GroundStationOnWayPointAction.Way_Point_Action_Craft_Yaw, (int) heading);
         return waypoint;
     }
 
     private void setWaypointTaskSettings(){
         mTask.finishAction = DJIGroundStationTypeDef.DJIGroundStationFinishAction.None;
-        mTask.movingMode = DJIGroundStationTypeDef.DJIGroundStationMovingMode.GSHeadingUsingWaypointHeading;
+        mTask.movingMode = DJIGroundStationTypeDef.DJIGroundStationMovingMode.GSHeadingUsingInitialDirection;
         mTask.pathMode = DJIGroundStationTypeDef.DJIGroundStationPathMode.Point_To_Point;
         mTask.wayPointCount = mTask.getAllWaypoint().size();
     }
@@ -337,13 +337,7 @@ public class DroneWrapper {
 
     // sets the angle the drone is facing relative to north
     public void setYawAngle(float angle){
-        angle = -angle%360;
-        if (angle < -180){
-            angle += 360;
-        } else if(angle > 180){
-            angle -= 360;
-        }
-        final float finalAngle = angle;
+        final float finalAngle = convertYawAngle(angle);
         openGs();
         new Thread()
         {
@@ -419,7 +413,7 @@ public class DroneWrapper {
     }
 
     // receives new coordinates in meters
-    public void setNewGPSCoordinates(float x, float y, float z) {
+    public void setNewGPSCoordinates(float x, float y, float z, float heading) {
         // bound parameters
 //        altitude = max(Constants.MIN_ALTITUDE, altitude);
 //        altitude = min(Constants.MAX_ALTITUDE, altitude);
@@ -430,13 +424,14 @@ public class DroneWrapper {
 
         // convert longitude and latitude to gps coordinates
         float converted_lat = homeLocationLatitude - metersToLat(z);
-        float converted_long = homeLocationLongitude - metersToLong(x);
+        float converted_long = homeLocationLongitude + metersToLong(x);
+        float converted_heading = convertYawAngle(heading);
 
-        flyToNewWaypoint(converted_lat, converted_long, y);
+        flyToNewWaypoint(converted_lat, converted_long, y, converted_heading);
     }
 
-    private void flyToNewWaypoint(float latitude, float longitude, float altitude) {
-        closeGs(latitude, longitude, altitude, (short) 0);
+    private void flyToNewWaypoint(float latitude, float longitude, float altitude, float heading) {
+        closeGs(latitude, longitude, altitude, (short) heading);
     }
 
     private float metersToLong(float longitude_in_meters) {
@@ -448,10 +443,20 @@ public class DroneWrapper {
     }
 
     public float getCurrentLongitudeInMeters(){
-        return -(currentLongitude - homeLocationLongitude)/Constants.GPS_SCALE;
+        return (currentLongitude - homeLocationLongitude)/Constants.GPS_SCALE;
     }
 
     public float getCurrentLatitudeInMeters(){
         return -(currentLatitude - homeLocationLatitude)/Constants.GPS_SCALE;
+    }
+
+    private float convertYawAngle(float angle) {
+        float converted_angle = -angle%360;
+        if (converted_angle < -180){
+            converted_angle += 360;
+        } else if(converted_angle > 180){
+            converted_angle -= 360;
+        }
+        return converted_angle;
     }
 }

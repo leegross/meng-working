@@ -18,6 +18,7 @@
             android:layout_gravity="center"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true" />
+
     </RelativeLayout>
 
     <RelativeLayout
@@ -150,6 +151,24 @@
 
         </LinearLayout>
     </ScrollView>
+
+    <EditText
+        android:id="@+id/textInput"
+        android:layout_width="180px"
+        android:layout_height="100px"
+        android:hint="zoom scale"
+        android:inputType="number"
+        android:textSize="12dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="100px"
+        android:text="Enter Scale"
+        android:layout_alignTop="@+id/textInput"
+        android:layout_toRightOf="@+id/textInput"
+        android:onClick="enterScale"/>
 
 
 </RelativeLayout>
