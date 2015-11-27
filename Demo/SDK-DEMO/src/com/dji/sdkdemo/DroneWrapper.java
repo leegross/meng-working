@@ -40,8 +40,15 @@ public class DroneWrapper {
     private MyGLSurfaceView mGLView;
     private uiCallback mUiCallback;
 
-    public DroneWrapper(MyGLSurfaceView surfaceView) {
+    public DroneWrapper(MyGLSurfaceView surfaceView, uiCallback uiCallback) {
         mGLView = surfaceView;
+        mUiCallback = uiCallback;
+
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
         initMainControllerState();
 
@@ -53,6 +60,7 @@ public class DroneWrapper {
     }
 
     private void initFlyingInfo(){
+
         DJIDrone.getDjiGroundStation().setGroundStationFlyingInfoCallBack(new DJIGroundStationFlyingInfoCallBack() {
 
             @Override
@@ -115,9 +123,6 @@ public class DroneWrapper {
 
     public interface uiCallback {
         void UICallback(String type, String result);
-    }
-    public void setUICallback(uiCallback cb){
-        mUiCallback = cb;
     }
 
     public void takeOff(){
@@ -355,7 +360,7 @@ public class DroneWrapper {
     public void resume(){
 
         DJIDrone.getDjiMainController().startUpdateTimer(100);
-        DJIDrone.getDjiGroundStation().startUpdateTimer(1000);
+        DJIDrone.getDjiGroundStation().startUpdateTimer(100);
     }
 
     public void pause(){

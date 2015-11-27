@@ -7,6 +7,7 @@ import android.graphics.SurfaceTexture;
 import android.os.Bundle;
 import android.view.Surface;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -62,10 +63,10 @@ public class TouchControllerActivity extends DemoBaseActivity
         mGLView = (MyGLSurfaceView) findViewById(R.id.surfaceview);
         mConnectStateTextView = (TextView)findViewById(R.id.ConnectStateGsTextView);
         mGroundStationTextView = (TextView)findViewById(R.id.GroundStationInfoTV);
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN); // hide keyboard when first launch activity
 
-        droneWrapper = new DroneWrapper(mGLView);
+        droneWrapper = new DroneWrapper(mGLView, getUICallback());
         droneWrapper.setToastCallback(getToastCallback());
-        droneWrapper.setUICallback(getUICallback());
 
         initDecoder();
 
@@ -195,6 +196,7 @@ public class TouchControllerActivity extends DemoBaseActivity
     protected void onResume() {
         // TODO Auto-generated method stub
 //        mDjiGLSurfaceView.resume();
+        super.onResume();
         mGLView.onResume();
 
         mTimer = new Timer();
@@ -205,7 +207,6 @@ public class TouchControllerActivity extends DemoBaseActivity
 
         DJIDrone.getDjiGimbal().startUpdateTimer(1000);
 
-        super.onResume();
     }
 
     @Override
