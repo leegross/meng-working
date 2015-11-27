@@ -297,29 +297,6 @@ public class TouchControllerActivity extends DemoBaseActivity
 
         DJIDrone.getDjiCamera().setReceivedVideoDataCallBack(mReceivedVideoDataCallBack);
 
-        DJIGimbalUpdateAttitudeCallBack mGimbalUpdateAttitudeCallBack = new DJIGimbalUpdateAttitudeCallBack() {
 
-            DroneWrapper dw = droneWrapper;
-
-            @Override
-            public void onResult(final DJIGimbalAttitude attitude) {
-
-                StringBuffer sb = new StringBuffer();
-                sb.append("pitch=").append(attitude.pitch).append("\n");
-                sb.append("roll=").append(attitude.roll).append("\n");
-                sb.append("yaw=").append(attitude.yaw).append("\n");
-                sb.append("yawAngle=").append(DJIDrone.getDjiGimbal().getYawAngle()).append("\n");
-                sb.append("roll adjust=").append(attitude.rollAdjust).append("\n");
-
-                if (dw != null) {
-                    droneWrapper.setCurrentGimbalPitch((float) attitude.pitch);
-
-                }
-
-            }
-
-        };
-
-        DJIDrone.getDjiGimbal().setGimbalUpdateAttitudeCallBack(mGimbalUpdateAttitudeCallBack);
     }
 }

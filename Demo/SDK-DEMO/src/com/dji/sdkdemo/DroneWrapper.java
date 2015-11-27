@@ -2,6 +2,7 @@ package com.dji.sdkdemo;
 
 import dji.sdk.api.DJIDrone;
 import dji.sdk.api.DJIError;
+import dji.sdk.api.Gimbal.DJIGimbalAttitude;
 import dji.sdk.api.Gimbal.DJIGimbalRotation;
 import dji.sdk.api.GroundStation.DJIGroundStationFlyingInfo;
 import dji.sdk.api.GroundStation.DJIGroundStationTask;
@@ -9,6 +10,7 @@ import dji.sdk.api.GroundStation.DJIGroundStationTypeDef;
 import dji.sdk.api.GroundStation.DJIGroundStationWaypoint;
 import dji.sdk.api.MainController.DJIMainControllerSystemState;
 import dji.sdk.interfaces.DJIExecuteResultCallback;
+import dji.sdk.interfaces.DJIGimbalUpdateAttitudeCallBack;
 import dji.sdk.interfaces.DJIGroundStationExecuteCallBack;
 import dji.sdk.interfaces.DJIGroundStationFlyingInfoCallBack;
 import dji.sdk.interfaces.DJIMcuUpdateStateCallBack;
@@ -56,6 +58,8 @@ public class DroneWrapper {
 
         initFlyingInfo();
 
+        initGimbalInfo();
+
         DJIDrone.getDjiGroundStation().setYawControlMode(DJIGroundStationTypeDef.DJINavigationFlightControlYawControlMode.Navigation_Flight_Control_Yaw_Control_Angle);
     }
 
@@ -64,8 +68,7 @@ public class DroneWrapper {
         DJIDrone.getDjiGroundStation().setGroundStationFlyingInfoCallBack(new DJIGroundStationFlyingInfoCallBack() {
 
             @Override
-            public void onResult(DJIGroundStationFlyingInfo mInfo)
-            {
+            public void onResult(DJIGroundStationFlyingInfo mInfo) {
                 final StringBuffer sb = new StringBuffer();
 
                 currentAltitude = mInfo.altitude;
@@ -85,6 +88,30 @@ public class DroneWrapper {
                 }
             }
         });
+    }
+
+    private void initGimbalInfo(){
+        DJIGimbalUpdateAttitudeCallBack mGimbalUpdateAttitudeCallBack = new DJIGimbalUpdateAttitudeCallBack() {
+
+            //DroneWrapper dw = droneWrapper;
+
+            @Override
+            public void onResult(final DJIGimbalAttitude attitude) {
+
+                StringBuffer sb = new StringBuffer();
+                sb.append("pitch=").append(attitude.pitch).append("\n");
+                sb.append("roll=").append(attitude.roll).append("\n");
+                sb.append("yaw=").append(attitude.yaw).append("\n");
+                sb.append("yawAngle=").append(DJIDrone.getDjiGimbal().getYawAngle()).append("\n");
+                sb.append("roll adjust=").append(attitude.rollAdjust).append("\n");
+
+                currentGimbalPitch = (float) attitude.pitch;
+                mGLView.onDroneLocationAndOrientationUpdate();
+            }
+
+        };
+
+        DJIDrone.getDjiGimbal().setGimbalUpdateAttitudeCallBack(mGimbalUpdateAttitudeCallBack);
     }
 
     private void initMainControllerState(){
@@ -270,7 +297,7 @@ public class DroneWrapper {
     private void uploadWaypoint(){
         if(!checkGetHomePoint()) return;
 
-        DJIDrone.getDjiGroundStation().uploadGroundStationTask(mTask, new DJIGroundStationExecuteCallBack(){
+        DJIDrone.getDjiGroundStation().uploadGroundStationTask(mTask, new DJIGroundStationExecuteCallBack() {
 
             @Override
             public void onResult(DJIGroundStationTypeDef.GroundStationResult result) {
@@ -284,7 +311,7 @@ public class DroneWrapper {
 
     private void startTask(){
         if(!checkGetHomePoint()) return;
-        DJIDrone.getDjiGroundStation().startGroundStationTask(new DJIGroundStationExecuteCallBack(){
+        DJIDrone.getDjiGroundStation().startGroundStationTask(new DJIGroundStationExecuteCallBack() {
 
             @Override
             public void onResult(DJIGroundStationTypeDef.GroundStationResult result) {
@@ -297,7 +324,7 @@ public class DroneWrapper {
     public void closeGs(final float latitude, final float longitude, final float altitude, final short heading){
         if(!checkGetHomePoint()) return;
 
-        DJIDrone.getDjiGroundStation().closeGroundStation(new DJIGroundStationExecuteCallBack(){
+        DJIDrone.getDjiGroundStation().closeGroundStation(new DJIGroundStationExecuteCallBack() {
 
             @Override
             public void onResult(DJIGroundStationTypeDef.GroundStationResult result) {
@@ -312,7 +339,7 @@ public class DroneWrapper {
     public void closeGs(){
         if(!checkGetHomePoint()) return;
 
-        DJIDrone.getDjiGroundStation().closeGroundStation(new DJIGroundStationExecuteCallBack(){
+        DJIDrone.getDjiGroundStation().closeGroundStation(new DJIGroundStationExecuteCallBack() {
 
             @Override
             public void onResult(DJIGroundStationTypeDef.GroundStationResult result) {
@@ -334,7 +361,7 @@ public class DroneWrapper {
             {
                 DJIGimbalRotation mPitch = new DJIGimbalRotation(true, false,true, finalAngle);
 
-                DJIDrone.getDjiGimbal().updateGimbalAttitude(mPitch,null,null);
+                DJIDrone.getDjiGimbal().updateGimbalAttitude(mPitch, null, null);
 
             }
         }.start();
@@ -388,14 +415,6 @@ public class DroneWrapper {
         return currentLongitude;
     }
 
-    public float getHomeLocationLatitude(){
-        return homeLocationLatitude;
-    }
-
-    public float getHomeLocationLongitude(){
-        return homeLocationLongitude;
-    }
-
     public float getCurrentGimbalPitch(){
         return currentGimbalPitch;
     }
@@ -404,13 +423,8 @@ public class DroneWrapper {
         return -90;//DJIDrone.getDjiGimbal().getGimbalPitchMinAngle();
     }
 
-    public float getGimbalMaxPitchAngle(){
+    public float getGimbalMaxPitchAngle() {
         return 0;//DJIDrone.getDjiGimbal().getGimbalPitchMaxAngle();
-    }
-
-    public void setCurrentGimbalPitch(float pitch){
-        currentGimbalPitch = pitch;
-        mGLView.onDroneLocationAndOrientationUpdate();
     }
 
     public float getCurrentYaw(){
@@ -419,13 +433,6 @@ public class DroneWrapper {
 
     // receives new coordinates in meters
     public void setNewGPSCoordinates(float x, float y, float z, float heading) {
-        // bound parameters
-//        altitude = max(Constants.MIN_ALTITUDE, altitude);
-//        altitude = min(Constants.MAX_ALTITUDE, altitude);
-//        latitude = max(-Constants.MAX_DIST, latitude);
-//        latitude = min(Constants.MAX_DIST, latitude);
-//        longitude = max(-Constants.MAX_DIST, longitude);
-//        longitude = min(Constants.MAX_DIST, longitude);
 
         // convert longitude and latitude to gps coordinates
         float converted_lat = homeLocationLatitude - metersToLat(z);

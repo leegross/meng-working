@@ -7,80 +7,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c2fb097-3e27-43c5-9229-9d241b4244a9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Lib/DJI-SDK-LIB/DJI-SDK-LIB.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Lib/DJI-SDK-LIB/build/intermediates/manifests/tmp/manifestMerger3956122374757448777.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/Constants.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/Constants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lib/DJI-SDK-LIB/build/outputs/aar/DJI-SDK-LIB-debug.aar" afterPath="$PROJECT_DIR$/Lib/DJI-SDK-LIB/build/outputs/aar/DJI-SDK-LIB-debug.aar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lib/DJI-SDK-LIB/build/outputs/aar/DJI-SDK-LIB-release.aar" afterPath="$PROJECT_DIR$/Lib/DJI-SDK-LIB/build/outputs/aar/DJI-SDK-LIB-release.aar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$11.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$12$1.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$3.class" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$11$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$7.class" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$11.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$12.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$3.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$4.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$4.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$5.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$5.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$6.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$6.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$7.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$7.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$8.class" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$8.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$9.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$1.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$10.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$11$1.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$11$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$11.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$11.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$2.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$3.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$4.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$5.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$6.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$7.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$8.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$9.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$9.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug-unaligned.apk" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug.apk" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$1.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$2$1$1.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$2$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$2$1.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$2$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$2.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$3$1.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$3$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$3.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$4.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$5.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$6$1.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$6$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$6.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$7.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$Task.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$Task.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/pre-dexed/debug/android-support-v4-be1325018676009061ee878b295680a163e1d84f.jar" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/pre-dexed/debug/android-support-v4-be1325018676009061ee878b295680a163e1d84f.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/pre-dexed/debug/bouncycastle-171e9f2c83de5c56cadb0354a516896e0f4b9782.jar" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/pre-dexed/debug/bouncycastle-171e9f2c83de5c56cadb0354a516896e0f4b9782.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/pre-dexed/debug/classes-5546068f4b5cfa95303146a2e7183e3b947c85fd.jar" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/pre-dexed/debug/classes-5546068f4b5cfa95303146a2e7183e3b947c85fd.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/dex/debug/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/exploded-aar/DJI-SDK-Android-V2.4.0.Lib/DJI-SDK-LIB/unspecified/classes.jar" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/exploded-aar/DJI-SDK-Android-V2.4.0.Lib/DJI-SDK-LIB/unspecified/classes.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lib/DJI-SDK-LIB/build/intermediates/bundles/debug/classes.jar" afterPath="$PROJECT_DIR$/Lib/DJI-SDK-LIB/build/intermediates/bundles/debug/classes.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lib/DJI-SDK-LIB/build/intermediates/bundles/release/classes.jar" afterPath="$PROJECT_DIR$/Lib/DJI-SDK-LIB/build/intermediates/bundles/release/classes.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/pre-dexed/debug/dji-sdk-a6c95edf12fa6ca5ed1f73d481b96fada49475dd.jar" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/pre-dexed/debug/dji-sdk-a6c95edf12fa6ca5ed1f73d481b96fada49475dd.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/pre-dexed/debug/eventbus-4c8b7eb7347198b9f7fb57aac5dd058b4b7098e2.jar" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/pre-dexed/debug/eventbus-4c8b7eb7347198b9f7fb57aac5dd058b4b7098e2.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/model_data.bin" afterPath="$PROJECT_DIR$/build/intermediates/model_data.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/pre-dexed/debug/mygson-2.0-3d353440aa1cbd223ce303162dfac39cb6ff7a22.jar" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/pre-dexed/debug/mygson-2.0-3d353440aa1cbd223ce303162dfac39cb6ff7a22.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/outputFileStates.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/pre-dexed/debug/pinyin4j-2.5.0-a76d33f43a08dbea6b05ff690df9f03ecec4f691.jar" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/pre-dexed/debug/pinyin4j-2.5.0-a76d33f43a08dbea6b05ff690df9f03ecec4f691.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/res/resources-debug-test.ap_" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/res/resources-debug-test.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lib/DJI-SDK-LIB/build/intermediates/res/resources-debug-test.ap_" afterPath="$PROJECT_DIR$/Lib/DJI-SDK-LIB/build/intermediates/res/resources-debug-test.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/res/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DJI-SDK-Android-V2.4.0.iml" afterPath="$PROJECT_DIR$/DJI-SDK-Android-V2.4.0.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/Demo.iml" afterPath="$PROJECT_DIR$/Demo/Demo.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Lib/Lib.iml" afterPath="$PROJECT_DIR$/Lib/Lib.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/SDK-DEMO.iml" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/SDK-DEMO.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/TouchControllerActivity.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/TouchControllerActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/local.properties" afterPath="$PROJECT_DIR$/local.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/res/debug/raw/per_pixel_fragment_shader.glsl" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/res/debug/raw/per_pixel_fragment_shader.glsl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DJI-SDK-Android-V2.4.0.iws" />
@@ -111,11 +63,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TouchControllerActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TouchControllerActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/TouchControllerActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6323185">
-              <caret line="65" column="133" selection-start-line="65" selection-start-column="133" selection-end-line="65" selection-end-column="133" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="285" column="52" selection-start-line="285" selection-start-column="52" selection-end-line="285" selection-end-column="52" />
               <folding>
                 <element signature="e#3290#3339#0" expanded="true" />
                 <element signature="e#7063#7092#0" expanded="true" />
@@ -138,22 +90,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DroneWrapper.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DroneWrapper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.148149">
-              <caret line="47" column="26" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.37470725">
+              <caret line="54" column="34" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
               <folding>
-                <element signature="e#2056#3111#0" expanded="true" />
-                <element signature="e#3110#3111#0" expanded="true" />
-                <element signature="e#4248#4249#0" expanded="true" />
-                <element signature="e#4282#4283#0" expanded="true" />
+                <element signature="method#initFlyingInfo#0;class#DroneWrapper#0" expanded="false" />
+                <element signature="e#2187#3230#0" expanded="true" />
+                <element signature="e#3229#3230#0" expanded="true" />
+                <element signature="method#initGimbalInfo#0;class#DroneWrapper#0" expanded="false" />
+                <element signature="e#3347#4126#0" expanded="true" />
+                <element signature="e#4125#4126#0" expanded="true" />
+                <element signature="method#initMainControllerState#0;class#DroneWrapper#0" expanded="false" />
+                <element signature="e#5359#5360#0" expanded="true" />
+                <element signature="e#5393#5394#0" expanded="true" />
                 <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
-                <element signature="e#5865#5962#0" expanded="false" />
+                <element signature="e#6976#7073#0" expanded="false" />
                 <element signature="method#addWaypoint#0;class#DroneWrapper#0" expanded="false" />
                 <element signature="method#distInMeters#0;class#DroneWrapper#0" expanded="false" />
-                <element signature="method#createWaypoint#0;class#DroneWrapper#0" expanded="false" />
-                <element signature="method#setWaypointTaskSettings#0;class#DroneWrapper#0" expanded="false" />
+                <element signature="e#11991#12345#0" expanded="true" />
+                <element signature="e#12344#12345#0" expanded="true" />
+                <element signature="e#12489#12809#0" expanded="true" />
+                <element signature="e#12808#12809#0" expanded="true" />
+                <element signature="e#15483#15484#0" expanded="true" />
+                <element signature="e#15521#15522#0" expanded="true" />
+                <element signature="e#15640#15641#0" expanded="true" />
+                <element signature="e#15679#15680#0" expanded="true" />
+                <element signature="e#15722#15723#0" expanded="true" />
+                <element signature="e#15763#15764#0" expanded="true" />
+                <element signature="method#setNewGPSCoordinates#0;class#DroneWrapper#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -2784,8 +2750,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/TouchControllerActivity.java" />
+        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java" />
       </list>
     </option>
   </component>
@@ -3132,30 +3098,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="14" />
+      <option name="time" value="15" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.148149">
-          <caret line="47" column="26" selection-start-line="47" selection-start-column="26" selection-end-line="47" selection-end-column="26" />
-          <folding>
-            <element signature="e#2056#3111#0" expanded="true" />
-            <element signature="e#3110#3111#0" expanded="true" />
-            <element signature="e#4248#4249#0" expanded="true" />
-            <element signature="e#4282#4283#0" expanded="true" />
-            <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
-            <element signature="e#5865#5962#0" expanded="false" />
-            <element signature="method#addWaypoint#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#distInMeters#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#createWaypoint#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#setWaypointTaskSettings#0;class#DroneWrapper#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml">
       <provider selected="true" editor-type-id="android-designer">
         <state />
@@ -3169,12 +3116,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/TouchControllerActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6323185">
-          <caret line="65" column="133" selection-start-line="65" selection-start-column="133" selection-end-line="65" selection-end-column="133" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="285" column="52" selection-start-line="285" selection-start-column="52" selection-end-line="285" selection-end-column="52" />
           <folding>
             <element signature="e#3290#3339#0" expanded="true" />
             <element signature="e#7063#7092#0" expanded="true" />
             <element signature="e#7197#7229#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37470725">
+          <caret line="54" column="34" selection-start-line="54" selection-start-column="34" selection-end-line="54" selection-end-column="34" />
+          <folding>
+            <element signature="method#initFlyingInfo#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#2187#3230#0" expanded="true" />
+            <element signature="e#3229#3230#0" expanded="true" />
+            <element signature="method#initGimbalInfo#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#3347#4126#0" expanded="true" />
+            <element signature="e#4125#4126#0" expanded="true" />
+            <element signature="method#initMainControllerState#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#5359#5360#0" expanded="true" />
+            <element signature="e#5393#5394#0" expanded="true" />
+            <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#6976#7073#0" expanded="false" />
+            <element signature="method#addWaypoint#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="method#distInMeters#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#11991#12345#0" expanded="true" />
+            <element signature="e#12344#12345#0" expanded="true" />
+            <element signature="e#12489#12809#0" expanded="true" />
+            <element signature="e#12808#12809#0" expanded="true" />
+            <element signature="e#15483#15484#0" expanded="true" />
+            <element signature="e#15521#15522#0" expanded="true" />
+            <element signature="e#15640#15641#0" expanded="true" />
+            <element signature="e#15679#15680#0" expanded="true" />
+            <element signature="e#15722#15723#0" expanded="true" />
+            <element signature="e#15763#15764#0" expanded="true" />
+            <element signature="method#setNewGPSCoordinates#0;class#DroneWrapper#0" expanded="false" />
           </folding>
         </state>
       </provider>
