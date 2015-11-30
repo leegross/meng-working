@@ -30,6 +30,8 @@ class MyGLSurfaceView extends GLSurfaceView {
     private int minGimbalPitchAngle;
     private int maxGimbalPitchAngle;
 
+    private boolean isGestureInProgress;
+
     float mPrevDelta = 0;
 
     float scale = 100.0f;
@@ -46,6 +48,7 @@ class MyGLSurfaceView extends GLSurfaceView {
         setRenderer(mRenderer);
 
         scale = 100.0f;
+        isGestureInProgress = false;
     }
 
     @Override
@@ -54,6 +57,7 @@ class MyGLSurfaceView extends GLSurfaceView {
         // and other input controls. In this case, you are only
         // interested in events where the touch position changed.
 
+        isGestureInProgress = true;
         float x = e.getX();
         float y = e.getY();
 
@@ -114,10 +118,10 @@ class MyGLSurfaceView extends GLSurfaceView {
 
                     break;
                 case MotionEvent.ACTION_UP:
-
                     mDroneWrapper.setYawAngle(mRenderer.getPhiCamera());
                     mDroneWrapper.setGimbalPitch((int) mRenderer.getThetaCamera());
 
+                    isGestureInProgress = false;
                     break;
             }
 
@@ -176,5 +180,9 @@ class MyGLSurfaceView extends GLSurfaceView {
 
     public void updateZoomScale(float new_scale) {
         scale = new_scale;
+    }
+
+    public boolean isGestureInProgress() {
+        return isGestureInProgress;
     }
 }

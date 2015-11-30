@@ -285,4 +285,28 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         Matrix.multiplyMM(rotationMatrix, 0, rotatePhiMatrix, 0, rotateThetaMatrix, 0);
         return rotationMatrix;
     }
+
+    public String cameraInfoToString(){
+        final StringBuffer sb = new StringBuffer();
+
+        sb.append("camera_x: ").append(cameraTranslationV[0]).append("\n");
+        sb.append("camera_y: ").append(cameraTranslationV[1]).append("\n");
+        sb.append("camera_z: ").append(cameraTranslationV[2]).append("\n");
+        sb.append("camera pitch: ").append(camera_theta).append("\n");
+        sb.append("camera yaw: ").append(camera_phi).append("\n");
+
+        return sb.toString();
+    }
+
+    public String projectorInfoToString(){
+        final StringBuffer sb = new StringBuffer();
+
+        sb.append("projector_x: ").append(projectorTranslationV[0]).append("\n");
+        sb.append("projector_y: ").append(projectorTranslationV[1]).append("\n");
+        sb.append("projector_z: ").append(projectorTranslationV[2]).append("\n");
+        sb.append("projector pitch: ").append(projector_theta).append("\n");
+        sb.append("projector yaw: ").append(projector_phi).append("\n");
+
+        return sb.toString();
+    }
 }

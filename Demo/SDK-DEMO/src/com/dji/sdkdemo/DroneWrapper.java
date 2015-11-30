@@ -1,5 +1,8 @@
 package com.dji.sdkdemo;
 
+import android.util.Log;
+
+import dji.sdk.api.Camera.DJICameraSettingsTypeDef;
 import dji.sdk.api.DJIDrone;
 import dji.sdk.api.DJIError;
 import dji.sdk.api.Gimbal.DJIGimbalAttitude;
@@ -8,6 +11,7 @@ import dji.sdk.api.GroundStation.DJIGroundStationFlyingInfo;
 import dji.sdk.api.GroundStation.DJIGroundStationTask;
 import dji.sdk.api.GroundStation.DJIGroundStationTypeDef;
 import dji.sdk.api.GroundStation.DJIGroundStationWaypoint;
+import dji.sdk.api.GroundStation.DJIGroundStationTypeDef;
 import dji.sdk.api.MainController.DJIMainControllerSystemState;
 import dji.sdk.interfaces.DJIExecuteResultCallback;
 import dji.sdk.interfaces.DJIGimbalUpdateAttitudeCallBack;
@@ -15,6 +19,8 @@ import dji.sdk.interfaces.DJIGroundStationExecuteCallBack;
 import dji.sdk.interfaces.DJIGroundStationFlyingInfoCallBack;
 import dji.sdk.interfaces.DJIMcuUpdateStateCallBack;
 
+import static dji.sdk.api.GroundStation.DJIGroundStationTypeDef.*;
+import static dji.sdk.api.GroundStation.DJIGroundStationTypeDef.DJINavigationFlightControlYawControlMode.*;
 import static java.lang.Math.max;
 import static java.lang.Math.min;
 import static java.lang.Math.pow;
@@ -31,6 +37,7 @@ public class DroneWrapper {
     private float currentLongitude;
     private float currentGimbalPitch;
     private float currentYaw;
+    private String currentFlightMode;
 
     // drone home points
     private float homeLocationLatitude;
@@ -40,11 +47,9 @@ public class DroneWrapper {
     private DJIGroundStationTask mTask;
     private setResultToToastCallback toastCallback;
     private MyGLSurfaceView mGLView;
-    private uiCallback mUiCallback;
 
-    public DroneWrapper(MyGLSurfaceView surfaceView, uiCallback uiCallback) {
+    public DroneWrapper(MyGLSurfaceView surfaceView) {
         mGLView = surfaceView;
-        mUiCallback = uiCallback;
 
         try {
             Thread.sleep(500);
@@ -60,7 +65,9 @@ public class DroneWrapper {
 
         initGimbalInfo();
 
-        DJIDrone.getDjiGroundStation().setYawControlMode(DJIGroundStationTypeDef.DJINavigationFlightControlYawControlMode.Navigation_Flight_Control_Yaw_Control_Angle);
+        DJIDrone.getDjiGroundStation().setYawControlMode(Navigation_Flight_Control_Yaw_Control_Angle);
+
+        //DJIDrone.getDjiCamera().setCameraMode(DJICameraSettingsTypeDef.CameraMode.Camera_Camera_Mode, null); //need to test this line
     }
 
     private void initFlyingInfo(){
@@ -69,23 +76,13 @@ public class DroneWrapper {
 
             @Override
             public void onResult(DJIGroundStationFlyingInfo mInfo) {
-                final StringBuffer sb = new StringBuffer();
-
                 currentAltitude = mInfo.altitude;
                 currentLatitude = (float) mInfo.droneLocationLatitude;
                 currentLongitude = (float) mInfo.droneLocationLongitude;
-                sb.append("drone altitude: ").append(currentAltitude).append("\n");
-                sb.append("drone latitude: ").append(currentLatitude).append("\n");
-                sb.append("drone longitude: ").append(currentLongitude).append("\n");
-                sb.append("drone yaw: ").append(mInfo.yaw).append("\n");
-                currentAltitude = mInfo.altitude;
                 currentYaw = mInfo.yaw;
+                currentFlightMode = mInfo.flightMode.name();
 
                 mGLView.onDroneLocationAndOrientationUpdate();
-
-                if (mUiCallback != null) {
-                    mUiCallback.UICallback("ground_station_text_view", sb.toString());
-                }
             }
         });
     }
@@ -97,14 +94,6 @@ public class DroneWrapper {
 
             @Override
             public void onResult(final DJIGimbalAttitude attitude) {
-
-                StringBuffer sb = new StringBuffer();
-                sb.append("pitch=").append(attitude.pitch).append("\n");
-                sb.append("roll=").append(attitude.roll).append("\n");
-                sb.append("yaw=").append(attitude.yaw).append("\n");
-                sb.append("yawAngle=").append(DJIDrone.getDjiGimbal().getYawAngle()).append("\n");
-                sb.append("roll adjust=").append(attitude.rollAdjust).append("\n");
-
                 currentGimbalPitch = (float) attitude.pitch;
                 mGLView.onDroneLocationAndOrientationUpdate();
             }
@@ -141,6 +130,14 @@ public class DroneWrapper {
         return getHomePointFlag;
     }
 
+    public boolean isExecutingMission() {
+        if (//currentFlightMode != GroundStationFlightMode.GS_Mode_Joystick &&
+            currentFlightMode != GroundStationFlightMode.GS_Mode_Waypoint.name()) {
+            return false;
+        }
+        return true;
+    }
+
     public interface setResultToToastCallback {
         void ToastResult(String result);
     }
@@ -155,7 +152,7 @@ public class DroneWrapper {
     public void takeOff(){
         DJIDrone.getDjiGroundStation().oneKeyFly(new DJIGroundStationExecuteCallBack() {
             @Override
-            public void onResult(DJIGroundStationTypeDef.GroundStationResult groundStationResult) {
+            public void onResult(GroundStationResult groundStationResult) {
                 String ResultsString = "take off return code =" + groundStationResult.toString();
 //                toastCallback.ToastResult(ResultsString);
             }
@@ -168,7 +165,7 @@ public class DroneWrapper {
         DJIDrone.getDjiGroundStation().openGroundStation(new DJIGroundStationExecuteCallBack() {
 
             @Override
-            public void onResult(DJIGroundStationTypeDef.GroundStationResult result) {
+            public void onResult(GroundStationResult result) {
                 String ResultsString = "openGS return code =" + result.toString();
 //                toastCallback.ToastResult(ResultsString);
                 addWaypoint(latitude, longitude, altitude, heading);
@@ -183,7 +180,7 @@ public class DroneWrapper {
         DJIDrone.getDjiGroundStation().openGroundStation(new DJIGroundStationExecuteCallBack() {
 
             @Override
-            public void onResult(DJIGroundStationTypeDef.GroundStationResult result) {
+            public void onResult(GroundStationResult result) {
                 String ResultsString = "openGS return code =" + result.toString();
                 toastCallback.ToastResult(ResultsString);
             }
@@ -283,14 +280,14 @@ public class DroneWrapper {
         waypoint.dampingDistance = 1.5f;
         waypoint.hasAction = true;
 
-        waypoint.addAction(DJIGroundStationTypeDef.GroundStationOnWayPointAction.Way_Point_Action_Craft_Yaw, (int) heading);
+        waypoint.addAction(GroundStationOnWayPointAction.Way_Point_Action_Craft_Yaw, (int) heading);
         return waypoint;
     }
 
     private void setWaypointTaskSettings(){
-        mTask.finishAction = DJIGroundStationTypeDef.DJIGroundStationFinishAction.None;
-        mTask.movingMode = DJIGroundStationTypeDef.DJIGroundStationMovingMode.GSHeadingUsingInitialDirection;
-        mTask.pathMode = DJIGroundStationTypeDef.DJIGroundStationPathMode.Point_To_Point;
+        mTask.finishAction = DJIGroundStationFinishAction.None;
+        mTask.movingMode = DJIGroundStationMovingMode.GSHeadingUsingInitialDirection;
+        mTask.pathMode = DJIGroundStationPathMode.Point_To_Point;
         mTask.wayPointCount = mTask.getAllWaypoint().size();
     }
 
@@ -300,7 +297,7 @@ public class DroneWrapper {
         DJIDrone.getDjiGroundStation().uploadGroundStationTask(mTask, new DJIGroundStationExecuteCallBack() {
 
             @Override
-            public void onResult(DJIGroundStationTypeDef.GroundStationResult result) {
+            public void onResult(GroundStationResult result) {
                 String ResultsString = "upload waypoint return code =" + result.toString();
 //                toastCallback.ToastResult(ResultsString);
                 startTask();
@@ -314,7 +311,7 @@ public class DroneWrapper {
         DJIDrone.getDjiGroundStation().startGroundStationTask(new DJIGroundStationExecuteCallBack() {
 
             @Override
-            public void onResult(DJIGroundStationTypeDef.GroundStationResult result) {
+            public void onResult(GroundStationResult result) {
                 String ResultsString = "start task return code =" + result.toString();
 //                toastCallback.ToastResult(ResultsString);
             }
@@ -327,7 +324,7 @@ public class DroneWrapper {
         DJIDrone.getDjiGroundStation().closeGroundStation(new DJIGroundStationExecuteCallBack() {
 
             @Override
-            public void onResult(DJIGroundStationTypeDef.GroundStationResult result) {
+            public void onResult(GroundStationResult result) {
                 String ResultsString = "close gs return code =" + result.toString();
 //                toastCallback.ToastResult(ResultsString);
                 openGs(latitude, longitude, altitude, heading);
@@ -342,7 +339,7 @@ public class DroneWrapper {
         DJIDrone.getDjiGroundStation().closeGroundStation(new DJIGroundStationExecuteCallBack() {
 
             @Override
-            public void onResult(DJIGroundStationTypeDef.GroundStationResult result) {
+            public void onResult(GroundStationResult result) {
                 String ResultsString = "close gs return code =" + result.toString();
 //                toastCallback.ToastResult(ResultsString);
             }
@@ -377,7 +374,8 @@ public class DroneWrapper {
             {
                 DJIDrone.getDjiGroundStation().sendFlightControlData(finalAngle, 0, 0, 0, new DJIExecuteResultCallback() {
                     @Override
-                    public void onResult(DJIError djiError) {}
+                    public void onResult(DJIError djiError) {
+                    }
                 });
 
             }
@@ -471,4 +469,17 @@ public class DroneWrapper {
         }
         return converted_angle;
     }
+
+    public String getDroneInfoToString(){
+        final StringBuffer sb = new StringBuffer();
+
+        sb.append("drone altitude: ").append(currentAltitude).append("\n");
+        sb.append("drone latitude: ").append(currentLatitude).append("\n");
+        sb.append("drone longitude: ").append(currentLongitude).append("\n");
+        sb.append("drone yaw: ").append(currentYaw).append("\n");
+        sb.append("drone pitch: ").append(currentGimbalPitch).append("\n");
+
+        return sb.toString();
+    }
+
 }

@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.SurfaceTexture;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Surface;
 import android.view.View;
 import android.view.WindowManager;
@@ -19,10 +20,8 @@ import dji.sdk.api.Camera.DJICameraDecodeTypeDef;
 import dji.sdk.api.DJIDrone;
 import dji.sdk.api.DJIDroneTypeDef;
 import dji.sdk.api.DJIError;
-import dji.sdk.api.Gimbal.DJIGimbalAttitude;
 import dji.sdk.api.mediacodec.DJIVideoDecoder;
 import dji.sdk.interfaces.DJIGeneralListener;
-import dji.sdk.interfaces.DJIGimbalUpdateAttitudeCallBack;
 import dji.sdk.interfaces.DJIReceivedVideoDataCallBack;
 
 public class TouchControllerActivity extends DemoBaseActivity
@@ -35,6 +34,9 @@ public class TouchControllerActivity extends DemoBaseActivity
 
     private DroneWrapper droneWrapper;
     private Timer mTimer;
+    private Timer mCameraResetTimer;
+    private Thread uiUpdateThread;
+
 
     public void showMessage(String title, String msg) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -65,13 +67,14 @@ public class TouchControllerActivity extends DemoBaseActivity
         mGroundStationTextView = (TextView)findViewById(R.id.GroundStationInfoTV);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN); // hide keyboard when first launch activity
 
-        droneWrapper = new DroneWrapper(mGLView, getUICallback());
+        droneWrapper = new DroneWrapper(mGLView);
         droneWrapper.setToastCallback(getToastCallback());
 
         initDecoder();
 
         mGLView.setDroneWrapper(droneWrapper);
 
+        initUIUpdateThread();
     }
 
     private void onInitSDK(){
@@ -106,47 +109,48 @@ public class TouchControllerActivity extends DemoBaseActivity
         }.start();
     }
 
-    private DroneWrapper.uiCallback getUICallback() {
-        DroneWrapper.uiCallback ui_callback = new DroneWrapper.uiCallback() {
+    private void initResetCameraTask(){
+        mCameraResetTimer = new Timer();
+        mCameraResetTimer.schedule(new TimerTask() {
+
             @Override
-            public void UICallback(final String type, final String result) {
-                TouchControllerActivity.this.runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        if (type == "ground_station_text_view") {
-                            final StringBuffer sb = new StringBuffer();
-
-                            MyGLRenderer r = mGLView.getRenderer();
-                            float[] camera_translation = r.getCameraTranslation();
-                            float camera_phi = r.getPhiCamera();
-                            float camera_theta = r.getThetaCamera();
-                            sb.append("camera_x: ").append(camera_translation[0]).append("\n");
-                            sb.append("camera_y: ").append(camera_translation[1]).append("\n");
-                            sb.append("camera_z: ").append(camera_translation[2]).append("\n");
-                            sb.append("camera pitch: ").append(camera_theta).append("\n");
-                            sb.append("camera yaw: ").append(camera_phi).append("\n");
-
-                            float[] projector_translation = r.getProjectorTranslation();
-                            float projector_phi = r.getPhiProjector();
-                            float projector_theta = r.getThetaProjector();
-                            sb.append("projector_x: ").append(projector_translation[0]).append("\n");
-                            sb.append("projector_y: ").append(projector_translation[1]).append("\n");
-                            sb.append("projector_z: ").append(projector_translation[2]).append("\n");
-                            sb.append("projector pitch: ").append(projector_theta).append("\n");
-                            sb.append("projector yaw: ").append(projector_phi).append("\n");
-                            String txt = sb.toString();
-                            txt += result;
-                            mGroundStationTextView.setText(txt);
-                        }
+            public void run() {
+                Log.d("myApp", "in here");
+                if (mGLView != null && !mGLView.isGestureInProgress()) {
+                    Log.d("myApp", "updating");
+                    if (mGLView.getRenderer() != null) {
+//                        mGLView.getRenderer().resetCameraParameters();
                     }
-                });
+                }
+            }
+        }, 0, 300);
+    }
+
+    private void initUIUpdateThread(){
+        uiUpdateThread = new Thread() {
+
+            @Override
+            public void run() {
+                try {
+                    while (!isInterrupted()) {
+                        Thread.sleep(300);
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                String txt = mGLView.getRenderer().cameraInfoToString() + mGLView.getRenderer().projectorInfoToString() + droneWrapper.getDroneInfoToString();
+                                mGroundStationTextView.setText(txt);
+                            }
+                        });
+                    }
+                } catch (InterruptedException ignored) {
+                }
             }
         };
-        return ui_callback;
+
+        uiUpdateThread.start();
     }
 
     class Task extends TimerTask {
-        //int times = 1;
 
         @Override
         public void run()
@@ -207,6 +211,7 @@ public class TouchControllerActivity extends DemoBaseActivity
 
         DJIDrone.getDjiGimbal().startUpdateTimer(1000);
 
+        initResetCameraTask(); // resets camera so that is it where the projector is
     }
 
     @Override
@@ -226,6 +231,12 @@ public class TouchControllerActivity extends DemoBaseActivity
         }
 
         droneWrapper.pause();
+
+        if(mCameraResetTimer!=null) {
+            mCameraResetTimer.cancel();
+            mCameraResetTimer.purge();
+            mCameraResetTimer = null;
+        }
 
         DJIDrone.getDjiGimbal().stopUpdateTimer();
 
