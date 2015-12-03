@@ -115,9 +115,7 @@ public class TouchControllerActivity extends DemoBaseActivity
 
             @Override
             public void run() {
-                Log.d("myApp", "in here");
                 if (mGLView != null && !mGLView.isGestureInProgress()) {
-                    Log.d("myApp", "updating");
                     if (mGLView.getRenderer() != null) {
 //                        mGLView.getRenderer().resetCameraParameters();
                     }

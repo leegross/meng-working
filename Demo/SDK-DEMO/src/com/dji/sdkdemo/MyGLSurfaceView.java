@@ -3,13 +3,13 @@ package com.dji.sdkdemo;
 import android.content.Context;
 import android.opengl.GLSurfaceView;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
 
-import static java.lang.Math.atan2;
+import static com.dji.sdkdemo.Constants.*;
 import static java.lang.Math.pow;
 import static java.lang.StrictMath.sqrt;
 import static java.lang.StrictMath.tan;
-import static java.lang.StrictMath.toDegrees;
 import static java.lang.StrictMath.toRadians;
 
 /**
@@ -20,15 +20,17 @@ class MyGLSurfaceView extends GLSurfaceView {
     private final MyGLRenderer mRenderer;
     private DroneWrapper mDroneWrapper;
 
-    float H_CENTER = Constants.SURFACE__HORIZONTAL_CENTER;
-    float V_CENTER = Constants.SURFACE_VERTICAL_CENTER;
-    private final float TOUCH_SCALE_FACTOR = (float) (tan(toRadians(Constants.HORIZONTAL_FOV/2)) * Constants.FRUST_NEAR /H_CENTER);//.011f;//180f/320;
-
-    private float mPreviousX;
-    private float mPreviousY;
+    float H_CENTER = SURFACE__HORIZONTAL_CENTER;
+    float V_CENTER = SURFACE_VERTICAL_CENTER;
+    private final float TOUCH_SCALE_FACTOR = (float) (tan(toRadians(HORIZONTAL_FOV/2)) * FRUST_NEAR /H_CENTER);
 
     private int minGimbalPitchAngle;
     private int maxGimbalPitchAngle;
+
+    float phi_at_gest_start;
+    float theta_at_gest_start;
+    float x_at_gest_start;
+    float y_at_gest_start;
 
     private boolean isGestureInProgress;
 
@@ -49,6 +51,11 @@ class MyGLSurfaceView extends GLSurfaceView {
 
         scale = 100.0f;
         isGestureInProgress = false;
+
+        phi_at_gest_start = 0;
+        theta_at_gest_start = 0;
+        x_at_gest_start = 0;
+        y_at_gest_start = 0;
     }
 
     @Override
@@ -62,7 +69,7 @@ class MyGLSurfaceView extends GLSurfaceView {
         float y = e.getY();
 
         //handle multi touch event
-        if (e.getPointerCount() > 1) {
+        if (e.getPointerCount() > 1 && false) {
             float p1x = e.getX(0);
             float p1y = e.getY(0);
             float p2x = e.getX(1);
@@ -76,15 +83,6 @@ class MyGLSurfaceView extends GLSurfaceView {
                     mRenderer.updateCameraZoom(zoom_scale);
                     break;
                 case MotionEvent.ACTION_POINTER_UP:
-                    int i = 1 - e.getActionIndex(); // index of the finger that is left
-                    if (i == 0) {
-                        mPreviousX = p1x;
-                        mPreviousY = p1y;
-                    } else {
-                        mPreviousX = p2x;
-                        mPreviousY = p2y;
-                    }
-
                     float[] cameraTranslationV = mRenderer.getCameraTranslation();
                     float x_translate = cameraTranslationV[0];
                     float y_translate = cameraTranslationV[1];
@@ -101,21 +99,14 @@ class MyGLSurfaceView extends GLSurfaceView {
         // handle single touch event
         else {
             switch (e.getAction()) {
+                case MotionEvent.ACTION_DOWN:
+                    phi_at_gest_start = mRenderer.getPhiCamera();
+                    theta_at_gest_start = mRenderer.getThetaCamera();
+                    x_at_gest_start = x;
+                    y_at_gest_start = y;
+                    break;
                 case MotionEvent.ACTION_MOVE:
-
-                    float thetaX1 = (float) atan2((x - H_CENTER) * TOUCH_SCALE_FACTOR, Constants.FRUST_NEAR);
-                    float thetaX2 = (float) atan2((H_CENTER - mPreviousX) * TOUCH_SCALE_FACTOR, Constants.FRUST_NEAR);
-                    float thetaX = (float) toDegrees(thetaX1 + thetaX2);
-
-                    float thetaY1 = (float) atan2((V_CENTER - y) * TOUCH_SCALE_FACTOR, Constants.FRUST_NEAR);
-                    float thetaY2 = (float) atan2((mPreviousY - V_CENTER) * TOUCH_SCALE_FACTOR, Constants.FRUST_NEAR);
-                    float thetaY = (float) toDegrees(thetaY1 + thetaY2);
-
-                    thetaY = clipPitchAngle(thetaY);
-
-                    mRenderer.updateCameraRotationAngles(thetaY, thetaX);
-//                    mRenderer.updateCameraRotation(thetaY, thetaX);
-
+                    mRenderer.updateCameraRotation(x_at_gest_start, y_at_gest_start, x, y, theta_at_gest_start, phi_at_gest_start);
                     break;
                 case MotionEvent.ACTION_UP:
                     mDroneWrapper.setYawAngle(mRenderer.getPhiCamera());
@@ -124,9 +115,6 @@ class MyGLSurfaceView extends GLSurfaceView {
                     isGestureInProgress = false;
                     break;
             }
-
-            mPreviousX = x;
-            mPreviousY = y;
         }
 
         return true;
