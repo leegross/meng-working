@@ -18,6 +18,9 @@ import static com.dji.sdkdemo.util.OperationsHelper.floatEquals;
 import static com.dji.sdkdemo.util.OperationsHelper.*;
 import static java.lang.StrictMath.abs;
 import static java.lang.StrictMath.acos;
+import static java.lang.StrictMath.atan2;
+import static java.lang.StrictMath.sqrt;
+import static java.lang.StrictMath.toDegrees;
 
 /**
  * Created by leegross on 9/14/15.
@@ -61,9 +64,9 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         mHemisphere = new Hemisphere(mContext);
         mSurfaceTexture = new SurfaceTexture(mHemisphere.getTextureHandle());
 
-        camera_theta = 0;
+        camera_theta = -45;
         camera_phi = 0;
-        projector_theta = 0;
+        projector_theta = -45;
         projector_phi = 0;
         camera_theta_initialized = false;
         camera_phi_initialized = false;
@@ -267,14 +270,15 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
     public void updateCameraRotation(float p1x, float p1y, float p2x, float p2y, float theta, float phi){
         // get world coordinates from screen coordinates
-        float[] p1_r = screenPointToRelativeWorldDirection(p1x, p1y); // relative
-        float[] p2_w = screenPointToWorldDirection(p2x, p2y, theta, phi); // actual
+        float[] p1_r = screenPointToRelativeWorldDirection(SURFACE__HORIZONTAL_CENTER, SURFACE_VERTICAL_CENTER); // relative direction
+        float[] p2_w = screenPointToWorldDirection(SURFACE__HORIZONTAL_CENTER, SURFACE_VERTICAL_CENTER, theta, phi); // actual direction - given the orientation of the drone
 
-        // normalize p1_r and p2
+        // change to 3D and normalize p1_r and p2
         p1_r = new float[]{p1_r[0]/p1_r[3], p1_r[1]/p1_r[3], p1_r[2]/p1_r[3]};
         p2_w = new float[]{p2_w[0]/p2_w[3],p2_w[1]/p2_w[3], p2_w[2]/p2_w[3]};
         p1_r = normalizeV(p1_r);
         p2_w = normalizeV(p2_w);
+
 
         // get phi
         // project on x and x plane to to find the yaw angle
@@ -282,13 +286,22 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         float[] p2_xz = new float[]{p2_w[0], 0, p2_w[2]};
         p1_xz = normalizeV(p1_xz);
         p2_xz = normalizeV(p2_xz);
-        float new_phi = (float) acos(dot(p1_xz, p2_xz));
+        float phi1 = (float) toDegrees(acos(dot(p1_xz, new float[]{1, 0, 0})));
+        float phi2 = (float) toDegrees(acos(dot(p2_xz, new float[]{1, 0, 0})));
+        float new_phi = phi2 - phi1;
 
-        // apply new phi to vectors
-        float[] p1_ = multiplyMV(getRotationMatrix(new_phi, new float[]{0, 1, 0, 0}), p1_r);
+
+        // apply new phi to p1
+        p1_r = new float[]{p1_r[0], p1_r[1], p1_r[2], 1}; // switch to homogeneous coords
+        float[] p1_ = multiplyMV(getRotationMatrix(new_phi, new float[]{0, 1, 0}), p1_r);
+        p1_ = new float[]{p1_[0], p1_[1], p1_[2]};
+        p1_ = normalizeV(p1_);
 
         // get theta
-        float new_theta = (float) acos(dot(p1_, p2_w));
+        float theta1 = (float) toDegrees(acos(dot(p1_, new float[]{0, 1, 0})));
+        float theta2 = (float) toDegrees(acos(dot(p2_w, new float[]{0, 1, 0})));
+        float new_theta = theta2 - theta1;
+
 
         camera_phi = new_phi;
         camera_theta = new_theta;
@@ -299,7 +312,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     // P^-1 is the inverse of the projection matrix
     // and v is the scaled screen coordinates vector (x and y range from -1 to 1)
     private float[] screenPointToWorldDirection(float x, float y, float theta, float phi){
-        float[] v = {-(2.0f * x/GL_SURFACE_WIDTH - 1.0f), -(2.0f * y/GL_SURFACE_HEIGHT - 1.0f), 0, 1};
+        float[] v = {(2.0f * x/GL_SURFACE_WIDTH - 1.0f), -(2.0f * y/GL_SURFACE_HEIGHT - 1.0f), 0, 1};
 
         float[] mTempViewMatrix = new float[16];
         float[] mTempCameraMatrix = new float[16];
@@ -322,7 +335,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     // P^-1 is the inverse of the projection matrix
     // and v is the scaled screen coordinates vector (x and y range from -1 to 1)
     private float[] screenPointToRelativeWorldDirection(float x, float y){
-        float[] v = {-(2.0f * x/GL_SURFACE_WIDTH - 1.0f), -(2.0f * y/GL_SURFACE_HEIGHT - 1.0f), 0, 1};
+        float[] v = {(2.0f * x/GL_SURFACE_WIDTH - 1.0f), -(2.0f * y/GL_SURFACE_HEIGHT - 1.0f), 0, 1};
         float[] proj_inv = getInverseProjectionMatrix();
 
         return multiplyMV(proj_inv, v);

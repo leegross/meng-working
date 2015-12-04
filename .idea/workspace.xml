@@ -72,20 +72,33 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
               <folding>
-                <element signature="e#1402#1596#0" expanded="true" />
-                <element signature="e#1595#1596#0" expanded="true" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#1514#1515#0" expanded="false" />
+                <element signature="e#1577#1578#0" expanded="false" />
                 <element signature="method#onInitSDK#0;class#TouchControllerActivity#0" expanded="false" />
                 <element signature="method#checkDronePermissions#0;class#TouchControllerActivity#0" expanded="false" />
                 <element signature="method#initUIUpdateThread#0;class#TouchControllerActivity#0" expanded="false" />
                 <element signature="class#Task#0;class#TouchControllerActivity#0" expanded="false" />
+                <element signature="e#5107#5108#0" expanded="false" />
+                <element signature="e#5150#5151#0" expanded="false" />
                 <element signature="method#getToastCallback#0;class#TouchControllerActivity#0" expanded="false" />
+                <element signature="e#5414#5415#0" expanded="false" />
+                <element signature="e#5470#5471#0" expanded="false" />
                 <element signature="method#setResultToToast#0;class#TouchControllerActivity#0" expanded="false" />
                 <element signature="method#checkConnectState#0;class#TouchControllerActivity#0" expanded="false" />
                 <element signature="method#onResume#0;class#TouchControllerActivity#0" expanded="false" />
+                <element signature="e#6828#6829#0" expanded="false" />
+                <element signature="e#6859#6860#0" expanded="false" />
                 <element signature="method#onPause#0;class#TouchControllerActivity#0" expanded="false" />
                 <element signature="method#onDestroy#0;class#TouchControllerActivity#0" expanded="false" />
+                <element signature="e#7646#7647#0" expanded="false" />
+                <element signature="e#7684#7685#0" expanded="false" />
                 <element signature="method#addWaypoints1#0;class#TouchControllerActivity#0" expanded="false" />
                 <element signature="method#addWaypoints2#0;class#TouchControllerActivity#0" expanded="false" />
+                <element signature="e#8065#8066#0" expanded="false" />
+                <element signature="e#8103#8104#0" expanded="false" />
+                <element signature="e#8141#8142#0" expanded="false" />
+                <element signature="e#8202#8203#0" expanded="false" />
                 <element signature="method#enterScale#0;class#TouchControllerActivity#0" expanded="false" />
                 <element signature="method#initDecoder#0;class#TouchControllerActivity#0" expanded="false" />
               </folding>
@@ -113,10 +126,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyGLSurfaceView.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MyGLSurfaceView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.496788">
+            <state vertical-scroll-proportion="0.0">
               <caret line="105" column="39" selection-start-line="105" selection-start-column="39" selection-end-line="105" selection-end-column="39" />
               <folding>
                 <element signature="e#6119#6120#0" expanded="true" />
@@ -130,32 +143,40 @@
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="327" column="39" selection-start-line="327" selection-start-column="39" selection-end-line="327" selection-end-column="39" />
+              <caret line="298" column="0" selection-start-line="298" selection-start-column="0" selection-end-line="298" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1772#1773#0" expanded="true" />
-                <element signature="e#1806#1807#0" expanded="true" />
+                <element signature="e#1901#1902#0" expanded="true" />
+                <element signature="e#1935#1936#0" expanded="true" />
                 <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
-                <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
-                <element signature="e#7278#7279#0" expanded="true" />
-                <element signature="e#7316#7317#0" expanded="true" />
-                <element signature="e#7802#7803#0" expanded="true" />
-                <element signature="e#7837#7838#0" expanded="true" />
-                <element signature="e#7871#7872#0" expanded="true" />
-                <element signature="e#7904#7905#0" expanded="true" />
-                <element signature="e#7943#7944#0" expanded="true" />
-                <element signature="e#7981#7982#0" expanded="true" />
-                <element signature="e#8018#8019#0" expanded="true" />
-                <element signature="e#8054#8055#0" expanded="true" />
-                <element signature="e#8352#8353#0" expanded="true" />
-                <element signature="e#8399#8400#0" expanded="true" />
-                <element signature="e#8445#8446#0" expanded="true" />
-                <element signature="e#8490#8491#0" expanded="true" />
-                <element signature="e#8534#8535#0" expanded="true" />
-                <element signature="e#8575#8576#0" expanded="true" />
-                <element signature="e#8755#8756#0" expanded="true" />
-                <element signature="e#8799#8800#0" expanded="true" />
+                <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
+                <element signature="e#7411#7412#0" expanded="true" />
+                <element signature="e#7449#7450#0" expanded="true" />
+                <element signature="e#7935#7936#0" expanded="true" />
+                <element signature="e#7970#7971#0" expanded="true" />
+                <element signature="e#8004#8005#0" expanded="true" />
+                <element signature="e#8037#8038#0" expanded="true" />
+                <element signature="e#8076#8077#0" expanded="true" />
+                <element signature="e#8114#8115#0" expanded="true" />
+                <element signature="e#8151#8152#0" expanded="true" />
+                <element signature="e#8187#8188#0" expanded="true" />
+                <element signature="e#8578#8579#0" expanded="true" />
+                <element signature="e#8623#8624#0" expanded="true" />
+                <element signature="e#8667#8668#0" expanded="true" />
+                <element signature="e#8708#8709#0" expanded="true" />
+                <element signature="e#8888#8889#0" expanded="true" />
+                <element signature="e#8932#8933#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.08665106">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -164,7 +185,7 @@
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/util/OperationsHelper.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="87" column="25" selection-start-line="87" selection-start-column="25" selection-end-line="87" selection-end-column="25" />
+              <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -191,6 +212,7 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="84" column="62" selection-start-line="84" selection-start-column="62" selection-end-line="84" selection-end-column="62" />
               <folding>
+                <element signature="imports" expanded="false" />
                 <element signature="method#initMainControllerState#0;class#DroneWrapper#0" expanded="false" />
                 <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
                 <element signature="e#4978#4979#0" expanded="false" />
@@ -2907,8 +2929,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -2919,7 +2939,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2970,138 +2989,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DJI-SDK-Android-V2.4.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DJI-SDK-Android-V2.4.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SDK-DEMO" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sdkdemo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DJI-SDK-Android-V2.4.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DJI-SDK-Android-V2.4.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SDK-DEMO" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sdkdemo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DJI-SDK-Android-V2.4.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DJI-SDK-Android-V2.4.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SDK-DEMO" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DJI-SDK-Android-V2.4.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DJI-SDK-Android-V2.4.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SDK-DEMO" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="raw" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DJI-SDK-Android-V2.4.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DJI-SDK-Android-V2.4.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="SDK-DEMO" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -3297,13 +3189,12 @@
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34610304" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34610304" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3989432" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3989432" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -3316,12 +3207,13 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24177396" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24177396" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -3331,15 +3223,15 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34610304" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24177396" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -3354,8 +3246,8 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -3372,22 +3264,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="135" />
+      <option name="time" value="169" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="177" column="0" selection-start-line="177" selection-start-column="0" selection-end-line="177" selection-end-column="0" />
-          <folding>
-            <element signature="e#6119#6120#0" expanded="true" />
-            <element signature="e#6151#6152#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml">
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -3404,6 +3285,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="133" column="0" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="method#initMainControllerState#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="e#4978#4979#0" expanded="false" />
@@ -3450,20 +3332,33 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1402#1596#0" expanded="true" />
-            <element signature="e#1595#1596#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1514#1515#0" expanded="false" />
+            <element signature="e#1577#1578#0" expanded="false" />
             <element signature="method#onInitSDK#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkDronePermissions#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initUIUpdateThread#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="class#Task#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#5107#5108#0" expanded="false" />
+            <element signature="e#5150#5151#0" expanded="false" />
             <element signature="method#getToastCallback#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#5414#5415#0" expanded="false" />
+            <element signature="e#5470#5471#0" expanded="false" />
             <element signature="method#setResultToToast#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkConnectState#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onResume#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#6828#6829#0" expanded="false" />
+            <element signature="e#6859#6860#0" expanded="false" />
             <element signature="method#onPause#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#7646#7647#0" expanded="false" />
+            <element signature="e#7684#7685#0" expanded="false" />
             <element signature="method#addWaypoints1#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#addWaypoints2#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#8065#8066#0" expanded="false" />
+            <element signature="e#8103#8104#0" expanded="false" />
+            <element signature="e#8141#8142#0" expanded="false" />
+            <element signature="e#8202#8203#0" expanded="false" />
             <element signature="method#enterScale#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initDecoder#0;class#TouchControllerActivity#0" expanded="false" />
           </folding>
@@ -3476,28 +3371,26 @@
           <caret line="303" column="23" selection-start-line="303" selection-start-column="23" selection-end-line="303" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1772#1773#0" expanded="true" />
-            <element signature="e#1806#1807#0" expanded="true" />
+            <element signature="e#1901#1902#0" expanded="true" />
+            <element signature="e#1935#1936#0" expanded="true" />
             <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#7278#7279#0" expanded="true" />
-            <element signature="e#7316#7317#0" expanded="true" />
-            <element signature="e#7802#7803#0" expanded="true" />
-            <element signature="e#7837#7838#0" expanded="true" />
-            <element signature="e#7871#7872#0" expanded="true" />
-            <element signature="e#7904#7905#0" expanded="true" />
-            <element signature="e#7943#7944#0" expanded="true" />
-            <element signature="e#7981#7982#0" expanded="true" />
-            <element signature="e#8018#8019#0" expanded="true" />
-            <element signature="e#8054#8055#0" expanded="true" />
-            <element signature="e#8352#8353#0" expanded="true" />
-            <element signature="e#8399#8400#0" expanded="true" />
-            <element signature="e#8445#8446#0" expanded="true" />
-            <element signature="e#8490#8491#0" expanded="true" />
-            <element signature="e#8534#8535#0" expanded="true" />
-            <element signature="e#8575#8576#0" expanded="true" />
-            <element signature="e#8755#8756#0" expanded="true" />
-            <element signature="e#8799#8800#0" expanded="true" />
+            <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#7411#7412#0" expanded="true" />
+            <element signature="e#7449#7450#0" expanded="true" />
+            <element signature="e#7935#7936#0" expanded="true" />
+            <element signature="e#7970#7971#0" expanded="true" />
+            <element signature="e#8004#8005#0" expanded="true" />
+            <element signature="e#8037#8038#0" expanded="true" />
+            <element signature="e#8076#8077#0" expanded="true" />
+            <element signature="e#8114#8115#0" expanded="true" />
+            <element signature="e#8151#8152#0" expanded="true" />
+            <element signature="e#8187#8188#0" expanded="true" />
+            <element signature="e#8578#8579#0" expanded="true" />
+            <element signature="e#8623#8624#0" expanded="true" />
+            <element signature="e#8667#8668#0" expanded="true" />
+            <element signature="e#8708#8709#0" expanded="true" />
+            <element signature="e#8888#8889#0" expanded="true" />
+            <element signature="e#8932#8933#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3529,6 +3422,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="133" column="0" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="method#initMainControllerState#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="e#4978#4979#0" expanded="false" />
@@ -3575,20 +3469,33 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1402#1596#0" expanded="true" />
-            <element signature="e#1595#1596#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1514#1515#0" expanded="false" />
+            <element signature="e#1577#1578#0" expanded="false" />
             <element signature="method#onInitSDK#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkDronePermissions#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initUIUpdateThread#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="class#Task#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#5107#5108#0" expanded="false" />
+            <element signature="e#5150#5151#0" expanded="false" />
             <element signature="method#getToastCallback#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#5414#5415#0" expanded="false" />
+            <element signature="e#5470#5471#0" expanded="false" />
             <element signature="method#setResultToToast#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkConnectState#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onResume#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#6828#6829#0" expanded="false" />
+            <element signature="e#6859#6860#0" expanded="false" />
             <element signature="method#onPause#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#7646#7647#0" expanded="false" />
+            <element signature="e#7684#7685#0" expanded="false" />
             <element signature="method#addWaypoints1#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#addWaypoints2#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#8065#8066#0" expanded="false" />
+            <element signature="e#8103#8104#0" expanded="false" />
+            <element signature="e#8141#8142#0" expanded="false" />
+            <element signature="e#8202#8203#0" expanded="false" />
             <element signature="method#enterScale#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initDecoder#0;class#TouchControllerActivity#0" expanded="false" />
           </folding>
@@ -3601,28 +3508,26 @@
           <caret line="303" column="23" selection-start-line="303" selection-start-column="23" selection-end-line="303" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1772#1773#0" expanded="true" />
-            <element signature="e#1806#1807#0" expanded="true" />
+            <element signature="e#1901#1902#0" expanded="true" />
+            <element signature="e#1935#1936#0" expanded="true" />
             <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#7278#7279#0" expanded="true" />
-            <element signature="e#7316#7317#0" expanded="true" />
-            <element signature="e#7802#7803#0" expanded="true" />
-            <element signature="e#7837#7838#0" expanded="true" />
-            <element signature="e#7871#7872#0" expanded="true" />
-            <element signature="e#7904#7905#0" expanded="true" />
-            <element signature="e#7943#7944#0" expanded="true" />
-            <element signature="e#7981#7982#0" expanded="true" />
-            <element signature="e#8018#8019#0" expanded="true" />
-            <element signature="e#8054#8055#0" expanded="true" />
-            <element signature="e#8352#8353#0" expanded="true" />
-            <element signature="e#8399#8400#0" expanded="true" />
-            <element signature="e#8445#8446#0" expanded="true" />
-            <element signature="e#8490#8491#0" expanded="true" />
-            <element signature="e#8534#8535#0" expanded="true" />
-            <element signature="e#8575#8576#0" expanded="true" />
-            <element signature="e#8755#8756#0" expanded="true" />
-            <element signature="e#8799#8800#0" expanded="true" />
+            <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#7411#7412#0" expanded="true" />
+            <element signature="e#7449#7450#0" expanded="true" />
+            <element signature="e#7935#7936#0" expanded="true" />
+            <element signature="e#7970#7971#0" expanded="true" />
+            <element signature="e#8004#8005#0" expanded="true" />
+            <element signature="e#8037#8038#0" expanded="true" />
+            <element signature="e#8076#8077#0" expanded="true" />
+            <element signature="e#8114#8115#0" expanded="true" />
+            <element signature="e#8151#8152#0" expanded="true" />
+            <element signature="e#8187#8188#0" expanded="true" />
+            <element signature="e#8578#8579#0" expanded="true" />
+            <element signature="e#8623#8624#0" expanded="true" />
+            <element signature="e#8667#8668#0" expanded="true" />
+            <element signature="e#8708#8709#0" expanded="true" />
+            <element signature="e#8888#8889#0" expanded="true" />
+            <element signature="e#8932#8933#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3654,6 +3559,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="133" column="0" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="method#initMainControllerState#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="e#4978#4979#0" expanded="false" />
@@ -3700,20 +3606,33 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="229" column="5" selection-start-line="229" selection-start-column="5" selection-end-line="229" selection-end-column="5" />
           <folding>
-            <element signature="e#1402#1596#0" expanded="true" />
-            <element signature="e#1595#1596#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1514#1515#0" expanded="false" />
+            <element signature="e#1577#1578#0" expanded="false" />
             <element signature="method#onInitSDK#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkDronePermissions#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initUIUpdateThread#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="class#Task#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#5107#5108#0" expanded="false" />
+            <element signature="e#5150#5151#0" expanded="false" />
             <element signature="method#getToastCallback#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#5414#5415#0" expanded="false" />
+            <element signature="e#5470#5471#0" expanded="false" />
             <element signature="method#setResultToToast#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkConnectState#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onResume#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#6828#6829#0" expanded="false" />
+            <element signature="e#6859#6860#0" expanded="false" />
             <element signature="method#onPause#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#7646#7647#0" expanded="false" />
+            <element signature="e#7684#7685#0" expanded="false" />
             <element signature="method#addWaypoints1#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#addWaypoints2#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#8065#8066#0" expanded="false" />
+            <element signature="e#8103#8104#0" expanded="false" />
+            <element signature="e#8141#8142#0" expanded="false" />
+            <element signature="e#8202#8203#0" expanded="false" />
             <element signature="method#enterScale#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initDecoder#0;class#TouchControllerActivity#0" expanded="false" />
           </folding>
@@ -3726,28 +3645,26 @@
           <caret line="251" column="10" selection-start-line="251" selection-start-column="10" selection-end-line="251" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1772#1773#0" expanded="true" />
-            <element signature="e#1806#1807#0" expanded="true" />
+            <element signature="e#1901#1902#0" expanded="true" />
+            <element signature="e#1935#1936#0" expanded="true" />
             <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#7278#7279#0" expanded="true" />
-            <element signature="e#7316#7317#0" expanded="true" />
-            <element signature="e#7802#7803#0" expanded="true" />
-            <element signature="e#7837#7838#0" expanded="true" />
-            <element signature="e#7871#7872#0" expanded="true" />
-            <element signature="e#7904#7905#0" expanded="true" />
-            <element signature="e#7943#7944#0" expanded="true" />
-            <element signature="e#7981#7982#0" expanded="true" />
-            <element signature="e#8018#8019#0" expanded="true" />
-            <element signature="e#8054#8055#0" expanded="true" />
-            <element signature="e#8352#8353#0" expanded="true" />
-            <element signature="e#8399#8400#0" expanded="true" />
-            <element signature="e#8445#8446#0" expanded="true" />
-            <element signature="e#8490#8491#0" expanded="true" />
-            <element signature="e#8534#8535#0" expanded="true" />
-            <element signature="e#8575#8576#0" expanded="true" />
-            <element signature="e#8755#8756#0" expanded="true" />
-            <element signature="e#8799#8800#0" expanded="true" />
+            <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#7411#7412#0" expanded="true" />
+            <element signature="e#7449#7450#0" expanded="true" />
+            <element signature="e#7935#7936#0" expanded="true" />
+            <element signature="e#7970#7971#0" expanded="true" />
+            <element signature="e#8004#8005#0" expanded="true" />
+            <element signature="e#8037#8038#0" expanded="true" />
+            <element signature="e#8076#8077#0" expanded="true" />
+            <element signature="e#8114#8115#0" expanded="true" />
+            <element signature="e#8151#8152#0" expanded="true" />
+            <element signature="e#8187#8188#0" expanded="true" />
+            <element signature="e#8578#8579#0" expanded="true" />
+            <element signature="e#8623#8624#0" expanded="true" />
+            <element signature="e#8667#8668#0" expanded="true" />
+            <element signature="e#8708#8709#0" expanded="true" />
+            <element signature="e#8888#8889#0" expanded="true" />
+            <element signature="e#8932#8933#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3779,6 +3696,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="98" column="33" selection-start-line="98" selection-start-column="33" selection-end-line="98" selection-end-column="33" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="method#initMainControllerState#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="e#4978#4979#0" expanded="false" />
@@ -3825,20 +3743,33 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1402#1596#0" expanded="true" />
-            <element signature="e#1595#1596#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1514#1515#0" expanded="false" />
+            <element signature="e#1577#1578#0" expanded="false" />
             <element signature="method#onInitSDK#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkDronePermissions#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initUIUpdateThread#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="class#Task#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#5107#5108#0" expanded="false" />
+            <element signature="e#5150#5151#0" expanded="false" />
             <element signature="method#getToastCallback#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#5414#5415#0" expanded="false" />
+            <element signature="e#5470#5471#0" expanded="false" />
             <element signature="method#setResultToToast#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkConnectState#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onResume#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#6828#6829#0" expanded="false" />
+            <element signature="e#6859#6860#0" expanded="false" />
             <element signature="method#onPause#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#7646#7647#0" expanded="false" />
+            <element signature="e#7684#7685#0" expanded="false" />
             <element signature="method#addWaypoints1#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#addWaypoints2#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#8065#8066#0" expanded="false" />
+            <element signature="e#8103#8104#0" expanded="false" />
+            <element signature="e#8141#8142#0" expanded="false" />
+            <element signature="e#8202#8203#0" expanded="false" />
             <element signature="method#enterScale#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initDecoder#0;class#TouchControllerActivity#0" expanded="false" />
           </folding>
@@ -3851,28 +3782,26 @@
           <caret line="255" column="0" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1772#1773#0" expanded="true" />
-            <element signature="e#1806#1807#0" expanded="true" />
+            <element signature="e#1901#1902#0" expanded="true" />
+            <element signature="e#1935#1936#0" expanded="true" />
             <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#7278#7279#0" expanded="true" />
-            <element signature="e#7316#7317#0" expanded="true" />
-            <element signature="e#7802#7803#0" expanded="true" />
-            <element signature="e#7837#7838#0" expanded="true" />
-            <element signature="e#7871#7872#0" expanded="true" />
-            <element signature="e#7904#7905#0" expanded="true" />
-            <element signature="e#7943#7944#0" expanded="true" />
-            <element signature="e#7981#7982#0" expanded="true" />
-            <element signature="e#8018#8019#0" expanded="true" />
-            <element signature="e#8054#8055#0" expanded="true" />
-            <element signature="e#8352#8353#0" expanded="true" />
-            <element signature="e#8399#8400#0" expanded="true" />
-            <element signature="e#8445#8446#0" expanded="true" />
-            <element signature="e#8490#8491#0" expanded="true" />
-            <element signature="e#8534#8535#0" expanded="true" />
-            <element signature="e#8575#8576#0" expanded="true" />
-            <element signature="e#8755#8756#0" expanded="true" />
-            <element signature="e#8799#8800#0" expanded="true" />
+            <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#7411#7412#0" expanded="true" />
+            <element signature="e#7449#7450#0" expanded="true" />
+            <element signature="e#7935#7936#0" expanded="true" />
+            <element signature="e#7970#7971#0" expanded="true" />
+            <element signature="e#8004#8005#0" expanded="true" />
+            <element signature="e#8037#8038#0" expanded="true" />
+            <element signature="e#8076#8077#0" expanded="true" />
+            <element signature="e#8114#8115#0" expanded="true" />
+            <element signature="e#8151#8152#0" expanded="true" />
+            <element signature="e#8187#8188#0" expanded="true" />
+            <element signature="e#8578#8579#0" expanded="true" />
+            <element signature="e#8623#8624#0" expanded="true" />
+            <element signature="e#8667#8668#0" expanded="true" />
+            <element signature="e#8708#8709#0" expanded="true" />
+            <element signature="e#8888#8889#0" expanded="true" />
+            <element signature="e#8932#8933#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3904,6 +3833,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="93" column="21" selection-start-line="93" selection-start-column="21" selection-end-line="93" selection-end-column="21" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="method#initMainControllerState#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="e#4978#4979#0" expanded="false" />
@@ -3950,20 +3880,33 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#1402#1596#0" expanded="true" />
-            <element signature="e#1595#1596#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1514#1515#0" expanded="false" />
+            <element signature="e#1577#1578#0" expanded="false" />
             <element signature="method#onInitSDK#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkDronePermissions#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initUIUpdateThread#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="class#Task#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#5107#5108#0" expanded="false" />
+            <element signature="e#5150#5151#0" expanded="false" />
             <element signature="method#getToastCallback#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#5414#5415#0" expanded="false" />
+            <element signature="e#5470#5471#0" expanded="false" />
             <element signature="method#setResultToToast#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkConnectState#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onResume#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#6828#6829#0" expanded="false" />
+            <element signature="e#6859#6860#0" expanded="false" />
             <element signature="method#onPause#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#7646#7647#0" expanded="false" />
+            <element signature="e#7684#7685#0" expanded="false" />
             <element signature="method#addWaypoints1#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#addWaypoints2#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#8065#8066#0" expanded="false" />
+            <element signature="e#8103#8104#0" expanded="false" />
+            <element signature="e#8141#8142#0" expanded="false" />
+            <element signature="e#8202#8203#0" expanded="false" />
             <element signature="method#enterScale#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initDecoder#0;class#TouchControllerActivity#0" expanded="false" />
           </folding>
@@ -3976,28 +3919,26 @@
           <caret line="255" column="0" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1772#1773#0" expanded="true" />
-            <element signature="e#1806#1807#0" expanded="true" />
+            <element signature="e#1901#1902#0" expanded="true" />
+            <element signature="e#1935#1936#0" expanded="true" />
             <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#7278#7279#0" expanded="true" />
-            <element signature="e#7316#7317#0" expanded="true" />
-            <element signature="e#7802#7803#0" expanded="true" />
-            <element signature="e#7837#7838#0" expanded="true" />
-            <element signature="e#7871#7872#0" expanded="true" />
-            <element signature="e#7904#7905#0" expanded="true" />
-            <element signature="e#7943#7944#0" expanded="true" />
-            <element signature="e#7981#7982#0" expanded="true" />
-            <element signature="e#8018#8019#0" expanded="true" />
-            <element signature="e#8054#8055#0" expanded="true" />
-            <element signature="e#8352#8353#0" expanded="true" />
-            <element signature="e#8399#8400#0" expanded="true" />
-            <element signature="e#8445#8446#0" expanded="true" />
-            <element signature="e#8490#8491#0" expanded="true" />
-            <element signature="e#8534#8535#0" expanded="true" />
-            <element signature="e#8575#8576#0" expanded="true" />
-            <element signature="e#8755#8756#0" expanded="true" />
-            <element signature="e#8799#8800#0" expanded="true" />
+            <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#7411#7412#0" expanded="true" />
+            <element signature="e#7449#7450#0" expanded="true" />
+            <element signature="e#7935#7936#0" expanded="true" />
+            <element signature="e#7970#7971#0" expanded="true" />
+            <element signature="e#8004#8005#0" expanded="true" />
+            <element signature="e#8037#8038#0" expanded="true" />
+            <element signature="e#8076#8077#0" expanded="true" />
+            <element signature="e#8114#8115#0" expanded="true" />
+            <element signature="e#8151#8152#0" expanded="true" />
+            <element signature="e#8187#8188#0" expanded="true" />
+            <element signature="e#8578#8579#0" expanded="true" />
+            <element signature="e#8623#8624#0" expanded="true" />
+            <element signature="e#8667#8668#0" expanded="true" />
+            <element signature="e#8708#8709#0" expanded="true" />
+            <element signature="e#8888#8889#0" expanded="true" />
+            <element signature="e#8932#8933#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -4029,6 +3970,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="93" column="21" selection-start-line="93" selection-start-column="21" selection-end-line="93" selection-end-column="21" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="method#initMainControllerState#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="e#4978#4979#0" expanded="false" />
@@ -4075,20 +4017,33 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
           <folding>
-            <element signature="e#1402#1596#0" expanded="true" />
-            <element signature="e#1595#1596#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1514#1515#0" expanded="false" />
+            <element signature="e#1577#1578#0" expanded="false" />
             <element signature="method#onInitSDK#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkDronePermissions#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initUIUpdateThread#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="class#Task#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#5107#5108#0" expanded="false" />
+            <element signature="e#5150#5151#0" expanded="false" />
             <element signature="method#getToastCallback#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#5414#5415#0" expanded="false" />
+            <element signature="e#5470#5471#0" expanded="false" />
             <element signature="method#setResultToToast#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkConnectState#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onResume#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#6828#6829#0" expanded="false" />
+            <element signature="e#6859#6860#0" expanded="false" />
             <element signature="method#onPause#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#7646#7647#0" expanded="false" />
+            <element signature="e#7684#7685#0" expanded="false" />
             <element signature="method#addWaypoints1#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#addWaypoints2#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#8065#8066#0" expanded="false" />
+            <element signature="e#8103#8104#0" expanded="false" />
+            <element signature="e#8141#8142#0" expanded="false" />
+            <element signature="e#8202#8203#0" expanded="false" />
             <element signature="method#enterScale#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initDecoder#0;class#TouchControllerActivity#0" expanded="false" />
           </folding>
@@ -4101,28 +4056,26 @@
           <caret line="255" column="0" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1772#1773#0" expanded="true" />
-            <element signature="e#1806#1807#0" expanded="true" />
+            <element signature="e#1901#1902#0" expanded="true" />
+            <element signature="e#1935#1936#0" expanded="true" />
             <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#7278#7279#0" expanded="true" />
-            <element signature="e#7316#7317#0" expanded="true" />
-            <element signature="e#7802#7803#0" expanded="true" />
-            <element signature="e#7837#7838#0" expanded="true" />
-            <element signature="e#7871#7872#0" expanded="true" />
-            <element signature="e#7904#7905#0" expanded="true" />
-            <element signature="e#7943#7944#0" expanded="true" />
-            <element signature="e#7981#7982#0" expanded="true" />
-            <element signature="e#8018#8019#0" expanded="true" />
-            <element signature="e#8054#8055#0" expanded="true" />
-            <element signature="e#8352#8353#0" expanded="true" />
-            <element signature="e#8399#8400#0" expanded="true" />
-            <element signature="e#8445#8446#0" expanded="true" />
-            <element signature="e#8490#8491#0" expanded="true" />
-            <element signature="e#8534#8535#0" expanded="true" />
-            <element signature="e#8575#8576#0" expanded="true" />
-            <element signature="e#8755#8756#0" expanded="true" />
-            <element signature="e#8799#8800#0" expanded="true" />
+            <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#7411#7412#0" expanded="true" />
+            <element signature="e#7449#7450#0" expanded="true" />
+            <element signature="e#7935#7936#0" expanded="true" />
+            <element signature="e#7970#7971#0" expanded="true" />
+            <element signature="e#8004#8005#0" expanded="true" />
+            <element signature="e#8037#8038#0" expanded="true" />
+            <element signature="e#8076#8077#0" expanded="true" />
+            <element signature="e#8114#8115#0" expanded="true" />
+            <element signature="e#8151#8152#0" expanded="true" />
+            <element signature="e#8187#8188#0" expanded="true" />
+            <element signature="e#8578#8579#0" expanded="true" />
+            <element signature="e#8623#8624#0" expanded="true" />
+            <element signature="e#8667#8668#0" expanded="true" />
+            <element signature="e#8708#8709#0" expanded="true" />
+            <element signature="e#8888#8889#0" expanded="true" />
+            <element signature="e#8932#8933#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -4154,6 +4107,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="160" column="0" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="method#initMainControllerState#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="e#4978#4979#0" expanded="false" />
@@ -4200,20 +4154,33 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="122" column="51" selection-start-line="122" selection-start-column="30" selection-end-line="122" selection-end-column="51" />
           <folding>
-            <element signature="e#1402#1596#0" expanded="true" />
-            <element signature="e#1595#1596#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1514#1515#0" expanded="false" />
+            <element signature="e#1577#1578#0" expanded="false" />
             <element signature="method#onInitSDK#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkDronePermissions#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initUIUpdateThread#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="class#Task#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#5107#5108#0" expanded="false" />
+            <element signature="e#5150#5151#0" expanded="false" />
             <element signature="method#getToastCallback#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#5414#5415#0" expanded="false" />
+            <element signature="e#5470#5471#0" expanded="false" />
             <element signature="method#setResultToToast#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkConnectState#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onResume#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#6828#6829#0" expanded="false" />
+            <element signature="e#6859#6860#0" expanded="false" />
             <element signature="method#onPause#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#7646#7647#0" expanded="false" />
+            <element signature="e#7684#7685#0" expanded="false" />
             <element signature="method#addWaypoints1#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#addWaypoints2#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#8065#8066#0" expanded="false" />
+            <element signature="e#8103#8104#0" expanded="false" />
+            <element signature="e#8141#8142#0" expanded="false" />
+            <element signature="e#8202#8203#0" expanded="false" />
             <element signature="method#enterScale#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initDecoder#0;class#TouchControllerActivity#0" expanded="false" />
           </folding>
@@ -4247,6 +4214,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="59" selection-end-column="9" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="method#initMainControllerState#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="e#4978#4979#0" expanded="false" />
@@ -4311,6 +4279,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="84" column="62" selection-start-line="84" selection-start-column="62" selection-end-line="84" selection-end-column="62" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="method#initMainControllerState#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="e#4978#4979#0" expanded="false" />
@@ -4375,7 +4344,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.30864197">
           <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4383,7 +4351,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5875">
           <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4392,20 +4359,33 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
           <folding>
-            <element signature="e#1402#1596#0" expanded="true" />
-            <element signature="e#1595#1596#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1514#1515#0" expanded="false" />
+            <element signature="e#1577#1578#0" expanded="false" />
             <element signature="method#onInitSDK#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkDronePermissions#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initUIUpdateThread#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="class#Task#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#5107#5108#0" expanded="false" />
+            <element signature="e#5150#5151#0" expanded="false" />
             <element signature="method#getToastCallback#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#5414#5415#0" expanded="false" />
+            <element signature="e#5470#5471#0" expanded="false" />
             <element signature="method#setResultToToast#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkConnectState#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onResume#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#6828#6829#0" expanded="false" />
+            <element signature="e#6859#6860#0" expanded="false" />
             <element signature="method#onPause#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#7646#7647#0" expanded="false" />
+            <element signature="e#7684#7685#0" expanded="false" />
             <element signature="method#addWaypoints1#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#addWaypoints2#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#8065#8066#0" expanded="false" />
+            <element signature="e#8103#8104#0" expanded="false" />
+            <element signature="e#8141#8142#0" expanded="false" />
+            <element signature="e#8202#8203#0" expanded="false" />
             <element signature="method#enterScale#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initDecoder#0;class#TouchControllerActivity#0" expanded="false" />
           </folding>
@@ -4432,14 +4412,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="105" column="39" selection-start-line="105" selection-start-column="39" selection-end-line="105" selection-end-column="39" />
+          <folding>
+            <element signature="e#6119#6120#0" expanded="true" />
+            <element signature="e#6151#6152#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/util/OperationsHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="87" column="25" selection-start-line="87" selection-start-column="25" selection-end-line="87" selection-end-column="25" />
+          <caret line="66" column="5" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -4449,43 +4439,38 @@
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="327" column="39" selection-start-line="327" selection-start-column="39" selection-end-line="327" selection-end-column="39" />
+          <caret line="298" column="0" selection-start-line="298" selection-start-column="0" selection-end-line="298" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1772#1773#0" expanded="true" />
-            <element signature="e#1806#1807#0" expanded="true" />
+            <element signature="e#1901#1902#0" expanded="true" />
+            <element signature="e#1935#1936#0" expanded="true" />
             <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#7278#7279#0" expanded="true" />
-            <element signature="e#7316#7317#0" expanded="true" />
-            <element signature="e#7802#7803#0" expanded="true" />
-            <element signature="e#7837#7838#0" expanded="true" />
-            <element signature="e#7871#7872#0" expanded="true" />
-            <element signature="e#7904#7905#0" expanded="true" />
-            <element signature="e#7943#7944#0" expanded="true" />
-            <element signature="e#7981#7982#0" expanded="true" />
-            <element signature="e#8018#8019#0" expanded="true" />
-            <element signature="e#8054#8055#0" expanded="true" />
-            <element signature="e#8352#8353#0" expanded="true" />
-            <element signature="e#8399#8400#0" expanded="true" />
-            <element signature="e#8445#8446#0" expanded="true" />
-            <element signature="e#8490#8491#0" expanded="true" />
-            <element signature="e#8534#8535#0" expanded="true" />
-            <element signature="e#8575#8576#0" expanded="true" />
-            <element signature="e#8755#8756#0" expanded="true" />
-            <element signature="e#8799#8800#0" expanded="true" />
+            <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#7411#7412#0" expanded="true" />
+            <element signature="e#7449#7450#0" expanded="true" />
+            <element signature="e#7935#7936#0" expanded="true" />
+            <element signature="e#7970#7971#0" expanded="true" />
+            <element signature="e#8004#8005#0" expanded="true" />
+            <element signature="e#8037#8038#0" expanded="true" />
+            <element signature="e#8076#8077#0" expanded="true" />
+            <element signature="e#8114#8115#0" expanded="true" />
+            <element signature="e#8151#8152#0" expanded="true" />
+            <element signature="e#8187#8188#0" expanded="true" />
+            <element signature="e#8578#8579#0" expanded="true" />
+            <element signature="e#8623#8624#0" expanded="true" />
+            <element signature="e#8667#8668#0" expanded="true" />
+            <element signature="e#8708#8709#0" expanded="true" />
+            <element signature="e#8888#8889#0" expanded="true" />
+            <element signature="e#8932#8933#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
+    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.496788">
-          <caret line="105" column="39" selection-start-line="105" selection-start-column="39" selection-end-line="105" selection-end-column="39" />
-          <folding>
-            <element signature="e#6119#6120#0" expanded="true" />
-            <element signature="e#6151#6152#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.08665106">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

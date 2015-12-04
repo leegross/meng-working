@@ -52,11 +52,7 @@ public class OperationsHelper {
     public static float[] normalizeV(float[] v){
         float[] out = new float[v.length];
 
-        float mag = 0;
-        for (float aV : v) {
-            mag = aV * aV;
-        }
-        mag = sqrt(mag);
+        float mag = sqrt(dot(v, v));
 
         for (int i = 0; i < v.length; i++) {
             out[i] = v[i]/mag;
