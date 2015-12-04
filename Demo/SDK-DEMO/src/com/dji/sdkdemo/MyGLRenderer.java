@@ -282,10 +282,11 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         float[] currentRotationM = getCameraRotationMatrix(theta, phi);
         float[] inv_rotation = getInverse(currentRotationM);
         float[] p2 = multiplyMV(inv_rotation, p2_w);
+//        float[] p2 = p2_w;
 
         // normalize p1_r and p2
-        p2 = new float[]{p2[0],p2[1], p2[2]};
-        p1_w = new float[]{p1_w[0], p1_w[1], p1_w[2]};
+        p2 = new float[]{p2[0]/p2[3],p2[1]/p2[3], p2[2]/p2[3]};
+        p1_w = new float[]{p1_w[0]/p1_w[3], p1_w[1]/p1_w[3], p1_w[2]/p1_w[3]};
         p1_w = normalizeV(p1_w);
         p2 = normalizeV(p2);
 
@@ -295,11 +296,14 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     }
 
     private float[] screenPointToWorldDirection(float x, float y){
-        float[] v = {(2.0f * x/GL_SURFACE_WIDTH - 1.0f), -(2.0f * y/GL_SURFACE_HEIGHT - 1.0f), 0, 1};
+        float[] v = {-(2.0f * x/GL_SURFACE_WIDTH - 1.0f), -(2.0f * y/GL_SURFACE_HEIGHT - 1.0f), 0, 1};
         float[] proj_inv = getInverseProjectionMatrix();
         Matrix.translateM(mCamera, 0, -cameraTranslationV[0], -cameraTranslationV[1], -cameraTranslationV[2]);
 
         float[] v_world = multiplyMV(proj_inv, v);
+
+//        float[] mvp_inv = getInverse(mMVPMatrix);
+//        float[] v_world = multiplyMV(mvp_inv, v);
         return v_world;
     }
 
