@@ -6,6 +6,8 @@ import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 import android.opengl.Matrix;
 
+import com.dji.sdkdemo.util.OperationsHelper;
+
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
@@ -17,9 +19,7 @@ import static com.dji.sdkdemo.util.OperationsHelper.addArrays;
 import static com.dji.sdkdemo.util.OperationsHelper.floatEquals;
 import static com.dji.sdkdemo.util.OperationsHelper.*;
 import static java.lang.StrictMath.abs;
-import static java.lang.StrictMath.acos;
 import static java.lang.StrictMath.atan2;
-import static java.lang.StrictMath.sqrt;
 import static java.lang.StrictMath.toDegrees;
 
 /**
@@ -28,11 +28,9 @@ import static java.lang.StrictMath.toDegrees;
 public class MyGLRenderer implements GLSurfaceView.Renderer {
 
     // mMVPMatrix is an abbreviation for "Model View Projection Matrix"
-    private final float[] mMVPMatrix = new float[16];
-    private final float[] mMVPProjectorMatrix = new float[16];
+    private float[] mMVPMatrix = new float[16];
+    private float[] mMVPProjectorMatrix = new float[16];
     private final float[] mProjectionMatrix = new float[16];
-    private final float[] mViewMatrix = new float[16];
-    private final float[] mCamera = new float[16];
 
     private float camera_theta; // rotation of camera in vertical direction
     private float camera_phi; // rotation of camera in horizontal direction
@@ -80,8 +78,8 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         // Redraw background color
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT | GLES20.GL_DEPTH_BUFFER_BIT);
 
-        transformMatrix(mMVPMatrix, camera_theta, camera_phi, cameraTranslationV); // transform camera matrix
-        transformMatrix(mMVPProjectorMatrix, projector_theta, projector_phi, projectorTranslationV); // transform projector matrix
+        mMVPMatrix = transformMatrix(camera_theta, camera_phi, cameraTranslationV); // transform camera matrix
+        mMVPProjectorMatrix = transformMatrix(projector_theta, projector_phi, projectorTranslationV); // transform projector matrix
 
         mSurfaceTexture.updateTexImage();
 
@@ -89,26 +87,36 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         mHemisphere.render(mMVPMatrix, mMVPProjectorMatrix);
     }
 
-    private void transformMatrix(float[] m, float theta, float phi, float[] translationV){
-        // Set the projector position (View matrix)
-        Matrix.setLookAtM(mViewMatrix, 0,
-                0, 0, 0, //eye
-                0, 0, 10, //center
-                0, 1, 0); // up
+    private float[] transformMatrix(float theta, float phi, float[] translationV){
+        float[] mCamera = new float[16];
 
-        Matrix.invertM(mCamera, 0, mViewMatrix, 0);
+        // Set the projector position (View matrix)
+        Matrix.setIdentityM(mCamera, 0);
+
         Matrix.translateM(mCamera, 0, translationV[0], translationV[1], translationV[2]);
-        Matrix.rotateM(mCamera, 0, phi % 360, 0, 1, 0); // rotate in horizontal direction about y axis
-        Matrix.rotateM(mCamera, 0, theta % 360, 1, 0, 0); // rotate in vertical direction about x direction
-        Matrix.invertM(mViewMatrix, 0, mCamera, 0);
+
+        float[] rotationMatrix = getCameraRotationMatrix(theta, phi);
+        mCamera = multiplyMM(mCamera, rotationMatrix);
+
+        float[] mViewMatrix = getInverse(mCamera);
 
         // Calculate the projection and view transformation
-        Matrix.multiplyMM(m, 0, mProjectionMatrix, 0, mViewMatrix, 0);
+        return OperationsHelper.multiplyMM(mProjectionMatrix, mViewMatrix);
+    }
+
+    public float[] getCameraRotationMatrix(float theta, float phi){
+        float[] rotationM = new float[16];
+        Matrix.setIdentityM(rotationM, 0);
+
+        Matrix.rotateM(rotationM, 0, phi, 0, 1, 0);
+        Matrix.rotateM(rotationM, 0, theta, 1, 0, 0);
+
+        return rotationM;
     }
 
     public void updateCameraZoom(float zoom_scale){
         //compute rotation matrices
-        float[] rotationMatrix = getCameraRotationMatrix(camera_theta, camera_phi);
+        float[] rotationMatrix = getCameraRotationMatrixForZoom(camera_theta, camera_phi);
 
         float[] translateV = new float[4];
         Matrix.multiplyMV(translateV, 0, rotationMatrix, 0, new float[]{0, 0, zoom_scale, 1}, 0);
@@ -259,52 +267,64 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     public void resetCameraParameters(){
         camera_phi = projector_phi;
         camera_theta = projector_theta;
-        System.arraycopy( projectorTranslationV, 0, cameraTranslationV, 0, projectorTranslationV.length );
-    }
-
-    private float[] getInverseProjectionMatrix(){
-        float[] inverse = new float[16];
-        Matrix.invertM(inverse, 0, mProjectionMatrix, 0);
-        return inverse;
+        System.arraycopy(projectorTranslationV, 0, cameraTranslationV, 0, projectorTranslationV.length);
     }
 
     public void updateCameraRotation(float p1x, float p1y, float p2x, float p2y, float theta, float phi){
         // get world coordinates from screen coordinates
-        float[] p1_r = screenPointToRelativeWorldDirection(SURFACE__HORIZONTAL_CENTER, SURFACE_VERTICAL_CENTER); // relative direction
-        float[] p2_w = screenPointToWorldDirection(SURFACE__HORIZONTAL_CENTER, SURFACE_VERTICAL_CENTER, theta, phi); // actual direction - given the orientation of the drone
+//        float[] p1_r = screenPointToRelativeWorldDirection(0, SURFACE_VERTICAL_CENTER); // relative direction
+//        float[] p2_w = screenPointToWorldDirection(0, SURFACE_VERTICAL_CENTER, theta, phi); // actual direction - given the orientation of the drone
+        float[] p1_r = screenPointToRelativeWorldDirection(p1x, p1y); // relative direction
+        float[] p2_w = screenPointToWorldDirection(p2x, p2y, theta, phi); // actual direction - given the orientation of the drone
 
         // change to 3D and normalize p1_r and p2
-        p1_r = new float[]{p1_r[0]/p1_r[3], p1_r[1]/p1_r[3], p1_r[2]/p1_r[3]};
-        p2_w = new float[]{p2_w[0]/p2_w[3],p2_w[1]/p2_w[3], p2_w[2]/p2_w[3]};
+        p1_r = new float[]{p1_r[0], p1_r[1], p1_r[2]};
+        p2_w = new float[]{p2_w[0], p2_w[1], p2_w[2]};
         p1_r = normalizeV(p1_r);
         p2_w = normalizeV(p2_w);
 
-
         // get phi
-        // project on x and x plane to to find the yaw angle
+        // project on x and z plane to to find the yaw angle
         float[] p1_xz = new float[]{p1_r[0], 0, p1_r[2]};
         float[] p2_xz = new float[]{p2_w[0], 0, p2_w[2]};
         p1_xz = normalizeV(p1_xz);
         p2_xz = normalizeV(p2_xz);
-        float phi1 = (float) toDegrees(acos(dot(p1_xz, new float[]{1, 0, 0})));
-        float phi2 = (float) toDegrees(acos(dot(p2_xz, new float[]{1, 0, 0})));
+        float phi1 = (float) toDegrees(atan2(p1_xz[0], -p1_xz[2]));
+        float phi2 = (float) toDegrees(atan2(p2_xz[0], -p2_xz[2]));
         float new_phi = phi2 - phi1;
-
 
         // apply new phi to p1
         p1_r = new float[]{p1_r[0], p1_r[1], p1_r[2], 1}; // switch to homogeneous coords
-        float[] p1_ = multiplyMV(getRotationMatrix(new_phi, new float[]{0, 1, 0}), p1_r);
+        float[] p1_ = multiplyMV(getRotationMatrix(-new_phi, new float[]{0, 1, 0}), p1_r);
         p1_ = new float[]{p1_[0], p1_[1], p1_[2]};
         p1_ = normalizeV(p1_);
 
         // get theta
-        float theta1 = (float) toDegrees(acos(dot(p1_, new float[]{0, 1, 0})));
-        float theta2 = (float) toDegrees(acos(dot(p2_w, new float[]{0, 1, 0})));
+        float theta1 = (float) toDegrees(atan2(p1_[1], -p1_[2]));
+        float theta2 = (float) toDegrees(atan2(p2_w[1], -p2_w[2]));
         float new_theta = theta2 - theta1;
 
+//        float[] p1_yz = new float[]{0, p1_r[1], p1_r[2]};
+//        float[] p2_yz = new float[]{0, p2_w[1], p2_w[2]};
+//        p1_yz = normalizeV(p1_yz);
+//        p2_yz = normalizeV(p2_yz);
+//        float theta1 = (float) toDegrees(atan2(p1_yz[1], -p1_yz[2]));//(float) toDegrees(acos(dot(p1_xz, new float[]{0, 0, -1})));
+//        float theta2 = (float) toDegrees(atan2(p2_yz[1], -p2_yz[2]));//(float) toDegrees(acos(dot(p2_xz, new float[]{0, 0, -1})));
+//        float new_theta = theta2 - theta1;
+//
+//        // apply new theta to p1
+//        p1_r = new float[]{p1_r[0], p1_r[1], p1_r[2], 1}; // switch to homogeneous coords
+//        float[] p1_ = multiplyMV(getRotationMatrix(new_theta%360, new float[]{1, 0, 0}), p1_r);
+//        p1_ = new float[]{p1_[0], p1_[1], p1_[2]};
+//        p1_ = normalizeV(p1_);
+//
+//        // get theta
+//        float phi1 = (float) toDegrees(atan2(p1_[0], -p1_[2]));//(float) toDegrees(acos(dot(p1_, new float[]{0, 0, -1})));
+//        float phi2 = (float) toDegrees(atan2(p2_w[0], -p2_w[2]));//(float) toDegrees(acos(dot(p2_w, new float[]{0, 0, -1})));
+//        float new_phi = phi2 - phi1;
 
         camera_phi = new_phi;
-        camera_theta = new_theta;
+        camera_theta = -new_theta;
     }
 
     // world direction = C * P^-1 * v
@@ -312,22 +332,15 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     // P^-1 is the inverse of the projection matrix
     // and v is the scaled screen coordinates vector (x and y range from -1 to 1)
     private float[] screenPointToWorldDirection(float x, float y, float theta, float phi){
-        float[] v = {(2.0f * x/GL_SURFACE_WIDTH - 1.0f), -(2.0f * y/GL_SURFACE_HEIGHT - 1.0f), 0, 1};
+        float[] v = {(2.0f * x/GL_SURFACE_WIDTH - 1.0f), -(2.0f * y / GL_SURFACE_HEIGHT - 1.0f), 0, 1};
 
-        float[] mTempViewMatrix = new float[16];
-        float[] mTempCameraMatrix = new float[16];
-        float[] mInverseProjectionMatrix = getInverseProjectionMatrix();
-        Matrix.setLookAtM(mTempViewMatrix, 0,
-                0, 0, 0, //eye
-                0, 0, 10, //center
-                0, 1, 0); // up
-
-        Matrix.invertM(mTempCameraMatrix, 0, mTempViewMatrix, 0);
-        Matrix.rotateM(mTempCameraMatrix, 0, phi % 360, 0, 1, 0); // rotate in horizontal direction about y axis
-        Matrix.rotateM(mTempCameraMatrix, 0, theta % 360, 1, 0, 0); // rotate in vertical direction about x direction
-
+        float[] mInverseProjectionMatrix = getInverse(mProjectionMatrix);
         float[] world_v = multiplyMV(mInverseProjectionMatrix, v);
-        world_v = multiplyMV(mTempCameraMatrix, world_v);
+
+        float[] cameraRotationMatrix = getCameraRotationMatrix(theta, phi);
+        float[] cameraInvRotationMatrix = getInverse(cameraRotationMatrix);
+        world_v = OperationsHelper.multiplyMV(cameraInvRotationMatrix, world_v);
+
         return world_v;
     }
 
@@ -336,17 +349,18 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     // and v is the scaled screen coordinates vector (x and y range from -1 to 1)
     private float[] screenPointToRelativeWorldDirection(float x, float y){
         float[] v = {(2.0f * x/GL_SURFACE_WIDTH - 1.0f), -(2.0f * y/GL_SURFACE_HEIGHT - 1.0f), 0, 1};
-        float[] proj_inv = getInverseProjectionMatrix();
+        float[] proj_inv = getInverse(mProjectionMatrix);
 
-        return multiplyMV(proj_inv, v);
+        float[] world_v = multiplyMV(proj_inv, v);
+        return world_v;
     }
 
-    private float[] getCameraRotationMatrix(float theta, float phi){
+    private float[] getCameraRotationMatrixForZoom(float theta, float phi){
         float[] rotateThetaMatrix = new float[16];
         float[] rotatePhiMatrix = new float[16];
 
-        Matrix.setRotateM(rotateThetaMatrix, 0, theta%360, 1, 0, 0);
         Matrix.setRotateM(rotatePhiMatrix, 0, phi%360, 0, 1, 0);
+        Matrix.setRotateM(rotateThetaMatrix, 0, theta%360, 1, 0, 0);
 
         float[] rotationMatrix = new float[16];
         Matrix.multiplyMM(rotationMatrix, 0, rotatePhiMatrix, 0, rotateThetaMatrix, 0);

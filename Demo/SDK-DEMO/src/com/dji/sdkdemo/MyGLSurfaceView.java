@@ -104,7 +104,7 @@ class MyGLSurfaceView extends GLSurfaceView {
                     theta_at_gest_start = mRenderer.getThetaCamera();
                     x_at_gest_start = x;
                     y_at_gest_start = y;
-                    break;
+//                    break;
                 case MotionEvent.ACTION_MOVE:
                     mRenderer.updateCameraRotation(x_at_gest_start, y_at_gest_start, x, y, theta_at_gest_start, phi_at_gest_start);
                     break;

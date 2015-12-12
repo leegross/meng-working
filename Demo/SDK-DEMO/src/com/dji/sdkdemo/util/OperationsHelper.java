@@ -74,9 +74,9 @@ public class OperationsHelper {
 
     public static float dot(float[] a, float[] b){
         if (a.length != b.length) return 0;
-        float result = 0;
+        float result = 0.0f;
         for (int i = 0; i < a.length; i++){
-            result += a[i] * b[i];
+            result += (double) a[i] * b[i];
         }
         return result;
     }
@@ -85,6 +85,12 @@ public class OperationsHelper {
         float[] rotationMatrix = new float[16];
         Matrix.setRotateM(rotationMatrix, 0, angle, rotation_axis[0], rotation_axis[1], rotation_axis[2]);
         return rotationMatrix;
+    }
+
+    public static float[] multiplyMM(float[] M1, float[] M2){
+        float[] output = new float[16];
+        Matrix.multiplyMM(output, 0, M1, 0, M2, 0);
+        return output;
     }
 
 }
