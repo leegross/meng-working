@@ -93,4 +93,10 @@ public class OperationsHelper {
         return output;
     }
 
+    public static float[] getTranspose(float[] M){
+        float[] transpose = new float[16];
+        Matrix.transposeM(transpose, 0, M, 0);
+        return transpose;
+    }
+
 }
