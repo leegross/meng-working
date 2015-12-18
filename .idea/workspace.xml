@@ -24,17 +24,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c2fb097-3e27-43c5-9229-9d241b4244a9" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/Hemisphere.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/Hemisphere.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/MyGLRenderer.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/MyGLRenderer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/util/OperationsHelper.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/util/OperationsHelper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R$raw.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R$raw.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/dji/sdk/R$raw.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/dji/sdk/R$raw.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R$string.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R$style.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R$style.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R$styleable.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R$styleable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R$xml.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R$xml.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/Rectangle.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/Rectangle.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug-unaligned.apk" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug.apk" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/dex/debug/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/res/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Hemisphere.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Hemisphere.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/util/OperationsHelper.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/util/OperationsHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/generated/source/r/debug/com/dji/sdkdemo/R.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/generated/source/r/debug/com/dji/sdkdemo/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/generated/source/r/debug/dji/sdk/R.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/generated/source/r/debug/dji/sdk/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/symbols/debug/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/incremental/mergeResources/debug/merger.xml" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/incremental/mergeResources/debug/merger.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DJI-SDK-Android-V2.4.0.iws" />
@@ -71,33 +84,18 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#1514#1515#0" expanded="false" />
-                <element signature="e#1577#1578#0" expanded="false" />
                 <element signature="method#onInitSDK#0;class#TouchControllerActivity#0" expanded="false" />
                 <element signature="method#checkDronePermissions#0;class#TouchControllerActivity#0" expanded="false" />
                 <element signature="method#initUIUpdateThread#0;class#TouchControllerActivity#0" expanded="false" />
                 <element signature="class#Task#0;class#TouchControllerActivity#0" expanded="false" />
-                <element signature="e#5107#5108#0" expanded="false" />
-                <element signature="e#5150#5151#0" expanded="false" />
                 <element signature="method#getToastCallback#0;class#TouchControllerActivity#0" expanded="false" />
-                <element signature="e#5414#5415#0" expanded="false" />
-                <element signature="e#5470#5471#0" expanded="false" />
                 <element signature="method#setResultToToast#0;class#TouchControllerActivity#0" expanded="false" />
                 <element signature="method#checkConnectState#0;class#TouchControllerActivity#0" expanded="false" />
                 <element signature="method#onResume#0;class#TouchControllerActivity#0" expanded="false" />
-                <element signature="e#6828#6829#0" expanded="false" />
-                <element signature="e#6859#6860#0" expanded="false" />
                 <element signature="method#onPause#0;class#TouchControllerActivity#0" expanded="false" />
                 <element signature="method#onDestroy#0;class#TouchControllerActivity#0" expanded="false" />
-                <element signature="e#7646#7647#0" expanded="false" />
-                <element signature="e#7684#7685#0" expanded="false" />
                 <element signature="method#addWaypoints1#0;class#TouchControllerActivity#0" expanded="false" />
                 <element signature="method#addWaypoints2#0;class#TouchControllerActivity#0" expanded="false" />
-                <element signature="e#8065#8066#0" expanded="false" />
-                <element signature="e#8103#8104#0" expanded="false" />
-                <element signature="e#8141#8142#0" expanded="false" />
-                <element signature="e#8202#8203#0" expanded="false" />
                 <element signature="method#enterScale#0;class#TouchControllerActivity#0" expanded="false" />
                 <element signature="method#initDecoder#0;class#TouchControllerActivity#0" expanded="false" />
               </folding>
@@ -109,7 +107,7 @@
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+              <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -138,28 +136,35 @@
       <file leaf-file-name="MyGLRenderer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.2833724">
-              <caret line="334" column="70" selection-start-line="334" selection-start-column="70" selection-end-line="334" selection-end-column="70" />
+            <state vertical-scroll-proportion="-1.6159251">
+              <caret line="69" column="26" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1944#1945#0" expanded="true" />
                 <element signature="e#1978#1979#0" expanded="true" />
-                <element signature="method#updateCameraZoom#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
-                <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
-                <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
-                <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-                <element signature="method#updateCameraRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
-                <element signature="method#updateProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
-                <element signature="method#setProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
-                <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
-                <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
-                <element signature="method#setProjectorTranslationV#0;class#MyGLRenderer#0" expanded="false" />
-                <element signature="method#resetCameraParameters#0;class#MyGLRenderer#0" expanded="false" />
-                <element signature="method#screenPointToRelativeWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
-                <element signature="method#getCameraRotationMatrixForZoom#0;class#MyGLRenderer#0" expanded="false" />
+                <element signature="e#7955#7956#0" expanded="true" />
+                <element signature="e#7993#7994#0" expanded="true" />
+                <element signature="e#8479#8480#0" expanded="true" />
+                <element signature="e#8514#8515#0" expanded="true" />
+                <element signature="e#8548#8549#0" expanded="true" />
+                <element signature="e#8581#8582#0" expanded="true" />
+                <element signature="e#8620#8621#0" expanded="true" />
+                <element signature="e#8658#8659#0" expanded="true" />
+                <element signature="e#8695#8696#0" expanded="true" />
+                <element signature="e#8731#8732#0" expanded="true" />
+                <element signature="e#9029#9030#0" expanded="true" />
+                <element signature="e#9076#9077#0" expanded="true" />
+                <element signature="e#9122#9123#0" expanded="true" />
+                <element signature="e#9167#9168#0" expanded="true" />
+                <element signature="e#9211#9212#0" expanded="true" />
+                <element signature="e#9252#9253#0" expanded="true" />
+                <element signature="e#9432#9433#0" expanded="true" />
+                <element signature="e#9476#9477#0" expanded="true" />
+                <element signature="e#11691#11732#0" expanded="false" />
                 <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
+                <marker date="1450466885000" expanded="true" signature="11743:13498" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -179,14 +184,14 @@
       </file>
       <file leaf-file-name="activity_my_waypoints.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml">
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
           <provider editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
-          </provider>
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
           </provider>
         </entry>
       </file>
@@ -2919,16 +2924,16 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java" />
-        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java" />
-        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/res/raw/per_pixel_fragment_shader.glsl" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/TouchControllerActivity.java" />
-        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Hemisphere.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/build.gradle" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/androidTest/MyGLRenderer.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/androidTest/MyGLRendererTest.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/androidTest/OperationsHelperTest.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/util/OperationsHelper.java" />
+        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java" />
+        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/res/raw/per_pixel_fragment_shader.glsl" />
+        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Hemisphere.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java" />
       </list>
     </option>
@@ -2971,16 +2976,9 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DJI-SDK-Android-V2.4.0" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -3049,11 +3047,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sdkdemo" />
+              <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -3075,23 +3069,26 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="res" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="sdkdemo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="androidTest" />
+              <option name="myItemId" value="raw" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DJI-SDK-Android-V2.4.0" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -3109,6 +3106,11 @@
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
     <property name="dynamic.classpath" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Demo/SDK-DEMO/res/raw" />
+    </key>
   </component>
   <component name="RunManager" selected="Android Application.SDK-DEMO">
     <configuration default="false" name="OperationsHelperTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -3329,7 +3331,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34610304" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3989432" sideWeight="0.49427754" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3989432" sideWeight="0.49427754" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3989432" sideWeight="0.50572246" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -3347,8 +3349,8 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -3357,15 +3359,15 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34610304" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24177396" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -3380,8 +3382,8 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -3406,39 +3408,11 @@
           <option name="timeStamp" value="172" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="274" />
+      <option name="time" value="290" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="303" column="23" selection-start-line="303" selection-start-column="23" selection-end-line="303" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1944#1945#0" expanded="true" />
-            <element signature="e#1978#1979#0" expanded="true" />
-            <element signature="method#updateCameraZoom#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#updateCameraRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#updateProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setProjectorTranslationV#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#resetCameraParameters#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#screenPointToRelativeWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#getCameraRotationMatrixForZoom#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -3448,14 +3422,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
@@ -3510,33 +3484,18 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1514#1515#0" expanded="false" />
-            <element signature="e#1577#1578#0" expanded="false" />
             <element signature="method#onInitSDK#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkDronePermissions#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initUIUpdateThread#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="class#Task#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="e#5107#5108#0" expanded="false" />
-            <element signature="e#5150#5151#0" expanded="false" />
             <element signature="method#getToastCallback#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="e#5414#5415#0" expanded="false" />
-            <element signature="e#5470#5471#0" expanded="false" />
             <element signature="method#setResultToToast#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkConnectState#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onResume#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="e#6828#6829#0" expanded="false" />
-            <element signature="e#6859#6860#0" expanded="false" />
             <element signature="method#onPause#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="e#7646#7647#0" expanded="false" />
-            <element signature="e#7684#7685#0" expanded="false" />
             <element signature="method#addWaypoints1#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#addWaypoints2#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="e#8065#8066#0" expanded="false" />
-            <element signature="e#8103#8104#0" expanded="false" />
-            <element signature="e#8141#8142#0" expanded="false" />
-            <element signature="e#8202#8203#0" expanded="false" />
             <element signature="method#enterScale#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initDecoder#0;class#TouchControllerActivity#0" expanded="false" />
           </folding>
@@ -3551,22 +3510,29 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1944#1945#0" expanded="true" />
             <element signature="e#1978#1979#0" expanded="true" />
-            <element signature="method#updateCameraZoom#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#updateCameraRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#updateProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setProjectorTranslationV#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#resetCameraParameters#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#screenPointToRelativeWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#getCameraRotationMatrixForZoom#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#7955#7956#0" expanded="true" />
+            <element signature="e#7993#7994#0" expanded="true" />
+            <element signature="e#8479#8480#0" expanded="true" />
+            <element signature="e#8514#8515#0" expanded="true" />
+            <element signature="e#8548#8549#0" expanded="true" />
+            <element signature="e#8581#8582#0" expanded="true" />
+            <element signature="e#8620#8621#0" expanded="true" />
+            <element signature="e#8658#8659#0" expanded="true" />
+            <element signature="e#8695#8696#0" expanded="true" />
+            <element signature="e#8731#8732#0" expanded="true" />
+            <element signature="e#9029#9030#0" expanded="true" />
+            <element signature="e#9076#9077#0" expanded="true" />
+            <element signature="e#9122#9123#0" expanded="true" />
+            <element signature="e#9167#9168#0" expanded="true" />
+            <element signature="e#9211#9212#0" expanded="true" />
+            <element signature="e#9252#9253#0" expanded="true" />
+            <element signature="e#9432#9433#0" expanded="true" />
+            <element signature="e#9476#9477#0" expanded="true" />
+            <element signature="e#11691#11732#0" expanded="false" />
             <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
+            <marker date="1450466885000" expanded="true" signature="11743:13498" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -3580,14 +3546,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
@@ -3642,33 +3608,18 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="229" column="5" selection-start-line="229" selection-start-column="5" selection-end-line="229" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1514#1515#0" expanded="false" />
-            <element signature="e#1577#1578#0" expanded="false" />
             <element signature="method#onInitSDK#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkDronePermissions#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initUIUpdateThread#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="class#Task#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="e#5107#5108#0" expanded="false" />
-            <element signature="e#5150#5151#0" expanded="false" />
             <element signature="method#getToastCallback#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="e#5414#5415#0" expanded="false" />
-            <element signature="e#5470#5471#0" expanded="false" />
             <element signature="method#setResultToToast#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkConnectState#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onResume#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="e#6828#6829#0" expanded="false" />
-            <element signature="e#6859#6860#0" expanded="false" />
             <element signature="method#onPause#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="e#7646#7647#0" expanded="false" />
-            <element signature="e#7684#7685#0" expanded="false" />
             <element signature="method#addWaypoints1#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#addWaypoints2#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="e#8065#8066#0" expanded="false" />
-            <element signature="e#8103#8104#0" expanded="false" />
-            <element signature="e#8141#8142#0" expanded="false" />
-            <element signature="e#8202#8203#0" expanded="false" />
             <element signature="method#enterScale#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initDecoder#0;class#TouchControllerActivity#0" expanded="false" />
           </folding>
@@ -3683,22 +3634,29 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1944#1945#0" expanded="true" />
             <element signature="e#1978#1979#0" expanded="true" />
-            <element signature="method#updateCameraZoom#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#updateCameraRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#updateProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setProjectorTranslationV#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#resetCameraParameters#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#screenPointToRelativeWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#getCameraRotationMatrixForZoom#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#7955#7956#0" expanded="true" />
+            <element signature="e#7993#7994#0" expanded="true" />
+            <element signature="e#8479#8480#0" expanded="true" />
+            <element signature="e#8514#8515#0" expanded="true" />
+            <element signature="e#8548#8549#0" expanded="true" />
+            <element signature="e#8581#8582#0" expanded="true" />
+            <element signature="e#8620#8621#0" expanded="true" />
+            <element signature="e#8658#8659#0" expanded="true" />
+            <element signature="e#8695#8696#0" expanded="true" />
+            <element signature="e#8731#8732#0" expanded="true" />
+            <element signature="e#9029#9030#0" expanded="true" />
+            <element signature="e#9076#9077#0" expanded="true" />
+            <element signature="e#9122#9123#0" expanded="true" />
+            <element signature="e#9167#9168#0" expanded="true" />
+            <element signature="e#9211#9212#0" expanded="true" />
+            <element signature="e#9252#9253#0" expanded="true" />
+            <element signature="e#9432#9433#0" expanded="true" />
+            <element signature="e#9476#9477#0" expanded="true" />
+            <element signature="e#11691#11732#0" expanded="false" />
             <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
+            <marker date="1450466885000" expanded="true" signature="11743:13498" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -3712,14 +3670,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
@@ -3774,33 +3732,18 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1514#1515#0" expanded="false" />
-            <element signature="e#1577#1578#0" expanded="false" />
             <element signature="method#onInitSDK#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkDronePermissions#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initUIUpdateThread#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="class#Task#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="e#5107#5108#0" expanded="false" />
-            <element signature="e#5150#5151#0" expanded="false" />
             <element signature="method#getToastCallback#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="e#5414#5415#0" expanded="false" />
-            <element signature="e#5470#5471#0" expanded="false" />
             <element signature="method#setResultToToast#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkConnectState#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onResume#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="e#6828#6829#0" expanded="false" />
-            <element signature="e#6859#6860#0" expanded="false" />
             <element signature="method#onPause#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="e#7646#7647#0" expanded="false" />
-            <element signature="e#7684#7685#0" expanded="false" />
             <element signature="method#addWaypoints1#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#addWaypoints2#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="e#8065#8066#0" expanded="false" />
-            <element signature="e#8103#8104#0" expanded="false" />
-            <element signature="e#8141#8142#0" expanded="false" />
-            <element signature="e#8202#8203#0" expanded="false" />
             <element signature="method#enterScale#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initDecoder#0;class#TouchControllerActivity#0" expanded="false" />
           </folding>
@@ -3815,22 +3758,29 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1944#1945#0" expanded="true" />
             <element signature="e#1978#1979#0" expanded="true" />
-            <element signature="method#updateCameraZoom#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#updateCameraRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#updateProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setProjectorTranslationV#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#resetCameraParameters#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#screenPointToRelativeWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#getCameraRotationMatrixForZoom#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#7955#7956#0" expanded="true" />
+            <element signature="e#7993#7994#0" expanded="true" />
+            <element signature="e#8479#8480#0" expanded="true" />
+            <element signature="e#8514#8515#0" expanded="true" />
+            <element signature="e#8548#8549#0" expanded="true" />
+            <element signature="e#8581#8582#0" expanded="true" />
+            <element signature="e#8620#8621#0" expanded="true" />
+            <element signature="e#8658#8659#0" expanded="true" />
+            <element signature="e#8695#8696#0" expanded="true" />
+            <element signature="e#8731#8732#0" expanded="true" />
+            <element signature="e#9029#9030#0" expanded="true" />
+            <element signature="e#9076#9077#0" expanded="true" />
+            <element signature="e#9122#9123#0" expanded="true" />
+            <element signature="e#9167#9168#0" expanded="true" />
+            <element signature="e#9211#9212#0" expanded="true" />
+            <element signature="e#9252#9253#0" expanded="true" />
+            <element signature="e#9432#9433#0" expanded="true" />
+            <element signature="e#9476#9477#0" expanded="true" />
+            <element signature="e#11691#11732#0" expanded="false" />
             <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
+            <marker date="1450466885000" expanded="true" signature="11743:13498" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -3844,14 +3794,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
@@ -3906,33 +3856,18 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1514#1515#0" expanded="false" />
-            <element signature="e#1577#1578#0" expanded="false" />
             <element signature="method#onInitSDK#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkDronePermissions#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initUIUpdateThread#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="class#Task#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="e#5107#5108#0" expanded="false" />
-            <element signature="e#5150#5151#0" expanded="false" />
             <element signature="method#getToastCallback#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="e#5414#5415#0" expanded="false" />
-            <element signature="e#5470#5471#0" expanded="false" />
             <element signature="method#setResultToToast#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkConnectState#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onResume#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="e#6828#6829#0" expanded="false" />
-            <element signature="e#6859#6860#0" expanded="false" />
             <element signature="method#onPause#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="e#7646#7647#0" expanded="false" />
-            <element signature="e#7684#7685#0" expanded="false" />
             <element signature="method#addWaypoints1#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#addWaypoints2#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="e#8065#8066#0" expanded="false" />
-            <element signature="e#8103#8104#0" expanded="false" />
-            <element signature="e#8141#8142#0" expanded="false" />
-            <element signature="e#8202#8203#0" expanded="false" />
             <element signature="method#enterScale#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initDecoder#0;class#TouchControllerActivity#0" expanded="false" />
           </folding>
@@ -3947,22 +3882,29 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1944#1945#0" expanded="true" />
             <element signature="e#1978#1979#0" expanded="true" />
-            <element signature="method#updateCameraZoom#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#updateCameraRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#updateProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setProjectorTranslationV#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#resetCameraParameters#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#screenPointToRelativeWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#getCameraRotationMatrixForZoom#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#7955#7956#0" expanded="true" />
+            <element signature="e#7993#7994#0" expanded="true" />
+            <element signature="e#8479#8480#0" expanded="true" />
+            <element signature="e#8514#8515#0" expanded="true" />
+            <element signature="e#8548#8549#0" expanded="true" />
+            <element signature="e#8581#8582#0" expanded="true" />
+            <element signature="e#8620#8621#0" expanded="true" />
+            <element signature="e#8658#8659#0" expanded="true" />
+            <element signature="e#8695#8696#0" expanded="true" />
+            <element signature="e#8731#8732#0" expanded="true" />
+            <element signature="e#9029#9030#0" expanded="true" />
+            <element signature="e#9076#9077#0" expanded="true" />
+            <element signature="e#9122#9123#0" expanded="true" />
+            <element signature="e#9167#9168#0" expanded="true" />
+            <element signature="e#9211#9212#0" expanded="true" />
+            <element signature="e#9252#9253#0" expanded="true" />
+            <element signature="e#9432#9433#0" expanded="true" />
+            <element signature="e#9476#9477#0" expanded="true" />
+            <element signature="e#11691#11732#0" expanded="false" />
             <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
+            <marker date="1450466885000" expanded="true" signature="11743:13498" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -3976,14 +3918,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
@@ -4038,33 +3980,18 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1514#1515#0" expanded="false" />
-            <element signature="e#1577#1578#0" expanded="false" />
             <element signature="method#onInitSDK#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkDronePermissions#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initUIUpdateThread#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="class#Task#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="e#5107#5108#0" expanded="false" />
-            <element signature="e#5150#5151#0" expanded="false" />
             <element signature="method#getToastCallback#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="e#5414#5415#0" expanded="false" />
-            <element signature="e#5470#5471#0" expanded="false" />
             <element signature="method#setResultToToast#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkConnectState#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onResume#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="e#6828#6829#0" expanded="false" />
-            <element signature="e#6859#6860#0" expanded="false" />
             <element signature="method#onPause#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="e#7646#7647#0" expanded="false" />
-            <element signature="e#7684#7685#0" expanded="false" />
             <element signature="method#addWaypoints1#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#addWaypoints2#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="e#8065#8066#0" expanded="false" />
-            <element signature="e#8103#8104#0" expanded="false" />
-            <element signature="e#8141#8142#0" expanded="false" />
-            <element signature="e#8202#8203#0" expanded="false" />
             <element signature="method#enterScale#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initDecoder#0;class#TouchControllerActivity#0" expanded="false" />
           </folding>
@@ -4079,22 +4006,29 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1944#1945#0" expanded="true" />
             <element signature="e#1978#1979#0" expanded="true" />
-            <element signature="method#updateCameraZoom#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#updateCameraRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#updateProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setProjectorTranslationV#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#resetCameraParameters#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#screenPointToRelativeWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#getCameraRotationMatrixForZoom#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#7955#7956#0" expanded="true" />
+            <element signature="e#7993#7994#0" expanded="true" />
+            <element signature="e#8479#8480#0" expanded="true" />
+            <element signature="e#8514#8515#0" expanded="true" />
+            <element signature="e#8548#8549#0" expanded="true" />
+            <element signature="e#8581#8582#0" expanded="true" />
+            <element signature="e#8620#8621#0" expanded="true" />
+            <element signature="e#8658#8659#0" expanded="true" />
+            <element signature="e#8695#8696#0" expanded="true" />
+            <element signature="e#8731#8732#0" expanded="true" />
+            <element signature="e#9029#9030#0" expanded="true" />
+            <element signature="e#9076#9077#0" expanded="true" />
+            <element signature="e#9122#9123#0" expanded="true" />
+            <element signature="e#9167#9168#0" expanded="true" />
+            <element signature="e#9211#9212#0" expanded="true" />
+            <element signature="e#9252#9253#0" expanded="true" />
+            <element signature="e#9432#9433#0" expanded="true" />
+            <element signature="e#9476#9477#0" expanded="true" />
+            <element signature="e#11691#11732#0" expanded="false" />
             <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
+            <marker date="1450466885000" expanded="true" signature="11743:13498" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -4108,14 +4042,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
@@ -4170,33 +4104,18 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="122" column="51" selection-start-line="122" selection-start-column="30" selection-end-line="122" selection-end-column="51" />
           <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1514#1515#0" expanded="false" />
-            <element signature="e#1577#1578#0" expanded="false" />
             <element signature="method#onInitSDK#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkDronePermissions#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initUIUpdateThread#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="class#Task#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="e#5107#5108#0" expanded="false" />
-            <element signature="e#5150#5151#0" expanded="false" />
             <element signature="method#getToastCallback#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="e#5414#5415#0" expanded="false" />
-            <element signature="e#5470#5471#0" expanded="false" />
             <element signature="method#setResultToToast#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkConnectState#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onResume#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="e#6828#6829#0" expanded="false" />
-            <element signature="e#6859#6860#0" expanded="false" />
             <element signature="method#onPause#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="e#7646#7647#0" expanded="false" />
-            <element signature="e#7684#7685#0" expanded="false" />
             <element signature="method#addWaypoints1#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#addWaypoints2#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="e#8065#8066#0" expanded="false" />
-            <element signature="e#8103#8104#0" expanded="false" />
-            <element signature="e#8141#8142#0" expanded="false" />
-            <element signature="e#8202#8203#0" expanded="false" />
             <element signature="method#enterScale#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initDecoder#0;class#TouchControllerActivity#0" expanded="false" />
           </folding>
@@ -4212,14 +4131,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
@@ -4332,20 +4251,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/raw/per_pixel_fragment_shader.glsl">
-      <provider selected="true" editor-type-id="text-editor">
+      <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -4354,52 +4265,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.30864197">
           <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/TouchControllerActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1514#1515#0" expanded="false" />
-            <element signature="e#1577#1578#0" expanded="false" />
-            <element signature="method#onInitSDK#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#checkDronePermissions#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#initUIUpdateThread#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="class#Task#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="e#5107#5108#0" expanded="false" />
-            <element signature="e#5150#5151#0" expanded="false" />
-            <element signature="method#getToastCallback#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="e#5414#5415#0" expanded="false" />
-            <element signature="e#5470#5471#0" expanded="false" />
-            <element signature="method#setResultToToast#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#checkConnectState#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#onResume#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="e#6828#6829#0" expanded="false" />
-            <element signature="e#6859#6860#0" expanded="false" />
-            <element signature="method#onPause#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="e#7646#7647#0" expanded="false" />
-            <element signature="e#7684#7685#0" expanded="false" />
-            <element signature="method#addWaypoints1#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#addWaypoints2#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="e#8065#8066#0" expanded="false" />
-            <element signature="e#8103#8104#0" expanded="false" />
-            <element signature="e#8141#8142#0" expanded="false" />
-            <element signature="e#8202#8203#0" expanded="false" />
-            <element signature="method#enterScale#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#initDecoder#0;class#TouchControllerActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Hemisphere.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.035128806">
-          <caret line="171" column="116" selection-start-line="171" selection-start-column="116" selection-end-line="171" selection-end-column="116" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4414,7 +4279,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5473251">
           <caret line="32" column="9" selection-start-line="32" selection-start-column="9" selection-end-line="32" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4432,7 +4296,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.6296296">
           <caret line="408" column="19" selection-start-line="408" selection-start-column="19" selection-end-line="408" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4440,23 +4303,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="95" column="77" selection-start-line="95" selection-start-column="77" selection-end-line="95" selection-end-column="77" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4464,7 +4310,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.57954544">
           <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4478,30 +4323,97 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="95" column="77" selection-start-line="95" selection-start-column="77" selection-end-line="95" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/TouchControllerActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+          <folding>
+            <element signature="method#onInitSDK#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="method#checkDronePermissions#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="method#initUIUpdateThread#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="class#Task#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="method#getToastCallback#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="method#setResultToToast#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="method#checkConnectState#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="method#onResume#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="method#onPause#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="method#onDestroy#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="method#addWaypoints1#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="method#addWaypoints2#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="method#enterScale#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="method#initDecoder#0;class#TouchControllerActivity#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/raw/per_pixel_fragment_shader.glsl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/raw/colorful_grid.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Hemisphere.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.2833724">
-          <caret line="334" column="70" selection-start-line="334" selection-start-column="70" selection-end-line="334" selection-end-column="70" />
+        <state vertical-scroll-proportion="-1.6159251">
+          <caret line="69" column="26" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1944#1945#0" expanded="true" />
             <element signature="e#1978#1979#0" expanded="true" />
-            <element signature="method#updateCameraZoom#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#updateCameraRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#updateProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setProjectorTranslationV#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#resetCameraParameters#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#screenPointToRelativeWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#getCameraRotationMatrixForZoom#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#7955#7956#0" expanded="true" />
+            <element signature="e#7993#7994#0" expanded="true" />
+            <element signature="e#8479#8480#0" expanded="true" />
+            <element signature="e#8514#8515#0" expanded="true" />
+            <element signature="e#8548#8549#0" expanded="true" />
+            <element signature="e#8581#8582#0" expanded="true" />
+            <element signature="e#8620#8621#0" expanded="true" />
+            <element signature="e#8658#8659#0" expanded="true" />
+            <element signature="e#8695#8696#0" expanded="true" />
+            <element signature="e#8731#8732#0" expanded="true" />
+            <element signature="e#9029#9030#0" expanded="true" />
+            <element signature="e#9076#9077#0" expanded="true" />
+            <element signature="e#9122#9123#0" expanded="true" />
+            <element signature="e#9167#9168#0" expanded="true" />
+            <element signature="e#9211#9212#0" expanded="true" />
+            <element signature="e#9252#9253#0" expanded="true" />
+            <element signature="e#9432#9433#0" expanded="true" />
+            <element signature="e#9476#9477#0" expanded="true" />
+            <element signature="e#11691#11732#0" expanded="false" />
             <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
+            <marker date="1450466885000" expanded="true" signature="11743:13498" placeholder="..." />
           </folding>
         </state>
       </provider>

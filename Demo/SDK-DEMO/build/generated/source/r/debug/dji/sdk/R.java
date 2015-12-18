@@ -51,16 +51,16 @@ public final class R {
 		public static final int log_dialog_view = 0x7f030005;
 	}
 	public static final class raw {
-		public static final int dark_1080p25 = 0x7f060000;
-		public static final int dark_1080p30 = 0x7f060001;
-		public static final int dark_720p25 = 0x7f060002;
-		public static final int dark_720p30 = 0x7f060003;
-		public static final int dock = 0x7f060004;
-		public static final int effect_tick = 0x7f060005;
-		public static final int flyc_param_infos = 0x7f060006;
-		public static final int iframe_1280_3s = 0x7f060007;
-		public static final int iframe_1280_ins = 0x7f060008;
-		public static final int iframe_960_3s = 0x7f060009;
+		public static final int dark_1080p25 = 0x7f060001;
+		public static final int dark_1080p30 = 0x7f060002;
+		public static final int dark_720p25 = 0x7f060003;
+		public static final int dark_720p30 = 0x7f060004;
+		public static final int dock = 0x7f060005;
+		public static final int effect_tick = 0x7f060006;
+		public static final int flyc_param_infos = 0x7f060007;
+		public static final int iframe_1280_3s = 0x7f060008;
+		public static final int iframe_1280_ins = 0x7f060009;
+		public static final int iframe_960_3s = 0x7f06000a;
 	}
 	public static final class string {
 		public static final int DESCRIPTION_RESULT_OK = 0x7f0a0004;

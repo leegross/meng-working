@@ -281,13 +281,10 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
     public void updateCameraRotation(float p1x, float p1y, float p2x, float p2y, float theta, float phi){
         // get world coordinates from screen coordinates
-//        float[] p1_r = screenPointToRelativeWorldDirection(0, SURFACE_VERTICAL_CENTER); // relative direction
-//        float[] p2_w = screenPointToWorldDirection(0, SURFACE_VERTICAL_CENTER, theta, phi); // actual direction - given the orientation of the drone
-//        float[] p1_r = screenPointToRelativeWorldDirection(p1x, p1y); // relative direction
-        float[] p2_w = screenPointToWorldDirection(p2x, p2y, theta, phi); // actual direction - given the orientation of the drone
         float[] p1_r = screenPointToWorldDirection(p1x, p1y, theta, phi); // relative direction
-//        float[] p2_w = screenPointToWorldDirection(GL_SURFACE_WIDTH, SURFACE_VERTICAL_CENTER, theta, phi); // actual direction - given the orientation of the drone
+        float[] p2_w = screenPointToWorldDirection(p2x, p2y, theta, phi); // actual direction - given the orientation of the drone
 //        float[] p1_r = screenPointToWorldDirection(SURFACE__HORIZONTAL_CENTER, SURFACE_VERTICAL_CENTER, theta, phi); // relative direction
+//        float[] p2_w = screenPointToWorldDirection(GL_SURFACE_WIDTH, SURFACE_VERTICAL_CENTER, theta, phi); // actual direction - given the orientation of the drone
 
 
         // change to 3D and normalize p1_r and p2
@@ -317,6 +314,46 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         float theta1 = (float) toDegrees(atan2(p1_[1], sqrt(pow(p1_[2], 2) + pow(p1_[0], 2))));
         float theta2 = (float) toDegrees(atan2(p2_w[1], sqrt(pow(p2_w[2], 2) + pow(p2_w[0], 2))));
         float new_theta = theta2 - theta1;
+
+        // change to 3D and normalize p1_r and p2
+//        p1_r = new float[]{p1_r[0], p1_r[1], p1_r[2]};
+//        p2_w = new float[]{p2_w[0], p2_w[1], p2_w[2]};
+//        p1_r = normalizeV(p1_r);
+//        p2_w = normalizeV(p2_w);
+//
+//        // get theta
+//        // project on y and z plane to to find the yaw angle
+//        float[] p1_yz = new float[]{0, p1_r[1], p1_r[2]};
+//        float[] p2_yz = new float[]{0, p2_w[1], p2_w[2]};
+//        p1_yz = normalizeV(p1_yz);
+//        p2_yz = normalizeV(p2_yz);
+//        float theta1 = (float) toDegrees(atan2(p1_yz[1], -p1_yz[2]));
+//        float theta2 = (float) toDegrees(atan2(p2_yz[1], -p2_yz[2]));
+//        float new_theta = theta2 - theta1;
+//
+//        // apply new theta to p1
+//        p1_r = new float[]{p1_r[0], p1_r[1], p1_r[2], 1}; // switch to homogeneous coords
+//        float[] thetaRotationM = getRotationMatrix(new_theta, new float[]{1, 0, 0});
+//        float[] p1_ = multiplyMV(thetaRotationM, p1_r);
+//        p1_ = new float[]{p1_[0], p1_[1], p1_[2]};
+//        p1_ = normalizeV(p1_);
+//
+//        // get phi
+//        float phi1 = (float) toDegrees(atan2(p1_[0], p1_[2]));
+//        float phi2 = (float) toDegrees(atan2(p2_w[0], p2_w[2]));
+//        float new_phi = phi2 - phi1;
+//
+//        // apply phi
+//        p1_ = new float[]{p1_[0], p1_[1], p1_[2], 1};
+//        float[] phiRotationM = getRotationMatrix(new_phi, new float[]{0, 1, 0});
+//        p1_ = multiplyMV(phiRotationM, p1_);
+//        p1_ = new float[]{p1_[0], p1_[1], p1_[2]};
+//        p1_ = normalizeV(p1_);
+//
+//        // adjust theta
+//        theta1 = (float) toDegrees(atan2(p1_[1], sqrt(pow(p1_[2], 2) + pow(p1_[0], 2))));
+//        theta2 = (float) toDegrees(atan2(p2_w[1], sqrt(pow(p2_w[2], 2) + pow(p2_w[0], 2))));
+//        new_theta += theta2 - theta1;
 
         camera_phi = phi + new_phi;
         camera_theta = theta - new_theta;

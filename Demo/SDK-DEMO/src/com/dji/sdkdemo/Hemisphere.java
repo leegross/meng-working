@@ -69,7 +69,7 @@ public class Hemisphere {
     int indexCount;
 
     Hemisphere(Context context) {
-        mTextureDataHandle = TextureHelper.loadTexture(context, R.raw.sample_img);
+        mTextureDataHandle = TextureHelper.loadTexture(context, R.raw.colorful_grid);
 
         try {
 
