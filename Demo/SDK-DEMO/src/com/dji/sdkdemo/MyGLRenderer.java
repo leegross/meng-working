@@ -119,11 +119,30 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         return rotationM;
     }
 
-    public void updateCameraZoom(float zoom_scale, float midx, float midy, float theta, float phi){
+    public void updateCameraZoom(float zoom_scale, float midx, float midy){
 
-        // compute angles of midpoint
-        float[] p1 = screenPointToWorldDirection(SURFACE__HORIZONTAL_CENTER, SURFACE_VERTICAL_CENTER, theta, phi); // camera center
-        float[] p2 = screenPointToWorldDirection(midx, midy, theta, phi); // midpoint of fingers
+        float[] mid_phi_theta = getDirectionofMidpointForZoom(midx, midy);
+        float midpt_phi = mid_phi_theta[0];
+        float midpt_theta = mid_phi_theta[1];
+
+        //compute rotation matrices
+        float[] rotationMatrix = getCameraRotationMatrix(midpt_theta, midpt_phi);
+
+        float[] translateV = new float[4];
+        Matrix.multiplyMV(translateV, 0, rotationMatrix, 0, new float[]{0, 0, -zoom_scale, 1}, 0);
+
+        if (!passPendingBoundsCheck(translateV)) return;
+
+        float[] temp = addArrays(cameraTranslationV, translateV);
+
+//        cameraTranslationV = temp;
+        cameraTranslationV = clipTranslationVector(temp);
+    }
+
+    private float[] getDirectionofMidpointForZoom(float midx, float midy){
+
+        float[] p1 = screenPointToWorldDirection(SURFACE__HORIZONTAL_CENTER, SURFACE_VERTICAL_CENTER); // camera center
+        float[] p2 = screenPointToWorldDirection(midx, midy); // midpoint of fingers
 
         // change to 3D and normalize p1 and p2
         p1 = new float[]{p1[0], p1[1], p1[2]};
@@ -132,27 +151,16 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         p2 = normalizeV(p2);
 
         float[] phi_theta = computeDeltaPhiAndThetaBetweenTwoUnitVectors(p1, p2);
-        float midpt_phi = phi - phi_theta[0];
-        float midpt_theta = theta + phi_theta[1];
 
-        //compute rotation matrices
-        float[] rotationMatrix = getCameraRotationMatrix(midpt_theta, midpt_phi);
+        // compute angles of midpoint
+        float midpt_phi = camera_phi - phi_theta[0];
+        float midpt_theta = camera_theta + phi_theta[1];
 
-//        float[] rotationMatrix = getCameraRotationMatrix(camera_theta, camera_phi);
-
-        float[] translateV = new float[4];
-        Matrix.multiplyMV(translateV, 0, rotationMatrix, 0, new float[]{0, 0, -zoom_scale, 1}, 0);
-        if (!passPendingBoundsCheck(translateV)) {
-         return;
-        }
-        float[] temp = addArrays(cameraTranslationV, translateV);
-
-//        cameraTranslationV = temp;
-        cameraTranslationV = clipTranslationVector(temp);
+        return new float[]{midpt_phi, midpt_theta};
     }
 
     private boolean passPendingBoundsCheck(float[] translateDeltaV) {
-        if (( floatEquals(cameraTranslationV[1], MIN_ALTITUDE) && cameraTranslationV[1] + translateDeltaV[1] < MIN_ALTITUDE) ||
+        if (( (floatEquals(cameraTranslationV[1], MIN_ALTITUDE)|| cameraTranslationV[1] < MIN_ALTITUDE) && cameraTranslationV[1] + translateDeltaV[1] < cameraTranslationV[1]) ||
             ( floatEquals(cameraTranslationV[0], -MAX_DIST) && cameraTranslationV[0] + translateDeltaV[0] < -MAX_DIST) ||
             ( floatEquals(cameraTranslationV[0], MAX_DIST) && cameraTranslationV[0] + translateDeltaV[0] > MAX_DIST) ||
             ( floatEquals(cameraTranslationV[2], -MAX_DIST) && cameraTranslationV[2] + translateDeltaV[2] < -MAX_DIST) ||
@@ -292,10 +300,10 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         System.arraycopy(projectorTranslationV, 0, cameraTranslationV, 0, projectorTranslationV.length);
     }
 
-    public void updateCameraRotation(float p1x, float p1y, float p2x, float p2y, float theta, float phi){
+    public void updateCameraRotation(float p1x, float p1y, float p2x, float p2y){
         // get world coordinates from screen coordinates
-        float[] p1 = screenPointToWorldDirection(p1x, p1y, theta, phi); // relative direction
-        float[] p2 = screenPointToWorldDirection(p2x, p2y, theta, phi); // actual direction - given the orientation of the drone
+        float[] p1 = screenPointToWorldDirection(p1x, p1y); // relative direction
+        float[] p2 = screenPointToWorldDirection(p2x, p2y); // actual direction - given the orientation of the drone
 //        float[] p1 = screenPointToWorldDirection(SURFACE__HORIZONTAL_CENTER, GL_SURFACE_HEIGHT, theta, phi); // relative direction
 //        float[] p2 = screenPointToWorldDirection(SURFACE__HORIZONTAL_CENTER, SURFACE_VERTICAL_CENTER, theta, phi); // actual direction - given the orientation of the drone
 
@@ -374,8 +382,8 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 //            new_theta = 0;
 //        }
 
-        camera_phi = phi + new_phi;
-        camera_theta = max(theta - new_theta, -90);
+        camera_phi += new_phi;
+        camera_theta = max(camera_theta - new_theta, -90);
     }
 
     private float[] computeDeltaPhiAndThetaBetweenTwoUnitVectors(float[] p1, float[] p2){
@@ -409,13 +417,13 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     // where C is the camera matrix,
     // P^-1 is the inverse of the projection matrix
     // and v is the scaled screen coordinates vector (x and y range from -1 to 1)
-    private float[] screenPointToWorldDirection(float x, float y, float theta, float phi){
+    private float[] screenPointToWorldDirection(float x, float y){
         float[] v = {(2.0f * x/GL_SURFACE_WIDTH - 1.0f), -(2.0f * y / GL_SURFACE_HEIGHT - 1.0f), 0, 1};
 
         float[] mInverseProjectionMatrix = getInverse(mProjectionMatrix);
         float[] world_v = multiplyMV(mInverseProjectionMatrix, v);
 
-        float[] cameraRotationM = getCameraRotationMatrix(theta, phi);
+        float[] cameraRotationM = getCameraRotationMatrix(camera_theta, camera_phi);
         world_v = OperationsHelper.multiplyMV(cameraRotationM, world_v);
 
         return world_v;

@@ -22,15 +22,9 @@ class MyGLSurfaceView extends GLSurfaceView {
 
     float H_CENTER = SURFACE__HORIZONTAL_CENTER;
     float V_CENTER = SURFACE_VERTICAL_CENTER;
-    private final float TOUCH_SCALE_FACTOR = (float) (tan(toRadians(HORIZONTAL_FOV/2)) * FRUST_NEAR /H_CENTER);
 
     private int minGimbalPitchAngle;
     private int maxGimbalPitchAngle;
-
-    float phi_at_gest_start;
-    float theta_at_gest_start;
-    float x_at_gest_start;
-    float y_at_gest_start;
 
     private boolean isGestureInProgress;
 
@@ -39,8 +33,6 @@ class MyGLSurfaceView extends GLSurfaceView {
     float scale = 100.0f;
     private float prevX;
     private float prevY;
-    private float prevTheta;
-    private float prevPhi;
 
     public MyGLSurfaceView(Context context, AttributeSet attrs){
         super(context, attrs);
@@ -55,11 +47,6 @@ class MyGLSurfaceView extends GLSurfaceView {
 
         scale = 100.0f;
         isGestureInProgress = false;
-
-        phi_at_gest_start = 0;
-        theta_at_gest_start = 0;
-        x_at_gest_start = 0;
-        y_at_gest_start = 0;
     }
 
     @Override
@@ -82,11 +69,16 @@ class MyGLSurfaceView extends GLSurfaceView {
                 case MotionEvent.ACTION_POINTER_DOWN:
                     break;
                 case MotionEvent.ACTION_MOVE:
-                    float delta = (float) sqrt(pow(p1x - p2x, 2) + pow(p1y - p2y, 2));
-                    float zoom_scale = (delta-mPrevDelta)/scale;
-                    float midx = (p1x + p2x)/2.0f;
-                    float midy = (p1y + p2y)/2.0f;
-                    mRenderer.updateCameraZoom(zoom_scale, midx, midy, prevTheta, prevPhi);
+                    String gesture = getGesture(p1x, p1y, p2x, p2y);
+                    if (gesture == "Zoom") {
+                        float delta = (float) sqrt(pow(p1x - p2x, 2) + pow(p1y - p2y, 2));
+                        float zoom_scale = (delta - mPrevDelta) / scale;
+                        float midx = (p1x + p2x) / 2.0f;
+                        float midy = (p1y + p2y) / 2.0f;
+                        mRenderer.updateCameraZoom(zoom_scale, midx, midy);
+                    } else if (gesture == "Two Finger Rotation"){
+
+                    }
                     break;
                 case MotionEvent.ACTION_POINTER_UP:
                     float[] cameraTranslationV = mRenderer.getCameraTranslation();
@@ -107,8 +99,6 @@ class MyGLSurfaceView extends GLSurfaceView {
                     break;
             }
 
-            prevTheta = mRenderer.getThetaCamera();
-            prevPhi = mRenderer.getPhiCamera();
             mPrevDelta = (float) sqrt(pow(p1x - p2x, 2.0f) + pow(p1y - p2y, 2.0f));
 
         }
@@ -116,7 +106,7 @@ class MyGLSurfaceView extends GLSurfaceView {
         else {
             switch (e.getAction()) {
                 case MotionEvent.ACTION_MOVE:
-                    mRenderer.updateCameraRotation(prevX, prevY, x, y, prevTheta, prevPhi);
+                    mRenderer.updateCameraRotation(prevX, prevY, x, y);
                     break;
                 case MotionEvent.ACTION_UP:
                     mDroneWrapper.setYawAngle(mRenderer.getPhiCamera());
@@ -127,11 +117,13 @@ class MyGLSurfaceView extends GLSurfaceView {
 
             prevX = x;
             prevY = y;
-            prevTheta = mRenderer.getThetaCamera();
-            prevPhi = mRenderer.getPhiCamera();
         }
 
         return true;
+    }
+
+    private String getGesture(float x1, float y1, float x2, float y2){
+        return "Zoom";
     }
 
     private float clipPitchAngle(float thetaY){
