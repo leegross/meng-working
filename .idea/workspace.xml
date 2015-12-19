@@ -24,30 +24,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c2fb097-3e27-43c5-9229-9d241b4244a9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/Hemisphere.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/Hemisphere.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/MyGLRenderer.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/MyGLRenderer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R$raw.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R$raw.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/dji/sdk/R$raw.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/dji/sdk/R$raw.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R$string.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R$style.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R$styleable.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R$xml.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R$xml.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/Rectangle.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/Rectangle.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/MyGLSurfaceView.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/MyGLSurfaceView.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug-unaligned.apk" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug.apk" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/dex/debug/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/res/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Hemisphere.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Hemisphere.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/generated/source/r/debug/com/dji/sdkdemo/R.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/generated/source/r/debug/com/dji/sdkdemo/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/generated/source/r/debug/dji/sdk/R.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/generated/source/r/debug/dji/sdk/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/symbols/debug/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/incremental/mergeResources/debug/merger.xml" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/incremental/mergeResources/debug/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DJI-SDK-Android-V2.4.0.iws" />
@@ -127,7 +114,7 @@
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="95" column="77" selection-start-line="95" selection-start-column="77" selection-end-line="95" selection-end-column="77" />
+              <caret line="109" column="40" selection-start-line="109" selection-start-column="40" selection-end-line="109" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -136,35 +123,35 @@
       <file leaf-file-name="MyGLRenderer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.6159251">
-              <caret line="69" column="26" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.4566745">
+              <caret line="73" column="29" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1944#1945#0" expanded="true" />
-                <element signature="e#1978#1979#0" expanded="true" />
-                <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
-                <element signature="e#7955#7956#0" expanded="true" />
-                <element signature="e#7993#7994#0" expanded="true" />
-                <element signature="e#8479#8480#0" expanded="true" />
-                <element signature="e#8514#8515#0" expanded="true" />
-                <element signature="e#8548#8549#0" expanded="true" />
-                <element signature="e#8581#8582#0" expanded="true" />
-                <element signature="e#8620#8621#0" expanded="true" />
-                <element signature="e#8658#8659#0" expanded="true" />
-                <element signature="e#8695#8696#0" expanded="true" />
-                <element signature="e#8731#8732#0" expanded="true" />
-                <element signature="e#9029#9030#0" expanded="true" />
-                <element signature="e#9076#9077#0" expanded="true" />
-                <element signature="e#9122#9123#0" expanded="true" />
-                <element signature="e#9167#9168#0" expanded="true" />
-                <element signature="e#9211#9212#0" expanded="true" />
-                <element signature="e#9252#9253#0" expanded="true" />
-                <element signature="e#9432#9433#0" expanded="true" />
-                <element signature="e#9476#9477#0" expanded="true" />
-                <element signature="e#11691#11732#0" expanded="false" />
+                <element signature="e#2024#2025#0" expanded="true" />
+                <element signature="e#2058#2059#0" expanded="true" />
+                <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
+                <element signature="e#8035#8036#0" expanded="true" />
+                <element signature="e#8073#8074#0" expanded="true" />
+                <element signature="e#8559#8560#0" expanded="true" />
+                <element signature="e#8594#8595#0" expanded="true" />
+                <element signature="e#8628#8629#0" expanded="true" />
+                <element signature="e#8661#8662#0" expanded="true" />
+                <element signature="e#8700#8701#0" expanded="true" />
+                <element signature="e#8738#8739#0" expanded="true" />
+                <element signature="e#8775#8776#0" expanded="true" />
+                <element signature="e#8811#8812#0" expanded="true" />
+                <element signature="e#9109#9110#0" expanded="true" />
+                <element signature="e#9156#9157#0" expanded="true" />
+                <element signature="e#9202#9203#0" expanded="true" />
+                <element signature="e#9247#9248#0" expanded="true" />
+                <element signature="e#9291#9292#0" expanded="true" />
+                <element signature="e#9332#9333#0" expanded="true" />
+                <element signature="e#9512#9513#0" expanded="true" />
+                <element signature="e#9556#9557#0" expanded="true" />
+                <element signature="e#12189#12211#0" expanded="false" />
                 <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
-                <marker date="1450466885000" expanded="true" signature="11743:13498" placeholder="..." />
+                <marker date="1450550239000" expanded="true" signature="12272:14133" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -2929,11 +2916,11 @@
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/androidTest/MyGLRenderer.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/androidTest/MyGLRendererTest.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/androidTest/OperationsHelperTest.java" />
-        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/util/OperationsHelper.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/res/raw/per_pixel_fragment_shader.glsl" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Hemisphere.java" />
+        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java" />
       </list>
     </option>
@@ -3408,7 +3395,7 @@
           <option name="timeStamp" value="172" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="290" />
+      <option name="time" value="334" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -3508,31 +3495,31 @@
           <caret line="303" column="23" selection-start-line="303" selection-start-column="23" selection-end-line="303" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1944#1945#0" expanded="true" />
-            <element signature="e#1978#1979#0" expanded="true" />
-            <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#7955#7956#0" expanded="true" />
-            <element signature="e#7993#7994#0" expanded="true" />
-            <element signature="e#8479#8480#0" expanded="true" />
-            <element signature="e#8514#8515#0" expanded="true" />
-            <element signature="e#8548#8549#0" expanded="true" />
-            <element signature="e#8581#8582#0" expanded="true" />
-            <element signature="e#8620#8621#0" expanded="true" />
-            <element signature="e#8658#8659#0" expanded="true" />
-            <element signature="e#8695#8696#0" expanded="true" />
-            <element signature="e#8731#8732#0" expanded="true" />
-            <element signature="e#9029#9030#0" expanded="true" />
-            <element signature="e#9076#9077#0" expanded="true" />
-            <element signature="e#9122#9123#0" expanded="true" />
-            <element signature="e#9167#9168#0" expanded="true" />
-            <element signature="e#9211#9212#0" expanded="true" />
-            <element signature="e#9252#9253#0" expanded="true" />
-            <element signature="e#9432#9433#0" expanded="true" />
-            <element signature="e#9476#9477#0" expanded="true" />
-            <element signature="e#11691#11732#0" expanded="false" />
+            <element signature="e#2024#2025#0" expanded="true" />
+            <element signature="e#2058#2059#0" expanded="true" />
+            <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#8035#8036#0" expanded="true" />
+            <element signature="e#8073#8074#0" expanded="true" />
+            <element signature="e#8559#8560#0" expanded="true" />
+            <element signature="e#8594#8595#0" expanded="true" />
+            <element signature="e#8628#8629#0" expanded="true" />
+            <element signature="e#8661#8662#0" expanded="true" />
+            <element signature="e#8700#8701#0" expanded="true" />
+            <element signature="e#8738#8739#0" expanded="true" />
+            <element signature="e#8775#8776#0" expanded="true" />
+            <element signature="e#8811#8812#0" expanded="true" />
+            <element signature="e#9109#9110#0" expanded="true" />
+            <element signature="e#9156#9157#0" expanded="true" />
+            <element signature="e#9202#9203#0" expanded="true" />
+            <element signature="e#9247#9248#0" expanded="true" />
+            <element signature="e#9291#9292#0" expanded="true" />
+            <element signature="e#9332#9333#0" expanded="true" />
+            <element signature="e#9512#9513#0" expanded="true" />
+            <element signature="e#9556#9557#0" expanded="true" />
+            <element signature="e#12189#12211#0" expanded="false" />
             <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
-            <marker date="1450466885000" expanded="true" signature="11743:13498" placeholder="..." />
+            <marker date="1450550239000" expanded="true" signature="12272:14133" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -3632,31 +3619,31 @@
           <caret line="251" column="10" selection-start-line="251" selection-start-column="10" selection-end-line="251" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1944#1945#0" expanded="true" />
-            <element signature="e#1978#1979#0" expanded="true" />
-            <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#7955#7956#0" expanded="true" />
-            <element signature="e#7993#7994#0" expanded="true" />
-            <element signature="e#8479#8480#0" expanded="true" />
-            <element signature="e#8514#8515#0" expanded="true" />
-            <element signature="e#8548#8549#0" expanded="true" />
-            <element signature="e#8581#8582#0" expanded="true" />
-            <element signature="e#8620#8621#0" expanded="true" />
-            <element signature="e#8658#8659#0" expanded="true" />
-            <element signature="e#8695#8696#0" expanded="true" />
-            <element signature="e#8731#8732#0" expanded="true" />
-            <element signature="e#9029#9030#0" expanded="true" />
-            <element signature="e#9076#9077#0" expanded="true" />
-            <element signature="e#9122#9123#0" expanded="true" />
-            <element signature="e#9167#9168#0" expanded="true" />
-            <element signature="e#9211#9212#0" expanded="true" />
-            <element signature="e#9252#9253#0" expanded="true" />
-            <element signature="e#9432#9433#0" expanded="true" />
-            <element signature="e#9476#9477#0" expanded="true" />
-            <element signature="e#11691#11732#0" expanded="false" />
+            <element signature="e#2024#2025#0" expanded="true" />
+            <element signature="e#2058#2059#0" expanded="true" />
+            <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#8035#8036#0" expanded="true" />
+            <element signature="e#8073#8074#0" expanded="true" />
+            <element signature="e#8559#8560#0" expanded="true" />
+            <element signature="e#8594#8595#0" expanded="true" />
+            <element signature="e#8628#8629#0" expanded="true" />
+            <element signature="e#8661#8662#0" expanded="true" />
+            <element signature="e#8700#8701#0" expanded="true" />
+            <element signature="e#8738#8739#0" expanded="true" />
+            <element signature="e#8775#8776#0" expanded="true" />
+            <element signature="e#8811#8812#0" expanded="true" />
+            <element signature="e#9109#9110#0" expanded="true" />
+            <element signature="e#9156#9157#0" expanded="true" />
+            <element signature="e#9202#9203#0" expanded="true" />
+            <element signature="e#9247#9248#0" expanded="true" />
+            <element signature="e#9291#9292#0" expanded="true" />
+            <element signature="e#9332#9333#0" expanded="true" />
+            <element signature="e#9512#9513#0" expanded="true" />
+            <element signature="e#9556#9557#0" expanded="true" />
+            <element signature="e#12189#12211#0" expanded="false" />
             <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
-            <marker date="1450466885000" expanded="true" signature="11743:13498" placeholder="..." />
+            <marker date="1450550239000" expanded="true" signature="12272:14133" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -3756,31 +3743,31 @@
           <caret line="255" column="0" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1944#1945#0" expanded="true" />
-            <element signature="e#1978#1979#0" expanded="true" />
-            <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#7955#7956#0" expanded="true" />
-            <element signature="e#7993#7994#0" expanded="true" />
-            <element signature="e#8479#8480#0" expanded="true" />
-            <element signature="e#8514#8515#0" expanded="true" />
-            <element signature="e#8548#8549#0" expanded="true" />
-            <element signature="e#8581#8582#0" expanded="true" />
-            <element signature="e#8620#8621#0" expanded="true" />
-            <element signature="e#8658#8659#0" expanded="true" />
-            <element signature="e#8695#8696#0" expanded="true" />
-            <element signature="e#8731#8732#0" expanded="true" />
-            <element signature="e#9029#9030#0" expanded="true" />
-            <element signature="e#9076#9077#0" expanded="true" />
-            <element signature="e#9122#9123#0" expanded="true" />
-            <element signature="e#9167#9168#0" expanded="true" />
-            <element signature="e#9211#9212#0" expanded="true" />
-            <element signature="e#9252#9253#0" expanded="true" />
-            <element signature="e#9432#9433#0" expanded="true" />
-            <element signature="e#9476#9477#0" expanded="true" />
-            <element signature="e#11691#11732#0" expanded="false" />
+            <element signature="e#2024#2025#0" expanded="true" />
+            <element signature="e#2058#2059#0" expanded="true" />
+            <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#8035#8036#0" expanded="true" />
+            <element signature="e#8073#8074#0" expanded="true" />
+            <element signature="e#8559#8560#0" expanded="true" />
+            <element signature="e#8594#8595#0" expanded="true" />
+            <element signature="e#8628#8629#0" expanded="true" />
+            <element signature="e#8661#8662#0" expanded="true" />
+            <element signature="e#8700#8701#0" expanded="true" />
+            <element signature="e#8738#8739#0" expanded="true" />
+            <element signature="e#8775#8776#0" expanded="true" />
+            <element signature="e#8811#8812#0" expanded="true" />
+            <element signature="e#9109#9110#0" expanded="true" />
+            <element signature="e#9156#9157#0" expanded="true" />
+            <element signature="e#9202#9203#0" expanded="true" />
+            <element signature="e#9247#9248#0" expanded="true" />
+            <element signature="e#9291#9292#0" expanded="true" />
+            <element signature="e#9332#9333#0" expanded="true" />
+            <element signature="e#9512#9513#0" expanded="true" />
+            <element signature="e#9556#9557#0" expanded="true" />
+            <element signature="e#12189#12211#0" expanded="false" />
             <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
-            <marker date="1450466885000" expanded="true" signature="11743:13498" placeholder="..." />
+            <marker date="1450550239000" expanded="true" signature="12272:14133" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -3880,31 +3867,31 @@
           <caret line="255" column="0" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1944#1945#0" expanded="true" />
-            <element signature="e#1978#1979#0" expanded="true" />
-            <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#7955#7956#0" expanded="true" />
-            <element signature="e#7993#7994#0" expanded="true" />
-            <element signature="e#8479#8480#0" expanded="true" />
-            <element signature="e#8514#8515#0" expanded="true" />
-            <element signature="e#8548#8549#0" expanded="true" />
-            <element signature="e#8581#8582#0" expanded="true" />
-            <element signature="e#8620#8621#0" expanded="true" />
-            <element signature="e#8658#8659#0" expanded="true" />
-            <element signature="e#8695#8696#0" expanded="true" />
-            <element signature="e#8731#8732#0" expanded="true" />
-            <element signature="e#9029#9030#0" expanded="true" />
-            <element signature="e#9076#9077#0" expanded="true" />
-            <element signature="e#9122#9123#0" expanded="true" />
-            <element signature="e#9167#9168#0" expanded="true" />
-            <element signature="e#9211#9212#0" expanded="true" />
-            <element signature="e#9252#9253#0" expanded="true" />
-            <element signature="e#9432#9433#0" expanded="true" />
-            <element signature="e#9476#9477#0" expanded="true" />
-            <element signature="e#11691#11732#0" expanded="false" />
+            <element signature="e#2024#2025#0" expanded="true" />
+            <element signature="e#2058#2059#0" expanded="true" />
+            <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#8035#8036#0" expanded="true" />
+            <element signature="e#8073#8074#0" expanded="true" />
+            <element signature="e#8559#8560#0" expanded="true" />
+            <element signature="e#8594#8595#0" expanded="true" />
+            <element signature="e#8628#8629#0" expanded="true" />
+            <element signature="e#8661#8662#0" expanded="true" />
+            <element signature="e#8700#8701#0" expanded="true" />
+            <element signature="e#8738#8739#0" expanded="true" />
+            <element signature="e#8775#8776#0" expanded="true" />
+            <element signature="e#8811#8812#0" expanded="true" />
+            <element signature="e#9109#9110#0" expanded="true" />
+            <element signature="e#9156#9157#0" expanded="true" />
+            <element signature="e#9202#9203#0" expanded="true" />
+            <element signature="e#9247#9248#0" expanded="true" />
+            <element signature="e#9291#9292#0" expanded="true" />
+            <element signature="e#9332#9333#0" expanded="true" />
+            <element signature="e#9512#9513#0" expanded="true" />
+            <element signature="e#9556#9557#0" expanded="true" />
+            <element signature="e#12189#12211#0" expanded="false" />
             <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
-            <marker date="1450466885000" expanded="true" signature="11743:13498" placeholder="..." />
+            <marker date="1450550239000" expanded="true" signature="12272:14133" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -4004,31 +3991,31 @@
           <caret line="255" column="0" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1944#1945#0" expanded="true" />
-            <element signature="e#1978#1979#0" expanded="true" />
-            <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#7955#7956#0" expanded="true" />
-            <element signature="e#7993#7994#0" expanded="true" />
-            <element signature="e#8479#8480#0" expanded="true" />
-            <element signature="e#8514#8515#0" expanded="true" />
-            <element signature="e#8548#8549#0" expanded="true" />
-            <element signature="e#8581#8582#0" expanded="true" />
-            <element signature="e#8620#8621#0" expanded="true" />
-            <element signature="e#8658#8659#0" expanded="true" />
-            <element signature="e#8695#8696#0" expanded="true" />
-            <element signature="e#8731#8732#0" expanded="true" />
-            <element signature="e#9029#9030#0" expanded="true" />
-            <element signature="e#9076#9077#0" expanded="true" />
-            <element signature="e#9122#9123#0" expanded="true" />
-            <element signature="e#9167#9168#0" expanded="true" />
-            <element signature="e#9211#9212#0" expanded="true" />
-            <element signature="e#9252#9253#0" expanded="true" />
-            <element signature="e#9432#9433#0" expanded="true" />
-            <element signature="e#9476#9477#0" expanded="true" />
-            <element signature="e#11691#11732#0" expanded="false" />
+            <element signature="e#2024#2025#0" expanded="true" />
+            <element signature="e#2058#2059#0" expanded="true" />
+            <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#8035#8036#0" expanded="true" />
+            <element signature="e#8073#8074#0" expanded="true" />
+            <element signature="e#8559#8560#0" expanded="true" />
+            <element signature="e#8594#8595#0" expanded="true" />
+            <element signature="e#8628#8629#0" expanded="true" />
+            <element signature="e#8661#8662#0" expanded="true" />
+            <element signature="e#8700#8701#0" expanded="true" />
+            <element signature="e#8738#8739#0" expanded="true" />
+            <element signature="e#8775#8776#0" expanded="true" />
+            <element signature="e#8811#8812#0" expanded="true" />
+            <element signature="e#9109#9110#0" expanded="true" />
+            <element signature="e#9156#9157#0" expanded="true" />
+            <element signature="e#9202#9203#0" expanded="true" />
+            <element signature="e#9247#9248#0" expanded="true" />
+            <element signature="e#9291#9292#0" expanded="true" />
+            <element signature="e#9332#9333#0" expanded="true" />
+            <element signature="e#9512#9513#0" expanded="true" />
+            <element signature="e#9556#9557#0" expanded="true" />
+            <element signature="e#12189#12211#0" expanded="false" />
             <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
-            <marker date="1450466885000" expanded="true" signature="11743:13498" placeholder="..." />
+            <marker date="1450550239000" expanded="true" signature="12272:14133" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -4323,14 +4310,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="95" column="77" selection-start-line="95" selection-start-column="77" selection-end-line="95" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/TouchControllerActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -4383,37 +4362,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="109" column="40" selection-start-line="109" selection-start-column="40" selection-end-line="109" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.6159251">
-          <caret line="69" column="26" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.4566745">
+          <caret line="73" column="29" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1944#1945#0" expanded="true" />
-            <element signature="e#1978#1979#0" expanded="true" />
-            <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#7955#7956#0" expanded="true" />
-            <element signature="e#7993#7994#0" expanded="true" />
-            <element signature="e#8479#8480#0" expanded="true" />
-            <element signature="e#8514#8515#0" expanded="true" />
-            <element signature="e#8548#8549#0" expanded="true" />
-            <element signature="e#8581#8582#0" expanded="true" />
-            <element signature="e#8620#8621#0" expanded="true" />
-            <element signature="e#8658#8659#0" expanded="true" />
-            <element signature="e#8695#8696#0" expanded="true" />
-            <element signature="e#8731#8732#0" expanded="true" />
-            <element signature="e#9029#9030#0" expanded="true" />
-            <element signature="e#9076#9077#0" expanded="true" />
-            <element signature="e#9122#9123#0" expanded="true" />
-            <element signature="e#9167#9168#0" expanded="true" />
-            <element signature="e#9211#9212#0" expanded="true" />
-            <element signature="e#9252#9253#0" expanded="true" />
-            <element signature="e#9432#9433#0" expanded="true" />
-            <element signature="e#9476#9477#0" expanded="true" />
-            <element signature="e#11691#11732#0" expanded="false" />
+            <element signature="e#2024#2025#0" expanded="true" />
+            <element signature="e#2058#2059#0" expanded="true" />
+            <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#8035#8036#0" expanded="true" />
+            <element signature="e#8073#8074#0" expanded="true" />
+            <element signature="e#8559#8560#0" expanded="true" />
+            <element signature="e#8594#8595#0" expanded="true" />
+            <element signature="e#8628#8629#0" expanded="true" />
+            <element signature="e#8661#8662#0" expanded="true" />
+            <element signature="e#8700#8701#0" expanded="true" />
+            <element signature="e#8738#8739#0" expanded="true" />
+            <element signature="e#8775#8776#0" expanded="true" />
+            <element signature="e#8811#8812#0" expanded="true" />
+            <element signature="e#9109#9110#0" expanded="true" />
+            <element signature="e#9156#9157#0" expanded="true" />
+            <element signature="e#9202#9203#0" expanded="true" />
+            <element signature="e#9247#9248#0" expanded="true" />
+            <element signature="e#9291#9292#0" expanded="true" />
+            <element signature="e#9332#9333#0" expanded="true" />
+            <element signature="e#9512#9513#0" expanded="true" />
+            <element signature="e#9556#9557#0" expanded="true" />
+            <element signature="e#12189#12211#0" expanded="false" />
             <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
-            <marker date="1450466885000" expanded="true" signature="11743:13498" placeholder="..." />
+            <marker date="1450550239000" expanded="true" signature="12272:14133" placeholder="..." />
           </folding>
         </state>
       </provider>

@@ -37,6 +37,10 @@ class MyGLSurfaceView extends GLSurfaceView {
     float mPrevDelta = 0;
 
     float scale = 100.0f;
+    private float prev_x;
+    private float prev_y;
+    private float prev_theta;
+    private float prev_phi;
 
     public MyGLSurfaceView(Context context, AttributeSet attrs){
         super(context, attrs);
@@ -69,7 +73,7 @@ class MyGLSurfaceView extends GLSurfaceView {
         float y = e.getY();
 
         //handle multi touch event
-        if (e.getPointerCount() > 1 && false) {
+        if (e.getPointerCount() > 1) {
             float p1x = e.getX(0);
             float p1y = e.getY(0);
             float p2x = e.getX(1);
@@ -104,9 +108,10 @@ class MyGLSurfaceView extends GLSurfaceView {
                     theta_at_gest_start = mRenderer.getThetaCamera();
                     x_at_gest_start = x;
                     y_at_gest_start = y;
-//                    break;
+                    break;
                 case MotionEvent.ACTION_MOVE:
-                    mRenderer.updateCameraRotation(x_at_gest_start, y_at_gest_start, x, y, theta_at_gest_start, phi_at_gest_start);
+//                    mRenderer.updateCameraRotation(x_at_gest_start, y_at_gest_start, x, y, theta_at_gest_start, phi_at_gest_start);
+                    mRenderer.updateCameraRotation(prev_x, prev_y, x, y, prev_theta, prev_phi);
                     break;
                 case MotionEvent.ACTION_UP:
                     mDroneWrapper.setYawAngle(mRenderer.getPhiCamera());
@@ -115,6 +120,10 @@ class MyGLSurfaceView extends GLSurfaceView {
                     isGestureInProgress = false;
                     break;
             }
+            prev_x = x;
+            prev_y = y;
+            prev_theta = mRenderer.getThetaCamera();
+            prev_phi = mRenderer.getPhiCamera();
         }
 
         return true;
