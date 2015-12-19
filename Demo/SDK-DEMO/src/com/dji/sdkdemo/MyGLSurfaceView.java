@@ -37,10 +37,10 @@ class MyGLSurfaceView extends GLSurfaceView {
     float mPrevDelta = 0;
 
     float scale = 100.0f;
-    private float prev_x;
-    private float prev_y;
-    private float prev_theta;
-    private float prev_phi;
+    private float prevX;
+    private float prevY;
+    private float prevTheta;
+    private float prevPhi;
 
     public MyGLSurfaceView(Context context, AttributeSet attrs){
         super(context, attrs);
@@ -83,8 +83,10 @@ class MyGLSurfaceView extends GLSurfaceView {
                     break;
                 case MotionEvent.ACTION_MOVE:
                     float delta = (float) sqrt(pow(p1x - p2x, 2) + pow(p1y - p2y, 2));
-                    float zoom_scale = (mPrevDelta - delta)/scale;
-                    mRenderer.updateCameraZoom(zoom_scale);
+                    float zoom_scale = (delta-mPrevDelta)/scale;
+                    float midx = (p1x + p2x)/2.0f;
+                    float midy = (p1y + p2y)/2.0f;
+                    mRenderer.updateCameraZoom(zoom_scale, midx, midy, prevTheta, prevPhi);
                     break;
                 case MotionEvent.ACTION_POINTER_UP:
                     float[] cameraTranslationV = mRenderer.getCameraTranslation();
@@ -94,36 +96,39 @@ class MyGLSurfaceView extends GLSurfaceView {
                     float heading = mRenderer.getPhiCamera();
                     mDroneWrapper.setNewGPSCoordinates(x_translate, y_translate, z_translate, heading);
 
+                    if (e.getActionIndex() == 0){
+                        prevX = p2x;
+                        prevY = p2y;
+                    } else{
+                        prevX = p1x;
+                        prevY = p1y;
+                    }
+
                     break;
             }
 
+            prevTheta = mRenderer.getThetaCamera();
+            prevPhi = mRenderer.getPhiCamera();
             mPrevDelta = (float) sqrt(pow(p1x - p2x, 2.0f) + pow(p1y - p2y, 2.0f));
 
         }
         // handle single touch event
         else {
             switch (e.getAction()) {
-                case MotionEvent.ACTION_DOWN:
-                    phi_at_gest_start = mRenderer.getPhiCamera();
-                    theta_at_gest_start = mRenderer.getThetaCamera();
-                    x_at_gest_start = x;
-                    y_at_gest_start = y;
-                    break;
                 case MotionEvent.ACTION_MOVE:
-//                    mRenderer.updateCameraRotation(x_at_gest_start, y_at_gest_start, x, y, theta_at_gest_start, phi_at_gest_start);
-                    mRenderer.updateCameraRotation(prev_x, prev_y, x, y, prev_theta, prev_phi);
+                    mRenderer.updateCameraRotation(prevX, prevY, x, y, prevTheta, prevPhi);
                     break;
                 case MotionEvent.ACTION_UP:
                     mDroneWrapper.setYawAngle(mRenderer.getPhiCamera());
                     mDroneWrapper.setGimbalPitch((int) mRenderer.getThetaCamera());
-
                     isGestureInProgress = false;
                     break;
             }
-            prev_x = x;
-            prev_y = y;
-            prev_theta = mRenderer.getThetaCamera();
-            prev_phi = mRenderer.getPhiCamera();
+
+            prevX = x;
+            prevY = y;
+            prevTheta = mRenderer.getThetaCamera();
+            prevPhi = mRenderer.getPhiCamera();
         }
 
         return true;

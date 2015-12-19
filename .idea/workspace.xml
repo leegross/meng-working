@@ -20,6 +20,7 @@
     </layouts>
   </component>
   <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="myAppTouch" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
@@ -71,18 +72,33 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
               <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#1514#1515#0" expanded="false" />
+                <element signature="e#1577#1578#0" expanded="false" />
                 <element signature="method#onInitSDK#0;class#TouchControllerActivity#0" expanded="false" />
                 <element signature="method#checkDronePermissions#0;class#TouchControllerActivity#0" expanded="false" />
                 <element signature="method#initUIUpdateThread#0;class#TouchControllerActivity#0" expanded="false" />
                 <element signature="class#Task#0;class#TouchControllerActivity#0" expanded="false" />
+                <element signature="e#5107#5108#0" expanded="false" />
+                <element signature="e#5150#5151#0" expanded="false" />
                 <element signature="method#getToastCallback#0;class#TouchControllerActivity#0" expanded="false" />
+                <element signature="e#5414#5415#0" expanded="false" />
+                <element signature="e#5470#5471#0" expanded="false" />
                 <element signature="method#setResultToToast#0;class#TouchControllerActivity#0" expanded="false" />
                 <element signature="method#checkConnectState#0;class#TouchControllerActivity#0" expanded="false" />
                 <element signature="method#onResume#0;class#TouchControllerActivity#0" expanded="false" />
+                <element signature="e#6828#6829#0" expanded="false" />
+                <element signature="e#6859#6860#0" expanded="false" />
                 <element signature="method#onPause#0;class#TouchControllerActivity#0" expanded="false" />
                 <element signature="method#onDestroy#0;class#TouchControllerActivity#0" expanded="false" />
+                <element signature="e#7646#7647#0" expanded="false" />
+                <element signature="e#7684#7685#0" expanded="false" />
                 <element signature="method#addWaypoints1#0;class#TouchControllerActivity#0" expanded="false" />
                 <element signature="method#addWaypoints2#0;class#TouchControllerActivity#0" expanded="false" />
+                <element signature="e#8065#8066#0" expanded="false" />
+                <element signature="e#8103#8104#0" expanded="false" />
+                <element signature="e#8141#8142#0" expanded="false" />
+                <element signature="e#8202#8203#0" expanded="false" />
                 <element signature="method#enterScale#0;class#TouchControllerActivity#0" expanded="false" />
                 <element signature="method#initDecoder#0;class#TouchControllerActivity#0" expanded="false" />
               </folding>
@@ -114,7 +130,7 @@
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="109" column="40" selection-start-line="109" selection-start-column="40" selection-end-line="109" selection-end-column="40" />
+              <caret line="87" column="50" selection-start-line="87" selection-start-column="50" selection-end-line="87" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -123,35 +139,37 @@
       <file leaf-file-name="MyGLRenderer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4566745">
-              <caret line="73" column="29" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.08665106">
+              <caret line="113" column="67" selection-start-line="113" selection-start-column="67" selection-end-line="113" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2024#2025#0" expanded="true" />
                 <element signature="e#2058#2059#0" expanded="true" />
                 <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
-                <element signature="e#8035#8036#0" expanded="true" />
-                <element signature="e#8073#8074#0" expanded="true" />
-                <element signature="e#8559#8560#0" expanded="true" />
-                <element signature="e#8594#8595#0" expanded="true" />
-                <element signature="e#8628#8629#0" expanded="true" />
-                <element signature="e#8661#8662#0" expanded="true" />
-                <element signature="e#8700#8701#0" expanded="true" />
-                <element signature="e#8738#8739#0" expanded="true" />
-                <element signature="e#8775#8776#0" expanded="true" />
-                <element signature="e#8811#8812#0" expanded="true" />
-                <element signature="e#9109#9110#0" expanded="true" />
-                <element signature="e#9156#9157#0" expanded="true" />
-                <element signature="e#9202#9203#0" expanded="true" />
-                <element signature="e#9247#9248#0" expanded="true" />
-                <element signature="e#9291#9292#0" expanded="true" />
-                <element signature="e#9332#9333#0" expanded="true" />
-                <element signature="e#9512#9513#0" expanded="true" />
-                <element signature="e#9556#9557#0" expanded="true" />
-                <element signature="e#12189#12211#0" expanded="false" />
+                <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
+                <element signature="e#8478#8479#0" expanded="true" />
+                <element signature="e#8516#8517#0" expanded="true" />
+                <element signature="e#9002#9003#0" expanded="true" />
+                <element signature="e#9037#9038#0" expanded="true" />
+                <element signature="e#9071#9072#0" expanded="true" />
+                <element signature="e#9104#9105#0" expanded="true" />
+                <element signature="e#9143#9144#0" expanded="true" />
+                <element signature="e#9181#9182#0" expanded="true" />
+                <element signature="e#9218#9219#0" expanded="true" />
+                <element signature="e#9254#9255#0" expanded="true" />
+                <element signature="e#9552#9553#0" expanded="true" />
+                <element signature="e#9599#9600#0" expanded="true" />
+                <element signature="e#9645#9646#0" expanded="true" />
+                <element signature="e#9690#9691#0" expanded="true" />
+                <element signature="e#9734#9735#0" expanded="true" />
+                <element signature="e#9775#9776#0" expanded="true" />
+                <element signature="e#9955#9956#0" expanded="true" />
+                <element signature="e#9999#10000#0" expanded="true" />
+                <element signature="e#11710#11732#0" expanded="false" />
+                <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
-                <marker date="1450550239000" expanded="true" signature="12272:14133" placeholder="..." />
+                <marker date="1450563392000" expanded="true" signature="11793:13654" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -162,9 +180,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="91" column="51" selection-start-line="91" selection-start-column="51" selection-end-line="91" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -3395,7 +3411,7 @@
           <option name="timeStamp" value="172" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="334" />
+      <option name="time" value="338" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -3471,18 +3487,33 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1514#1515#0" expanded="false" />
+            <element signature="e#1577#1578#0" expanded="false" />
             <element signature="method#onInitSDK#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkDronePermissions#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initUIUpdateThread#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="class#Task#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#5107#5108#0" expanded="false" />
+            <element signature="e#5150#5151#0" expanded="false" />
             <element signature="method#getToastCallback#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#5414#5415#0" expanded="false" />
+            <element signature="e#5470#5471#0" expanded="false" />
             <element signature="method#setResultToToast#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkConnectState#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onResume#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#6828#6829#0" expanded="false" />
+            <element signature="e#6859#6860#0" expanded="false" />
             <element signature="method#onPause#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#7646#7647#0" expanded="false" />
+            <element signature="e#7684#7685#0" expanded="false" />
             <element signature="method#addWaypoints1#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#addWaypoints2#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#8065#8066#0" expanded="false" />
+            <element signature="e#8103#8104#0" expanded="false" />
+            <element signature="e#8141#8142#0" expanded="false" />
+            <element signature="e#8202#8203#0" expanded="false" />
             <element signature="method#enterScale#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initDecoder#0;class#TouchControllerActivity#0" expanded="false" />
           </folding>
@@ -3498,28 +3529,30 @@
             <element signature="e#2024#2025#0" expanded="true" />
             <element signature="e#2058#2059#0" expanded="true" />
             <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#8035#8036#0" expanded="true" />
-            <element signature="e#8073#8074#0" expanded="true" />
-            <element signature="e#8559#8560#0" expanded="true" />
-            <element signature="e#8594#8595#0" expanded="true" />
-            <element signature="e#8628#8629#0" expanded="true" />
-            <element signature="e#8661#8662#0" expanded="true" />
-            <element signature="e#8700#8701#0" expanded="true" />
-            <element signature="e#8738#8739#0" expanded="true" />
-            <element signature="e#8775#8776#0" expanded="true" />
-            <element signature="e#8811#8812#0" expanded="true" />
-            <element signature="e#9109#9110#0" expanded="true" />
-            <element signature="e#9156#9157#0" expanded="true" />
-            <element signature="e#9202#9203#0" expanded="true" />
-            <element signature="e#9247#9248#0" expanded="true" />
-            <element signature="e#9291#9292#0" expanded="true" />
-            <element signature="e#9332#9333#0" expanded="true" />
-            <element signature="e#9512#9513#0" expanded="true" />
-            <element signature="e#9556#9557#0" expanded="true" />
-            <element signature="e#12189#12211#0" expanded="false" />
+            <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#8478#8479#0" expanded="true" />
+            <element signature="e#8516#8517#0" expanded="true" />
+            <element signature="e#9002#9003#0" expanded="true" />
+            <element signature="e#9037#9038#0" expanded="true" />
+            <element signature="e#9071#9072#0" expanded="true" />
+            <element signature="e#9104#9105#0" expanded="true" />
+            <element signature="e#9143#9144#0" expanded="true" />
+            <element signature="e#9181#9182#0" expanded="true" />
+            <element signature="e#9218#9219#0" expanded="true" />
+            <element signature="e#9254#9255#0" expanded="true" />
+            <element signature="e#9552#9553#0" expanded="true" />
+            <element signature="e#9599#9600#0" expanded="true" />
+            <element signature="e#9645#9646#0" expanded="true" />
+            <element signature="e#9690#9691#0" expanded="true" />
+            <element signature="e#9734#9735#0" expanded="true" />
+            <element signature="e#9775#9776#0" expanded="true" />
+            <element signature="e#9955#9956#0" expanded="true" />
+            <element signature="e#9999#10000#0" expanded="true" />
+            <element signature="e#11710#11732#0" expanded="false" />
+            <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
-            <marker date="1450550239000" expanded="true" signature="12272:14133" placeholder="..." />
+            <marker date="1450563392000" expanded="true" signature="11793:13654" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -3595,18 +3628,33 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="229" column="5" selection-start-line="229" selection-start-column="5" selection-end-line="229" selection-end-column="5" />
           <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1514#1515#0" expanded="false" />
+            <element signature="e#1577#1578#0" expanded="false" />
             <element signature="method#onInitSDK#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkDronePermissions#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initUIUpdateThread#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="class#Task#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#5107#5108#0" expanded="false" />
+            <element signature="e#5150#5151#0" expanded="false" />
             <element signature="method#getToastCallback#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#5414#5415#0" expanded="false" />
+            <element signature="e#5470#5471#0" expanded="false" />
             <element signature="method#setResultToToast#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkConnectState#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onResume#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#6828#6829#0" expanded="false" />
+            <element signature="e#6859#6860#0" expanded="false" />
             <element signature="method#onPause#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#7646#7647#0" expanded="false" />
+            <element signature="e#7684#7685#0" expanded="false" />
             <element signature="method#addWaypoints1#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#addWaypoints2#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#8065#8066#0" expanded="false" />
+            <element signature="e#8103#8104#0" expanded="false" />
+            <element signature="e#8141#8142#0" expanded="false" />
+            <element signature="e#8202#8203#0" expanded="false" />
             <element signature="method#enterScale#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initDecoder#0;class#TouchControllerActivity#0" expanded="false" />
           </folding>
@@ -3622,28 +3670,30 @@
             <element signature="e#2024#2025#0" expanded="true" />
             <element signature="e#2058#2059#0" expanded="true" />
             <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#8035#8036#0" expanded="true" />
-            <element signature="e#8073#8074#0" expanded="true" />
-            <element signature="e#8559#8560#0" expanded="true" />
-            <element signature="e#8594#8595#0" expanded="true" />
-            <element signature="e#8628#8629#0" expanded="true" />
-            <element signature="e#8661#8662#0" expanded="true" />
-            <element signature="e#8700#8701#0" expanded="true" />
-            <element signature="e#8738#8739#0" expanded="true" />
-            <element signature="e#8775#8776#0" expanded="true" />
-            <element signature="e#8811#8812#0" expanded="true" />
-            <element signature="e#9109#9110#0" expanded="true" />
-            <element signature="e#9156#9157#0" expanded="true" />
-            <element signature="e#9202#9203#0" expanded="true" />
-            <element signature="e#9247#9248#0" expanded="true" />
-            <element signature="e#9291#9292#0" expanded="true" />
-            <element signature="e#9332#9333#0" expanded="true" />
-            <element signature="e#9512#9513#0" expanded="true" />
-            <element signature="e#9556#9557#0" expanded="true" />
-            <element signature="e#12189#12211#0" expanded="false" />
+            <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#8478#8479#0" expanded="true" />
+            <element signature="e#8516#8517#0" expanded="true" />
+            <element signature="e#9002#9003#0" expanded="true" />
+            <element signature="e#9037#9038#0" expanded="true" />
+            <element signature="e#9071#9072#0" expanded="true" />
+            <element signature="e#9104#9105#0" expanded="true" />
+            <element signature="e#9143#9144#0" expanded="true" />
+            <element signature="e#9181#9182#0" expanded="true" />
+            <element signature="e#9218#9219#0" expanded="true" />
+            <element signature="e#9254#9255#0" expanded="true" />
+            <element signature="e#9552#9553#0" expanded="true" />
+            <element signature="e#9599#9600#0" expanded="true" />
+            <element signature="e#9645#9646#0" expanded="true" />
+            <element signature="e#9690#9691#0" expanded="true" />
+            <element signature="e#9734#9735#0" expanded="true" />
+            <element signature="e#9775#9776#0" expanded="true" />
+            <element signature="e#9955#9956#0" expanded="true" />
+            <element signature="e#9999#10000#0" expanded="true" />
+            <element signature="e#11710#11732#0" expanded="false" />
+            <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
-            <marker date="1450550239000" expanded="true" signature="12272:14133" placeholder="..." />
+            <marker date="1450563392000" expanded="true" signature="11793:13654" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -3719,18 +3769,33 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1514#1515#0" expanded="false" />
+            <element signature="e#1577#1578#0" expanded="false" />
             <element signature="method#onInitSDK#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkDronePermissions#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initUIUpdateThread#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="class#Task#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#5107#5108#0" expanded="false" />
+            <element signature="e#5150#5151#0" expanded="false" />
             <element signature="method#getToastCallback#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#5414#5415#0" expanded="false" />
+            <element signature="e#5470#5471#0" expanded="false" />
             <element signature="method#setResultToToast#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkConnectState#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onResume#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#6828#6829#0" expanded="false" />
+            <element signature="e#6859#6860#0" expanded="false" />
             <element signature="method#onPause#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#7646#7647#0" expanded="false" />
+            <element signature="e#7684#7685#0" expanded="false" />
             <element signature="method#addWaypoints1#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#addWaypoints2#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#8065#8066#0" expanded="false" />
+            <element signature="e#8103#8104#0" expanded="false" />
+            <element signature="e#8141#8142#0" expanded="false" />
+            <element signature="e#8202#8203#0" expanded="false" />
             <element signature="method#enterScale#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initDecoder#0;class#TouchControllerActivity#0" expanded="false" />
           </folding>
@@ -3746,28 +3811,30 @@
             <element signature="e#2024#2025#0" expanded="true" />
             <element signature="e#2058#2059#0" expanded="true" />
             <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#8035#8036#0" expanded="true" />
-            <element signature="e#8073#8074#0" expanded="true" />
-            <element signature="e#8559#8560#0" expanded="true" />
-            <element signature="e#8594#8595#0" expanded="true" />
-            <element signature="e#8628#8629#0" expanded="true" />
-            <element signature="e#8661#8662#0" expanded="true" />
-            <element signature="e#8700#8701#0" expanded="true" />
-            <element signature="e#8738#8739#0" expanded="true" />
-            <element signature="e#8775#8776#0" expanded="true" />
-            <element signature="e#8811#8812#0" expanded="true" />
-            <element signature="e#9109#9110#0" expanded="true" />
-            <element signature="e#9156#9157#0" expanded="true" />
-            <element signature="e#9202#9203#0" expanded="true" />
-            <element signature="e#9247#9248#0" expanded="true" />
-            <element signature="e#9291#9292#0" expanded="true" />
-            <element signature="e#9332#9333#0" expanded="true" />
-            <element signature="e#9512#9513#0" expanded="true" />
-            <element signature="e#9556#9557#0" expanded="true" />
-            <element signature="e#12189#12211#0" expanded="false" />
+            <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#8478#8479#0" expanded="true" />
+            <element signature="e#8516#8517#0" expanded="true" />
+            <element signature="e#9002#9003#0" expanded="true" />
+            <element signature="e#9037#9038#0" expanded="true" />
+            <element signature="e#9071#9072#0" expanded="true" />
+            <element signature="e#9104#9105#0" expanded="true" />
+            <element signature="e#9143#9144#0" expanded="true" />
+            <element signature="e#9181#9182#0" expanded="true" />
+            <element signature="e#9218#9219#0" expanded="true" />
+            <element signature="e#9254#9255#0" expanded="true" />
+            <element signature="e#9552#9553#0" expanded="true" />
+            <element signature="e#9599#9600#0" expanded="true" />
+            <element signature="e#9645#9646#0" expanded="true" />
+            <element signature="e#9690#9691#0" expanded="true" />
+            <element signature="e#9734#9735#0" expanded="true" />
+            <element signature="e#9775#9776#0" expanded="true" />
+            <element signature="e#9955#9956#0" expanded="true" />
+            <element signature="e#9999#10000#0" expanded="true" />
+            <element signature="e#11710#11732#0" expanded="false" />
+            <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
-            <marker date="1450550239000" expanded="true" signature="12272:14133" placeholder="..." />
+            <marker date="1450563392000" expanded="true" signature="11793:13654" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -3843,18 +3910,33 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1514#1515#0" expanded="false" />
+            <element signature="e#1577#1578#0" expanded="false" />
             <element signature="method#onInitSDK#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkDronePermissions#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initUIUpdateThread#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="class#Task#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#5107#5108#0" expanded="false" />
+            <element signature="e#5150#5151#0" expanded="false" />
             <element signature="method#getToastCallback#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#5414#5415#0" expanded="false" />
+            <element signature="e#5470#5471#0" expanded="false" />
             <element signature="method#setResultToToast#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkConnectState#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onResume#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#6828#6829#0" expanded="false" />
+            <element signature="e#6859#6860#0" expanded="false" />
             <element signature="method#onPause#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#7646#7647#0" expanded="false" />
+            <element signature="e#7684#7685#0" expanded="false" />
             <element signature="method#addWaypoints1#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#addWaypoints2#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#8065#8066#0" expanded="false" />
+            <element signature="e#8103#8104#0" expanded="false" />
+            <element signature="e#8141#8142#0" expanded="false" />
+            <element signature="e#8202#8203#0" expanded="false" />
             <element signature="method#enterScale#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initDecoder#0;class#TouchControllerActivity#0" expanded="false" />
           </folding>
@@ -3870,28 +3952,30 @@
             <element signature="e#2024#2025#0" expanded="true" />
             <element signature="e#2058#2059#0" expanded="true" />
             <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#8035#8036#0" expanded="true" />
-            <element signature="e#8073#8074#0" expanded="true" />
-            <element signature="e#8559#8560#0" expanded="true" />
-            <element signature="e#8594#8595#0" expanded="true" />
-            <element signature="e#8628#8629#0" expanded="true" />
-            <element signature="e#8661#8662#0" expanded="true" />
-            <element signature="e#8700#8701#0" expanded="true" />
-            <element signature="e#8738#8739#0" expanded="true" />
-            <element signature="e#8775#8776#0" expanded="true" />
-            <element signature="e#8811#8812#0" expanded="true" />
-            <element signature="e#9109#9110#0" expanded="true" />
-            <element signature="e#9156#9157#0" expanded="true" />
-            <element signature="e#9202#9203#0" expanded="true" />
-            <element signature="e#9247#9248#0" expanded="true" />
-            <element signature="e#9291#9292#0" expanded="true" />
-            <element signature="e#9332#9333#0" expanded="true" />
-            <element signature="e#9512#9513#0" expanded="true" />
-            <element signature="e#9556#9557#0" expanded="true" />
-            <element signature="e#12189#12211#0" expanded="false" />
+            <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#8478#8479#0" expanded="true" />
+            <element signature="e#8516#8517#0" expanded="true" />
+            <element signature="e#9002#9003#0" expanded="true" />
+            <element signature="e#9037#9038#0" expanded="true" />
+            <element signature="e#9071#9072#0" expanded="true" />
+            <element signature="e#9104#9105#0" expanded="true" />
+            <element signature="e#9143#9144#0" expanded="true" />
+            <element signature="e#9181#9182#0" expanded="true" />
+            <element signature="e#9218#9219#0" expanded="true" />
+            <element signature="e#9254#9255#0" expanded="true" />
+            <element signature="e#9552#9553#0" expanded="true" />
+            <element signature="e#9599#9600#0" expanded="true" />
+            <element signature="e#9645#9646#0" expanded="true" />
+            <element signature="e#9690#9691#0" expanded="true" />
+            <element signature="e#9734#9735#0" expanded="true" />
+            <element signature="e#9775#9776#0" expanded="true" />
+            <element signature="e#9955#9956#0" expanded="true" />
+            <element signature="e#9999#10000#0" expanded="true" />
+            <element signature="e#11710#11732#0" expanded="false" />
+            <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
-            <marker date="1450550239000" expanded="true" signature="12272:14133" placeholder="..." />
+            <marker date="1450563392000" expanded="true" signature="11793:13654" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -3967,18 +4051,33 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1514#1515#0" expanded="false" />
+            <element signature="e#1577#1578#0" expanded="false" />
             <element signature="method#onInitSDK#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkDronePermissions#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initUIUpdateThread#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="class#Task#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#5107#5108#0" expanded="false" />
+            <element signature="e#5150#5151#0" expanded="false" />
             <element signature="method#getToastCallback#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#5414#5415#0" expanded="false" />
+            <element signature="e#5470#5471#0" expanded="false" />
             <element signature="method#setResultToToast#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkConnectState#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onResume#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#6828#6829#0" expanded="false" />
+            <element signature="e#6859#6860#0" expanded="false" />
             <element signature="method#onPause#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#7646#7647#0" expanded="false" />
+            <element signature="e#7684#7685#0" expanded="false" />
             <element signature="method#addWaypoints1#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#addWaypoints2#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#8065#8066#0" expanded="false" />
+            <element signature="e#8103#8104#0" expanded="false" />
+            <element signature="e#8141#8142#0" expanded="false" />
+            <element signature="e#8202#8203#0" expanded="false" />
             <element signature="method#enterScale#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initDecoder#0;class#TouchControllerActivity#0" expanded="false" />
           </folding>
@@ -3994,28 +4093,30 @@
             <element signature="e#2024#2025#0" expanded="true" />
             <element signature="e#2058#2059#0" expanded="true" />
             <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#8035#8036#0" expanded="true" />
-            <element signature="e#8073#8074#0" expanded="true" />
-            <element signature="e#8559#8560#0" expanded="true" />
-            <element signature="e#8594#8595#0" expanded="true" />
-            <element signature="e#8628#8629#0" expanded="true" />
-            <element signature="e#8661#8662#0" expanded="true" />
-            <element signature="e#8700#8701#0" expanded="true" />
-            <element signature="e#8738#8739#0" expanded="true" />
-            <element signature="e#8775#8776#0" expanded="true" />
-            <element signature="e#8811#8812#0" expanded="true" />
-            <element signature="e#9109#9110#0" expanded="true" />
-            <element signature="e#9156#9157#0" expanded="true" />
-            <element signature="e#9202#9203#0" expanded="true" />
-            <element signature="e#9247#9248#0" expanded="true" />
-            <element signature="e#9291#9292#0" expanded="true" />
-            <element signature="e#9332#9333#0" expanded="true" />
-            <element signature="e#9512#9513#0" expanded="true" />
-            <element signature="e#9556#9557#0" expanded="true" />
-            <element signature="e#12189#12211#0" expanded="false" />
+            <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#8478#8479#0" expanded="true" />
+            <element signature="e#8516#8517#0" expanded="true" />
+            <element signature="e#9002#9003#0" expanded="true" />
+            <element signature="e#9037#9038#0" expanded="true" />
+            <element signature="e#9071#9072#0" expanded="true" />
+            <element signature="e#9104#9105#0" expanded="true" />
+            <element signature="e#9143#9144#0" expanded="true" />
+            <element signature="e#9181#9182#0" expanded="true" />
+            <element signature="e#9218#9219#0" expanded="true" />
+            <element signature="e#9254#9255#0" expanded="true" />
+            <element signature="e#9552#9553#0" expanded="true" />
+            <element signature="e#9599#9600#0" expanded="true" />
+            <element signature="e#9645#9646#0" expanded="true" />
+            <element signature="e#9690#9691#0" expanded="true" />
+            <element signature="e#9734#9735#0" expanded="true" />
+            <element signature="e#9775#9776#0" expanded="true" />
+            <element signature="e#9955#9956#0" expanded="true" />
+            <element signature="e#9999#10000#0" expanded="true" />
+            <element signature="e#11710#11732#0" expanded="false" />
+            <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
-            <marker date="1450550239000" expanded="true" signature="12272:14133" placeholder="..." />
+            <marker date="1450563392000" expanded="true" signature="11793:13654" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -4091,18 +4192,33 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="122" column="51" selection-start-line="122" selection-start-column="30" selection-end-line="122" selection-end-column="51" />
           <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1514#1515#0" expanded="false" />
+            <element signature="e#1577#1578#0" expanded="false" />
             <element signature="method#onInitSDK#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkDronePermissions#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initUIUpdateThread#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="class#Task#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#5107#5108#0" expanded="false" />
+            <element signature="e#5150#5151#0" expanded="false" />
             <element signature="method#getToastCallback#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#5414#5415#0" expanded="false" />
+            <element signature="e#5470#5471#0" expanded="false" />
             <element signature="method#setResultToToast#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkConnectState#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onResume#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#6828#6829#0" expanded="false" />
+            <element signature="e#6859#6860#0" expanded="false" />
             <element signature="method#onPause#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#7646#7647#0" expanded="false" />
+            <element signature="e#7684#7685#0" expanded="false" />
             <element signature="method#addWaypoints1#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#addWaypoints2#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#8065#8066#0" expanded="false" />
+            <element signature="e#8103#8104#0" expanded="false" />
+            <element signature="e#8141#8142#0" expanded="false" />
+            <element signature="e#8202#8203#0" expanded="false" />
             <element signature="method#enterScale#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initDecoder#0;class#TouchControllerActivity#0" expanded="false" />
           </folding>
@@ -4304,9 +4420,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="91" column="51" selection-start-line="91" selection-start-column="51" selection-end-line="91" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -4315,18 +4429,33 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1514#1515#0" expanded="false" />
+            <element signature="e#1577#1578#0" expanded="false" />
             <element signature="method#onInitSDK#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkDronePermissions#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initUIUpdateThread#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="class#Task#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#5107#5108#0" expanded="false" />
+            <element signature="e#5150#5151#0" expanded="false" />
             <element signature="method#getToastCallback#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#5414#5415#0" expanded="false" />
+            <element signature="e#5470#5471#0" expanded="false" />
             <element signature="method#setResultToToast#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#checkConnectState#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onResume#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#6828#6829#0" expanded="false" />
+            <element signature="e#6859#6860#0" expanded="false" />
             <element signature="method#onPause#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#onDestroy#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#7646#7647#0" expanded="false" />
+            <element signature="e#7684#7685#0" expanded="false" />
             <element signature="method#addWaypoints1#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#addWaypoints2#0;class#TouchControllerActivity#0" expanded="false" />
+            <element signature="e#8065#8066#0" expanded="false" />
+            <element signature="e#8103#8104#0" expanded="false" />
+            <element signature="e#8141#8142#0" expanded="false" />
+            <element signature="e#8202#8203#0" expanded="false" />
             <element signature="method#enterScale#0;class#TouchControllerActivity#0" expanded="false" />
             <element signature="method#initDecoder#0;class#TouchControllerActivity#0" expanded="false" />
           </folding>
@@ -4365,42 +4494,44 @@
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="109" column="40" selection-start-line="109" selection-start-column="40" selection-end-line="109" selection-end-column="40" />
+          <caret line="87" column="50" selection-start-line="87" selection-start-column="50" selection-end-line="87" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4566745">
-          <caret line="73" column="29" selection-start-line="73" selection-start-column="29" selection-end-line="73" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.08665106">
+          <caret line="113" column="67" selection-start-line="113" selection-start-column="67" selection-end-line="113" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2024#2025#0" expanded="true" />
             <element signature="e#2058#2059#0" expanded="true" />
             <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#8035#8036#0" expanded="true" />
-            <element signature="e#8073#8074#0" expanded="true" />
-            <element signature="e#8559#8560#0" expanded="true" />
-            <element signature="e#8594#8595#0" expanded="true" />
-            <element signature="e#8628#8629#0" expanded="true" />
-            <element signature="e#8661#8662#0" expanded="true" />
-            <element signature="e#8700#8701#0" expanded="true" />
-            <element signature="e#8738#8739#0" expanded="true" />
-            <element signature="e#8775#8776#0" expanded="true" />
-            <element signature="e#8811#8812#0" expanded="true" />
-            <element signature="e#9109#9110#0" expanded="true" />
-            <element signature="e#9156#9157#0" expanded="true" />
-            <element signature="e#9202#9203#0" expanded="true" />
-            <element signature="e#9247#9248#0" expanded="true" />
-            <element signature="e#9291#9292#0" expanded="true" />
-            <element signature="e#9332#9333#0" expanded="true" />
-            <element signature="e#9512#9513#0" expanded="true" />
-            <element signature="e#9556#9557#0" expanded="true" />
-            <element signature="e#12189#12211#0" expanded="false" />
+            <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#8478#8479#0" expanded="true" />
+            <element signature="e#8516#8517#0" expanded="true" />
+            <element signature="e#9002#9003#0" expanded="true" />
+            <element signature="e#9037#9038#0" expanded="true" />
+            <element signature="e#9071#9072#0" expanded="true" />
+            <element signature="e#9104#9105#0" expanded="true" />
+            <element signature="e#9143#9144#0" expanded="true" />
+            <element signature="e#9181#9182#0" expanded="true" />
+            <element signature="e#9218#9219#0" expanded="true" />
+            <element signature="e#9254#9255#0" expanded="true" />
+            <element signature="e#9552#9553#0" expanded="true" />
+            <element signature="e#9599#9600#0" expanded="true" />
+            <element signature="e#9645#9646#0" expanded="true" />
+            <element signature="e#9690#9691#0" expanded="true" />
+            <element signature="e#9734#9735#0" expanded="true" />
+            <element signature="e#9775#9776#0" expanded="true" />
+            <element signature="e#9955#9956#0" expanded="true" />
+            <element signature="e#9999#10000#0" expanded="true" />
+            <element signature="e#11710#11732#0" expanded="false" />
+            <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
-            <marker date="1450550239000" expanded="true" signature="12272:14133" placeholder="..." />
+            <marker date="1450563392000" expanded="true" signature="11793:13654" placeholder="..." />
           </folding>
         </state>
       </provider>

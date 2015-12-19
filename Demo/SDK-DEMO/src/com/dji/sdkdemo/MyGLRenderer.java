@@ -112,12 +112,6 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     }
 
     public float[] getCameraRotationMatrix(float theta, float phi){
-//        float[] phiRotatiomMatrix = getRotationMatrix(phi, new float[]{0, 1, 0, 0});
-//        float[] newXAxis = multiplyMV(phiRotatiomMatrix, new float[]{1, 0, 0, 0});
-//        float[] thetaRotationMatrix = getRotationMatrix(theta, newXAxis);
-
-//        float [] rotationM = multiplyMM(thetaRotationMatrix, phiRotatiomMatrix);
-
         float[] thetaRotationMatrix = getRotationMatrix(theta, new float[]{1, 0, 0, 0});
         float[] phiRotationMatrix = getRotationMatrix(phi, new float[]{0, 1, 0, 0});
         float[] rotationM = multiplyMM(phiRotationMatrix, thetaRotationMatrix);
@@ -125,12 +119,29 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         return rotationM;
     }
 
-    public void updateCameraZoom(float zoom_scale){
+    public void updateCameraZoom(float zoom_scale, float midx, float midy, float theta, float phi){
+
+        // compute angles of midpoint
+        float[] p1 = screenPointToWorldDirection(SURFACE__HORIZONTAL_CENTER, SURFACE_VERTICAL_CENTER, theta, phi); // camera center
+        float[] p2 = screenPointToWorldDirection(midx, midy, theta, phi); // midpoint of fingers
+
+        // change to 3D and normalize p1 and p2
+        p1 = new float[]{p1[0], p1[1], p1[2]};
+        p2 = new float[]{p2[0], p2[1], p2[2]};
+        p1 = normalizeV(p1);
+        p2 = normalizeV(p2);
+
+        float[] phi_theta = computeDeltaPhiAndThetaBetweenTwoUnitVectors(p1, p2);
+        float midpt_phi = phi - phi_theta[0];
+        float midpt_theta = theta + phi_theta[1];
+
         //compute rotation matrices
-        float[] rotationMatrix = getCameraRotationMatrixForZoom(camera_theta, camera_phi);
+        float[] rotationMatrix = getCameraRotationMatrix(midpt_theta, midpt_phi);
+
+//        float[] rotationMatrix = getCameraRotationMatrix(camera_theta, camera_phi);
 
         float[] translateV = new float[4];
-        Matrix.multiplyMV(translateV, 0, rotationMatrix, 0, new float[]{0, 0, zoom_scale, 1}, 0);
+        Matrix.multiplyMV(translateV, 0, rotationMatrix, 0, new float[]{0, 0, -zoom_scale, 1}, 0);
         if (!passPendingBoundsCheck(translateV)) {
          return;
         }
@@ -305,27 +316,9 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
             float theta2 = (float) toDegrees(atan2(p2[1], -p2[2]));
             new_theta = theta2 - theta1;
         } else {
-            // get phi
-            // project on x and z plane to to find the yaw angle
-            float[] p1_xz = new float[]{p1[0], 0, p1[2]};
-            float[] p2_xz = new float[]{p2[0], 0, p2[2]};
-            p1_xz = normalizeV(p1_xz);
-            p2_xz = normalizeV(p2_xz);
-            float phi1 = (float) toDegrees(atan2(p1_xz[0], -p1_xz[2]));
-            float phi2 = (float) toDegrees(atan2(p2_xz[0], -p2_xz[2]));
-            new_phi = phi2 - phi1;
-
-            // apply new phi to p1
-            p1 = new float[]{p1[0], p1[1], p1[2], 1}; // switch to homogeneous coords
-            float[] phiRotationMatrix = getRotationMatrix(new_phi, new float[]{0, 1, 0});
-            float[] p1_ = multiplyMV(phiRotationMatrix, p1);
-            p1_ = new float[]{p1_[0], p1_[1], p1_[2]};
-            p1_ = normalizeV(p1_);
-
-            // get theta
-            theta1 = (float) toDegrees(atan2(p1_[1], sqrt(pow(p1_[2], 2) + pow(p1_[0], 2))));
-            float theta2 = (float) toDegrees(atan2(p2[1], sqrt(pow(p2[2], 2) + pow(p2[0], 2))));
-            new_theta = theta2 - theta1;
+            float[] phi_theta = computeDeltaPhiAndThetaBetweenTwoUnitVectors(p1, p2);
+            new_phi = phi_theta[0];
+            new_theta = phi_theta[1];
         }
 
         //--------------------
@@ -385,7 +378,32 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         camera_theta = max(theta - new_theta, -90);
     }
 
+    private float[] computeDeltaPhiAndThetaBetweenTwoUnitVectors(float[] p1, float[] p2){
+        // get phi
+        // project on x and z plane to to find the yaw angle
+        float[] p1_xz = new float[]{p1[0], 0, p1[2]};
+        float[] p2_xz = new float[]{p2[0], 0, p2[2]};
+        p1_xz = normalizeV(p1_xz);
+        p2_xz = normalizeV(p2_xz);
+        float phi1 = (float) toDegrees(atan2(p1_xz[0], -p1_xz[2]));
+        float phi2 = (float) toDegrees(atan2(p2_xz[0], -p2_xz[2]));
+        float new_phi = phi2 - phi1;
 
+        // apply new phi to p1
+        p1 = new float[]{p1[0], p1[1], p1[2], 1}; // switch to homogeneous coords
+        float[] phiRotationMatrix = getRotationMatrix(new_phi, new float[]{0, 1, 0});
+        float[] p1_ = multiplyMV(phiRotationMatrix, p1);
+        p1_ = new float[]{p1_[0], p1_[1], p1_[2]};
+        p1_ = normalizeV(p1_);
+
+        // get theta
+        float theta1 = (float) toDegrees(atan2(p1_[1], sqrt(pow(p1_[2], 2) + pow(p1_[0], 2))));
+        float theta2 = (float) toDegrees(atan2(p2[1], sqrt(pow(p2[2], 2) + pow(p2[0], 2))));
+        float new_theta = theta2 - theta1;
+
+        float[] phi_theta = new float[]{new_phi, new_theta};
+        return phi_theta;
+    }
 
     // world direction = C * P^-1 * v
     // where C is the camera matrix,
@@ -412,18 +430,6 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
         float[] world_v = multiplyMV(proj_inv, v);
         return world_v;
-    }
-
-    private float[] getCameraRotationMatrixForZoom(float theta, float phi){
-        float[] rotateThetaMatrix = new float[16];
-        float[] rotatePhiMatrix = new float[16];
-
-        Matrix.setRotateM(rotatePhiMatrix, 0, phi%360, 0, 1, 0);
-        Matrix.setRotateM(rotateThetaMatrix, 0, theta%360, 1, 0, 0);
-
-        float[] rotationMatrix = new float[16];
-        Matrix.multiplyMM(rotationMatrix, 0, rotatePhiMatrix, 0, rotateThetaMatrix, 0);
-        return rotationMatrix;
     }
 
     public String cameraInfoToString(){
