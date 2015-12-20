@@ -8,9 +8,10 @@ import android.view.MotionEvent;
 
 import static com.dji.sdkdemo.Constants.*;
 import static java.lang.Math.pow;
+import static java.lang.Math.toDegrees;
+import static java.lang.StrictMath.abs;
+import static java.lang.StrictMath.atan2;
 import static java.lang.StrictMath.sqrt;
-import static java.lang.StrictMath.tan;
-import static java.lang.StrictMath.toRadians;
 
 /**
  * Created by leegross on 9/14/15.
@@ -33,6 +34,14 @@ class MyGLSurfaceView extends GLSurfaceView {
     float scale = 100.0f;
     private float prevX;
     private float prevY;
+    private float gestStartX1;
+    private float gestStartY1;
+    private float gestStartX2;
+    private float gestStartY2;
+    private float prevX1;
+    private float prevY1;
+    private float prevX2;
+    private float prevY2;
 
     public MyGLSurfaceView(Context context, AttributeSet attrs){
         super(context, attrs);
@@ -67,18 +76,27 @@ class MyGLSurfaceView extends GLSurfaceView {
             float p2y = e.getY(1);
             switch (e.getActionMasked()) {
                 case MotionEvent.ACTION_POINTER_DOWN:
+                    gestStartX1 = p1x;
+                    gestStartY1 = p1y;
+                    gestStartX2 = p2x;
+                    gestStartY2 = p2y;
                     break;
                 case MotionEvent.ACTION_MOVE:
-                    String gesture = getGesture(p1x, p1y, p2x, p2y);
-                    if (gesture == "Zoom") {
-                        float delta = (float) sqrt(pow(p1x - p2x, 2) + pow(p1y - p2y, 2));
-                        float zoom_scale = (delta - mPrevDelta) / scale;
-                        float midx = (p1x + p2x) / 2.0f;
-                        float midy = (p1y + p2y) / 2.0f;
-                        mRenderer.updateCameraZoom(zoom_scale, midx, midy);
-                    } else if (gesture == "Two Finger Rotation"){
-
-                    }
+                    float rotation_angle = computeRotationAngle(p1x, p1y, p2x, p2y, gestStartX1, gestStartY1, gestStartX2, gestStartY2);
+                    String gesture = getGesture(rotation_angle);
+//                    if (gesture.equals("Zoom")) {
+//                        float delta = (float) sqrt(pow(p1x - p2x, 2) + pow(p1y - p2y, 2));
+//                        float zoom_scale = (delta - mPrevDelta) / scale;
+//                        float midx = (p1x + p2x) / 2.0f;
+//                        float midy = (p1y + p2y) / 2.0f;
+//                        mRenderer.moveBasedOnCameraZoom(zoom_scale, midx, midy);
+//                    } else if (gesture.equals("Two Finger Rotation")){
+                    rotation_angle = computeRotationAngle(p1x, p1y, p2x, p2y, prevX1, prevY1, prevX2, prevY2);
+                    float[] rotationPt = computeRotationPoint(p1x, p1y, p2x, p2y);
+                        float rx = rotationPt[0];
+                        float ry = rotationPt[1];
+                        mRenderer.moveBasedOnTwoFingerRotation(rx, ry,rotation_angle);
+//                    }
                     break;
                 case MotionEvent.ACTION_POINTER_UP:
                     float[] cameraTranslationV = mRenderer.getCameraTranslation();
@@ -99,6 +117,11 @@ class MyGLSurfaceView extends GLSurfaceView {
                     break;
             }
 
+
+            prevX1 = p1x;
+            prevY1 = p1y;
+            prevX2 = p2x;
+            prevY2 = p2y;
             mPrevDelta = (float) sqrt(pow(p1x - p2x, 2.0f) + pow(p1y - p2y, 2.0f));
 
         }
@@ -122,25 +145,62 @@ class MyGLSurfaceView extends GLSurfaceView {
         return true;
     }
 
-    private String getGesture(float x1, float y1, float x2, float y2){
-        return "Zoom";
-    }
+    private String getGesture(float rotation_angle){
 
-    private float clipPitchAngle(float thetaY){
-        // Y is limited to [-90, 0] so don't move past those
-        if (mRenderer.getThetaCamera() > maxGimbalPitchAngle &&
-                mRenderer.getThetaCamera() - thetaY > maxGimbalPitchAngle) {
-            thetaY = (float) 0;
-        } else if (mRenderer.getThetaCamera() < minGimbalPitchAngle &&
-                mRenderer.getThetaCamera() - thetaY < minGimbalPitchAngle) {
-            thetaY = (float) 0;
-        } else if (mRenderer.getThetaCamera() - thetaY > maxGimbalPitchAngle) {
-            thetaY = mRenderer.getThetaCamera() - maxGimbalPitchAngle;
-        } else if (mRenderer.getThetaCamera() - thetaY < minGimbalPitchAngle) {
-            thetaY = mRenderer.getThetaCamera() - minGimbalPitchAngle;
+        Log.d("myAppTouch", "rotation angle:      " + rotation_angle);
+
+        if (abs(rotation_angle) < 15) {
+            return "Zoom";
+        } else {
+            return "Two Finger Rotation";
         }
 
-        return thetaY;
+    }
+
+    private float computeRotationAngle(float x1, float y1, float x2, float y2, float prevx1, float prevy1, float prevx2, float prevy2){
+        // compute rotation angle
+        float p1_move = (float) sqrt(pow(x1- prevx1, 2) + pow(y1- prevy1, 2));
+        float p2_move = (float) sqrt(pow(x2- prevx2, 2) + pow(y2- prevy2, 2));
+
+        float rotation_angle;
+        if (p1_move < p2_move){
+            float fixed_x = (x1+ prevx1)/2.0f;
+            float fixed_y = (y1+ prevy1)/2.0f;
+
+            float angle_start = (float) atan2(fixed_y - prevy2, fixed_x - prevx2);
+            float angle_end = (float) atan2(fixed_y - y2, fixed_x - x2);
+            rotation_angle = (float) toDegrees(angle_end - angle_start);
+        } else {
+            float fixed_x = (x2 + prevx2)/2.0f;
+            float fixed_y = (y2 + prevy2)/2.0f;
+
+            float angle_start = (float) atan2(fixed_y - prevy1, fixed_x - prevx1);
+            float angle_end = (float) atan2(fixed_y - y1, fixed_x - x1);
+            rotation_angle = (float) toDegrees(angle_end - angle_start);
+        }
+
+        if (rotation_angle < -180){
+            rotation_angle += 360;
+        }
+
+        return rotation_angle;
+    }
+
+    private float[] computeRotationPoint(float x1, float y1, float x2, float y2){
+        float p1_move = (float) sqrt(pow(x1- gestStartX1, 2) + pow(y1- gestStartY1, 2));
+        float p2_move = (float) sqrt(pow(x2- gestStartX2, 2) + pow(y2- gestStartY2, 2));
+
+        float fixed_x;
+        float fixed_y;
+        if (p1_move < p2_move){
+            fixed_x = gestStartX1;
+            fixed_y = gestStartY1;
+        } else {
+            fixed_x = gestStartX2;
+            fixed_y = gestStartY2;
+        }
+
+        return new float[]{fixed_x, fixed_y};
     }
 
     // called by drone wrapper when we receive new orientation update

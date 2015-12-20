@@ -18,10 +18,11 @@ import static com.dji.sdkdemo.Constants.HORIZONTAL_FOV;
 import static com.dji.sdkdemo.util.OperationsHelper.addArrays;
 import static com.dji.sdkdemo.util.OperationsHelper.floatEquals;
 import static com.dji.sdkdemo.util.OperationsHelper.*;
+import static java.lang.Math.cos;
 import static java.lang.Math.sin;
+import static java.lang.Math.tan;
 import static java.lang.Math.toRadians;
 import static java.lang.StrictMath.abs;
-import static java.lang.StrictMath.acos;
 import static java.lang.StrictMath.atan2;
 import static java.lang.StrictMath.max;
 import static java.lang.StrictMath.min;
@@ -69,15 +70,15 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         mHemisphere = new Hemisphere(mContext);
         mSurfaceTexture = new SurfaceTexture(mHemisphere.getTextureHandle());
 
-        camera_theta = -45;
+        camera_theta = -90;
         camera_phi = 0;
-        projector_theta = -45;
+        projector_theta = -90;
         projector_phi = 0;
         camera_theta_initialized = false;
         camera_phi_initialized = false;
 
-        cameraTranslationV = new float[]{0, STARTING_ALTITUDE, 0, 0};
-        projectorTranslationV = new float[]{0, STARTING_ALTITUDE, 0, 0};
+        cameraTranslationV = new float[]{0, STARTING_ALTITUDE, 0, 1};
+        projectorTranslationV = new float[]{0, STARTING_ALTITUDE, 0, 1};
     }
 
     public void onDrawFrame(GL10 unused) {
@@ -119,9 +120,9 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         return rotationM;
     }
 
-    public void updateCameraZoom(float zoom_scale, float midx, float midy){
+    public void moveBasedOnCameraZoom(float zoom_scale, float midx, float midy){
 
-        float[] mid_phi_theta = getDirectionofMidpointForZoom(midx, midy);
+        float[] mid_phi_theta = getDirectionAnglesOfPoint(midx, midy);
         float midpt_phi = mid_phi_theta[0];
         float midpt_theta = mid_phi_theta[1];
 
@@ -139,7 +140,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         cameraTranslationV = clipTranslationVector(temp);
     }
 
-    private float[] getDirectionofMidpointForZoom(float midx, float midy){
+    private float[] getDirectionAnglesOfPoint(float midx, float midy){
 
         float[] p1 = screenPointToWorldDirection(SURFACE__HORIZONTAL_CENTER, SURFACE_VERTICAL_CENTER); // camera center
         float[] p2 = screenPointToWorldDirection(midx, midy); // midpoint of fingers
@@ -157,6 +158,43 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         float midpt_theta = camera_theta + phi_theta[1];
 
         return new float[]{midpt_phi, midpt_theta};
+    }
+
+    public float[] getWorldPoint(float x, float y){
+        float[] phi_theta = getDirectionAnglesOfPoint(x, y);
+        float phi = -phi_theta[0];
+        float theta = phi_theta[1];
+        float r = (float) (cameraTranslationV[1] * tan(toRadians(90 - theta)));
+
+        float px = (float) (cameraTranslationV[0] + r * sin(toRadians(phi)));
+        float pz = (float) (cameraTranslationV[2] - r * cos(toRadians(phi)));
+
+        return new float[]{px, 0, pz};
+    }
+
+    // x and y are the screen coordinates that I want to rotate about
+    // beta is the angle I want to rotate by
+    public void moveBasedOnTwoFingerRotation(float x, float y, float beta){
+        float[] rotationPt = getWorldPoint(x, y);
+
+        // get translation matrices
+        float[] translationM = new float[16];
+        Matrix.setIdentityM(translationM, 0);
+        Matrix.translateM(translationM, 0, rotationPt[0], rotationPt[1], rotationPt[2]);
+        float[] translationInv = getInverse(translationM);
+
+        // shift the point
+        float[] tempCameraTransV = cameraTranslationV.clone();
+        tempCameraTransV = multiplyMV(translationInv, tempCameraTransV);
+
+        // rotate about y axis
+        float[] rotationM = getRotationMatrix(beta, new float[]{0, 1, 0, 1});
+        tempCameraTransV = multiplyMV(rotationM, tempCameraTransV);
+
+        // shift back
+        cameraTranslationV = multiplyMV(translationM, tempCameraTransV);
+
+        camera_phi += beta;
     }
 
     private boolean passPendingBoundsCheck(float[] translateDeltaV) {

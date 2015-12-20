@@ -72,6 +72,16 @@ public class OperationsHelper {
         return output;
     }
 
+    public static float[] multiplyMV4(float[] M, float[] V){
+        float[] output = new float[4];
+        for (int i = 0; i < 4; i++){
+            for (int j = 0; j < 4; j++){
+                output[i] += M[j*4 + i] * V[j];
+            }
+        }
+        return output;
+    }
+
     public static float dot(float[] a, float[] b){
         if (a.length != b.length) return 0;
         float result = 0.0f;
@@ -98,5 +108,6 @@ public class OperationsHelper {
         Matrix.transposeM(transpose, 0, M, 0);
         return transpose;
     }
+
 
 }
