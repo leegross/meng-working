@@ -26,8 +26,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9c2fb097-3e27-43c5-9229-9d241b4244a9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/MyGLRenderer.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/MyGLRenderer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/MyGLSurfaceView.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/MyGLSurfaceView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/util/OperationsHelper.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/util/OperationsHelper.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug-unaligned.apk" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug.apk" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
@@ -36,8 +34,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/util/OperationsHelper.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/util/OperationsHelper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DJI-SDK-Android-V2.4.0.iws" />
@@ -144,28 +140,33 @@
       <file leaf-file-name="MyGLRenderer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.19203748">
-              <caret line="176" column="75" selection-start-line="176" selection-start-column="75" selection-end-line="176" selection-end-column="75" />
+            <state vertical-scroll-proportion="0.7025761">
+              <caret line="74" column="29" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2051#2052#0" expanded="true" />
                 <element signature="e#2085#2086#0" expanded="true" />
-                <element signature="method#onDrawFrame#0;class#MyGLRenderer#0" expanded="false" />
-                <element signature="e#10767#10768#0" expanded="true" />
-                <element signature="e#10800#10801#0" expanded="true" />
-                <element signature="e#10839#10840#0" expanded="true" />
-                <element signature="e#10877#10878#0" expanded="true" />
+                <element signature="method#transformMatrix#0;class#MyGLRenderer#0" expanded="false" />
+                <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
+                <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
+                <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
+                <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
+                <element signature="method#updateCameraRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
+                <element signature="e#10769#10770#0" expanded="true" />
+                <element signature="e#10802#10803#0" expanded="true" />
+                <element signature="e#10841#10842#0" expanded="true" />
+                <element signature="e#10879#10880#0" expanded="true" />
                 <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
-                <element signature="e#11248#11249#0" expanded="true" />
-                <element signature="e#11295#11296#0" expanded="true" />
-                <element signature="e#11341#11342#0" expanded="true" />
-                <element signature="e#11386#11387#0" expanded="true" />
-                <element signature="e#13358#13380#0" expanded="false" />
+                <element signature="e#11250#11251#0" expanded="true" />
+                <element signature="e#11297#11298#0" expanded="true" />
+                <element signature="e#11343#11344#0" expanded="true" />
+                <element signature="e#11388#11389#0" expanded="true" />
+                <element signature="e#13360#13382#0" expanded="false" />
                 <element signature="method#screenPointToWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#screenPointToRelativeWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
-                <marker date="1450645978000" expanded="true" signature="13441:15302" placeholder="..." />
+                <marker date="1450652868000" expanded="true" signature="13443:15304" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -3409,7 +3410,7 @@
           <option name="timeStamp" value="172" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="372" />
+      <option name="time" value="388" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -3518,22 +3519,27 @@
             <element signature="imports" expanded="true" />
             <element signature="e#2051#2052#0" expanded="true" />
             <element signature="e#2085#2086#0" expanded="true" />
-            <element signature="method#onDrawFrame#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#10767#10768#0" expanded="true" />
-            <element signature="e#10800#10801#0" expanded="true" />
-            <element signature="e#10839#10840#0" expanded="true" />
-            <element signature="e#10877#10878#0" expanded="true" />
+            <element signature="method#transformMatrix#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#updateCameraRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#10769#10770#0" expanded="true" />
+            <element signature="e#10802#10803#0" expanded="true" />
+            <element signature="e#10841#10842#0" expanded="true" />
+            <element signature="e#10879#10880#0" expanded="true" />
             <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#11248#11249#0" expanded="true" />
-            <element signature="e#11295#11296#0" expanded="true" />
-            <element signature="e#11341#11342#0" expanded="true" />
-            <element signature="e#11386#11387#0" expanded="true" />
-            <element signature="e#13358#13380#0" expanded="false" />
+            <element signature="e#11250#11251#0" expanded="true" />
+            <element signature="e#11297#11298#0" expanded="true" />
+            <element signature="e#11343#11344#0" expanded="true" />
+            <element signature="e#11388#11389#0" expanded="true" />
+            <element signature="e#13360#13382#0" expanded="false" />
             <element signature="method#screenPointToWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#screenPointToRelativeWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
-            <marker date="1450645978000" expanded="true" signature="13441:15302" placeholder="..." />
+            <marker date="1450652868000" expanded="true" signature="13443:15304" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -3653,22 +3659,27 @@
             <element signature="imports" expanded="true" />
             <element signature="e#2051#2052#0" expanded="true" />
             <element signature="e#2085#2086#0" expanded="true" />
-            <element signature="method#onDrawFrame#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#10767#10768#0" expanded="true" />
-            <element signature="e#10800#10801#0" expanded="true" />
-            <element signature="e#10839#10840#0" expanded="true" />
-            <element signature="e#10877#10878#0" expanded="true" />
+            <element signature="method#transformMatrix#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#updateCameraRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#10769#10770#0" expanded="true" />
+            <element signature="e#10802#10803#0" expanded="true" />
+            <element signature="e#10841#10842#0" expanded="true" />
+            <element signature="e#10879#10880#0" expanded="true" />
             <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#11248#11249#0" expanded="true" />
-            <element signature="e#11295#11296#0" expanded="true" />
-            <element signature="e#11341#11342#0" expanded="true" />
-            <element signature="e#11386#11387#0" expanded="true" />
-            <element signature="e#13358#13380#0" expanded="false" />
+            <element signature="e#11250#11251#0" expanded="true" />
+            <element signature="e#11297#11298#0" expanded="true" />
+            <element signature="e#11343#11344#0" expanded="true" />
+            <element signature="e#11388#11389#0" expanded="true" />
+            <element signature="e#13360#13382#0" expanded="false" />
             <element signature="method#screenPointToWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#screenPointToRelativeWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
-            <marker date="1450645978000" expanded="true" signature="13441:15302" placeholder="..." />
+            <marker date="1450652868000" expanded="true" signature="13443:15304" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -3788,22 +3799,27 @@
             <element signature="imports" expanded="true" />
             <element signature="e#2051#2052#0" expanded="true" />
             <element signature="e#2085#2086#0" expanded="true" />
-            <element signature="method#onDrawFrame#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#10767#10768#0" expanded="true" />
-            <element signature="e#10800#10801#0" expanded="true" />
-            <element signature="e#10839#10840#0" expanded="true" />
-            <element signature="e#10877#10878#0" expanded="true" />
+            <element signature="method#transformMatrix#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#updateCameraRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#10769#10770#0" expanded="true" />
+            <element signature="e#10802#10803#0" expanded="true" />
+            <element signature="e#10841#10842#0" expanded="true" />
+            <element signature="e#10879#10880#0" expanded="true" />
             <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#11248#11249#0" expanded="true" />
-            <element signature="e#11295#11296#0" expanded="true" />
-            <element signature="e#11341#11342#0" expanded="true" />
-            <element signature="e#11386#11387#0" expanded="true" />
-            <element signature="e#13358#13380#0" expanded="false" />
+            <element signature="e#11250#11251#0" expanded="true" />
+            <element signature="e#11297#11298#0" expanded="true" />
+            <element signature="e#11343#11344#0" expanded="true" />
+            <element signature="e#11388#11389#0" expanded="true" />
+            <element signature="e#13360#13382#0" expanded="false" />
             <element signature="method#screenPointToWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#screenPointToRelativeWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
-            <marker date="1450645978000" expanded="true" signature="13441:15302" placeholder="..." />
+            <marker date="1450652868000" expanded="true" signature="13443:15304" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -3923,22 +3939,27 @@
             <element signature="imports" expanded="true" />
             <element signature="e#2051#2052#0" expanded="true" />
             <element signature="e#2085#2086#0" expanded="true" />
-            <element signature="method#onDrawFrame#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#10767#10768#0" expanded="true" />
-            <element signature="e#10800#10801#0" expanded="true" />
-            <element signature="e#10839#10840#0" expanded="true" />
-            <element signature="e#10877#10878#0" expanded="true" />
+            <element signature="method#transformMatrix#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#updateCameraRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#10769#10770#0" expanded="true" />
+            <element signature="e#10802#10803#0" expanded="true" />
+            <element signature="e#10841#10842#0" expanded="true" />
+            <element signature="e#10879#10880#0" expanded="true" />
             <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#11248#11249#0" expanded="true" />
-            <element signature="e#11295#11296#0" expanded="true" />
-            <element signature="e#11341#11342#0" expanded="true" />
-            <element signature="e#11386#11387#0" expanded="true" />
-            <element signature="e#13358#13380#0" expanded="false" />
+            <element signature="e#11250#11251#0" expanded="true" />
+            <element signature="e#11297#11298#0" expanded="true" />
+            <element signature="e#11343#11344#0" expanded="true" />
+            <element signature="e#11388#11389#0" expanded="true" />
+            <element signature="e#13360#13382#0" expanded="false" />
             <element signature="method#screenPointToWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#screenPointToRelativeWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
-            <marker date="1450645978000" expanded="true" signature="13441:15302" placeholder="..." />
+            <marker date="1450652868000" expanded="true" signature="13443:15304" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -4058,22 +4079,27 @@
             <element signature="imports" expanded="true" />
             <element signature="e#2051#2052#0" expanded="true" />
             <element signature="e#2085#2086#0" expanded="true" />
-            <element signature="method#onDrawFrame#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#10767#10768#0" expanded="true" />
-            <element signature="e#10800#10801#0" expanded="true" />
-            <element signature="e#10839#10840#0" expanded="true" />
-            <element signature="e#10877#10878#0" expanded="true" />
+            <element signature="method#transformMatrix#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#updateCameraRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#10769#10770#0" expanded="true" />
+            <element signature="e#10802#10803#0" expanded="true" />
+            <element signature="e#10841#10842#0" expanded="true" />
+            <element signature="e#10879#10880#0" expanded="true" />
             <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#11248#11249#0" expanded="true" />
-            <element signature="e#11295#11296#0" expanded="true" />
-            <element signature="e#11341#11342#0" expanded="true" />
-            <element signature="e#11386#11387#0" expanded="true" />
-            <element signature="e#13358#13380#0" expanded="false" />
+            <element signature="e#11250#11251#0" expanded="true" />
+            <element signature="e#11297#11298#0" expanded="true" />
+            <element signature="e#11343#11344#0" expanded="true" />
+            <element signature="e#11388#11389#0" expanded="true" />
+            <element signature="e#13360#13382#0" expanded="false" />
             <element signature="method#screenPointToWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#screenPointToRelativeWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
-            <marker date="1450645978000" expanded="true" signature="13441:15302" placeholder="..." />
+            <marker date="1450652868000" expanded="true" signature="13443:15304" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -4480,28 +4506,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19203748">
-          <caret line="176" column="75" selection-start-line="176" selection-start-column="75" selection-end-line="176" selection-end-column="75" />
+        <state vertical-scroll-proportion="0.7025761">
+          <caret line="74" column="29" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2051#2052#0" expanded="true" />
             <element signature="e#2085#2086#0" expanded="true" />
-            <element signature="method#onDrawFrame#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#10767#10768#0" expanded="true" />
-            <element signature="e#10800#10801#0" expanded="true" />
-            <element signature="e#10839#10840#0" expanded="true" />
-            <element signature="e#10877#10878#0" expanded="true" />
+            <element signature="method#transformMatrix#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#updateCameraRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#10769#10770#0" expanded="true" />
+            <element signature="e#10802#10803#0" expanded="true" />
+            <element signature="e#10841#10842#0" expanded="true" />
+            <element signature="e#10879#10880#0" expanded="true" />
             <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#11248#11249#0" expanded="true" />
-            <element signature="e#11295#11296#0" expanded="true" />
-            <element signature="e#11341#11342#0" expanded="true" />
-            <element signature="e#11386#11387#0" expanded="true" />
-            <element signature="e#13358#13380#0" expanded="false" />
+            <element signature="e#11250#11251#0" expanded="true" />
+            <element signature="e#11297#11298#0" expanded="true" />
+            <element signature="e#11343#11344#0" expanded="true" />
+            <element signature="e#11388#11389#0" expanded="true" />
+            <element signature="e#13360#13382#0" expanded="false" />
             <element signature="method#screenPointToWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#screenPointToRelativeWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
-            <marker date="1450645978000" expanded="true" signature="13441:15302" placeholder="..." />
+            <marker date="1450652868000" expanded="true" signature="13443:15304" placeholder="..." />
           </folding>
         </state>
       </provider>
