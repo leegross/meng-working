@@ -43,6 +43,9 @@ class MyGLSurfaceView extends GLSurfaceView {
     private float prevX2;
     private float prevY2;
 
+    private String current_gest = null;
+    private int move_count;
+
     public MyGLSurfaceView(Context context, AttributeSet attrs){
         super(context, attrs);
 
@@ -80,23 +83,31 @@ class MyGLSurfaceView extends GLSurfaceView {
                     gestStartY1 = p1y;
                     gestStartX2 = p2x;
                     gestStartY2 = p2y;
+                    current_gest = null;
+                    move_count = 0;
                     break;
                 case MotionEvent.ACTION_MOVE:
+                    move_count += 1;
+                    if (move_count < 10){
+                        break;
+                    }
                     float rotation_angle = computeRotationAngle(p1x, p1y, p2x, p2y, gestStartX1, gestStartY1, gestStartX2, gestStartY2);
                     String gesture = getGesture(rotation_angle);
-//                    if (gesture.equals("Zoom")) {
-//                        float delta = (float) sqrt(pow(p1x - p2x, 2) + pow(p1y - p2y, 2));
-//                        float zoom_scale = (delta - mPrevDelta) / scale;
-//                        float midx = (p1x + p2x) / 2.0f;
-//                        float midy = (p1y + p2y) / 2.0f;
-//                        mRenderer.moveBasedOnCameraZoom(zoom_scale, midx, midy);
-//                    } else if (gesture.equals("Two Finger Rotation")){
+                    if (gesture.equals("Zoom") && (current_gest == null || current_gest.equals("Zoom"))) {
+                        float delta = (float) sqrt(pow(p1x - p2x, 2) + pow(p1y - p2y, 2));
+                        float zoom_scale = (delta - mPrevDelta) / scale;
+                        float midx = (p1x + p2x) / 2.0f;
+                        float midy = (p1y + p2y) / 2.0f;
+                        mRenderer.moveBasedOnCameraZoom(zoom_scale, midx, midy);
+                        current_gest = "Zoom";
+                    } else if (gesture.equals("Two Finger Rotation") && (current_gest == null || current_gest.equals("Two Finger Rotation"))){
                     rotation_angle = computeRotationAngle(p1x, p1y, p2x, p2y, prevX1, prevY1, prevX2, prevY2);
                     float[] rotationPt = computeRotationPoint(p1x, p1y, p2x, p2y);
                         float rx = rotationPt[0];
                         float ry = rotationPt[1];
                         mRenderer.moveBasedOnTwoFingerRotation(rx, ry,rotation_angle);
-//                    }
+                        current_gest = "Two Finger Rotation";
+                    }
                     break;
                 case MotionEvent.ACTION_POINTER_UP:
                     float[] cameraTranslationV = mRenderer.getCameraTranslation();
@@ -149,7 +160,7 @@ class MyGLSurfaceView extends GLSurfaceView {
 
         Log.d("myAppTouch", "rotation angle:      " + rotation_angle);
 
-        if (abs(rotation_angle) < 15) {
+        if (abs(rotation_angle) < 5) {
             return "Zoom";
         } else {
             return "Two Finger Rotation";

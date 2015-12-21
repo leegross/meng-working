@@ -26,4 +26,6 @@ public class Constants {
     // used to determine whether to use an image or the stream for the texture
     // don't forget to change code in fragment shader
     public static boolean USE_CAMERA_STREAM = false;
+
+
 }

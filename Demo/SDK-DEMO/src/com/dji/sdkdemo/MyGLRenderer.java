@@ -163,7 +163,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     public float[] getWorldPoint(float x, float y){
         float[] phi_theta = getDirectionAnglesOfPoint(x, y);
         float phi = phi_theta[0];
-        float theta = phi_theta[1];
+        float theta = min(phi_theta[1], -89.999f);
         float r = (float) abs(cameraTranslationV[1] * tan(toRadians(90 - theta)));
 
         float px = (float) (cameraTranslationV[0] - r * sin(toRadians(phi)));
