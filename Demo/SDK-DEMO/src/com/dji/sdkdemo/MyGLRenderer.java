@@ -129,14 +129,15 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         //compute rotation matrices
         float[] rotationMatrix = getCameraRotationMatrix(midpt_theta, midpt_phi);
 
-        float[] translateV = new float[4];
-        Matrix.multiplyMV(translateV, 0, rotationMatrix, 0, new float[]{0, 0, -zoom_scale, 1}, 0);
+        // compute the translation
+        float[] translateV = multiplyMV(rotationMatrix, new float[]{0, 0, -zoom_scale, 1});
 
         if (!passPendingBoundsCheck(translateV)) return;
 
         float[] temp = addArrays(cameraTranslationV, translateV);
 
 //        cameraTranslationV = temp;
+        temp[3] =  1;
         cameraTranslationV = clipTranslationVector(temp);
     }
 
