@@ -79,6 +79,7 @@ class MyGLSurfaceView extends GLSurfaceView {
             float p2y = e.getY(1);
             switch (e.getActionMasked()) {
                 case MotionEvent.ACTION_POINTER_DOWN:
+                    Log.d("myAppTouch", "         two finger down");
                     gestStartX1 = p1x;
                     gestStartY1 = p1y;
                     gestStartX2 = p2x;
@@ -87,22 +88,30 @@ class MyGLSurfaceView extends GLSurfaceView {
                     move_count = 0;
                     break;
                 case MotionEvent.ACTION_MOVE:
+                    // add delay until we decide which gesture the user indicated
                     move_count += 1;
-                    if (move_count < 7){
+                    if (move_count < 10){
                         break;
                     }
-                    float rotation_angle = computeRotationAngle(p1x, p1y, p2x, p2y, gestStartX1, gestStartY1, gestStartX2, gestStartY2);
-                    String gesture = getGesture(rotation_angle);
-                    if (gesture.equals("Zoom") && (current_gest == null || current_gest.equals("Zoom"))) {
+
+                    // if we don't have a gesture, decide which gesture
+                    if (current_gest == null){
+                        float rotation_angle = computeRotationAngle(p1x, p1y, p2x, p2y, gestStartX1, gestStartY1, gestStartX2, gestStartY2);
+                        String gesture = getGesture(rotation_angle);
+                        current_gest = gesture;
+                    }
+
+                    // act based on gesture
+                    if (current_gest.equals("Zoom")) {
                         float delta = (float) sqrt(pow(p1x - p2x, 2) + pow(p1y - p2y, 2));
                         float zoom_scale = (delta - mPrevDelta) / scale;
                         float midx = (p1x + p2x) / 2.0f;
                         float midy = (p1y + p2y) / 2.0f;
                         mRenderer.moveBasedOnCameraZoom(zoom_scale, midx, midy);
                         current_gest = "Zoom";
-                    } else if (gesture.equals("Two Finger Rotation") && (current_gest == null || current_gest.equals("Two Finger Rotation"))){
-                    rotation_angle = computeRotationAngle(p1x, p1y, p2x, p2y, prevX1, prevY1, prevX2, prevY2);
-                    float[] rotationPt = computeRotationPoint(p1x, p1y, p2x, p2y);
+                    } else if (current_gest.equals("Two Finger Rotation")){
+                        float rotation_angle = computeRotationAngle(p1x, p1y, p2x, p2y, prevX1, prevY1, prevX2, prevY2);
+                        float[] rotationPt = computeRotationPoint(p1x, p1y, p2x, p2y);
                         float rx = rotationPt[0];
                         float ry = rotationPt[1];
                         mRenderer.moveBasedOnTwoFingerRotation(rx, ry,rotation_angle);
@@ -110,6 +119,7 @@ class MyGLSurfaceView extends GLSurfaceView {
                     }
                     break;
                 case MotionEvent.ACTION_POINTER_UP:
+                    Log.d("myAppTouch", "         two finger up");
                     float[] cameraTranslationV = mRenderer.getCameraTranslation();
                     float x_translate = cameraTranslationV[0];
                     float y_translate = cameraTranslationV[1];
@@ -128,7 +138,6 @@ class MyGLSurfaceView extends GLSurfaceView {
                     break;
             }
 
-
             prevX1 = p1x;
             prevY1 = p1y;
             prevX2 = p2x;
@@ -146,6 +155,8 @@ class MyGLSurfaceView extends GLSurfaceView {
                     mDroneWrapper.setYawAngle(mRenderer.getPhiCamera());
                     mDroneWrapper.setGimbalPitch((int) mRenderer.getThetaCamera());
                     isGestureInProgress = false;
+                    Log.d("myAppTouch", "         one finger up");
+
                     break;
             }
 
@@ -157,9 +168,6 @@ class MyGLSurfaceView extends GLSurfaceView {
     }
 
     private String getGesture(float rotation_angle){
-
-        Log.d("myAppTouch", "rotation angle:      " + rotation_angle);
-
         if (abs(rotation_angle) < 5) {
             return "Zoom";
         } else {

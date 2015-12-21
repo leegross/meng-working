@@ -126,11 +126,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyGLSurfaceView.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MyGLSurfaceView.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="96" column="51" selection-start-line="96" selection-start-column="51" selection-end-line="96" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.61358315">
+              <caret line="113" column="60" selection-start-line="113" selection-start-column="60" selection-end-line="113" selection-end-column="60" />
               <folding>
                 <element signature="method#onDroneLocationAndOrientationUpdate#0;class#MyGLSurfaceView#0" expanded="false" />
                 <element signature="method#setDroneWrapper#0;class#MyGLSurfaceView#0" expanded="false" />
@@ -139,11 +139,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyGLRenderer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MyGLRenderer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.37470725">
-              <caret line="42" column="30" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="74" column="27" selection-start-line="74" selection-start-column="27" selection-end-line="74" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2051#2052#0" expanded="true" />
@@ -155,18 +155,18 @@
                 <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-                <element signature="e#10824#10825#0" expanded="true" />
-                <element signature="e#10857#10858#0" expanded="true" />
-                <element signature="e#10896#10897#0" expanded="true" />
-                <element signature="e#10934#10935#0" expanded="true" />
-                <element signature="e#11305#11306#0" expanded="true" />
-                <element signature="e#11352#11353#0" expanded="true" />
-                <element signature="e#11398#11399#0" expanded="true" />
-                <element signature="e#11443#11444#0" expanded="true" />
-                <element signature="e#13415#13437#0" expanded="false" />
+                <element signature="e#10814#10815#0" expanded="true" />
+                <element signature="e#10847#10848#0" expanded="true" />
+                <element signature="e#10886#10887#0" expanded="true" />
+                <element signature="e#10924#10925#0" expanded="true" />
+                <element signature="e#11295#11296#0" expanded="true" />
+                <element signature="e#11342#11343#0" expanded="true" />
+                <element signature="e#11388#11389#0" expanded="true" />
+                <element signature="e#11433#11434#0" expanded="true" />
+                <element signature="e#13405#13427#0" expanded="false" />
                 <element signature="method#screenPointToRelativeWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
-                <marker date="1450665779000" expanded="true" signature="13498:15359" placeholder="..." />
+                <marker date="1450665965000" expanded="true" signature="13488:15349" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -2935,8 +2935,8 @@
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Hemisphere.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/util/OperationsHelper.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java" />
-        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java" />
+        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java" />
       </list>
     </option>
   </component>
@@ -3526,18 +3526,18 @@
             <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#10824#10825#0" expanded="true" />
-            <element signature="e#10857#10858#0" expanded="true" />
-            <element signature="e#10896#10897#0" expanded="true" />
-            <element signature="e#10934#10935#0" expanded="true" />
-            <element signature="e#11305#11306#0" expanded="true" />
-            <element signature="e#11352#11353#0" expanded="true" />
-            <element signature="e#11398#11399#0" expanded="true" />
-            <element signature="e#11443#11444#0" expanded="true" />
-            <element signature="e#13415#13437#0" expanded="false" />
+            <element signature="e#10814#10815#0" expanded="true" />
+            <element signature="e#10847#10848#0" expanded="true" />
+            <element signature="e#10886#10887#0" expanded="true" />
+            <element signature="e#10924#10925#0" expanded="true" />
+            <element signature="e#11295#11296#0" expanded="true" />
+            <element signature="e#11342#11343#0" expanded="true" />
+            <element signature="e#11388#11389#0" expanded="true" />
+            <element signature="e#11433#11434#0" expanded="true" />
+            <element signature="e#13405#13427#0" expanded="false" />
             <element signature="method#screenPointToRelativeWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
-            <marker date="1450665779000" expanded="true" signature="13498:15359" placeholder="..." />
+            <marker date="1450665965000" expanded="true" signature="13488:15349" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -3664,18 +3664,18 @@
             <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#10824#10825#0" expanded="true" />
-            <element signature="e#10857#10858#0" expanded="true" />
-            <element signature="e#10896#10897#0" expanded="true" />
-            <element signature="e#10934#10935#0" expanded="true" />
-            <element signature="e#11305#11306#0" expanded="true" />
-            <element signature="e#11352#11353#0" expanded="true" />
-            <element signature="e#11398#11399#0" expanded="true" />
-            <element signature="e#11443#11444#0" expanded="true" />
-            <element signature="e#13415#13437#0" expanded="false" />
+            <element signature="e#10814#10815#0" expanded="true" />
+            <element signature="e#10847#10848#0" expanded="true" />
+            <element signature="e#10886#10887#0" expanded="true" />
+            <element signature="e#10924#10925#0" expanded="true" />
+            <element signature="e#11295#11296#0" expanded="true" />
+            <element signature="e#11342#11343#0" expanded="true" />
+            <element signature="e#11388#11389#0" expanded="true" />
+            <element signature="e#11433#11434#0" expanded="true" />
+            <element signature="e#13405#13427#0" expanded="false" />
             <element signature="method#screenPointToRelativeWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
-            <marker date="1450665779000" expanded="true" signature="13498:15359" placeholder="..." />
+            <marker date="1450665965000" expanded="true" signature="13488:15349" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -3802,18 +3802,18 @@
             <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#10824#10825#0" expanded="true" />
-            <element signature="e#10857#10858#0" expanded="true" />
-            <element signature="e#10896#10897#0" expanded="true" />
-            <element signature="e#10934#10935#0" expanded="true" />
-            <element signature="e#11305#11306#0" expanded="true" />
-            <element signature="e#11352#11353#0" expanded="true" />
-            <element signature="e#11398#11399#0" expanded="true" />
-            <element signature="e#11443#11444#0" expanded="true" />
-            <element signature="e#13415#13437#0" expanded="false" />
+            <element signature="e#10814#10815#0" expanded="true" />
+            <element signature="e#10847#10848#0" expanded="true" />
+            <element signature="e#10886#10887#0" expanded="true" />
+            <element signature="e#10924#10925#0" expanded="true" />
+            <element signature="e#11295#11296#0" expanded="true" />
+            <element signature="e#11342#11343#0" expanded="true" />
+            <element signature="e#11388#11389#0" expanded="true" />
+            <element signature="e#11433#11434#0" expanded="true" />
+            <element signature="e#13405#13427#0" expanded="false" />
             <element signature="method#screenPointToRelativeWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
-            <marker date="1450665779000" expanded="true" signature="13498:15359" placeholder="..." />
+            <marker date="1450665965000" expanded="true" signature="13488:15349" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -3940,18 +3940,18 @@
             <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#10824#10825#0" expanded="true" />
-            <element signature="e#10857#10858#0" expanded="true" />
-            <element signature="e#10896#10897#0" expanded="true" />
-            <element signature="e#10934#10935#0" expanded="true" />
-            <element signature="e#11305#11306#0" expanded="true" />
-            <element signature="e#11352#11353#0" expanded="true" />
-            <element signature="e#11398#11399#0" expanded="true" />
-            <element signature="e#11443#11444#0" expanded="true" />
-            <element signature="e#13415#13437#0" expanded="false" />
+            <element signature="e#10814#10815#0" expanded="true" />
+            <element signature="e#10847#10848#0" expanded="true" />
+            <element signature="e#10886#10887#0" expanded="true" />
+            <element signature="e#10924#10925#0" expanded="true" />
+            <element signature="e#11295#11296#0" expanded="true" />
+            <element signature="e#11342#11343#0" expanded="true" />
+            <element signature="e#11388#11389#0" expanded="true" />
+            <element signature="e#11433#11434#0" expanded="true" />
+            <element signature="e#13405#13427#0" expanded="false" />
             <element signature="method#screenPointToRelativeWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
-            <marker date="1450665779000" expanded="true" signature="13498:15359" placeholder="..." />
+            <marker date="1450665965000" expanded="true" signature="13488:15349" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -4078,18 +4078,18 @@
             <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#10824#10825#0" expanded="true" />
-            <element signature="e#10857#10858#0" expanded="true" />
-            <element signature="e#10896#10897#0" expanded="true" />
-            <element signature="e#10934#10935#0" expanded="true" />
-            <element signature="e#11305#11306#0" expanded="true" />
-            <element signature="e#11352#11353#0" expanded="true" />
-            <element signature="e#11398#11399#0" expanded="true" />
-            <element signature="e#11443#11444#0" expanded="true" />
-            <element signature="e#13415#13437#0" expanded="false" />
+            <element signature="e#10814#10815#0" expanded="true" />
+            <element signature="e#10847#10848#0" expanded="true" />
+            <element signature="e#10886#10887#0" expanded="true" />
+            <element signature="e#10924#10925#0" expanded="true" />
+            <element signature="e#11295#11296#0" expanded="true" />
+            <element signature="e#11342#11343#0" expanded="true" />
+            <element signature="e#11388#11389#0" expanded="true" />
+            <element signature="e#11433#11434#0" expanded="true" />
+            <element signature="e#13405#13427#0" expanded="false" />
             <element signature="method#screenPointToRelativeWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
-            <marker date="1450665779000" expanded="true" signature="13498:15359" placeholder="..." />
+            <marker date="1450665965000" expanded="true" signature="13488:15349" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -4483,21 +4483,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="96" column="51" selection-start-line="96" selection-start-column="51" selection-end-line="96" selection-end-column="51" />
-          <folding>
-            <element signature="method#onDroneLocationAndOrientationUpdate#0;class#MyGLSurfaceView#0" expanded="false" />
-            <element signature="method#setDroneWrapper#0;class#MyGLSurfaceView#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37470725">
-          <caret line="42" column="30" selection-start-line="42" selection-start-column="18" selection-end-line="42" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="74" column="27" selection-start-line="74" selection-start-column="27" selection-end-line="74" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2051#2052#0" expanded="true" />
@@ -4509,18 +4498,29 @@
             <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#10824#10825#0" expanded="true" />
-            <element signature="e#10857#10858#0" expanded="true" />
-            <element signature="e#10896#10897#0" expanded="true" />
-            <element signature="e#10934#10935#0" expanded="true" />
-            <element signature="e#11305#11306#0" expanded="true" />
-            <element signature="e#11352#11353#0" expanded="true" />
-            <element signature="e#11398#11399#0" expanded="true" />
-            <element signature="e#11443#11444#0" expanded="true" />
-            <element signature="e#13415#13437#0" expanded="false" />
+            <element signature="e#10814#10815#0" expanded="true" />
+            <element signature="e#10847#10848#0" expanded="true" />
+            <element signature="e#10886#10887#0" expanded="true" />
+            <element signature="e#10924#10925#0" expanded="true" />
+            <element signature="e#11295#11296#0" expanded="true" />
+            <element signature="e#11342#11343#0" expanded="true" />
+            <element signature="e#11388#11389#0" expanded="true" />
+            <element signature="e#11433#11434#0" expanded="true" />
+            <element signature="e#13405#13427#0" expanded="false" />
             <element signature="method#screenPointToRelativeWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
-            <marker date="1450665779000" expanded="true" signature="13498:15359" placeholder="..." />
+            <marker date="1450665965000" expanded="true" signature="13488:15349" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.61358315">
+          <caret line="113" column="60" selection-start-line="113" selection-start-column="60" selection-end-line="113" selection-end-column="60" />
+          <folding>
+            <element signature="method#onDroneLocationAndOrientationUpdate#0;class#MyGLSurfaceView#0" expanded="false" />
+            <element signature="method#setDroneWrapper#0;class#MyGLSurfaceView#0" expanded="false" />
           </folding>
         </state>
       </provider>
