@@ -70,9 +70,9 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         mHemisphere = new Hemisphere(mContext);
         mSurfaceTexture = new SurfaceTexture(mHemisphere.getTextureHandle());
 
-        camera_theta = -90;
+        camera_theta = -89.9f;
         camera_phi = 0;
-        projector_theta = -90;
+        projector_theta = -89.9f;
         projector_phi = 0;
         camera_theta_initialized = false;
         camera_phi_initialized = false;
@@ -156,14 +156,14 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         // compute angles of midpoint
         float midpt_phi = camera_phi - phi_theta[0];
         float midpt_theta = camera_theta + phi_theta[1];
-
+        midpt_theta = max(midpt_theta, -89.999f);
         return new float[]{midpt_phi, midpt_theta};
     }
 
     public float[] getWorldPoint(float x, float y){
         float[] phi_theta = getDirectionAnglesOfPoint(x, y);
         float phi = phi_theta[0];
-        float theta = min(phi_theta[1], -89.999f);
+        float theta = phi_theta[1];
         float r = (float) abs(cameraTranslationV[1] * tan(toRadians(90 - theta)));
 
         float px = (float) (cameraTranslationV[0] - r * sin(toRadians(phi)));
@@ -421,7 +421,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 //        }
 
         camera_phi += new_phi;
-        camera_theta = max(camera_theta - new_theta, -90);
+        camera_theta = max(camera_theta - new_theta, -89.999f);
     }
 
     private float[] computeDeltaPhiAndThetaBetweenTwoUnitVectors(float[] p1, float[] p2){

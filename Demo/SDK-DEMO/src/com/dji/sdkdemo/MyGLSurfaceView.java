@@ -88,7 +88,7 @@ class MyGLSurfaceView extends GLSurfaceView {
                     break;
                 case MotionEvent.ACTION_MOVE:
                     move_count += 1;
-                    if (move_count < 10){
+                    if (move_count < 7){
                         break;
                     }
                     float rotation_angle = computeRotationAngle(p1x, p1y, p2x, p2y, gestStartX1, gestStartY1, gestStartX2, gestStartY2);
