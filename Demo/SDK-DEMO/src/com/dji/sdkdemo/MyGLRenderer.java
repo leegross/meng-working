@@ -70,9 +70,9 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         mHemisphere = new Hemisphere(mContext);
         mSurfaceTexture = new SurfaceTexture(mHemisphere.getTextureHandle());
 
-        camera_theta = -45;
+        camera_theta = 0;
         camera_phi = 180;
-        projector_theta = -45;
+        projector_theta = 0;
         projector_phi = 180;
         camera_theta_initialized = false;
         camera_phi_initialized = false;

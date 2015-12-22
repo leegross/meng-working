@@ -21,11 +21,12 @@ public class Constants {
     public static float MIN_ALTITUDE = .5f;
 
     public static float STARTING_ALTITUDE = 1.1f;
-    public static float GPS_SCALE =  0.00003f;
+
+    public static float EARTHS_RADIUS_IN_METERS = 6371393;
 
     // used to determine whether to use an image or the stream for the texture
     // don't forget to change code in fragment shader
-    public static boolean USE_CAMERA_STREAM = false;
+    public static boolean USE_CAMERA_STREAM = true;
 
 
 }
