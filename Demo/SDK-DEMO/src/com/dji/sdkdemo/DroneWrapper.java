@@ -38,15 +38,15 @@ public class DroneWrapper {
 
     // current drone parameters
     private float currentAltitude;
-    private float currentLatitude;
-    private float currentLongitude;
+    private double currentLatitude;
+    private double currentLongitude;
     private float currentGimbalPitch;
     private float currentYaw;
     private String currentFlightMode;
 
     // drone home points
-    private float homeLocationLatitude;
-    private float homeLocationLongitude;
+    private double homeLocationLatitude;
+    private double homeLocationLongitude;
     private boolean getHomePointFlag;
 
     private DJIGroundStationTask mTask;
@@ -164,7 +164,7 @@ public class DroneWrapper {
         });
     }
 
-    public void openGs(final float latitude, final float longitude, final float altitude, final short heading){
+    public void openGs(final double latitude, final double longitude, final float altitude, final short heading){
         if(!checkGetHomePoint()) return;
 
         DJIDrone.getDjiGroundStation().openGroundStation(new DJIGroundStationExecuteCallBack() {
@@ -231,7 +231,7 @@ public class DroneWrapper {
 //        uploadWaypoint();
 //    }
 
-    private void addWaypoint(float latitude, float longitude, float altitude, short heading){
+    private void addWaypoint(double latitude, double longitude, float altitude, short heading){
         // there is a limitation that we must have two waypoints
         // and that each waypoint must be at least 2 meters away from the previous waypoint
         // therefore, for every waypoint we want to set, we set a midpoint along the way
@@ -241,8 +241,8 @@ public class DroneWrapper {
         // check if lat and log are at least 4 meters away from current location
         // if they are, just give the first waypoint the midpoint coordinates
         // otherwise, give the second waypoint an altitude that is 2 meters above the second waypoint
-        float lat_midpoint;
-        float long_midpoint;
+        double lat_midpoint;
+        double long_midpoint;
         float alt_midpoint;
 //        if (dist < 4) {
             lat_midpoint = (currentLatitude + latitude)/2.0f;
@@ -256,7 +256,7 @@ public class DroneWrapper {
 
         mTask.RemoveAllWaypoint();
 
-        DJIGroundStationWaypoint mWayPoint1 = createWaypoint(latitude, longitude, latitude + 2.0f, heading);
+        DJIGroundStationWaypoint mWayPoint1 = createWaypoint(latitude, longitude, altitude + 2.0f, heading);
         mTask.addWaypoint(mWayPoint1);
 
 
@@ -268,7 +268,7 @@ public class DroneWrapper {
         uploadWaypoint();
     }
 
-    private DJIGroundStationWaypoint createWaypoint(float latitude, float longitude, float altitude, float heading) {
+    private DJIGroundStationWaypoint createWaypoint(double latitude, double longitude, float altitude, float heading) {
         DJIGroundStationWaypoint waypoint = new DJIGroundStationWaypoint(latitude, longitude);
         waypoint.action.actionRepeat = 1;
         waypoint.altitude = altitude;
@@ -315,7 +315,7 @@ public class DroneWrapper {
         });
     }
 
-    public void closeGs(final float latitude, final float longitude, final float altitude, final short heading){
+    public void closeGs(final double latitude, final double longitude, final float altitude, final short heading){
         if(!checkGetHomePoint()) return;
 
         DJIDrone.getDjiGroundStation().closeGroundStation(new DJIGroundStationExecuteCallBack() {
@@ -402,11 +402,11 @@ public class DroneWrapper {
         return currentAltitude;
     }
 
-    public float getCurrentLatitude(){
+    public double getCurrentLatitude(){
         return currentLatitude;
     }
 
-    public float getCurrentLongitude(){
+    public double getCurrentLongitude(){
         return currentLongitude;
     }
 
@@ -430,19 +430,19 @@ public class DroneWrapper {
     public void setNewGPSCoordinates(float x, float y, float z, float heading) {
 
         // convert longitude and latitude to gps coordinates
-        float converted_lat = homeLocationLatitude - metersToGPS(z);
-        float converted_long = homeLocationLongitude + metersToGPS(x);
+        double converted_lat = homeLocationLatitude - metersToGPS(z);
+        double converted_long = homeLocationLongitude + metersToGPS(x);
         float converted_heading = convertYawAngle(heading);
 
         flyToNewWaypoint(converted_lat, converted_long, y, converted_heading);
     }
 
-    private void flyToNewWaypoint(float latitude, float longitude, float altitude, float heading) {
+    private void flyToNewWaypoint(double latitude, double longitude, float altitude, float heading) {
         closeGs(latitude, longitude, altitude, (short) heading);
     }
 
-    private float metersToGPS(float longitude_in_meters) {
-        return (float) toDegrees(atan2(longitude_in_meters, EARTHS_RADIUS_IN_METERS));
+    private double metersToGPS(float meters) {
+        return toDegrees(atan2(meters, EARTHS_RADIUS_IN_METERS));
     }
 
     public float getCurrentLongitudeInMeters(){

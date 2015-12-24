@@ -25,37 +25,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c2fb097-3e27-43c5-9229-9d241b4244a9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/Constants.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/Constants.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$1.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$10.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$11.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$11.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$12$1.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$12$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$12.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$12.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$2.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$3.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$4.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$5.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$6.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$7.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$8.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$8.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$9.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$9.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/MyGLRenderer.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/MyGLRenderer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/MyGLSurfaceView.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/MyGLSurfaceView.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug-unaligned.apk" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug.apk" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/dex/debug/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/res/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/incremental/mergeResources/debug/merger.xml" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/incremental/mergeResources/debug/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/res/debug/raw/per_pixel_fragment_shader.glsl" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/res/debug/raw/per_pixel_fragment_shader.glsl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/res/raw/per_pixel_fragment_shader.glsl" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/res/raw/per_pixel_fragment_shader.glsl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DJI-SDK-Android-V2.4.0.iws" />
@@ -90,7 +75,7 @@
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
+              <caret line="24" column="57" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -110,9 +95,8 @@
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="171" column="0" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
+              <caret line="196" column="21" selection-start-line="196" selection-start-column="21" selection-end-line="196" selection-end-column="21" />
               <folding>
-                <element signature="method#onDroneLocationAndOrientationUpdate#0;class#MyGLSurfaceView#0" expanded="false" />
                 <element signature="method#setDroneWrapper#0;class#MyGLSurfaceView#0" expanded="false" />
               </folding>
             </state>
@@ -123,7 +107,7 @@
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="74" column="28" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
+              <caret line="244" column="5" selection-start-line="244" selection-start-column="5" selection-end-line="244" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#onDrawFrame#0;class#MyGLRenderer#0" expanded="false" />
@@ -164,40 +148,36 @@
       </file>
       <file leaf-file-name="activity_my_waypoints.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml">
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
           <provider editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="DroneWrapper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.088993">
-              <caret line="278" column="35" selection-start-line="278" selection-start-column="35" selection-end-line="278" selection-end-column="35" />
+            <state vertical-scroll-proportion="-4.0617285">
+              <caret line="53" column="22" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
               <folding>
                 <element signature="method#initMainControllerState#0;class#DroneWrapper#0" expanded="false" />
                 <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
                 <element signature="method#takeOff#0;class#DroneWrapper#0" expanded="false" />
-                <element signature="method#openGs#0;class#DroneWrapper#0" expanded="false" />
                 <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
-                <element signature="e#6728#6825#0" expanded="false" />
+                <element signature="e#6734#6831#0" expanded="false" />
                 <element signature="method#uploadWaypoint#0;class#DroneWrapper#0" expanded="false" />
                 <element signature="method#startTask#0;class#DroneWrapper#0" expanded="false" />
-                <element signature="method#closeGs#0;class#DroneWrapper#0" expanded="false" />
-                <element signature="method#closeGs#1;class#DroneWrapper#0" expanded="false" />
                 <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
                 <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
                 <element signature="method#resume#0;class#DroneWrapper#0" expanded="false" />
                 <element signature="method#pause#0;class#DroneWrapper#0" expanded="false" />
                 <element signature="method#droneUpdatesAreInitialized#0;class#DroneWrapper#0" expanded="false" />
                 <element signature="method#getGimbalMinPitchAngle#0;class#DroneWrapper#0" expanded="false" />
-                <element signature="method#convertYawAngle#0;class#DroneWrapper#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -2889,10 +2869,10 @@
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/androidTest/OperationsHelperTest.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/util/OperationsHelper.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Hemisphere.java" />
-        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/res/raw/per_pixel_fragment_shader.glsl" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java" />
+        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java" />
       </list>
     </option>
@@ -3082,7 +3062,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="android.project.structure.last.selected" value="SDK-DEMO" />
     <property name="android.project.structure.proportion" value="0.15" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="192.168.0.104:5555" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="192.168.0.104:1111" />
     <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="AVD_for_Galaxy_Nexus4" />
     <property name="FullScreen" value="false" />
     <property name="DEBUGGABLE_DEVICE" value="asus-nexus_7-059b3d8e" />
@@ -3306,7 +3286,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -3315,7 +3295,6 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34610304" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3989432" sideWeight="0.49427754" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3989432" sideWeight="0.50572246" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -3329,13 +3308,14 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24177396" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3989432" sideWeight="0.49427754" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -3344,15 +3324,15 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34610304" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3989432" sideWeight="0.50572246" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.49713877" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24177396" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -3367,8 +3347,8 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -3392,21 +3372,27 @@
           <properties />
           <option name="timeStamp" value="172" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java</url>
+          <line>436</line>
+          <properties />
+          <option name="timeStamp" value="420" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="419" />
+      <option name="time" value="425" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
@@ -3417,20 +3403,16 @@
             <element signature="method#initMainControllerState#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#takeOff#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#openGs#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
-            <element signature="e#6728#6825#0" expanded="false" />
+            <element signature="e#6734#6831#0" expanded="false" />
             <element signature="method#uploadWaypoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#startTask#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#closeGs#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#closeGs#1;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#resume#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#pause#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#droneUpdatesAreInitialized#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#getGimbalMinPitchAngle#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#convertYawAngle#0;class#DroneWrapper#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3439,21 +3421,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#onInitSDK#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#checkDronePermissions#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#initUIUpdateThread#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="class#Task#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#getToastCallback#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#checkConnectState#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#onResume#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#onPause#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#addWaypoints1#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#addWaypoints2#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#enterScale#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#initDecoder#0;class#TouchControllerActivity#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3491,21 +3458,20 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="165" column="54" selection-start-line="165" selection-start-column="54" selection-end-line="165" selection-end-column="54" />
           <folding>
-            <element signature="method#onDroneLocationAndOrientationUpdate#0;class#MyGLSurfaceView#0" expanded="false" />
             <element signature="method#setDroneWrapper#0;class#MyGLSurfaceView#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
@@ -3516,20 +3482,16 @@
             <element signature="method#initMainControllerState#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#takeOff#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#openGs#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
-            <element signature="e#6728#6825#0" expanded="false" />
+            <element signature="e#6734#6831#0" expanded="false" />
             <element signature="method#uploadWaypoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#startTask#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#closeGs#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#closeGs#1;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#resume#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#pause#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#droneUpdatesAreInitialized#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#getGimbalMinPitchAngle#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#convertYawAngle#0;class#DroneWrapper#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3538,21 +3500,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="229" column="5" selection-start-line="229" selection-start-column="5" selection-end-line="229" selection-end-column="5" />
-          <folding>
-            <element signature="method#onInitSDK#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#checkDronePermissions#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#initUIUpdateThread#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="class#Task#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#getToastCallback#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#checkConnectState#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#onResume#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#onPause#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#addWaypoints1#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#addWaypoints2#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#enterScale#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#initDecoder#0;class#TouchControllerActivity#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3590,21 +3537,20 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="165" column="54" selection-start-line="165" selection-start-column="54" selection-end-line="165" selection-end-column="54" />
           <folding>
-            <element signature="method#onDroneLocationAndOrientationUpdate#0;class#MyGLSurfaceView#0" expanded="false" />
             <element signature="method#setDroneWrapper#0;class#MyGLSurfaceView#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
@@ -3615,20 +3561,16 @@
             <element signature="method#initMainControllerState#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#takeOff#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#openGs#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
-            <element signature="e#6728#6825#0" expanded="false" />
+            <element signature="e#6734#6831#0" expanded="false" />
             <element signature="method#uploadWaypoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#startTask#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#closeGs#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#closeGs#1;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#resume#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#pause#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#droneUpdatesAreInitialized#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#getGimbalMinPitchAngle#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#convertYawAngle#0;class#DroneWrapper#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3637,21 +3579,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#onInitSDK#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#checkDronePermissions#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#initUIUpdateThread#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="class#Task#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#getToastCallback#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#checkConnectState#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#onResume#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#onPause#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#addWaypoints1#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#addWaypoints2#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#enterScale#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#initDecoder#0;class#TouchControllerActivity#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3689,21 +3616,20 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="185" column="0" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
           <folding>
-            <element signature="method#onDroneLocationAndOrientationUpdate#0;class#MyGLSurfaceView#0" expanded="false" />
             <element signature="method#setDroneWrapper#0;class#MyGLSurfaceView#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
@@ -3714,20 +3640,16 @@
             <element signature="method#initMainControllerState#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#takeOff#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#openGs#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
-            <element signature="e#6728#6825#0" expanded="false" />
+            <element signature="e#6734#6831#0" expanded="false" />
             <element signature="method#uploadWaypoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#startTask#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#closeGs#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#closeGs#1;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#resume#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#pause#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#droneUpdatesAreInitialized#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#getGimbalMinPitchAngle#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#convertYawAngle#0;class#DroneWrapper#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3736,21 +3658,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#onInitSDK#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#checkDronePermissions#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#initUIUpdateThread#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="class#Task#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#getToastCallback#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#checkConnectState#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#onResume#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#onPause#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#addWaypoints1#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#addWaypoints2#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#enterScale#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#initDecoder#0;class#TouchControllerActivity#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3788,21 +3695,20 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="185" column="0" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
           <folding>
-            <element signature="method#onDroneLocationAndOrientationUpdate#0;class#MyGLSurfaceView#0" expanded="false" />
             <element signature="method#setDroneWrapper#0;class#MyGLSurfaceView#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
@@ -3813,20 +3719,16 @@
             <element signature="method#initMainControllerState#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#takeOff#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#openGs#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
-            <element signature="e#6728#6825#0" expanded="false" />
+            <element signature="e#6734#6831#0" expanded="false" />
             <element signature="method#uploadWaypoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#startTask#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#closeGs#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#closeGs#1;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#resume#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#pause#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#droneUpdatesAreInitialized#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#getGimbalMinPitchAngle#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#convertYawAngle#0;class#DroneWrapper#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3835,21 +3737,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
-          <folding>
-            <element signature="method#onInitSDK#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#checkDronePermissions#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#initUIUpdateThread#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="class#Task#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#getToastCallback#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#checkConnectState#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#onResume#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#onPause#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#addWaypoints1#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#addWaypoints2#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#enterScale#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#initDecoder#0;class#TouchControllerActivity#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3887,21 +3774,20 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="185" column="0" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
           <folding>
-            <element signature="method#onDroneLocationAndOrientationUpdate#0;class#MyGLSurfaceView#0" expanded="false" />
             <element signature="method#setDroneWrapper#0;class#MyGLSurfaceView#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
@@ -3912,20 +3798,16 @@
             <element signature="method#initMainControllerState#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#takeOff#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#openGs#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
-            <element signature="e#6728#6825#0" expanded="false" />
+            <element signature="e#6734#6831#0" expanded="false" />
             <element signature="method#uploadWaypoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#startTask#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#closeGs#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#closeGs#1;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#resume#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#pause#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#droneUpdatesAreInitialized#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#getGimbalMinPitchAngle#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#convertYawAngle#0;class#DroneWrapper#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3934,21 +3816,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="122" column="51" selection-start-line="122" selection-start-column="30" selection-end-line="122" selection-end-column="51" />
-          <folding>
-            <element signature="method#onInitSDK#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#checkDronePermissions#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#initUIUpdateThread#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="class#Task#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#getToastCallback#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#checkConnectState#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#onResume#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#onPause#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#addWaypoints1#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#addWaypoints2#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#enterScale#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#initDecoder#0;class#TouchControllerActivity#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3957,21 +3824,20 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="124" column="26" selection-start-line="124" selection-start-column="26" selection-end-line="124" selection-end-column="26" />
           <folding>
-            <element signature="method#onDroneLocationAndOrientationUpdate#0;class#MyGLSurfaceView#0" expanded="false" />
             <element signature="method#setDroneWrapper#0;class#MyGLSurfaceView#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
@@ -3982,20 +3848,16 @@
             <element signature="method#initMainControllerState#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#takeOff#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#openGs#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
-            <element signature="e#6728#6825#0" expanded="false" />
+            <element signature="e#6734#6831#0" expanded="false" />
             <element signature="method#uploadWaypoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#startTask#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#closeGs#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#closeGs#1;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#resume#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#pause#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#droneUpdatesAreInitialized#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#getGimbalMinPitchAngle#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#convertYawAngle#0;class#DroneWrapper#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -4005,7 +3867,6 @@
         <state vertical-scroll-proportion="0.8559671">
           <caret line="180" column="4" selection-start-line="180" selection-start-column="4" selection-end-line="180" selection-end-column="4" />
           <folding>
-            <element signature="method#onDroneLocationAndOrientationUpdate#0;class#MyGLSurfaceView#0" expanded="false" />
             <element signature="method#setDroneWrapper#0;class#MyGLSurfaceView#0" expanded="false" />
           </folding>
         </state>
@@ -4019,14 +3880,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/util/Tools.java">
@@ -4112,57 +3973,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.218107">
           <caret line="172" column="30" selection-start-line="172" selection-start-column="28" selection-end-line="172" selection-end-column="30" />
-          <folding>
-            <element signature="method#onInitSDK#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#checkDronePermissions#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#initUIUpdateThread#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="class#Task#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#getToastCallback#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#checkConnectState#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#onResume#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#onPause#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#onDestroy#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#addWaypoints1#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#addWaypoints2#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#enterScale#0;class#TouchControllerActivity#0" expanded="false" />
-            <element signature="method#initDecoder#0;class#TouchControllerActivity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="171" column="0" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
-          <folding>
-            <element signature="method#onDroneLocationAndOrientationUpdate#0;class#MyGLSurfaceView#0" expanded="false" />
-            <element signature="method#setDroneWrapper#0;class#MyGLSurfaceView#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="43" selection-start-line="20" selection-start-column="43" selection-end-line="20" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/util/OperationsHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="82" column="5" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="74" column="28" selection-start-line="74" selection-start-column="28" selection-end-line="74" selection-end-column="28" />
+          <caret line="244" column="5" selection-start-line="244" selection-start-column="5" selection-end-line="244" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#onDrawFrame#0;class#MyGLRenderer#0" expanded="false" />
@@ -4188,28 +4005,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/util/OperationsHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="82" column="5" selection-start-line="82" selection-start-column="5" selection-end-line="82" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="57" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="196" column="21" selection-start-line="196" selection-start-column="21" selection-end-line="196" selection-end-column="21" />
+          <folding>
+            <element signature="method#setDroneWrapper#0;class#MyGLSurfaceView#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.088993">
-          <caret line="278" column="35" selection-start-line="278" selection-start-column="35" selection-end-line="278" selection-end-column="35" />
+        <state vertical-scroll-proportion="-4.0617285">
+          <caret line="53" column="22" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
           <folding>
             <element signature="method#initMainControllerState#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#takeOff#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#openGs#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
-            <element signature="e#6728#6825#0" expanded="false" />
+            <element signature="e#6734#6831#0" expanded="false" />
             <element signature="method#uploadWaypoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#startTask#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#closeGs#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#closeGs#1;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#resume#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#pause#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#droneUpdatesAreInitialized#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#getGimbalMinPitchAngle#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#convertYawAngle#0;class#DroneWrapper#0" expanded="false" />
           </folding>
         </state>
       </provider>
