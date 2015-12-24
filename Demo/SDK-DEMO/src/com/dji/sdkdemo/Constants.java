@@ -22,7 +22,7 @@ public class Constants {
 
     public static float STARTING_ALTITUDE = 1.1f;
 
-    public static float EARTHS_RADIUS_IN_METERS = 6371393;
+    public static double EARTHS_RADIUS_IN_METERS = 6371393;
 
     // used to determine whether to use an image or the stream for the texture
     // don't forget to change code in fragment shader

@@ -25,12 +25,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c2fb097-3e27-43c5-9229-9d241b4244a9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$1.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$3.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$5.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$9.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/Constants.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/Constants.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/MyGLSurfaceView.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/MyGLSurfaceView.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug-unaligned.apk" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug.apk" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
@@ -38,8 +34,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -75,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="57" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="57" />
+              <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -148,29 +143,28 @@
       </file>
       <file leaf-file-name="activity_my_waypoints.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml">
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
           <provider editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
         </entry>
       </file>
       <file leaf-file-name="DroneWrapper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.0617285">
-              <caret line="53" column="22" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.3325527">
+              <caret line="291" column="0" selection-start-line="291" selection-start-column="0" selection-end-line="291" selection-end-column="0" />
               <folding>
                 <element signature="method#initMainControllerState#0;class#DroneWrapper#0" expanded="false" />
                 <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
                 <element signature="method#takeOff#0;class#DroneWrapper#0" expanded="false" />
                 <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
                 <element signature="e#6734#6831#0" expanded="false" />
-                <element signature="method#uploadWaypoint#0;class#DroneWrapper#0" expanded="false" />
                 <element signature="method#startTask#0;class#DroneWrapper#0" expanded="false" />
                 <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
                 <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
@@ -178,6 +172,18 @@
                 <element signature="method#pause#0;class#DroneWrapper#0" expanded="false" />
                 <element signature="method#droneUpdatesAreInitialized#0;class#DroneWrapper#0" expanded="false" />
                 <element signature="method#getGimbalMinPitchAngle#0;class#DroneWrapper#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Temp.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/Temp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2871,9 +2877,10 @@
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Hemisphere.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/res/raw/per_pixel_fragment_shader.glsl" />
-        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java" />
+        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java" />
+        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/Temp.java" />
       </list>
     </option>
   </component>
@@ -2915,7 +2922,16 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="AndroidView">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DJI-SDK-Android-V2.4.0" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2963,6 +2979,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="SDK-DEMO" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DJI-SDK-Android-V2.4.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DJI-SDK-Android-V2.4.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SDK-DEMO" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -3042,18 +3080,9 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DJI-SDK-Android-V2.4.0" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -3086,6 +3115,21 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="com.dji.sdkdemo.androidTest.OperationsHelperTest" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="SDK-DEMO" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Temp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="Temp" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -3240,13 +3284,15 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Android Application.SDK-DEMO" />
       <item index="1" class="java.lang.String" itemvalue="Application.OperationsHelperTest" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Temp" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.OperationsHelperTest" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Application.Temp" />
+        <item index="1" class="java.lang.String" itemvalue="Application.OperationsHelperTest" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="Applet" default="true" selected="false">
@@ -3286,7 +3332,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -3295,6 +3341,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34610304" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3989432" sideWeight="0.49427754" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3989432" sideWeight="0.50572246" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -3308,31 +3355,30 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24177396" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3989432" sideWeight="0.49427754" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.34610304" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34610304" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3989432" sideWeight="0.50572246" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.49713877" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24177396" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32893" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -3378,52 +3424,30 @@
           <properties />
           <option name="timeStamp" value="420" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java</url>
+          <line>262</line>
+          <properties />
+          <option name="timeStamp" value="428" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java</url>
+          <line>258</line>
+          <properties />
+          <option name="timeStamp" value="429" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java</url>
+          <line>291</line>
+          <properties />
+          <option name="timeStamp" value="430" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="425" />
+      <option name="time" value="431" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="133" column="0" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
-          <folding>
-            <element signature="method#initMainControllerState#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#takeOff#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
-            <element signature="e#6734#6831#0" expanded="false" />
-            <element signature="method#uploadWaypoint#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#startTask#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#resume#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#pause#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#droneUpdatesAreInitialized#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#getGimbalMinPitchAngle#0;class#DroneWrapper#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/TouchControllerActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -3464,14 +3488,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
@@ -3484,7 +3508,6 @@
             <element signature="method#takeOff#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
             <element signature="e#6734#6831#0" expanded="false" />
-            <element signature="method#uploadWaypoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#startTask#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
@@ -3543,14 +3566,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
@@ -3563,7 +3586,6 @@
             <element signature="method#takeOff#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
             <element signature="e#6734#6831#0" expanded="false" />
-            <element signature="method#uploadWaypoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#startTask#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
@@ -3622,14 +3644,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
@@ -3642,7 +3664,6 @@
             <element signature="method#takeOff#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
             <element signature="e#6734#6831#0" expanded="false" />
-            <element signature="method#uploadWaypoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#startTask#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
@@ -3701,14 +3722,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
@@ -3721,7 +3742,6 @@
             <element signature="method#takeOff#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
             <element signature="e#6734#6831#0" expanded="false" />
-            <element signature="method#uploadWaypoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#startTask#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
@@ -3780,14 +3800,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
@@ -3800,7 +3820,6 @@
             <element signature="method#takeOff#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
             <element signature="e#6734#6831#0" expanded="false" />
-            <element signature="method#uploadWaypoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#startTask#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
@@ -3830,14 +3849,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
@@ -3850,7 +3869,6 @@
             <element signature="method#takeOff#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
             <element signature="e#6734#6831#0" expanded="false" />
-            <element signature="method#uploadWaypoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#startTask#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
@@ -3880,14 +3898,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/util/Tools.java">
@@ -4015,11 +4033,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java">
+    <entry file="jar://$USER_HOME$/Library/Android/sdk/platforms/android-17/android.jar!/java/lang/Math.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="57" selection-start-line="24" selection-start-column="50" selection-end-line="24" selection-end-column="57" />
-          <folding />
+        <state vertical-scroll-proportion="0.36">
+          <caret line="86" column="29" selection-start-line="86" selection-start-column="29" selection-end-line="86" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -4033,17 +4050,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/Temp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/Lib/DJI-SDK-LIB/libs/dji-sdk.jar!/dji/sdk/api/GroundStation/DJIGroundStationWaypoint.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43">
+          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.0617285">
-          <caret line="53" column="22" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.3325527">
+          <caret line="291" column="0" selection-start-line="291" selection-start-column="0" selection-end-line="291" selection-end-column="0" />
           <folding>
             <element signature="method#initMainControllerState#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#takeOff#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
             <element signature="e#6734#6831#0" expanded="false" />
-            <element signature="method#uploadWaypoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#startTask#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
