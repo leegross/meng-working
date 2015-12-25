@@ -278,12 +278,15 @@ public class DroneWrapper {
         waypoint.dampingDistance = 1.5f;
         waypoint.hasAction = false;
 
+//        waypoint.addAction(DJIGroundStationTypeDef.GroundStationOnWayPointAction.Way_Point_Action_Craft_Yaw, (int) heading);
+
         return waypoint;
     }
 
     private void setWaypointTaskSettings(){
         mTask.finishAction = DJIGroundStationFinishAction.None;
-        mTask.movingMode = DJIGroundStationMovingMode.GSHeadingUsingInitialDirection;
+//        mTask.movingMode = DJIGroundStationMovingMode.GSHeadingUsingInitialDirection;
+        mTask.movingMode = DJIGroundStationMovingMode.GSHeadingUsingWaypointHeading;
         mTask.pathMode = DJIGroundStationPathMode.Point_To_Point;
         mTask.wayPointCount = mTask.getAllWaypoint().size();
     }

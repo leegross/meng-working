@@ -92,7 +92,7 @@ class MyGLSurfaceView extends GLSurfaceView {
                         float[] rotationPt = computeRotationPoint(p1x, p1y, p2x, p2y);
                         float rx = rotationPt[0];
                         float ry = rotationPt[1];
-//                        mRenderer.moveBasedOnTwoFingerRotation(rx, ry,rotation_angle);
+                        mRenderer.moveBasedOnTwoFingerRotation(rx, ry,rotation_angle);
                     break;
                 case MotionEvent.ACTION_POINTER_UP:
                     float[] cameraTranslationV = mRenderer.getCameraTranslation();
@@ -100,9 +100,8 @@ class MyGLSurfaceView extends GLSurfaceView {
                     float y_translate = cameraTranslationV[1];
                     float z_translate = cameraTranslationV[2];
                     float heading = mRenderer.getPhiCamera();
-                    mDroneWrapper.setNewGPSCoordinates(1, 1, 1, 0);
 
-//                    mDroneWrapper.setNewGPSCoordinates(x_translate, y_translate, z_translate, heading);
+                    mDroneWrapper.setNewGPSCoordinates(x_translate, y_translate, z_translate, heading);
 
                     if (e.getActionIndex() == 0){
                         prevX = p2x;
