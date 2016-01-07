@@ -339,7 +339,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         System.arraycopy(projectorTranslationV, 0, cameraTranslationV, 0, projectorTranslationV.length);
     }
 
-    public void updateCameraRotation(float p1x, float p1y, float p2x, float p2y, float gest_start_y){
+    public void updateCameraRotation(float p1x, float p1y, float p2x, float p2y, float gest_start_y, float gest_start_theta){
         // get world coordinates from screen coordinates
         float[] p1 = screenPointToWorldDirection(p1x, p1y); // relative direction
         float[] p2 = screenPointToWorldDirection(p2x, p2y); // actual direction - given the orientation of the drone
@@ -359,8 +359,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
         // if we're below 60 degrees, only allow pitch
         // otherwise compute points to both yaw and pitch
-        float theta1 = -(gest_start_y-SURFACE_VERTICAL_CENTER)/GL_SURFACE_HEIGHT * fov_y + camera_theta;
-//        float theta1 = -(p1y-SURFACE_VERTICAL_CENTER)/GL_SURFACE_HEIGHT * fov_y + camera_theta;
+        float theta1 = -(gest_start_y-SURFACE_VERTICAL_CENTER)/GL_SURFACE_HEIGHT * fov_y + gest_start_theta;
         if ( theta1 < -60){
             new_phi = 0;
             new_theta = -(p2y - p1y)/GL_SURFACE_HEIGHT * fov_y;

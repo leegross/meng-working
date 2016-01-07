@@ -30,6 +30,7 @@ class MyGLSurfaceView extends GLSurfaceView {
     private float prevY;
     private float gestStartX;
     private float gestStartY;
+    private float gestStartTheta;
     private float gestStartX1;
     private float gestStartY1;
     private float gestStartX2;
@@ -123,9 +124,10 @@ class MyGLSurfaceView extends GLSurfaceView {
                 case MotionEvent.ACTION_DOWN:
                     gestStartX = x;
                     gestStartY = y;
+                    gestStartTheta = mRenderer.getThetaCamera();
                     break;
                 case MotionEvent.ACTION_MOVE:
-                    mRenderer.updateCameraRotation(prevX, prevY, x, y, gestStartY);
+                    mRenderer.updateCameraRotation(prevX, prevY, x, y, gestStartY, gestStartTheta);
                     break;
                 case MotionEvent.ACTION_UP:
                     mDroneWrapper.setYawAngle(mRenderer.getPhiCamera());
