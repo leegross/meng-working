@@ -117,7 +117,7 @@ public class TouchControllerActivity extends DemoBaseActivity
             public void run() {
                 if (mGLView != null && !mGLView.isGestureInProgress()) {
                     if (mGLView.getRenderer() != null) {
-//                        mGLView.getRenderer().resetCameraParameters();
+                        mGLView.getRenderer().resetCameraParameters();
                     }
                 }
             }

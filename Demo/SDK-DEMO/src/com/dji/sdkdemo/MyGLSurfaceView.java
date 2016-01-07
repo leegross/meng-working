@@ -21,12 +21,6 @@ class MyGLSurfaceView extends GLSurfaceView {
     private final MyGLRenderer mRenderer;
     private DroneWrapper mDroneWrapper;
 
-    float H_CENTER = SURFACE__HORIZONTAL_CENTER;
-    float V_CENTER = SURFACE_VERTICAL_CENTER;
-
-    private int minGimbalPitchAngle;
-    private int maxGimbalPitchAngle;
-
     private boolean isGestureInProgress;
 
     float mPrevDelta = 0;
@@ -34,6 +28,8 @@ class MyGLSurfaceView extends GLSurfaceView {
     float scale = 100.0f;
     private float prevX;
     private float prevY;
+    private float gestStartX;
+    private float gestStartY;
     private float gestStartX1;
     private float gestStartY1;
     private float gestStartX2;
@@ -124,8 +120,12 @@ class MyGLSurfaceView extends GLSurfaceView {
         // handle single touch event
         else {
             switch (e.getAction()) {
+                case MotionEvent.ACTION_DOWN:
+                    gestStartX = x;
+                    gestStartY = y;
+                    break;
                 case MotionEvent.ACTION_MOVE:
-                    mRenderer.updateCameraRotation(prevX, prevY, x, y);
+                    mRenderer.updateCameraRotation(prevX, prevY, x, y, gestStartY);
                     break;
                 case MotionEvent.ACTION_UP:
                     mDroneWrapper.setYawAngle(mRenderer.getPhiCamera());
@@ -209,8 +209,6 @@ class MyGLSurfaceView extends GLSurfaceView {
 
     public void setDroneWrapper(DroneWrapper droneWrapper) {
         mDroneWrapper = droneWrapper;
-        minGimbalPitchAngle = (int) mDroneWrapper.getGimbalMinPitchAngle();
-        maxGimbalPitchAngle = (int) mDroneWrapper.getGimbalMaxPitchAngle();
     }
 
     public MyGLRenderer getRenderer() {
