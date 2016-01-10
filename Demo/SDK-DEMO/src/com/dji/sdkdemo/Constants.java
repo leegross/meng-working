@@ -1,5 +1,8 @@
 package com.dji.sdkdemo;
 
+import static java.lang.Math.tan;
+import static java.lang.StrictMath.toRadians;
+
 /**
  * Created by leegross on 11/8/15.
  */
@@ -27,6 +30,10 @@ public class Constants {
     // used to determine whether to use an image or the stream for the texture
     // don't forget to change code in fragment shader
     public static boolean USE_CAMERA_STREAM = false;
+
+    public static float FRUST_NEAR_SCALE_X = (float) (FRUST_NEAR * tan(toRadians(HORIZONTAL_FOV)/2.0f));
+    public static float FRUST_NEAR_SCALE_Y = (float) (FRUST_NEAR * tan(toRadians(HORIZONTAL_FOV/ASPECT_RATIO)/2.0f));
+
 
 
 }

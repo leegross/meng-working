@@ -35,9 +35,6 @@ import static java.lang.StrictMath.toDegrees;
  */
 public class MyGLRenderer implements GLSurfaceView.Renderer {
 
-    // mMVPMatrix is an abbreviation for "Model View Projection Matrix"
-    private float[] mMVPMatrix = new float[16];
-    private float[] mMVPProjectorMatrix = new float[16];
     private final float[] mProjectionMatrix = new float[16];
 
     private float camera_theta; // rotation of camera in vertical direction
@@ -86,8 +83,8 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         // Redraw background color
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT | GLES20.GL_DEPTH_BUFFER_BIT);
 
-        mMVPMatrix = transformMatrix(camera_theta, camera_phi, cameraTranslationV); // transform camera matrix
-        mMVPProjectorMatrix = transformMatrix(projector_theta, projector_phi, projectorTranslationV); // transform projector matrix
+        float[] mMVPMatrix = transformMatrix(camera_theta, camera_phi, cameraTranslationV);
+        float[] mMVPProjectorMatrix = transformMatrix(projector_theta, projector_phi, projectorTranslationV);
 
         mSurfaceTexture.updateTexImage();
 
@@ -120,17 +117,19 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         return rotationM;
     }
 
-    public void moveBasedOnCameraZoom(float zoom_scale, float midx, float midy){
+    public void moveBasedOnCameraZoom(float p1x, float p1y, float p2x, float p2y, float prev_p1x, float prev_p1y, float prev_p2x, float prev_p2y){
 
-        float[] mid_phi_theta = getDirectionAnglesOfPoint(midx, midy);
-        float midpt_phi = mid_phi_theta[0];
-        float midpt_theta = mid_phi_theta[1];
+        float[] angle_mag_x = solveFor2DZoomAngleAndMagnitude(p1x, p2x, prev_p1x, prev_p2x, GL_SURFACE_WIDTH, FRUST_NEAR_SCALE_X);
+        float[] angle_mag_y = solveFor2DZoomAngleAndMagnitude(p1y, p2y, prev_p1y, prev_p2y, GL_SURFACE_HEIGHT, FRUST_NEAR_SCALE_Y);
 
         //compute rotation matrices
-        float[] rotationMatrix = getCameraRotationMatrix(midpt_theta, midpt_phi);
+        float[] rotationMatrix_x = getCameraRotationMatrix(camera_theta, camera_phi + angle_mag_x[0]);
+        float[] rotationMatrix_y = getCameraRotationMatrix(camera_theta - angle_mag_y[0], camera_phi);
 
         // compute the translation
-        float[] translateV = multiplyMV(rotationMatrix, new float[]{0, 0, -zoom_scale, 1});
+        float[] translateV_x = multiplyMV(rotationMatrix_x, new float[]{0, 0, -angle_mag_x[1], 1});
+        float[] translateV_y = multiplyMV(rotationMatrix_y, new float[]{0, 0, -angle_mag_y[1], 1});
+        float[] translateV = addArrays(translateV_x, translateV_y);
 
         if (!passPendingBoundsCheck(translateV)) return;
 
@@ -141,7 +140,33 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         cameraTranslationV = clipTranslationVector(temp);
     }
 
-    private float[] getDirectionAnglesOfPoint(float midx, float midy){
+    private float[] solveFor2DZoomAngleAndMagnitude(float p1, float p2, float prev_p1, float prev_p2, float dimension_size, float frust_near_scale){
+        // scale all points to range between -1 and 1
+        p1 = (2.0f * p1/dimension_size - 1.0f) * frust_near_scale;
+        p2 = (2.0f * p2/dimension_size - 1.0f) * frust_near_scale;
+        prev_p1 = (2.0f * prev_p1/dimension_size - 1.0f) * frust_near_scale;
+        prev_p2 = (2.0f * prev_p2/dimension_size - 1.0f) * frust_near_scale;
+
+        float prev_mid = (prev_p1 + prev_p2)/2.0f;
+        float new_mid = (p1 + p2)/2.0f;
+
+        float bisec_angle = (float) toDegrees(atan2(0 - prev_mid, FRUST_NEAR));
+
+        float prev_bisec = (float) (float) sqrt(pow(FRUST_NEAR, 2) + pow(0 - prev_mid, 2));
+
+        float half = abs(p1 - new_mid);
+        float prev_half = abs(prev_p1-prev_mid);
+
+        if (prev_half <= .00000001) return new float[]{0, 0};
+        float zoom_mag = (half/prev_half -1.0f) * prev_bisec;
+
+        // take direction of zoom into account (if it's negative, we actually want to move in opposite direction)
+//        if (zoom_mag < 0) bisec_angle +=180;
+
+        return new float[]{bisec_angle, zoom_mag};
+    }
+
+    private float[] getDirectionAnglesOfPoint(float midx, float midy) {
 
         float[] p1 = screenPointToWorldDirection(SURFACE__HORIZONTAL_CENTER, SURFACE_VERTICAL_CENTER); // camera center
         float[] p2 = screenPointToWorldDirection(midx, midy); // midpoint of fingers
@@ -272,16 +297,6 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         return mSurfaceTexture;
     }
 
-    public void updateCameraRotationAngles(float theta, float phi) {
-        camera_theta -= theta; // vertical directions are inverted
-        camera_phi += phi;
-    }
-
-    public void updateProjectorRotationAngles(float theta, float phi) {
-        projector_theta -=theta;
-        projector_phi += phi;
-    }
-
     public void setProjectorRotationAngles(float theta, float phi) {
         projector_theta = theta;
         projector_phi = phi;
@@ -293,14 +308,6 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
     public float getPhiCamera(){
         return camera_phi;
-    }
-
-    public float getThetaProjector(){
-        return projector_theta;
-    }
-
-    public float getPhiProjector(){
-        return projector_phi;
     }
 
     public void setInitialCameraTheta(float theta){
@@ -327,10 +334,6 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
     public void setProjectorTranslationV(float x, float y, float z){
         projectorTranslationV = new float[]{x, y, z, 0};
-    }
-
-    public float[] getProjectorTranslation(){
-        return projectorTranslationV;
     }
 
     public void resetCameraParameters(){
@@ -419,11 +422,12 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     // relative world direction = P^-1 * v
     // P^-1 is the inverse of the projection matrix
     // and v is the scaled screen coordinates vector (x and y range from -1 to 1)
-    private float[] screenPointToRelativeWorldDirection(float x, float y){
-        float[] v = {(2.0f * x/GL_SURFACE_WIDTH - 1.0f), -(2.0f * y/GL_SURFACE_HEIGHT - 1.0f), 0, 1};
-        float[] proj_inv = getInverse(mProjectionMatrix);
+    // the output is relative to the current orientation of the camera
+    private float[] screenPointToRelativeDirection(float x, float y){
+        float[] v = {(2.0f * x/GL_SURFACE_WIDTH - 1.0f), -(2.0f * y / GL_SURFACE_HEIGHT - 1.0f), 0, 1};
 
-        float[] world_v = multiplyMV(proj_inv, v);
+        float[] mInverseProjectionMatrix = getInverse(mProjectionMatrix);
+        float[] world_v = multiplyMV(mInverseProjectionMatrix, v);
         return world_v;
     }
 
