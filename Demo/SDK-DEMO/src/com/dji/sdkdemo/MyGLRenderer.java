@@ -144,23 +144,11 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
         float[] cameraRotationM = getCameraRotationMatrix(camera_theta, camera_phi);
         float[] translateV = multiplyMV(cameraRotationM, dispV);
-//        //------
-//        float[] angle_mag_x = solveFor2DZoomAngleAndMagnitude(p1x, p2x, prev_p1x, prev_p2x, GL_SURFACE_WIDTH, FRUST_NEAR_SCALE_X);
-//        float[] angle_mag_y = solveFor2DZoomAngleAndMagnitude(p1y, p2y, prev_p1y, prev_p2y, GL_SURFACE_HEIGHT, FRUST_NEAR_SCALE_Y);
-//
-//        //compute rotation matrices
-//        float[] rotationMatrix_x = getCameraRotationMatrix(camera_theta, camera_phi + angle_mag_x[0]);
-//        float[] rotationMatrix_y = getCameraRotationMatrix(camera_theta - angle_mag_y[0], camera_phi);
-//
-//        // compute the translation
-//        float[] translateV_x = multiplyMV(rotationMatrix_x, new float[]{0, 0, -angle_mag_x[1], 1});
-//        float[] translateV_y = multiplyMV(rotationMatrix_y, new float[]{0, 0, -angle_mag_y[1], 1});
-//        float[] translateV = addArrays(translateV_x, translateV_y);
-//
+
         if (!passPendingBoundsCheck(translateV)) return;
-//
+
         float[] temp = addArrays(cameraTranslationV, translateV);
-//
+
 ////        cameraTranslationV = temp;
         temp[3] =  1;
         cameraTranslationV = clipTranslationVector(temp);
@@ -191,23 +179,6 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         float a2_ = (FRUST_NEAR * (a1 - b1) + beta_ * (-a2 + b2))/(alpha_ - beta_);
 
         return new float[]{a1_ - a1, a2_ - a2};
-//        float prev_mid = (prev_p1 + prev_p2)/2.0f;
-//        float new_mid = (p1 + p2)/2.0f;
-//
-//        float bisec_angle = (float) toDegrees(atan2(0 - prev_mid, FRUST_NEAR));
-//
-//        float prev_bisec = (float) (float) sqrt(pow(FRUST_NEAR, 2) + pow(0 - prev_mid, 2));
-//
-//        float half = abs(p1 - new_mid);
-//        float prev_half = abs(prev_p1-prev_mid);
-//
-//        if (prev_half <= .00000001) return new float[]{0, 0};
-//        float zoom_mag = (half/prev_half -1.0f) * prev_bisec;
-//
-//        // take direction of zoom into account (if it's negative, we actually want to move in opposite direction)
-////        if (zoom_mag < 0) bisec_angle +=180;
-//
-//        return new float[]{bisec_angle, zoom_mag};
     }
 
     private float[] getDirectionAnglesOfPoint(float midx, float midy) {

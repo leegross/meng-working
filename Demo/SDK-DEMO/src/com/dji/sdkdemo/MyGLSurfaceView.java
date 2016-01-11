@@ -7,8 +7,13 @@ import android.util.Log;
 import android.view.MotionEvent;
 
 import static com.dji.sdkdemo.Constants.*;
+import static java.lang.Math.atan;
+import static java.lang.Math.cos;
 import static java.lang.Math.pow;
+import static java.lang.Math.sin;
+import static java.lang.Math.tan;
 import static java.lang.Math.toDegrees;
+import static java.lang.Math.toRadians;
 import static java.lang.StrictMath.abs;
 import static java.lang.StrictMath.atan2;
 import static java.lang.StrictMath.sqrt;
@@ -83,29 +88,48 @@ class MyGLSurfaceView extends GLSurfaceView {
                     break;
                 case MotionEvent.ACTION_MOVE:
 
+//                    p1x = SURFACE__HORIZONTAL_CENTER - 1/6.0f * GL_SURFACE_WIDTH;
+//                    p1y = SURFACE_VERTICAL_CENTER - 1/4.0f * GL_SURFACE_HEIGHT;
+//                    p2x = SURFACE__HORIZONTAL_CENTER + 1/6.0f * GL_SURFACE_WIDTH;
+//                    p2y = SURFACE_VERTICAL_CENTER - 1/4.0f * GL_SURFACE_HEIGHT;
+//                    prevX1 = SURFACE__HORIZONTAL_CENTER - 1/6.0f * GL_SURFACE_WIDTH;
+//                    prevY1 = SURFACE_VERTICAL_CENTER;
+//                    prevX2 = SURFACE__HORIZONTAL_CENTER + 1/6.0f * GL_SURFACE_WIDTH;
+//                    prevY2 = SURFACE_VERTICAL_CENTER;
+
+                    float rotation_angle = computeRotationAngle(p1x, p1y, p2x, p2y, prevX1, prevY1, prevX2, prevY2);
+                    float[] rotationPt = computeRotationPoint(p1x, p1y, p2x, p2y);
+                    float rx = rotationPt[0];
+                    float ry = rotationPt[1];
+//                    mRenderer.moveBasedOnTwoFingerRotation(rx, ry,rotation_angle);
+
 //                    mRenderer.moveBasedOnCameraZoom(
 //                            SURFACE__HORIZONTAL_CENTER - 1/6.0f * GL_SURFACE_WIDTH, SURFACE_VERTICAL_CENTER,
-//                            SURFACE__HORIZONTAL_CENTER + 1/6.0f * GL_SURFACE_WIDTH, SURFACE_VERTICAL_CENTER,
-//                            SURFACE__HORIZONTAL_CENTER - 1/6.0f * GL_SURFACE_WIDTH, SURFACE_VERTICAL_CENTER,
-//                            SURFACE__HORIZONTAL_CENTER + 1/6.0f * GL_SURFACE_WIDTH, SURFACE_VERTICAL_CENTER
+//                            SURFACE__HORIZONTAL_CENTER + 1/6.0f * GL_SURFACE_WIDTH, SURFACE_VERTICAL_CENTER + 1/4.0f * GL_SURFACE_HEIGHT,
+//                            SURFACE__HORIZONTAL_CENTER - 1/6.0f * GL_SURFACE_WIDTH, SURFACE_VERTICAL_CENTER + 1/4.0f * GL_SURFACE_HEIGHT,
+//                            SURFACE__HORIZONTAL_CENTER + 1/6.0f * GL_SURFACE_WIDTH, SURFACE_VERTICAL_CENTER + 1/4.0f * GL_SURFACE_HEIGHT
 //                    );
-                    mRenderer.moveBasedOnCameraZoom(p1x, p1y, p2x, p2y, prevX1, prevY1, prevX2, prevY2);
+                    float on_screen_rotation_angle = computeOnScreenRotationAngle(p1x, p1y, p2x, p2y, gestStartX1, gestStartY1, gestStartX2, gestStartY2);
 
-//                    float delta = (float) sqrt(pow(p1x - p2x, 2) + pow(p1y - p2y, 2));
-//                    float zoom_scale = (delta - mPrevDelta) / scale;
-//                    float midx = (p1x + p2x) / 2.0f;
-//                    float midy = (p1y + p2y) / 2.0f;
-//                    mRenderer.moveBasedOnCameraZoom(zoom_scale, midx, midy);
-//
-//                    float total_rotation_angle = computeRotationAngle(p1x, p1y, p2x, p2y, gestStartX1, gestStartY1, gestStartX2, gestStartY2);
-//                    if (!twoFingerRotationStarted && total_rotation_angle < 7){ break;}
-//                    else {twoFingerRotationStarted = true;}
-//
-//                    float rotation_angle = computeRotationAngle(p1x, p1y, p2x, p2y, prevX1, prevY1, prevX2, prevY2);
-//                    float[] rotationPt = computeRotationPoint(p1x, p1y, p2x, p2y);
-//                    float rx = rotationPt[0];
-//                    float ry = rotationPt[1];
-//                    mRenderer.moveBasedOnTwoFingerRotation(rx, ry,rotation_angle);
+                    // if fixed pt for two finger rotation is p1
+                    // else fixed pt for two finger rotation is p2
+                    if (abs(rx - p1x) < .00000001 && abs(ry - p1y) < .00000001 ){
+                        float mag_prev = (float) (sqrt(pow(prevX2 - prevX1, 2) + pow(prevY2 - prevY1, 2)));
+                        float angle_current = (float) toDegrees(atan2(p2y - p1y, p2x - p1x));
+
+                        float new_prev_p2x = (float) (prevX1 + mag_prev * cos(toRadians(angle_current)));
+                        float new_prev_p2y = (float) (prevY1 + mag_prev * sin(toRadians(angle_current)));
+                        mRenderer.moveBasedOnCameraZoom(p1x, p1y, p2x, p2y, prevX1, prevY1, new_prev_p2x, new_prev_p2y);
+                    } else {
+                        float mag_prev = (float) (sqrt(pow(prevX2 - prevX1, 2) + pow(prevY2 - prevY1, 2)));
+                        float angle_current = (float) toDegrees(atan2(p2y - p1y, p2x - p1x));
+
+                        float new_prev_p1x = (float) (prevX2 - mag_prev * cos(toRadians(angle_current)));
+                        float new_prev_p1y = (float) (prevY2 - mag_prev * sin(toRadians(angle_current)));
+                        mRenderer.moveBasedOnCameraZoom(p1x, p1y, p2x, p2y, new_prev_p1x, new_prev_p1y, prevX2, prevY2);
+                    }
+
+//                    mRenderer.moveBasedOnCameraZoom(p1x, p1y, p2x, p2y, prevX1, prevY1, prevX2, prevY2);
 
                     break;
                 case MotionEvent.ACTION_POINTER_UP:
@@ -159,6 +183,35 @@ class MyGLSurfaceView extends GLSurfaceView {
         }
 
         return true;
+    }
+
+    private float computeOnScreenRotationAngle(float x1, float y1, float x2, float y2, float prevx1, float prevy1, float prevx2, float prevy2){
+        // compute rotation angle
+        float p1_move = (float) sqrt(pow(x1- prevx1, 2) + pow(y1- prevy1, 2));
+        float p2_move = (float) sqrt(pow(x2- prevx2, 2) + pow(y2- prevy2, 2));
+
+        float rotation_angle;
+        if (p1_move < p2_move){
+            float fixed_x = prevx1;
+            float fixed_y = prevy1;
+
+            float angle_start = (float) atan2(fixed_y - prevy2, fixed_x - prevx2);
+            float angle_end = (float) atan2(fixed_y - y2, fixed_x - x2);
+            rotation_angle = (float) toDegrees(angle_end - angle_start);
+        } else {
+            float fixed_x = prevx2;
+            float fixed_y = prevy2;
+
+            float angle_start = (float) atan2(fixed_y - prevy1, fixed_x - prevx1);
+            float angle_end = (float) atan2(fixed_y - y1, fixed_x - x1);
+            rotation_angle = (float) toDegrees(angle_end - angle_start);
+        }
+
+        if (rotation_angle < -180){
+            rotation_angle += 360;
+        }
+
+        return rotation_angle;
     }
 
     private float computeRotationAngle(float x1, float y1, float x2, float y2, float prevx1, float prevy1, float prevx2, float prevy2){
