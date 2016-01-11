@@ -5,6 +5,7 @@ import android.graphics.SurfaceTexture;
 import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 import android.opengl.Matrix;
+import android.util.Log;
 
 import com.dji.sdkdemo.util.OperationsHelper;
 
@@ -12,6 +13,7 @@ import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
 import static android.opengl.Matrix.perspectiveM;
+import static android.opengl.Matrix.rotateM;
 import static com.dji.sdkdemo.Constants.*;
 import static com.dji.sdkdemo.Constants.FRUST_NEAR;
 import static com.dji.sdkdemo.Constants.HORIZONTAL_FOV;
@@ -67,9 +69,9 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         mHemisphere = new Hemisphere(mContext);
         mSurfaceTexture = new SurfaceTexture(mHemisphere.getTextureHandle());
 
-        camera_theta = -45;
+        camera_theta = -89.999f;
         camera_phi = 180;
-        projector_theta = -45;
+        projector_theta = -89.999f;
         projector_phi = 180;
         camera_theta_initialized = false;
         camera_phi_initialized = false;
@@ -119,51 +121,93 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
     public void moveBasedOnCameraZoom(float p1x, float p1y, float p2x, float p2y, float prev_p1x, float prev_p1y, float prev_p2x, float prev_p2y){
 
-        float[] angle_mag_x = solveFor2DZoomAngleAndMagnitude(p1x, p2x, prev_p1x, prev_p2x, GL_SURFACE_WIDTH, FRUST_NEAR_SCALE_X);
-        float[] angle_mag_y = solveFor2DZoomAngleAndMagnitude(p1y, p2y, prev_p1y, prev_p2y, GL_SURFACE_HEIGHT, FRUST_NEAR_SCALE_Y);
+        if (abs(p1x - p2x) < 0.0000001) {
+            p1x += 1.0f;
+            prev_p1x +=  1.0f;
+        }
+        if (abs(p1y - p2y) < 0.0000001) {
+            p1y += 1.0f;
+            prev_p1y +=  1.0f;
+        }
+        float[] prev_p1 = getWorlPositionRelativeToCamera(prev_p1x, prev_p1y);
+        float[] prev_p2 = getWorlPositionRelativeToCamera(prev_p2x, prev_p2y);
 
-        //compute rotation matrices
-        float[] rotationMatrix_x = getCameraRotationMatrix(camera_theta, camera_phi + angle_mag_x[0]);
-        float[] rotationMatrix_y = getCameraRotationMatrix(camera_theta - angle_mag_y[0], camera_phi);
 
-        // compute the translation
-        float[] translateV_x = multiplyMV(rotationMatrix_x, new float[]{0, 0, -angle_mag_x[1], 1});
-        float[] translateV_y = multiplyMV(rotationMatrix_y, new float[]{0, 0, -angle_mag_y[1], 1});
-        float[] translateV = addArrays(translateV_x, translateV_y);
+        float[] disp_xz = solveFor2DZoomAngleAndMagnitude(prev_p1[0], -prev_p1[2], prev_p2[0], -prev_p2[2], p1x, p2x, GL_SURFACE_WIDTH, FRUST_NEAR_SCALE_X);
+        float[] disp_yz = solveFor2DZoomAngleAndMagnitude(prev_p1[1], -prev_p1[2], prev_p2[1], -prev_p2[2], p1y, p2y, GL_SURFACE_HEIGHT, FRUST_NEAR_SCALE_Y);
 
+        float disp_z;
+        if (abs(disp_xz[1]) < .00000001) disp_z = disp_yz[1];
+        else disp_z = disp_xz[1];
+
+        float[] dispV = new float[]{-disp_xz[0], -disp_yz[0], disp_z, 1};
+
+        float[] cameraRotationM = getCameraRotationMatrix(camera_theta, camera_phi);
+        float[] translateV = multiplyMV(cameraRotationM, dispV);
+//        //------
+//        float[] angle_mag_x = solveFor2DZoomAngleAndMagnitude(p1x, p2x, prev_p1x, prev_p2x, GL_SURFACE_WIDTH, FRUST_NEAR_SCALE_X);
+//        float[] angle_mag_y = solveFor2DZoomAngleAndMagnitude(p1y, p2y, prev_p1y, prev_p2y, GL_SURFACE_HEIGHT, FRUST_NEAR_SCALE_Y);
+//
+//        //compute rotation matrices
+//        float[] rotationMatrix_x = getCameraRotationMatrix(camera_theta, camera_phi + angle_mag_x[0]);
+//        float[] rotationMatrix_y = getCameraRotationMatrix(camera_theta - angle_mag_y[0], camera_phi);
+//
+//        // compute the translation
+//        float[] translateV_x = multiplyMV(rotationMatrix_x, new float[]{0, 0, -angle_mag_x[1], 1});
+//        float[] translateV_y = multiplyMV(rotationMatrix_y, new float[]{0, 0, -angle_mag_y[1], 1});
+//        float[] translateV = addArrays(translateV_x, translateV_y);
+//
         if (!passPendingBoundsCheck(translateV)) return;
-
+//
         float[] temp = addArrays(cameraTranslationV, translateV);
-
-//        cameraTranslationV = temp;
+//
+////        cameraTranslationV = temp;
         temp[3] =  1;
         cameraTranslationV = clipTranslationVector(temp);
     }
 
-    private float[] solveFor2DZoomAngleAndMagnitude(float p1, float p2, float prev_p1, float prev_p2, float dimension_size, float frust_near_scale){
+    private float[] getWorlPositionRelativeToCamera(float x, float y){
+        float[] world_p = getWorldPoint(x, y);
+        float[] p_relative_to_position = new float[]{world_p[0] - cameraTranslationV[0], world_p[1] - cameraTranslationV[1], world_p[2] - cameraTranslationV[2], 1};
+
+        float[] rotationM = getCameraRotationMatrix(camera_theta, -camera_phi);
+        float[] p_relative_to_orientation = multiplyMV(rotationM, p_relative_to_position);
+
+        return p_relative_to_orientation;
+    }
+
+    private float[] solveFor2DZoomAngleAndMagnitude(float a1, float a2, float b1, float b2, float p1, float p2, float dimension_size, float frust_near_scale){
         // scale all points to range between -1 and 1
-        p1 = (2.0f * p1/dimension_size - 1.0f) * frust_near_scale;
-        p2 = (2.0f * p2/dimension_size - 1.0f) * frust_near_scale;
-        prev_p1 = (2.0f * prev_p1/dimension_size - 1.0f) * frust_near_scale;
-        prev_p2 = (2.0f * prev_p2/dimension_size - 1.0f) * frust_near_scale;
+        float alpha_ = (2.0f * p1/dimension_size - 1.0f) * frust_near_scale;
+        float beta_ = (2.0f * p2/dimension_size - 1.0f) * frust_near_scale;
 
-        float prev_mid = (prev_p1 + prev_p2)/2.0f;
-        float new_mid = (p1 + p2)/2.0f;
+        if (abs(p1 - p2) < 0.0000001) {
+            Log.d("zoomError", "impossible case reached");
+            float alpha = (a1 / a2) * FRUST_NEAR;
+            return new float[]{alpha_ - alpha, 0.0f};
+        }
 
-        float bisec_angle = (float) toDegrees(atan2(0 - prev_mid, FRUST_NEAR));
+        float a1_ = -alpha_ * (FRUST_NEAR * (-a1 + b1) + beta_ * (a2 - b2))/(FRUST_NEAR * (alpha_ - beta_));
+        float a2_ = (FRUST_NEAR * (a1 - b1) + beta_ * (-a2 + b2))/(alpha_ - beta_);
 
-        float prev_bisec = (float) (float) sqrt(pow(FRUST_NEAR, 2) + pow(0 - prev_mid, 2));
-
-        float half = abs(p1 - new_mid);
-        float prev_half = abs(prev_p1-prev_mid);
-
-        if (prev_half <= .00000001) return new float[]{0, 0};
-        float zoom_mag = (half/prev_half -1.0f) * prev_bisec;
-
-        // take direction of zoom into account (if it's negative, we actually want to move in opposite direction)
-//        if (zoom_mag < 0) bisec_angle +=180;
-
-        return new float[]{bisec_angle, zoom_mag};
+        return new float[]{a1_ - a1, a2_ - a2};
+//        float prev_mid = (prev_p1 + prev_p2)/2.0f;
+//        float new_mid = (p1 + p2)/2.0f;
+//
+//        float bisec_angle = (float) toDegrees(atan2(0 - prev_mid, FRUST_NEAR));
+//
+//        float prev_bisec = (float) (float) sqrt(pow(FRUST_NEAR, 2) + pow(0 - prev_mid, 2));
+//
+//        float half = abs(p1 - new_mid);
+//        float prev_half = abs(prev_p1-prev_mid);
+//
+//        if (prev_half <= .00000001) return new float[]{0, 0};
+//        float zoom_mag = (half/prev_half -1.0f) * prev_bisec;
+//
+//        // take direction of zoom into account (if it's negative, we actually want to move in opposite direction)
+////        if (zoom_mag < 0) bisec_angle +=180;
+//
+//        return new float[]{bisec_angle, zoom_mag};
     }
 
     private float[] getDirectionAnglesOfPoint(float midx, float midy) {

@@ -31,7 +31,8 @@ public class Constants {
     // don't forget to change code in fragment shader
     public static boolean USE_CAMERA_STREAM = false;
 
-    public static float FRUST_NEAR_SCALE_X = (float) (FRUST_NEAR * tan(toRadians(HORIZONTAL_FOV)/2.0f));
+    public static float EMPIRICAL_HORIZONTAL_FOV = 82.947968f;
+    public static float FRUST_NEAR_SCALE_X = (float) (FRUST_NEAR * tan(toRadians(EMPIRICAL_HORIZONTAL_FOV)/2.0f));
     public static float FRUST_NEAR_SCALE_Y = (float) (FRUST_NEAR * tan(toRadians(HORIZONTAL_FOV/ASPECT_RATIO)/2.0f));
 
 

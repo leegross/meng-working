@@ -86,10 +86,10 @@ class MyGLSurfaceView extends GLSurfaceView {
 //                    mRenderer.moveBasedOnCameraZoom(
 //                            SURFACE__HORIZONTAL_CENTER - 1/6.0f * GL_SURFACE_WIDTH, SURFACE_VERTICAL_CENTER,
 //                            SURFACE__HORIZONTAL_CENTER + 1/6.0f * GL_SURFACE_WIDTH, SURFACE_VERTICAL_CENTER,
-//                            0, SURFACE_VERTICAL_CENTER,
-//                            GL_SURFACE_WIDTH, SURFACE_VERTICAL_CENTER
+//                            SURFACE__HORIZONTAL_CENTER - 1/6.0f * GL_SURFACE_WIDTH, SURFACE_VERTICAL_CENTER,
+//                            SURFACE__HORIZONTAL_CENTER + 1/6.0f * GL_SURFACE_WIDTH, SURFACE_VERTICAL_CENTER
 //                    );
-//                    mRenderer.moveBasedOnCameraZoom(p1x, p1y, p2x, p2y, prevX1, prevY1, prevX2, prevY2);
+                    mRenderer.moveBasedOnCameraZoom(p1x, p1y, p2x, p2y, prevX1, prevY1, prevX2, prevY2);
 
 //                    float delta = (float) sqrt(pow(p1x - p2x, 2) + pow(p1y - p2y, 2));
 //                    float zoom_scale = (delta - mPrevDelta) / scale;
@@ -101,19 +101,11 @@ class MyGLSurfaceView extends GLSurfaceView {
 //                    if (!twoFingerRotationStarted && total_rotation_angle < 7){ break;}
 //                    else {twoFingerRotationStarted = true;}
 //
-//                    p1x = SURFACE__HORIZONTAL_CENTER;
-//                    p1y = SURFACE_VERTICAL_CENTER + 1/4 * GL_SURFACE_HEIGHT;
-//                    p2x = SURFACE__HORIZONTAL_CENTER;
-//                    p2y = SURFACE_VERTICAL_CENTER;
-//                    prevX1 = SURFACE__HORIZONTAL_CENTER - 1/6 * GL_SURFACE_WIDTH;
-//                    prevY1 = SURFACE_VERTICAL_CENTER;
-//                    prevX2 = SURFACE__HORIZONTAL_CENTER;
-//                    prevY2 = SURFACE_VERTICAL_CENTER;
-                    float rotation_angle = computeRotationAngle(p1x, p1y, p2x, p2y, prevX1, prevY1, prevX2, prevY2);
-                    float[] rotationPt = computeRotationPoint(p1x, p1y, p2x, p2y);
-                    float rx = rotationPt[0];
-                    float ry = rotationPt[1];
-                    mRenderer.moveBasedOnTwoFingerRotation(rx, ry,rotation_angle);
+//                    float rotation_angle = computeRotationAngle(p1x, p1y, p2x, p2y, prevX1, prevY1, prevX2, prevY2);
+//                    float[] rotationPt = computeRotationPoint(p1x, p1y, p2x, p2y);
+//                    float rx = rotationPt[0];
+//                    float ry = rotationPt[1];
+//                    mRenderer.moveBasedOnTwoFingerRotation(rx, ry,rotation_angle);
 
                     break;
                 case MotionEvent.ACTION_POINTER_UP:
@@ -185,10 +177,6 @@ class MyGLSurfaceView extends GLSurfaceView {
             prev_world_p = mRenderer.getWorldPoint(prevx2, prevy2);
             world_p = mRenderer.getWorldPoint(x2, y2);
             fixed_world_p = mRenderer.getWorldPoint(fixed_x, fixed_y);
-
-//            float angle_start = (float) atan2(fixed_y - prevy2, fixed_x - prevx2);
-//            float angle_end = (float) atan2(fixed_y - y2, fixed_x - x2);
-//            rotation_angle = (float) toDegrees(angle_end - angle_start);
         } else {
             float fixed_x = prevx2;//(x2 + prevx2)/2.0f;
             float fixed_y = prevy2;//(y2 + prevy2)/2.0f;
@@ -196,9 +184,6 @@ class MyGLSurfaceView extends GLSurfaceView {
             prev_world_p = mRenderer.getWorldPoint(prevx1, prevy1);
             world_p = mRenderer.getWorldPoint(x1, y1);
             fixed_world_p = mRenderer.getWorldPoint(fixed_x, fixed_y);
-//            float angle_start = (float) atan2(fixed_y - prevy1, fixed_x - prevx1);
-//            float angle_end = (float) atan2(fixed_y - y1, fixed_x - x1);
-//            rotation_angle = (float) toDegrees(angle_end - angle_start);
         }
 
         float angle_start = (float) atan2(fixed_world_p[2] - prev_world_p[2], fixed_world_p[0] - prev_world_p[0]);
