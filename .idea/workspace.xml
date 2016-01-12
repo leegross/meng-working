@@ -24,12 +24,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c2fb097-3e27-43c5-9229-9d241b4244a9" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/MyGLRenderer.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/MyGLRenderer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug-unaligned.apk" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug.apk" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/dex/debug/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DJI-SDK-Android-V2.4.0.iws" />
@@ -86,10 +90,10 @@
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="90" column="0" selection-start-line="90" selection-start-column="2" selection-end-line="97" selection-end-column="55" />
+              <caret line="90" column="0" selection-start-line="90" selection-start-column="2" selection-end-line="97" selection-end-column="84" />
               <folding>
-                <element signature="e#11885#11886#0" expanded="true" />
-                <element signature="e#11929#11930#0" expanded="true" />
+                <element signature="e#11943#11944#0" expanded="true" />
+                <element signature="e#11987#11988#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -111,18 +115,19 @@
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.6674473">
-              <caret line="73" column="34" selection-start-line="73" selection-start-column="34" selection-end-line="73" selection-end-column="34" />
+              <caret line="73" column="27" selection-start-line="73" selection-start-column="27" selection-end-line="73" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1944#1945#0" expanded="true" />
                 <element signature="e#1978#1979#0" expanded="true" />
-                <element signature="e#12130#12131#0" expanded="true" />
-                <element signature="e#12168#12169#0" expanded="true" />
-                <element signature="e#12342#12343#0" expanded="true" />
-                <element signature="e#12377#12378#0" expanded="true" />
+                <element signature="method#getWorlPositionRelativeToCamera#0;class#MyGLRenderer#0" expanded="false" />
+                <element signature="e#12155#12156#0" expanded="true" />
+                <element signature="e#12193#12194#0" expanded="true" />
+                <element signature="e#12367#12368#0" expanded="true" />
+                <element signature="e#12402#12403#0" expanded="true" />
                 <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
-                <element signature="e#12742#12743#0" expanded="true" />
-                <element signature="e#12789#12790#0" expanded="true" />
+                <element signature="e#12767#12768#0" expanded="true" />
+                <element signature="e#12814#12815#0" expanded="true" />
                 <element signature="method#resetCameraParameters#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#updateCameraRotation#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
@@ -3421,7 +3426,7 @@
           <option name="timeStamp" value="172" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="523" />
+      <option name="time" value="533" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -3434,13 +3439,14 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1944#1945#0" expanded="true" />
             <element signature="e#1978#1979#0" expanded="true" />
-            <element signature="e#12130#12131#0" expanded="true" />
-            <element signature="e#12168#12169#0" expanded="true" />
-            <element signature="e#12342#12343#0" expanded="true" />
-            <element signature="e#12377#12378#0" expanded="true" />
+            <element signature="method#getWorlPositionRelativeToCamera#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#12155#12156#0" expanded="true" />
+            <element signature="e#12193#12194#0" expanded="true" />
+            <element signature="e#12367#12368#0" expanded="true" />
+            <element signature="e#12402#12403#0" expanded="true" />
             <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#12742#12743#0" expanded="true" />
-            <element signature="e#12789#12790#0" expanded="true" />
+            <element signature="e#12767#12768#0" expanded="true" />
+            <element signature="e#12814#12815#0" expanded="true" />
             <element signature="method#resetCameraParameters#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#updateCameraRotation#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
@@ -3455,8 +3461,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="165" column="54" selection-start-line="165" selection-start-column="54" selection-end-line="165" selection-end-column="54" />
           <folding>
-            <element signature="e#11885#11886#0" expanded="true" />
-            <element signature="e#11929#11930#0" expanded="true" />
+            <element signature="e#11943#11944#0" expanded="true" />
+            <element signature="e#11987#11988#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3508,13 +3514,14 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1944#1945#0" expanded="true" />
             <element signature="e#1978#1979#0" expanded="true" />
-            <element signature="e#12130#12131#0" expanded="true" />
-            <element signature="e#12168#12169#0" expanded="true" />
-            <element signature="e#12342#12343#0" expanded="true" />
-            <element signature="e#12377#12378#0" expanded="true" />
+            <element signature="method#getWorlPositionRelativeToCamera#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#12155#12156#0" expanded="true" />
+            <element signature="e#12193#12194#0" expanded="true" />
+            <element signature="e#12367#12368#0" expanded="true" />
+            <element signature="e#12402#12403#0" expanded="true" />
             <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#12742#12743#0" expanded="true" />
-            <element signature="e#12789#12790#0" expanded="true" />
+            <element signature="e#12767#12768#0" expanded="true" />
+            <element signature="e#12814#12815#0" expanded="true" />
             <element signature="method#resetCameraParameters#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#updateCameraRotation#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
@@ -3529,8 +3536,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="165" column="54" selection-start-line="165" selection-start-column="54" selection-end-line="165" selection-end-column="54" />
           <folding>
-            <element signature="e#11885#11886#0" expanded="true" />
-            <element signature="e#11929#11930#0" expanded="true" />
+            <element signature="e#11943#11944#0" expanded="true" />
+            <element signature="e#11987#11988#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3582,13 +3589,14 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1944#1945#0" expanded="true" />
             <element signature="e#1978#1979#0" expanded="true" />
-            <element signature="e#12130#12131#0" expanded="true" />
-            <element signature="e#12168#12169#0" expanded="true" />
-            <element signature="e#12342#12343#0" expanded="true" />
-            <element signature="e#12377#12378#0" expanded="true" />
+            <element signature="method#getWorlPositionRelativeToCamera#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#12155#12156#0" expanded="true" />
+            <element signature="e#12193#12194#0" expanded="true" />
+            <element signature="e#12367#12368#0" expanded="true" />
+            <element signature="e#12402#12403#0" expanded="true" />
             <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#12742#12743#0" expanded="true" />
-            <element signature="e#12789#12790#0" expanded="true" />
+            <element signature="e#12767#12768#0" expanded="true" />
+            <element signature="e#12814#12815#0" expanded="true" />
             <element signature="method#resetCameraParameters#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#updateCameraRotation#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
@@ -3603,8 +3611,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="185" column="0" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
           <folding>
-            <element signature="e#11885#11886#0" expanded="true" />
-            <element signature="e#11929#11930#0" expanded="true" />
+            <element signature="e#11943#11944#0" expanded="true" />
+            <element signature="e#11987#11988#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3656,13 +3664,14 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1944#1945#0" expanded="true" />
             <element signature="e#1978#1979#0" expanded="true" />
-            <element signature="e#12130#12131#0" expanded="true" />
-            <element signature="e#12168#12169#0" expanded="true" />
-            <element signature="e#12342#12343#0" expanded="true" />
-            <element signature="e#12377#12378#0" expanded="true" />
+            <element signature="method#getWorlPositionRelativeToCamera#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#12155#12156#0" expanded="true" />
+            <element signature="e#12193#12194#0" expanded="true" />
+            <element signature="e#12367#12368#0" expanded="true" />
+            <element signature="e#12402#12403#0" expanded="true" />
             <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#12742#12743#0" expanded="true" />
-            <element signature="e#12789#12790#0" expanded="true" />
+            <element signature="e#12767#12768#0" expanded="true" />
+            <element signature="e#12814#12815#0" expanded="true" />
             <element signature="method#resetCameraParameters#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#updateCameraRotation#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
@@ -3677,8 +3686,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="185" column="0" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
           <folding>
-            <element signature="e#11885#11886#0" expanded="true" />
-            <element signature="e#11929#11930#0" expanded="true" />
+            <element signature="e#11943#11944#0" expanded="true" />
+            <element signature="e#11987#11988#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3730,13 +3739,14 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1944#1945#0" expanded="true" />
             <element signature="e#1978#1979#0" expanded="true" />
-            <element signature="e#12130#12131#0" expanded="true" />
-            <element signature="e#12168#12169#0" expanded="true" />
-            <element signature="e#12342#12343#0" expanded="true" />
-            <element signature="e#12377#12378#0" expanded="true" />
+            <element signature="method#getWorlPositionRelativeToCamera#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#12155#12156#0" expanded="true" />
+            <element signature="e#12193#12194#0" expanded="true" />
+            <element signature="e#12367#12368#0" expanded="true" />
+            <element signature="e#12402#12403#0" expanded="true" />
             <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#12742#12743#0" expanded="true" />
-            <element signature="e#12789#12790#0" expanded="true" />
+            <element signature="e#12767#12768#0" expanded="true" />
+            <element signature="e#12814#12815#0" expanded="true" />
             <element signature="method#resetCameraParameters#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#updateCameraRotation#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
@@ -3751,8 +3761,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="185" column="0" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
           <folding>
-            <element signature="e#11885#11886#0" expanded="true" />
-            <element signature="e#11929#11930#0" expanded="true" />
+            <element signature="e#11943#11944#0" expanded="true" />
+            <element signature="e#11987#11988#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3801,8 +3811,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="124" column="26" selection-start-line="124" selection-start-column="26" selection-end-line="124" selection-end-column="26" />
           <folding>
-            <element signature="e#11885#11886#0" expanded="true" />
-            <element signature="e#11929#11930#0" expanded="true" />
+            <element signature="e#11943#11944#0" expanded="true" />
+            <element signature="e#11987#11988#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3844,8 +3854,8 @@
         <state vertical-scroll-proportion="0.8559671">
           <caret line="180" column="4" selection-start-line="180" selection-start-column="4" selection-end-line="180" selection-end-column="4" />
           <folding>
-            <element signature="e#11885#11886#0" expanded="true" />
-            <element signature="e#11929#11930#0" expanded="true" />
+            <element signature="e#11943#11944#0" expanded="true" />
+            <element signature="e#11987#11988#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -4023,10 +4033,10 @@
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="90" column="0" selection-start-line="90" selection-start-column="2" selection-end-line="97" selection-end-column="55" />
+          <caret line="90" column="0" selection-start-line="90" selection-start-column="2" selection-end-line="97" selection-end-column="84" />
           <folding>
-            <element signature="e#11885#11886#0" expanded="true" />
-            <element signature="e#11929#11930#0" expanded="true" />
+            <element signature="e#11943#11944#0" expanded="true" />
+            <element signature="e#11987#11988#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -4034,18 +4044,19 @@
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6674473">
-          <caret line="73" column="34" selection-start-line="73" selection-start-column="34" selection-end-line="73" selection-end-column="34" />
+          <caret line="73" column="27" selection-start-line="73" selection-start-column="27" selection-end-line="73" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1944#1945#0" expanded="true" />
             <element signature="e#1978#1979#0" expanded="true" />
-            <element signature="e#12130#12131#0" expanded="true" />
-            <element signature="e#12168#12169#0" expanded="true" />
-            <element signature="e#12342#12343#0" expanded="true" />
-            <element signature="e#12377#12378#0" expanded="true" />
+            <element signature="method#getWorlPositionRelativeToCamera#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#12155#12156#0" expanded="true" />
+            <element signature="e#12193#12194#0" expanded="true" />
+            <element signature="e#12367#12368#0" expanded="true" />
+            <element signature="e#12402#12403#0" expanded="true" />
             <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#12742#12743#0" expanded="true" />
-            <element signature="e#12789#12790#0" expanded="true" />
+            <element signature="e#12767#12768#0" expanded="true" />
+            <element signature="e#12814#12815#0" expanded="true" />
             <element signature="method#resetCameraParameters#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#updateCameraRotation#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />

@@ -91,11 +91,11 @@ class MyGLSurfaceView extends GLSurfaceView {
 //                    p1x = SURFACE__HORIZONTAL_CENTER - 1/6.0f * GL_SURFACE_WIDTH;
 //                    p1y = SURFACE_VERTICAL_CENTER - 1/4.0f * GL_SURFACE_HEIGHT;
 //                    p2x = SURFACE__HORIZONTAL_CENTER + 1/6.0f * GL_SURFACE_WIDTH;
-//                    p2y = SURFACE_VERTICAL_CENTER - 1/4.0f * GL_SURFACE_HEIGHT;
+//                    p2y = SURFACE_VERTICAL_CENTER + 1/4.0f * GL_SURFACE_HEIGHT;
 //                    prevX1 = SURFACE__HORIZONTAL_CENTER - 1/6.0f * GL_SURFACE_WIDTH;
-//                    prevY1 = SURFACE_VERTICAL_CENTER;
+//                    prevY1 = SURFACE_VERTICAL_CENTER - 1/4.0f * GL_SURFACE_HEIGHT;
 //                    prevX2 = SURFACE__HORIZONTAL_CENTER + 1/6.0f * GL_SURFACE_WIDTH;
-//                    prevY2 = SURFACE_VERTICAL_CENTER;
+//                    prevY2 = SURFACE_VERTICAL_CENTER + 1/4.0f * GL_SURFACE_HEIGHT;
 
                     float rotation_angle = computeRotationAngle(p1x, p1y, p2x, p2y, prevX1, prevY1, prevX2, prevY2);
                     float[] rotationPt = computeRotationPoint(p1x, p1y, p2x, p2y);
