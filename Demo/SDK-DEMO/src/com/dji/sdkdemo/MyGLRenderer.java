@@ -69,9 +69,9 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         mHemisphere = new Hemisphere(mContext);
         mSurfaceTexture = new SurfaceTexture(mHemisphere.getTextureHandle());
 
-        camera_theta = 0;
+        camera_theta = -89.999f;
         camera_phi = 180;
-        projector_theta = 0;
+        projector_theta = -89.999f;
         projector_phi = 180;
         camera_theta_initialized = false;
         camera_phi_initialized = false;
@@ -121,14 +121,14 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
     public void moveBasedOnCameraZoom(float p1x, float p1y, float p2x, float p2y, float prev_p1x, float prev_p1y, float prev_p2x, float prev_p2y){
 
-        if (abs(p1x - p2x) < 0.0000001) {
-            p1x += 1.0f;
-            prev_p1x +=  1.0f;
-        }
-        if (abs(p1y - p2y) < 0.0000001) {
-            p1y += 1.0f;
-            prev_p1y +=  1.0f;
-        }
+//        if (abs(p1x - p2x) < 0.0000001) {
+//            p1x += 1.0f;
+//            prev_p1x +=  1.0f;
+//        }
+//        if (abs(p1y - p2y) < 0.0000001) {
+//            p1y += 1.0f;
+//            prev_p1y +=  1.0f;
+//        }
         float[] prev_p1 = getWorlPositionRelativeToCamera(prev_p1x, prev_p1y);
         float[] prev_p2 = getWorlPositionRelativeToCamera(prev_p2x, prev_p2y);
 
@@ -158,8 +158,9 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         float[] world_p = getWorldPoint(x, y);
         float[] p_relative_to_position = new float[]{world_p[0] - cameraTranslationV[0], world_p[1] - cameraTranslationV[1], world_p[2] - cameraTranslationV[2], 1};
 
-        float[] rotationM = getCameraRotationMatrix(camera_theta, -camera_phi);
-        float[] p_relative_to_orientation = multiplyMV(rotationM, p_relative_to_position);
+        float[] rotationM = getCameraRotationMatrix(camera_theta, camera_phi);
+        float[] rotationInvM = getInverse(rotationM);
+        float[] p_relative_to_orientation = multiplyMV(rotationInvM, p_relative_to_position);
 
         return p_relative_to_orientation;
     }
@@ -370,27 +371,38 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         p1 = normalizeV(p1);
         p2 = normalizeV(p2);
 
-        float new_phi;
-        float new_theta;
+        float new_phi = 0;
+        float new_theta = 0;
 
         float fov_y = HORIZONTAL_FOV / ASPECT_RATIO;
 
         // if we're below 60 degrees, only allow pitch
         // otherwise compute points to both yaw and pitch
         float theta1 = -(gest_start_y-SURFACE_VERTICAL_CENTER)/GL_SURFACE_HEIGHT * fov_y + gest_start_theta;
-        if ( theta1 < -60){
+        if ( false){//theta1 < -60){
             new_phi = 0;
             new_theta = -(p2y - p1y)/GL_SURFACE_HEIGHT * fov_y;
         } else {
-            float[] phi_theta = computeDeltaPhiAndThetaBetweenTwoUnitVectors(p1, p2);
-            new_phi = phi_theta[0];
-            new_theta = phi_theta[1];
+            int num_iter = 0;
+//            while (num_iter < 2) {
+                float[] phi_theta_p1__ = computeDeltaPhiAndThetaBetweenTwoUnitVectors(p1, p2);
+                new_phi = phi_theta_p1__[0];
+                new_theta = phi_theta_p1__[1];
+                p1 = new float[] {phi_theta_p1__[2], phi_theta_p1__[3], phi_theta_p1__[4]};
+//                camera_phi += new_phi;
+//                camera_theta = max(camera_theta - new_theta, -89.999f);
+                num_iter += 1;
+//            }
         }
 
         camera_phi += new_phi;
         camera_theta = max(camera_theta - new_theta, -89.999f);
     }
 
+    // returns delta angles phi, theta and a vector p1__
+    // phi and theta are the relative angles between p1 and p2
+    // p1__ is where p1 moves to after rotating the camera by phi and theta
+    // (p1__ doesn't always reach p2 because there is some error)
     private float[] computeDeltaPhiAndThetaBetweenTwoUnitVectors(float[] p1, float[] p2){
         // get phi
         // project on x and z plane to to find the yaw angle
@@ -414,8 +426,15 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         float theta2 = (float) toDegrees(atan2(p2[1], sqrt(pow(p2[2], 2) + pow(p2[0], 2))));
         float new_theta = theta2 - theta1;
 
-        float[] phi_theta = new float[]{new_phi, new_theta};
-        return phi_theta;
+        float[] u = multiplyMV(phiRotationMatrix, new float[]{1, 0, 0, 1});
+        float[] thetaRotationMatrix = getRotationMatrix(-new_theta, new float[]{u[0], u[1], u[2]});
+        p1_ = new float[]{p1_[0], p1_[1], p1_[2], 1};
+        float[] p1__ = multiplyMV(thetaRotationMatrix, p1_);
+        p1__ = new float[]{p1__[0], p1__[1], p1__[2]};
+        p1__ = normalizeV(p1__);
+
+        float[] phi_theta_p1__ = new float[]{new_phi, new_theta, p1__[0], p1__[1], p1__[2]};
+        return phi_theta_p1__;
     }
 
     // world direction = C * P^-1 * v
