@@ -133,8 +133,8 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         float[] prev_p2 = getWorlPositionRelativeToCamera(prev_p2x, prev_p2y);
 
 
-        float[] disp_xz = solveFor2DZoomAngleAndMagnitude(prev_p1[0], -prev_p1[2], prev_p2[0], -prev_p2[2], p1x, p2x, GL_SURFACE_WIDTH, FRUST_NEAR_SCALE_X, 1.0f);
-        float[] disp_yz = solveFor2DZoomAngleAndMagnitude(prev_p1[1], -prev_p1[2], prev_p2[1], -prev_p2[2], p1y, p2y, GL_SURFACE_HEIGHT, FRUST_NEAR_SCALE_Y, -1.0f);
+        float[] disp_xz = solveFor2DZoomDisplacement(prev_p1[0], -prev_p1[2], prev_p2[0], -prev_p2[2], p1x, p2x, GL_SURFACE_WIDTH, FRUST_NEAR_SCALE_X, 1.0f);
+        float[] disp_yz = solveFor2DZoomDisplacement(prev_p1[1], -prev_p1[2], prev_p2[1], -prev_p2[2], p1y, p2y, GL_SURFACE_HEIGHT, FRUST_NEAR_SCALE_Y, -1.0f);
 
         float disp_z;
         if (abs(disp_xz[1]) < .00000001) disp_z = disp_yz[1];
@@ -165,7 +165,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         return p_relative_to_orientation;
     }
 
-    private float[] solveFor2DZoomAngleAndMagnitude(float a1, float a2, float b1, float b2, float p1, float p2, float dimension_size, float frust_near_scale, float sign){
+    private float[] solveFor2DZoomDisplacement(float a1, float a2, float b1, float b2, float p1, float p2, float dimension_size, float frust_near_scale, float sign){
         // scale all points to range between -1 and 1
         float alpha_ = sign * (2.0f * p1/dimension_size - 1.0f) * frust_near_scale;
         float beta_ = sign * (2.0f * p2/dimension_size - 1.0f) * frust_near_scale;
