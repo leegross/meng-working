@@ -109,5 +109,9 @@ public class OperationsHelper {
         return transpose;
     }
 
+    public static float magnitude(float[] v){
+        return sqrt(dot(v, v));
+    }
+
 
 }

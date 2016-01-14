@@ -69,9 +69,9 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         mHemisphere = new Hemisphere(mContext);
         mSurfaceTexture = new SurfaceTexture(mHemisphere.getTextureHandle());
 
-        camera_theta = -89.999f;
+        camera_theta = 0;//-89.999f;
         camera_phi = 180;
-        projector_theta = -89.999f;
+        projector_theta = 0;//-89.999f;
         projector_phi = 180;
         camera_theta_initialized = false;
         camera_phi_initialized = false;
@@ -211,6 +211,13 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         float px = (float) (cameraTranslationV[0] - r * sin(toRadians(phi)));
         float pz = (float) (cameraTranslationV[2] - r * cos(toRadians(phi)));
 
+        // if the pt is above the horizon, make the radius the max radius (radius of the sphere)
+        float mag = magnitude(new float[]{px, 0, pz});
+        if (theta > -0.000001){
+            px = px/mag * SPHERE_RADIUS;
+            pz = pz/mag * SPHERE_RADIUS;
+        }
+
         return new float[]{px, 0, pz};
     }
 
@@ -218,6 +225,11 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     // beta is the angle I want to rotate by
     public void moveBasedOnTwoFingerRotation(float x, float y, float beta){
         float[] rotationPt = getWorldPoint(x, y);
+
+        //if rotation pt is past the horizon, don't rotate
+        if (abs(magnitude(rotationPt) - SPHERE_RADIUS) < .001){
+            return;
+        }
 
         // get translation matrices
         float[] translationM = new float[16];
