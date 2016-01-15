@@ -121,14 +121,6 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
     public void moveBasedOnCameraZoom(float p1x, float p1y, float p2x, float p2y, float prev_p1x, float prev_p1y, float prev_p2x, float prev_p2y){
 
-//        if (abs(p1x - p2x) < 0.0000001) {
-//            p1x += 1.0f;
-//            prev_p1x +=  1.0f;
-//        }
-//        if (abs(p1y - p2y) < 0.0000001) {
-//            p1y += 1.0f;
-//            prev_p1y +=  1.0f;
-//        }
         float[] prev_p1 = getWorlPositionRelativeToCamera(prev_p1x, prev_p1y);
         float[] prev_p2 = getWorlPositionRelativeToCamera(prev_p2x, prev_p2y);
 
@@ -142,6 +134,8 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
         float[] dispV = new float[]{-disp_xz[0], -disp_yz[0], disp_z, 1};
 
+        dispV = boundZoomAtMaxMag(dispV);
+
         float[] cameraRotationM = getCameraRotationMatrix(camera_theta, camera_phi);
         float[] translateV = multiplyMV(cameraRotationM, dispV);
 
@@ -152,6 +146,20 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 ////        cameraTranslationV = temp;
         temp[3] =  1;
         cameraTranslationV = clipTranslationVector(temp);
+    }
+
+    private float[] boundZoomAtMaxMag(float[] zoomV){
+        float[] result = zoomV.clone();
+        // cap zoom at a maximum magnitude
+        float[] dispV3D = new float[]{zoomV[0], zoomV[1], zoomV[2]};
+        float mag = magnitude(dispV3D);
+//        Log.d("zoom", mag + "");
+        if (mag > .03){
+            float[] new_disp_3d = scaleVtoMag(dispV3D, .03f);
+            result = new float[]{new_disp_3d[0], new_disp_3d[1], new_disp_3d[2], 1};
+//            Log.d("zoom", "update mag: " + magnitude(new_disp_3d));
+        }
+        return result;
     }
 
     private float[] getWorlPositionRelativeToCamera(float x, float y){
@@ -182,7 +190,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         return new float[]{a1_ - a1, a2_ - a2};
     }
 
-    private float[] getDirectionAnglesOfPoint(float midx, float midy) {
+    public float[] getDirectionAnglesOfPoint(float midx, float midy) {
 
         float[] p1 = screenPointToWorldDirection(SURFACE__HORIZONTAL_CENTER, SURFACE_VERTICAL_CENTER); // camera center
         float[] p2 = screenPointToWorldDirection(midx, midy); // midpoint of fingers
@@ -213,12 +221,50 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
         // if the pt is above the horizon, make the radius the max radius (radius of the sphere)
         float mag = magnitude(new float[]{px, 0, pz});
-        if (theta > -0.000001){
-            px = px/mag * SPHERE_RADIUS;
-            pz = pz/mag * SPHERE_RADIUS;
+        if (mag - SPHERE_RADIUS > -.001 || theta > -.001){
+            float[] p = projectHorizonPtOnSphereRadius(px, pz);
+            px = p[0];
+            pz = p[1];
         }
 
         return new float[]{px, 0, pz};
+    }
+
+    private float[] projectHorizonPtOnSphereRadius(float x_p, float z_p){
+        float x_d = cameraTranslationV[0];
+        float z_d = cameraTranslationV[2];
+        float r = SPHERE_RADIUS;
+
+        float x_candidate1;
+        float x_candidate2;
+        float z_candidate1;
+        float z_candidate2;
+
+        if (abs(x_p - x_d) < .0001) {
+            x_candidate1 = x_d;
+            z_candidate1 = (float) sqrt(pow(r, 2) - pow(x_d, 2));
+
+            x_candidate2 = x_d;
+            z_candidate2 = (float) -sqrt(pow(r, 2) - pow(x_d, 2));
+        } else {
+            float m = (z_p - z_d) / (x_p - x_d);
+
+            x_candidate1 = (float) ((sqrt(-pow(z_d - x_d * m, 2) + pow(m * r, 2) + pow(r, 2)) - m * (z_d - x_d * m)) / (m * m + 1));
+            z_candidate1 = (float) ((m * sqrt(-pow(z_d - x_d * m, 2) + pow(m * r, 2) + pow(r, 2)) + z_d - x_d * m) / (m * m + 1));
+
+            x_candidate2 = (float) ((-sqrt(-pow(z_d - x_d * m, 2) + pow(m * r, 2) + pow(r, 2)) - m * (z_d - x_d * m)) / (m * m + 1));
+            z_candidate2 = (float) ((-m * sqrt(-pow(z_d - x_d * m, 2) + pow(m * r, 2) + pow(r, 2)) + z_d - x_d * m) / (m * m + 1));
+        }
+
+        // choose candiate based on which one falls between the drone location and the point
+        float dist1 = (float) sqrt(pow(x_candidate1 - x_p, 2) + pow(z_candidate1 - z_p, 2));
+        float dist2 = (float) sqrt(pow(x_candidate1 - x_p, 2) + pow(z_candidate1 - z_p, 2));
+        if (dist1 < dist2){
+            return new float[]{x_candidate1, z_candidate1};
+        } else {
+            return new float[]{x_candidate2, z_candidate2};
+        }
+
     }
 
     // x and y are the screen coordinates that I want to rotate about
@@ -227,7 +273,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         float[] rotationPt = getWorldPoint(x, y);
 
         //if rotation pt is past the horizon, don't rotate
-        if (abs(magnitude(rotationPt) - SPHERE_RADIUS) < .001){
+        if (magnitude(rotationPt) - SPHERE_RADIUS > -.001){
             return;
         }
 

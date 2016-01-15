@@ -113,5 +113,14 @@ public class OperationsHelper {
         return sqrt(dot(v, v));
     }
 
+    public static float[] scaleVtoMag(float[] v, float mag){
+        float[] result = new float[v.length];
+        float old_mag = magnitude(v);
+        for (int i = 0; i < v.length; i++){
+            result[i] = v[i]/old_mag * mag;
+        }
+        return result;
+    }
+
 
 }

@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.MotionEvent;
 
 import static com.dji.sdkdemo.Constants.*;
+import static com.dji.sdkdemo.util.OperationsHelper.magnitude;
 import static java.lang.Math.atan;
 import static java.lang.Math.cos;
 import static java.lang.Math.log;
@@ -90,19 +91,19 @@ class MyGLSurfaceView extends GLSurfaceView {
                 case MotionEvent.ACTION_MOVE:
 
 //                    p1x = SURFACE__HORIZONTAL_CENTER;
-//                    p1y = SURFACE_VERTICAL_CENTER - 1/10.0f * GL_SURFACE_HEIGHT;
-//                    p2x = SURFACE__HORIZONTAL_CENTER + 1/6.0f * GL_SURFACE_WIDTH;
-//                    p2y = SURFACE_VERTICAL_CENTER + 1/4.0f * GL_SURFACE_HEIGHT;
+//                    p1y = SURFACE_VERTICAL_CENTER + 1/4.0f * GL_SURFACE_HEIGHT;
+//                    p2x = SURFACE__HORIZONTAL_CENTER;
+//                    p2y = SURFACE_VERTICAL_CENTER - 1/4.0f * GL_SURFACE_HEIGHT;
 //                    prevX1 = SURFACE__HORIZONTAL_CENTER;
-//                    prevY1 = SURFACE_VERTICAL_CENTER - 1/10.0f * GL_SURFACE_HEIGHT;
-//                    prevX2 = SURFACE__HORIZONTAL_CENTER - 1/6.0f * GL_SURFACE_WIDTH;
-//                    prevY2 = SURFACE_VERTICAL_CENTER + 1/4.0f * GL_SURFACE_HEIGHT;
+//                    prevY1 = SURFACE_VERTICAL_CENTER + 2/4.0f * GL_SURFACE_HEIGHT;
+//                    prevX2 = SURFACE__HORIZONTAL_CENTER;
+//                    prevY2 = SURFACE_VERTICAL_CENTER - 2/4.0f * GL_SURFACE_HEIGHT;
 
                     float rotation_angle = computeRotationAngle(p1x, p1y, p2x, p2y, prevX1, prevY1, prevX2, prevY2);
                     float[] rotationPt = computeRotationPoint(p1x, p1y, p2x, p2y);
                     float rx = rotationPt[0];
                     float ry = rotationPt[1];
-                    mRenderer.moveBasedOnTwoFingerRotation(rx, ry,rotation_angle);
+//                    mRenderer.moveBasedOnTwoFingerRotation(rx, ry,rotation_angle);
 
                     // if fixed pt for two finger rotation is p1
                     // else fixed pt for two finger rotation is p2
@@ -112,6 +113,17 @@ class MyGLSurfaceView extends GLSurfaceView {
 
                         float new_prev_p2x = (float) (p1x + mag_prev * cos(toRadians(angle_current)));
                         float new_prev_p2y = (float) (p1y + mag_prev * sin(toRadians(angle_current)));
+
+                        //if finger is above the horizon, move it to right below the horizon
+
+
+                        float mag = (float) sqrt(pow(p2x - new_prev_p2x, 2) + pow(p2y - new_prev_p2y, 2));
+                        Log.d("zoom", "move mag: " + mag);
+//                        if (mag < 1){
+//                            break;
+////                            new_prev_p2x = p2x;
+////                            new_prev_p2y = p2y;
+//                        }
                         mRenderer.moveBasedOnCameraZoom(p1x, p1y, p2x, p2y, p1x, p1y, new_prev_p2x, new_prev_p2y);
                     } else {
                         float mag_prev = (float) (sqrt(pow(prevX2 - prevX1, 2) + pow(prevY2 - prevY1, 2)));
@@ -119,10 +131,16 @@ class MyGLSurfaceView extends GLSurfaceView {
 
                         float new_prev_p1x = (float) (p2x - mag_prev * cos(toRadians(angle_current)));
                         float new_prev_p1y = (float) (p2y - mag_prev * sin(toRadians(angle_current)));
+
+                        float mag = (float) sqrt(pow(p1x - new_prev_p1x, 2) + pow(p1y - new_prev_p1y, 2));
+                        Log.d("zoom", "move mag: " + mag);
+//                        if (mag < 1){
+//                            break;
+////                            new_prev_p1x = p1x;
+////                            new_prev_p1y = p1y;
+//                        }
                         mRenderer.moveBasedOnCameraZoom(p1x, p1y, p2x, p2y, new_prev_p1x, new_prev_p1y, p2x, p2y);
                     }
-
-//                    mRenderer.moveBasedOnCameraZoom(p1x, p1y, p2x, p2y, prevX1, prevY1, prevX2, prevY2);
 
                     break;
                 case MotionEvent.ACTION_POINTER_UP:
