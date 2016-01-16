@@ -27,17 +27,14 @@
     <list default="true" id="9c2fb097-3e27-43c5-9229-9d241b4244a9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/MyGLRenderer.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/MyGLRenderer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/MyGLSurfaceView.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/MyGLSurfaceView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/util/OperationsHelper.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/util/OperationsHelper.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug-unaligned.apk" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug.apk" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/dex/debug/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/util/OperationsHelper.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/util/OperationsHelper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DJI-SDK-Android-V2.4.0.iws" />
@@ -93,11 +90,11 @@
       <file leaf-file-name="MyGLSurfaceView.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3676815">
-              <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.4379391">
+              <caret line="124" column="25" selection-start-line="124" selection-start-column="25" selection-end-line="124" selection-end-column="25" />
               <folding>
-                <element signature="e#10699#10700#0" expanded="true" />
-                <element signature="e#10743#10744#0" expanded="true" />
+                <element signature="e#11346#11347#0" expanded="true" />
+                <element signature="e#11390#11391#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -119,17 +116,22 @@
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="221" column="96" selection-start-line="221" selection-start-column="96" selection-end-line="221" selection-end-column="96" />
+              <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1944#1945#0" expanded="true" />
                 <element signature="e#1978#1979#0" expanded="true" />
+                <element signature="method#onSurfaceCreated#0;class#MyGLRenderer#0" expanded="false" />
+                <element signature="method#onDrawFrame#0;class#MyGLRenderer#0" expanded="false" />
+                <element signature="method#transformMatrix#0;class#MyGLRenderer#0" expanded="false" />
+                <element signature="method#getCameraRotationMatrix#0;class#MyGLRenderer#0" expanded="false" />
+                <element signature="method#getDirectionAnglesOfPoint#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-                <element signature="e#14702#14703#0" expanded="true" />
-                <element signature="e#14740#14741#0" expanded="true" />
+                <element signature="e#15356#15357#0" expanded="true" />
+                <element signature="e#15394#15395#0" expanded="true" />
                 <element signature="method#setProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
@@ -3358,7 +3360,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34610304" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3989432" sideWeight="0.4914163" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3989432" sideWeight="0.4914163" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3989432" sideWeight="0.50858366" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -3435,7 +3437,7 @@
           <option name="timeStamp" value="172" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="635" />
+      <option name="time" value="663" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -3448,12 +3450,17 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1944#1945#0" expanded="true" />
             <element signature="e#1978#1979#0" expanded="true" />
+            <element signature="method#onSurfaceCreated#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#onDrawFrame#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#transformMatrix#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#getCameraRotationMatrix#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#getDirectionAnglesOfPoint#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#14702#14703#0" expanded="true" />
-            <element signature="e#14740#14741#0" expanded="true" />
+            <element signature="e#15356#15357#0" expanded="true" />
+            <element signature="e#15394#15395#0" expanded="true" />
             <element signature="method#setProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
@@ -3473,8 +3480,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="165" column="54" selection-start-line="165" selection-start-column="54" selection-end-line="165" selection-end-column="54" />
           <folding>
-            <element signature="e#10699#10700#0" expanded="true" />
-            <element signature="e#10743#10744#0" expanded="true" />
+            <element signature="e#11346#11347#0" expanded="true" />
+            <element signature="e#11390#11391#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3526,12 +3533,17 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1944#1945#0" expanded="true" />
             <element signature="e#1978#1979#0" expanded="true" />
+            <element signature="method#onSurfaceCreated#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#onDrawFrame#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#transformMatrix#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#getCameraRotationMatrix#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#getDirectionAnglesOfPoint#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#14702#14703#0" expanded="true" />
-            <element signature="e#14740#14741#0" expanded="true" />
+            <element signature="e#15356#15357#0" expanded="true" />
+            <element signature="e#15394#15395#0" expanded="true" />
             <element signature="method#setProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
@@ -3551,8 +3563,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="165" column="54" selection-start-line="165" selection-start-column="54" selection-end-line="165" selection-end-column="54" />
           <folding>
-            <element signature="e#10699#10700#0" expanded="true" />
-            <element signature="e#10743#10744#0" expanded="true" />
+            <element signature="e#11346#11347#0" expanded="true" />
+            <element signature="e#11390#11391#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3604,12 +3616,17 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1944#1945#0" expanded="true" />
             <element signature="e#1978#1979#0" expanded="true" />
+            <element signature="method#onSurfaceCreated#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#onDrawFrame#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#transformMatrix#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#getCameraRotationMatrix#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#getDirectionAnglesOfPoint#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#14702#14703#0" expanded="true" />
-            <element signature="e#14740#14741#0" expanded="true" />
+            <element signature="e#15356#15357#0" expanded="true" />
+            <element signature="e#15394#15395#0" expanded="true" />
             <element signature="method#setProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
@@ -3629,8 +3646,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="185" column="0" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
           <folding>
-            <element signature="e#10699#10700#0" expanded="true" />
-            <element signature="e#10743#10744#0" expanded="true" />
+            <element signature="e#11346#11347#0" expanded="true" />
+            <element signature="e#11390#11391#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3682,12 +3699,17 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1944#1945#0" expanded="true" />
             <element signature="e#1978#1979#0" expanded="true" />
+            <element signature="method#onSurfaceCreated#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#onDrawFrame#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#transformMatrix#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#getCameraRotationMatrix#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#getDirectionAnglesOfPoint#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#14702#14703#0" expanded="true" />
-            <element signature="e#14740#14741#0" expanded="true" />
+            <element signature="e#15356#15357#0" expanded="true" />
+            <element signature="e#15394#15395#0" expanded="true" />
             <element signature="method#setProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
@@ -3707,8 +3729,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="185" column="0" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
           <folding>
-            <element signature="e#10699#10700#0" expanded="true" />
-            <element signature="e#10743#10744#0" expanded="true" />
+            <element signature="e#11346#11347#0" expanded="true" />
+            <element signature="e#11390#11391#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3760,12 +3782,17 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1944#1945#0" expanded="true" />
             <element signature="e#1978#1979#0" expanded="true" />
+            <element signature="method#onSurfaceCreated#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#onDrawFrame#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#transformMatrix#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#getCameraRotationMatrix#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#getDirectionAnglesOfPoint#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#14702#14703#0" expanded="true" />
-            <element signature="e#14740#14741#0" expanded="true" />
+            <element signature="e#15356#15357#0" expanded="true" />
+            <element signature="e#15394#15395#0" expanded="true" />
             <element signature="method#setProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
@@ -3785,8 +3812,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="185" column="0" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
           <folding>
-            <element signature="e#10699#10700#0" expanded="true" />
-            <element signature="e#10743#10744#0" expanded="true" />
+            <element signature="e#11346#11347#0" expanded="true" />
+            <element signature="e#11390#11391#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3835,8 +3862,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="124" column="26" selection-start-line="124" selection-start-column="26" selection-end-line="124" selection-end-column="26" />
           <folding>
-            <element signature="e#10699#10700#0" expanded="true" />
-            <element signature="e#10743#10744#0" expanded="true" />
+            <element signature="e#11346#11347#0" expanded="true" />
+            <element signature="e#11390#11391#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3878,8 +3905,8 @@
         <state vertical-scroll-proportion="0.8559671">
           <caret line="180" column="4" selection-start-line="180" selection-start-column="4" selection-end-line="180" selection-end-column="4" />
           <folding>
-            <element signature="e#10699#10700#0" expanded="true" />
-            <element signature="e#10743#10744#0" expanded="true" />
+            <element signature="e#11346#11347#0" expanded="true" />
+            <element signature="e#11390#11391#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -4060,17 +4087,22 @@
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="221" column="96" selection-start-line="221" selection-start-column="96" selection-end-line="221" selection-end-column="96" />
+          <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="127" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1944#1945#0" expanded="true" />
             <element signature="e#1978#1979#0" expanded="true" />
+            <element signature="method#onSurfaceCreated#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#onDrawFrame#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#transformMatrix#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#getCameraRotationMatrix#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#getDirectionAnglesOfPoint#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#14702#14703#0" expanded="true" />
-            <element signature="e#14740#14741#0" expanded="true" />
+            <element signature="e#15356#15357#0" expanded="true" />
+            <element signature="e#15394#15395#0" expanded="true" />
             <element signature="method#setProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
@@ -4087,11 +4119,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3676815">
-          <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.4379391">
+          <caret line="124" column="25" selection-start-line="124" selection-start-column="25" selection-end-line="124" selection-end-column="25" />
           <folding>
-            <element signature="e#10699#10700#0" expanded="true" />
-            <element signature="e#10743#10744#0" expanded="true" />
+            <element signature="e#11346#11347#0" expanded="true" />
+            <element signature="e#11390#11391#0" expanded="true" />
           </folding>
         </state>
       </provider>

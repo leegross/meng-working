@@ -90,14 +90,14 @@ class MyGLSurfaceView extends GLSurfaceView {
                     break;
                 case MotionEvent.ACTION_MOVE:
 
-//                    p1x = SURFACE__HORIZONTAL_CENTER;
-//                    p1y = SURFACE_VERTICAL_CENTER + 1/4.0f * GL_SURFACE_HEIGHT;
-//                    p2x = SURFACE__HORIZONTAL_CENTER;
-//                    p2y = SURFACE_VERTICAL_CENTER - 1/4.0f * GL_SURFACE_HEIGHT;
-//                    prevX1 = SURFACE__HORIZONTAL_CENTER;
-//                    prevY1 = SURFACE_VERTICAL_CENTER + 2/4.0f * GL_SURFACE_HEIGHT;
-//                    prevX2 = SURFACE__HORIZONTAL_CENTER;
-//                    prevY2 = SURFACE_VERTICAL_CENTER - 2/4.0f * GL_SURFACE_HEIGHT;
+//                    p1x = SURFACE__HORIZONTAL_CENTER - 1/6.0f * GL_SURFACE_WIDTH;
+//                    p1y = SURFACE_VERTICAL_CENTER;
+//                    p2x = SURFACE__HORIZONTAL_CENTER + 1/6.0f * GL_SURFACE_WIDTH;
+//                    p2y = SURFACE_VERTICAL_CENTER;
+//                    prevX1 = SURFACE__HORIZONTAL_CENTER - 2/6.0f * GL_SURFACE_WIDTH;
+//                    prevY1 = SURFACE_VERTICAL_CENTER;
+//                    prevX2 = SURFACE__HORIZONTAL_CENTER + 2/6.0f * GL_SURFACE_WIDTH;
+//                    prevY2 = SURFACE_VERTICAL_CENTER;
 
                     float rotation_angle = computeRotationAngle(p1x, p1y, p2x, p2y, prevX1, prevY1, prevX2, prevY2);
                     float[] rotationPt = computeRotationPoint(p1x, p1y, p2x, p2y);
@@ -111,35 +111,42 @@ class MyGLSurfaceView extends GLSurfaceView {
                         float mag_prev = (float) (sqrt(pow(prevX2 - prevX1, 2) + pow(prevY2 - prevY1, 2)));
                         float angle_current = (float) toDegrees(atan2(p2y - p1y, p2x - p1x));
 
-                        float new_prev_p2x = (float) (p1x + mag_prev * cos(toRadians(angle_current)));
-                        float new_prev_p2y = (float) (p1y + mag_prev * sin(toRadians(angle_current)));
+                        // project the fixed pt onto the line of the current pts
+                        // add the second prev pt at the angle of the prev pt to the new fixed pt
+                        float m = (p2y - p1y)/(p2x - p1x);
+                        float new_prev_p1x = (prevY1 - p1y + 1/m * prevX1 + m * p1x)/(1/m + m);
+                        if (abs(m) < .00001){
+                            new_prev_p1x = prevX1;
+                        }
+                        float new_prev_p1y = p1y + m * (new_prev_p1x - p1x);
+                        if (abs(p2x - p1x) < .0001){
+                            new_prev_p1x = p1x;
+                            new_prev_p1y = prevY1;
+                        }
+                        float new_prev_p2x = (float) (new_prev_p1x + mag_prev * cos(toRadians(angle_current)));
+                        float new_prev_p2y = (float) (new_prev_p1y + mag_prev * sin(toRadians(angle_current)));
 
-                        //if finger is above the horizon, move it to right below the horizon
-
-
-                        float mag = (float) sqrt(pow(p2x - new_prev_p2x, 2) + pow(p2y - new_prev_p2y, 2));
-                        Log.d("zoom", "move mag: " + mag);
-//                        if (mag < 1){
-//                            break;
-////                            new_prev_p2x = p2x;
-////                            new_prev_p2y = p2y;
-//                        }
-                        mRenderer.moveBasedOnCameraZoom(p1x, p1y, p2x, p2y, p1x, p1y, new_prev_p2x, new_prev_p2y);
+                        mRenderer.moveBasedOnCameraZoom(p1x, p1y, p2x, p2y, new_prev_p1x, new_prev_p1y, new_prev_p2x, new_prev_p2y);
                     } else {
                         float mag_prev = (float) (sqrt(pow(prevX2 - prevX1, 2) + pow(prevY2 - prevY1, 2)));
                         float angle_current = (float) toDegrees(atan2(p2y - p1y, p2x - p1x));
 
-                        float new_prev_p1x = (float) (p2x - mag_prev * cos(toRadians(angle_current)));
-                        float new_prev_p1y = (float) (p2y - mag_prev * sin(toRadians(angle_current)));
+                        // project the fixed pt onto the line of the current pts
+                        // add the second prev pt at the angle of the prev pt to the new fixed pt
+                        float m = (p2y - p1y)/(p2x - p1x);
+                        float new_prev_p2x = (prevY2 - p2y + 1/m * prevX2 + m * p2x)/(1/m + m);
+                        if (abs(m) < .00001){
+                            new_prev_p2x = prevX2;
+                        }
+                        float new_prev_p2y = p2y + m * (new_prev_p2x - p2x);
+                        if (abs(p2x - p1x) < .0001){
+                            new_prev_p2x = p2x;
+                            new_prev_p2y = prevY2;
+                        }
+                        float new_prev_p1x = (float) (new_prev_p2x - mag_prev * cos(toRadians(angle_current)));
+                        float new_prev_p1y = (float) (new_prev_p2y - mag_prev * sin(toRadians(angle_current)));
 
-                        float mag = (float) sqrt(pow(p1x - new_prev_p1x, 2) + pow(p1y - new_prev_p1y, 2));
-                        Log.d("zoom", "move mag: " + mag);
-//                        if (mag < 1){
-//                            break;
-////                            new_prev_p1x = p1x;
-////                            new_prev_p1y = p1y;
-//                        }
-                        mRenderer.moveBasedOnCameraZoom(p1x, p1y, p2x, p2y, new_prev_p1x, new_prev_p1y, p2x, p2y);
+                        mRenderer.moveBasedOnCameraZoom(p1x, p1y, p2x, p2y, new_prev_p1x, new_prev_p1y, new_prev_p2x, new_prev_p2y);
                     }
 
                     break;

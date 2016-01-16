@@ -215,6 +215,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         float phi = phi_theta[0];
         float theta = phi_theta[1];
         float r = (float) abs(cameraTranslationV[1] * tan(toRadians(90 - theta)));
+        r = min(r, 3 * SPHERE_RADIUS);
 
         float px = (float) (cameraTranslationV[0] - r * sin(toRadians(phi)));
         float pz = (float) (cameraTranslationV[2] - r * cos(toRadians(phi)));
@@ -257,6 +258,19 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         }
 
         // choose candiate based on which one falls between the drone location and the point
+        if (
+                min(x_d, x_p) <= x_candidate1 && x_candidate1 <= max(x_d, x_p) &&
+                min(z_d, z_p) <= z_candidate1 && z_candidate1 <= max(z_d, z_p)
+            ) {
+            return new float[] {x_candidate1, z_candidate1};
+        } else if (
+                min(x_d, x_p) <= x_candidate2 && x_candidate2 <= max(x_d, x_p) &&
+                min(z_d, z_p) <= z_candidate2 && z_candidate2 <= max(z_d, z_p)
+            ) {
+            return new float[] {x_candidate2, z_candidate2};
+        }
+
+        // if neither candidate lies in the middle, take the one closer to the projected point
         float dist1 = (float) sqrt(pow(x_candidate1 - x_p, 2) + pow(z_candidate1 - z_p, 2));
         float dist2 = (float) sqrt(pow(x_candidate1 - x_p, 2) + pow(z_candidate1 - z_p, 2));
         if (dist1 < dist2){
