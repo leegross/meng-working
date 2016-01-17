@@ -124,6 +124,19 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         float[] prev_p1 = getWorlPositionRelativeToCamera(prev_p1x, prev_p1y);
         float[] prev_p2 = getWorlPositionRelativeToCamera(prev_p2x, prev_p2y);
 
+        // get new screen pts
+        float[] world_p1 = getWorlPositionRelativeToCamera(p1x, p1y);
+        float[] world_p2 = getWorlPositionRelativeToCamera(p2x, p2y);
+
+        world_p1 = new float[]{world_p1[0], world_p1[1], world_p1[2], 1};
+        world_p2 = new float[]{world_p2[0], world_p2[1], world_p2[2], 1};
+        float[] screen_p1 = multiplyMV(mProjectionMatrix, world_p1);
+        float[] screen_p2 = multiplyMV(mProjectionMatrix, world_p2);
+
+        p1x = (screen_p1[0]/screen_p1[3] +1.0f) /2.0f * GL_SURFACE_WIDTH;
+        p2x = (screen_p2[0]/screen_p2[3] +1.0f) /2.0f * GL_SURFACE_WIDTH;
+        p1y = (-screen_p1[1]/screen_p1[3] +1.0f) /2.0f * GL_SURFACE_HEIGHT;
+        p2y = (-screen_p2[1]/screen_p2[3] +1.0f) /2.0f * GL_SURFACE_HEIGHT;
 
         float[] disp_xz = solveFor2DZoomDisplacement(prev_p1[0], -prev_p1[2], prev_p2[0], -prev_p2[2], p1x, p2x, GL_SURFACE_WIDTH, FRUST_NEAR_SCALE_X, 1.0f);
         float[] disp_yz = solveFor2DZoomDisplacement(prev_p1[1], -prev_p1[2], prev_p2[1], -prev_p2[2], p1y, p2y, GL_SURFACE_HEIGHT, FRUST_NEAR_SCALE_Y, -1.0f);
@@ -181,7 +194,8 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         if (abs(p1 - p2) < 0.0000001) {
             Log.d("zoomError", "impossible case reached");
             float alpha = (a1 / a2) * FRUST_NEAR;
-            return new float[]{alpha_ - alpha, 0.0f};
+//            return new float[]{alpha_ - alpha, 0.0f};
+            return new float[]{0.0f , 0.0f};
         }
 
         float a1_ = -alpha_ * (FRUST_NEAR * (-a1 + b1) + beta_ * (a2 - b2))/(FRUST_NEAR * (alpha_ - beta_));
@@ -210,7 +224,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         return new float[]{midpt_phi, midpt_theta};
     }
 
-    public float[] getWorldPoint(float x, float y){
+    public float[]  getWorldPoint(float x, float y){
         float[] phi_theta = getDirectionAnglesOfPoint(x, y);
         float phi = phi_theta[0];
         float theta = phi_theta[1];
@@ -272,7 +286,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
         // if neither candidate lies in the middle, take the one closer to the projected point
         float dist1 = (float) sqrt(pow(x_candidate1 - x_p, 2) + pow(z_candidate1 - z_p, 2));
-        float dist2 = (float) sqrt(pow(x_candidate1 - x_p, 2) + pow(z_candidate1 - z_p, 2));
+        float dist2 = (float) sqrt(pow(x_candidate2 - x_p, 2) + pow(z_candidate2 - z_p, 2));
         if (dist1 < dist2){
             return new float[]{x_candidate1, z_candidate1};
         } else {
