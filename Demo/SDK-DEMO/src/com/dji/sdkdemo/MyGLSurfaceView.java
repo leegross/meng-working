@@ -47,7 +47,7 @@ class MyGLSurfaceView extends GLSurfaceView {
     private float prevX2;
     private float prevY2;
 
-    private boolean twoFingerRotationStarted;
+    private float twoFingerRotationAvg;
 
     public MyGLSurfaceView(Context context, AttributeSet attrs){
         super(context, attrs);
@@ -86,7 +86,7 @@ class MyGLSurfaceView extends GLSurfaceView {
                     gestStartY1 = p1y;
                     gestStartX2 = p2x;
                     gestStartY2 = p2y;
-                    twoFingerRotationStarted = false;
+                    twoFingerRotationAvg = 0;
                     break;
                 case MotionEvent.ACTION_MOVE:
 
@@ -103,7 +103,9 @@ class MyGLSurfaceView extends GLSurfaceView {
                     float[] rotationPt = computeRotationPoint(p1x, p1y, p2x, p2y);
                     float rx = rotationPt[0];
                     float ry = rotationPt[1];
-//                    mRenderer.moveBasedOnTwoFingerRotation(rx, ry,rotation_angle);
+                    mRenderer.moveBasedOnTwoFingerRotation(rx, ry, rotation_angle);
+
+                    twoFingerRotationAvg = twoFingerRotationAvg * .97f + rotation_angle * .03f;
 
                     // if fixed pt for two finger rotation is p1
                     // else fixed pt for two finger rotation is p2
@@ -126,12 +128,7 @@ class MyGLSurfaceView extends GLSurfaceView {
                         float new_prev_p2x = (float) (new_prev_p1x + mag_prev * cos(toRadians(angle_current)));
                         float new_prev_p2y = (float) (new_prev_p1y + mag_prev * sin(toRadians(angle_current)));
 
-//                        float mag = (float) sqrt(pow(p2x - new_prev_p2x, 2) + pow(p2y - new_prev_p2y, 2));
-//                        if (mag < 1.0){
-//                            break;
-//                        }
-
-                        mRenderer.moveBasedOnCameraZoom(p1x, p1y, p2x, p2y, new_prev_p1x, new_prev_p1y, new_prev_p2x, new_prev_p2y);
+                        mRenderer.moveBasedOnCameraZoom(p1x, p1y, p2x, p2y, new_prev_p1x, new_prev_p1y, new_prev_p2x, new_prev_p2y, twoFingerRotationAvg);
                     } else {
                         float mag_prev = (float) (sqrt(pow(prevX2 - prevX1, 2) + pow(prevY2 - prevY1, 2)));
                         float angle_current = (float) toDegrees(atan2(p2y - p1y, p2x - p1x));
@@ -151,12 +148,7 @@ class MyGLSurfaceView extends GLSurfaceView {
                         float new_prev_p1x = (float) (new_prev_p2x - mag_prev * cos(toRadians(angle_current)));
                         float new_prev_p1y = (float) (new_prev_p2y - mag_prev * sin(toRadians(angle_current)));
 
-//                        float mag = (float) sqrt(pow(p1x - new_prev_p1x, 2) + pow(p1y - new_prev_p1y, 2));
-//                        if (mag < 1.0){
-//                            break;
-//                        }
-
-                        mRenderer.moveBasedOnCameraZoom(p1x, p1y, p2x, p2y, new_prev_p1x, new_prev_p1y, new_prev_p2x, new_prev_p2y);
+                        mRenderer.moveBasedOnCameraZoom(p1x, p1y, p2x, p2y, new_prev_p1x, new_prev_p1y, new_prev_p2x, new_prev_p2y, twoFingerRotationAvg);
                     }
 
                     break;
@@ -240,6 +232,8 @@ class MyGLSurfaceView extends GLSurfaceView {
         if (rotation_angle < -180){
             rotation_angle += 360;
         }
+
+        rotation_angle = rotation_angle %360;
 
         return rotation_angle;
     }

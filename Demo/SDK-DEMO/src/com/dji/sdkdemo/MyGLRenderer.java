@@ -119,7 +119,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         return rotationM;
     }
 
-    public void moveBasedOnCameraZoom(float p1x, float p1y, float p2x, float p2y, float prev_p1x, float prev_p1y, float prev_p2x, float prev_p2y){
+    public void moveBasedOnCameraZoom(float p1x, float p1y, float p2x, float p2y, float prev_p1x, float prev_p1y, float prev_p2x, float prev_p2y, float avg_two_finger_rotation_angle){
 
         float[] prev_p1 = getWorlPositionRelativeToCamera(prev_p1x, prev_p1y);
         float[] prev_p2 = getWorlPositionRelativeToCamera(prev_p2x, prev_p2y);
@@ -148,6 +148,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         float[] dispV = new float[]{-disp_xz[0], -disp_yz[0], disp_z, 1};
 
         dispV = boundZoomAtMaxMag(dispV);
+        dispV = scaleZoomBasedOnTwoFingerRotation(dispV, avg_two_finger_rotation_angle);
 
         float[] cameraRotationM = getCameraRotationMatrix(camera_theta, camera_phi);
         float[] translateV = multiplyMV(cameraRotationM, dispV);
@@ -159,6 +160,15 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 ////        cameraTranslationV = temp;
         temp[3] =  1;
         cameraTranslationV = clipTranslationVector(temp);
+    }
+
+    // scale zoomV based on the angle of rotation
+    // when the angle is small, scale should be the same (current_scale)
+    // when the angle is large, the scale should be small
+    private float[] scaleZoomBasedOnTwoFingerRotation(float[] zoomV, float avg_rotation_angle) {
+        float current_mag = magnitude(zoomV);
+        float new_mag_scale = (float) pow(1.0f/(pow(avg_rotation_angle, 2) * 5.0f + 1.0f), 4);
+        return scaleVtoMag(zoomV, new_mag_scale * current_mag);
     }
 
     private float[] boundZoomAtMaxMag(float[] zoomV){
