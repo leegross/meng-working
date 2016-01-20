@@ -325,6 +325,17 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     }
 
     public void moveBasedOnTwoFingerDrag(float prevX, float prevY, float x, float y){
+        float[] p = getWorldPoint(x, y);
+        float[] prevP = getWorldPoint(prevX, prevY);
+
+        //if pt is past the horizon, don't rotate
+        if (
+                magnitude(p) - SPHERE_RADIUS > -.001 ||
+                magnitude(prevP) - SPHERE_RADIUS > -.001
+            ){
+            return;
+        }
+
         float[] prev_p = getWorlPositionRelativeToCamera(prevX, prevY);
 
         float[] screen_p = getNewScreenPtBasedOnPrevScreenPt(prevX, prevY);
