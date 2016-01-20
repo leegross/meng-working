@@ -9,9 +9,11 @@ import android.util.Log;
 import android.view.Surface;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ToggleButton;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -31,6 +33,7 @@ public class TouchControllerActivity extends DemoBaseActivity
     private TextView mGroundStationTextView;
     private MyGLSurfaceView mGLView;
     private DJIVideoDecoder mVideoDecoder = null;
+    private ToggleButton toggle;
 
     private DroneWrapper droneWrapper;
     private Timer mTimer;
@@ -65,6 +68,18 @@ public class TouchControllerActivity extends DemoBaseActivity
         mGLView = (MyGLSurfaceView) findViewById(R.id.surfaceview);
         mConnectStateTextView = (TextView)findViewById(R.id.ConnectStateGsTextView);
         mGroundStationTextView = (TextView)findViewById(R.id.GroundStationInfoTV);
+        toggle = (ToggleButton) findViewById(R.id.TwoFingerDragToggle);
+
+        toggle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    mGLView.setDragAtConstAlt(true);
+                } else {
+                    mGLView.setDragAtConstAlt(false);
+                }
+            }
+        });
+
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN); // hide keyboard when first launch activity
 
         droneWrapper = new DroneWrapper(mGLView);

@@ -52,6 +52,8 @@ class MyGLSurfaceView extends GLSurfaceView {
 
     private float twoFingerRotationAvg;
 
+    private boolean dragAtConstAlt;
+
     public MyGLSurfaceView(Context context, AttributeSet attrs){
         super(context, attrs);
 
@@ -65,6 +67,7 @@ class MyGLSurfaceView extends GLSurfaceView {
 
         scale = 100.0f;
         isGestureInProgress = false;
+        dragAtConstAlt = false;
     }
 
     @Override
@@ -102,13 +105,17 @@ class MyGLSurfaceView extends GLSurfaceView {
 
                     Log.d("move", "" + prevMoveAvg);
 
-                    if (prevMoveAvg < 4){
-//                        mRenderer.moveBasedOnTwoFingerDrag(prevX1, prevY1, p1x, p1y);
+//                    if (prevMoveAvg < 4){
 
+                    if (dragAtConstAlt){
                         mRenderer.moveBasedOnTwoFingerDragAtConstAlt(prevX1, prevY1, p1x, p1y);
-
-                        break;
+                    } else {
+                        mRenderer.moveBasedOnTwoFingerDrag(prevX1, prevY1, p1x, p1y);
                     }
+//
+
+//                        break;
+//                    }
 
                     float rotation_angle = computeRotationAngle(p1x, p1y, p2x, p2y, prevX1, prevY1, prevX2, prevY2);
                     float[] rotationPt = computeRotationPoint(p1x, p1y, p2x, p2y);
@@ -315,5 +322,9 @@ class MyGLSurfaceView extends GLSurfaceView {
 
     public boolean isGestureInProgress() {
         return isGestureInProgress;
+    }
+
+    public void setDragAtConstAlt(boolean b){
+        dragAtConstAlt = b;
     }
 }
