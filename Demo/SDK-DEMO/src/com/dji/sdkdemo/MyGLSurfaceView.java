@@ -96,7 +96,9 @@ class MyGLSurfaceView extends GLSurfaceView {
 //                    p1x = SURFACE__HORIZONTAL_CENTER + 1/6.0f * GL_SURFACE_WIDTH;
 //                    p1y = SURFACE_VERTICAL_CENTER;
 
-                    mRenderer.moveBasedOnTwoFingerDrag(prevX1, prevY1, p1x, p1y);
+//                    mRenderer.moveBasedOnTwoFingerDrag(prevX1, prevY1, p1x, p1y);
+
+                    mRenderer.moveBasedOnTwoFingerDragAtConstAlt(prevX1, prevY1, p1x, p1y);
 
                     float rotation_angle = computeRotationAngle(p1x, p1y, p2x, p2y, prevX1, prevY1, prevX2, prevY2);
                     float[] rotationPt = computeRotationPoint(p1x, p1y, p2x, p2y);

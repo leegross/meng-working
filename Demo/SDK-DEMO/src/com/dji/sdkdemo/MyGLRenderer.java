@@ -69,9 +69,9 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         mHemisphere = new Hemisphere(mContext);
         mSurfaceTexture = new SurfaceTexture(mHemisphere.getTextureHandle());
 
-        camera_theta = 0;//-89.999f;
+        camera_theta = -89.999f;
         camera_phi = 180;
-        projector_theta = 0;// -89.999f;
+        projector_theta = -89.999f;
         projector_phi = 180;
         camera_theta_initialized = false;
         camera_phi_initialized = false;
@@ -385,7 +385,30 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     }
 
     public void moveBasedOnTwoFingerDragAtConstAlt(float prevX, float prevY, float x, float y){
+        float[] p = getWorldPoint(x, y);
+        float[] prevP = getWorldPoint(prevX, prevY);
 
+        //if pt is past the horizon, don't rotate
+        if (
+                magnitude(p) - SPHERE_RADIUS > -.001 ||
+                        magnitude(prevP) - SPHERE_RADIUS > -.001
+                ){
+            return;
+        }
+
+        float disp_x = p[0] - prevP[0];
+        float disp_z = p[2] - prevP[2];
+
+        float[] dispV = new float[]{-disp_x, 0, -disp_z, 1};
+
+        float[] translateV = boundTranslationAtMaxMagnitude(dispV, .03f);
+
+        if (!passPendingBoundsCheck(translateV)) return;
+
+        float[] temp = addArrays(cameraTranslationV, translateV);
+
+        temp[3] =  1;
+        cameraTranslationV = clipTranslationVector(temp);
     }
 
     private boolean passPendingBoundsCheck(float[] translateDeltaV) {
