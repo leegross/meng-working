@@ -71,7 +71,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
         camera_theta = 0;//-89.999f;
         camera_phi = 180;
-        projector_theta = 0;//-89.999f;
+        projector_theta = 0;// -89.999f;
         projector_phi = 180;
         camera_theta_initialized = false;
         camera_phi_initialized = false;
@@ -136,7 +136,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
         float[] dispV = new float[]{-disp_xz[0], -disp_yz[0], disp_z, 1};
 
-        dispV = boundZoomAtMaxMag(dispV);
+        dispV = boundTranslationAtMaxMagnitude(dispV, .03f);
         dispV = scaleZoomBasedOnTwoFingerRotation(dispV, avg_two_finger_rotation_angle);
 
         float[] cameraRotationM = getCameraRotationMatrix(camera_theta, camera_phi);
@@ -160,14 +160,14 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         return scaleVtoMag(zoomV, new_mag_scale * current_mag);
     }
 
-    private float[] boundZoomAtMaxMag(float[] zoomV){
+    private float[] boundTranslationAtMaxMagnitude(float[] zoomV, float max_mag){
         float[] result = zoomV.clone();
         // cap zoom at a maximum magnitude
         float[] dispV3D = new float[]{zoomV[0], zoomV[1], zoomV[2]};
         float mag = magnitude(dispV3D);
 //        Log.d("zoom", mag + "");
-        if (mag > .03){
-            float[] new_disp_3d = scaleVtoMag(dispV3D, .03f);
+        if (mag > max_mag){
+            float[] new_disp_3d = scaleVtoMag(dispV3D, max_mag);
             result = new float[]{new_disp_3d[0], new_disp_3d[1], new_disp_3d[2], 1};
 //            Log.d("zoom", "update mag: " + magnitude(new_disp_3d));
         }
@@ -329,12 +329,12 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
         float[] screen_p = getNewScreenPtBasedOnPrevScreenPt(prevX, prevY);
 
-        float disp_x =solveFor2DTwoFingerDragDisplacement(prev_p[0], prevX, screen_p[0],  GL_SURFACE_WIDTH, FRUST_NEAR_SCALE_X, 1.0f);
-        float disp_z =solveFor2DTwoFingerDragDisplacement(prev_p[1], prevY, screen_p[1],  GL_SURFACE_HEIGHT, FRUST_NEAR_SCALE_Y, -1.0f);
+        float disp_x =solveFor2DTwoFingerDragDisplacement(prev_p[0], screen_p[0], x,  GL_SURFACE_WIDTH, FRUST_NEAR_SCALE_X, 1.0f);
+        float disp_y =solveFor2DTwoFingerDragDisplacement(prev_p[1], screen_p[1], y, GL_SURFACE_HEIGHT, FRUST_NEAR_SCALE_Y, -1.0f);
 
-        float[] dispV = new float[]{-disp_x, 0, disp_z, 1};
+        float[] dispV = new float[]{-disp_x, -disp_y, 0, 1};
 
-        dispV = boundZoomAtMaxMag(dispV);
+        dispV = boundTranslationAtMaxMagnitude(dispV, .03f);
 
         float[] cameraRotationM = getCameraRotationMatrix(camera_theta, camera_phi);
         float[] translateV = multiplyMV(cameraRotationM, dispV);
@@ -363,10 +363,10 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         return new float[]{x, y};
     }
 
-    private float solveFor2DTwoFingerDragDisplacement(float a1, float prevX, float x, float dimension_size, float frust_near_scale, float sign){
+    private float solveFor2DTwoFingerDragDisplacement(float a1, float prev_p, float p, float dimension_size, float frust_near_scale, float sign){
         // scale all points to range between -1 and 1
-        float alpha = sign * (2.0f * prevX/dimension_size - 1.0f) * frust_near_scale;
-        float alpha_ = sign * (2.0f * x/dimension_size - 1.0f) * frust_near_scale;
+        float alpha = sign * (2.0f * prev_p/dimension_size - 1.0f) * frust_near_scale;
+        float alpha_ = sign * (2.0f * p/dimension_size - 1.0f) * frust_near_scale;
 
         float a1_ = alpha_/alpha * a1;
 

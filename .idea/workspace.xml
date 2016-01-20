@@ -92,10 +92,10 @@
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="200" column="26" selection-start-line="200" selection-start-column="26" selection-end-line="200" selection-end-column="26" />
+              <caret line="95" column="56" selection-start-line="95" selection-start-column="56" selection-end-line="95" selection-end-column="56" />
               <folding>
-                <element signature="e#11956#11957#0" expanded="true" />
-                <element signature="e#12000#12001#0" expanded="true" />
+                <element signature="e#11649#11650#0" expanded="true" />
+                <element signature="e#11693#11694#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,32 +116,32 @@
       <file leaf-file-name="MyGLRenderer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5733882">
-              <caret line="345" column="0" selection-start-line="345" selection-start-column="0" selection-end-line="345" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.4791155">
+              <caret line="336" column="57" selection-start-line="336" selection-start-column="57" selection-end-line="336" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1944#1945#0" expanded="true" />
                 <element signature="e#1978#1979#0" expanded="true" />
                 <element signature="method#scaleZoomBasedOnTwoFingerRotation#0;class#MyGLRenderer#0" expanded="false" />
-                <element signature="method#boundZoomAtMaxMag#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#getWorlPositionRelativeToCamera#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#solveFor2DZoomDisplacement#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#getDirectionAnglesOfPoint#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#getWorldPoint#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#projectHorizonPtOnSphereRadius#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#moveBasedOnTwoFingerRotation#0;class#MyGLRenderer#0" expanded="false" />
+                <element signature="method#getNewScreenPtBasedOnPrevScreenPt#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-                <element signature="e#18454#18455#0" expanded="true" />
-                <element signature="e#18492#18493#0" expanded="true" />
-                <element signature="e#18666#18667#0" expanded="true" />
-                <element signature="e#18701#18702#0" expanded="true" />
-                <element signature="e#18735#18736#0" expanded="true" />
-                <element signature="e#18768#18769#0" expanded="true" />
-                <element signature="e#19066#19067#0" expanded="true" />
-                <element signature="e#19113#19114#0" expanded="true" />
-                <element signature="e#19159#19160#0" expanded="true" />
-                <element signature="e#19204#19205#0" expanded="true" />
+                <element signature="e#18522#18523#0" expanded="true" />
+                <element signature="e#18560#18561#0" expanded="true" />
+                <element signature="e#18734#18735#0" expanded="true" />
+                <element signature="e#18769#18770#0" expanded="true" />
+                <element signature="e#18803#18804#0" expanded="true" />
+                <element signature="e#18836#18837#0" expanded="true" />
+                <element signature="e#19134#19135#0" expanded="true" />
+                <element signature="e#19181#19182#0" expanded="true" />
+                <element signature="e#19227#19228#0" expanded="true" />
+                <element signature="e#19272#19273#0" expanded="true" />
                 <element signature="method#updateCameraRotation#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#screenPointToRelativeDirection#0;class#MyGLRenderer#0" expanded="false" />
@@ -3364,7 +3364,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45046234" sideWeight="0.49713877" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42536327" sideWeight="0.4914163" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42536327" sideWeight="0.4914163" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45046234" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -3441,7 +3441,7 @@
           <option name="timeStamp" value="172" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="732" />
+      <option name="time" value="736" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -3455,25 +3455,25 @@
             <element signature="e#1944#1945#0" expanded="true" />
             <element signature="e#1978#1979#0" expanded="true" />
             <element signature="method#scaleZoomBasedOnTwoFingerRotation#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#boundZoomAtMaxMag#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#getWorlPositionRelativeToCamera#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#solveFor2DZoomDisplacement#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#getDirectionAnglesOfPoint#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#getWorldPoint#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectHorizonPtOnSphereRadius#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#moveBasedOnTwoFingerRotation#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#getNewScreenPtBasedOnPrevScreenPt#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#18454#18455#0" expanded="true" />
-            <element signature="e#18492#18493#0" expanded="true" />
-            <element signature="e#18666#18667#0" expanded="true" />
-            <element signature="e#18701#18702#0" expanded="true" />
-            <element signature="e#18735#18736#0" expanded="true" />
-            <element signature="e#18768#18769#0" expanded="true" />
-            <element signature="e#19066#19067#0" expanded="true" />
-            <element signature="e#19113#19114#0" expanded="true" />
-            <element signature="e#19159#19160#0" expanded="true" />
-            <element signature="e#19204#19205#0" expanded="true" />
+            <element signature="e#18522#18523#0" expanded="true" />
+            <element signature="e#18560#18561#0" expanded="true" />
+            <element signature="e#18734#18735#0" expanded="true" />
+            <element signature="e#18769#18770#0" expanded="true" />
+            <element signature="e#18803#18804#0" expanded="true" />
+            <element signature="e#18836#18837#0" expanded="true" />
+            <element signature="e#19134#19135#0" expanded="true" />
+            <element signature="e#19181#19182#0" expanded="true" />
+            <element signature="e#19227#19228#0" expanded="true" />
+            <element signature="e#19272#19273#0" expanded="true" />
             <element signature="method#updateCameraRotation#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#screenPointToRelativeDirection#0;class#MyGLRenderer#0" expanded="false" />
@@ -3487,8 +3487,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="165" column="54" selection-start-line="165" selection-start-column="54" selection-end-line="165" selection-end-column="54" />
           <folding>
-            <element signature="e#11956#11957#0" expanded="true" />
-            <element signature="e#12000#12001#0" expanded="true" />
+            <element signature="e#11649#11650#0" expanded="true" />
+            <element signature="e#11693#11694#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3541,25 +3541,25 @@
             <element signature="e#1944#1945#0" expanded="true" />
             <element signature="e#1978#1979#0" expanded="true" />
             <element signature="method#scaleZoomBasedOnTwoFingerRotation#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#boundZoomAtMaxMag#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#getWorlPositionRelativeToCamera#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#solveFor2DZoomDisplacement#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#getDirectionAnglesOfPoint#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#getWorldPoint#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectHorizonPtOnSphereRadius#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#moveBasedOnTwoFingerRotation#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#getNewScreenPtBasedOnPrevScreenPt#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#18454#18455#0" expanded="true" />
-            <element signature="e#18492#18493#0" expanded="true" />
-            <element signature="e#18666#18667#0" expanded="true" />
-            <element signature="e#18701#18702#0" expanded="true" />
-            <element signature="e#18735#18736#0" expanded="true" />
-            <element signature="e#18768#18769#0" expanded="true" />
-            <element signature="e#19066#19067#0" expanded="true" />
-            <element signature="e#19113#19114#0" expanded="true" />
-            <element signature="e#19159#19160#0" expanded="true" />
-            <element signature="e#19204#19205#0" expanded="true" />
+            <element signature="e#18522#18523#0" expanded="true" />
+            <element signature="e#18560#18561#0" expanded="true" />
+            <element signature="e#18734#18735#0" expanded="true" />
+            <element signature="e#18769#18770#0" expanded="true" />
+            <element signature="e#18803#18804#0" expanded="true" />
+            <element signature="e#18836#18837#0" expanded="true" />
+            <element signature="e#19134#19135#0" expanded="true" />
+            <element signature="e#19181#19182#0" expanded="true" />
+            <element signature="e#19227#19228#0" expanded="true" />
+            <element signature="e#19272#19273#0" expanded="true" />
             <element signature="method#updateCameraRotation#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#screenPointToRelativeDirection#0;class#MyGLRenderer#0" expanded="false" />
@@ -3573,8 +3573,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="165" column="54" selection-start-line="165" selection-start-column="54" selection-end-line="165" selection-end-column="54" />
           <folding>
-            <element signature="e#11956#11957#0" expanded="true" />
-            <element signature="e#12000#12001#0" expanded="true" />
+            <element signature="e#11649#11650#0" expanded="true" />
+            <element signature="e#11693#11694#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3627,25 +3627,25 @@
             <element signature="e#1944#1945#0" expanded="true" />
             <element signature="e#1978#1979#0" expanded="true" />
             <element signature="method#scaleZoomBasedOnTwoFingerRotation#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#boundZoomAtMaxMag#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#getWorlPositionRelativeToCamera#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#solveFor2DZoomDisplacement#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#getDirectionAnglesOfPoint#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#getWorldPoint#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectHorizonPtOnSphereRadius#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#moveBasedOnTwoFingerRotation#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#getNewScreenPtBasedOnPrevScreenPt#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#18454#18455#0" expanded="true" />
-            <element signature="e#18492#18493#0" expanded="true" />
-            <element signature="e#18666#18667#0" expanded="true" />
-            <element signature="e#18701#18702#0" expanded="true" />
-            <element signature="e#18735#18736#0" expanded="true" />
-            <element signature="e#18768#18769#0" expanded="true" />
-            <element signature="e#19066#19067#0" expanded="true" />
-            <element signature="e#19113#19114#0" expanded="true" />
-            <element signature="e#19159#19160#0" expanded="true" />
-            <element signature="e#19204#19205#0" expanded="true" />
+            <element signature="e#18522#18523#0" expanded="true" />
+            <element signature="e#18560#18561#0" expanded="true" />
+            <element signature="e#18734#18735#0" expanded="true" />
+            <element signature="e#18769#18770#0" expanded="true" />
+            <element signature="e#18803#18804#0" expanded="true" />
+            <element signature="e#18836#18837#0" expanded="true" />
+            <element signature="e#19134#19135#0" expanded="true" />
+            <element signature="e#19181#19182#0" expanded="true" />
+            <element signature="e#19227#19228#0" expanded="true" />
+            <element signature="e#19272#19273#0" expanded="true" />
             <element signature="method#updateCameraRotation#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#screenPointToRelativeDirection#0;class#MyGLRenderer#0" expanded="false" />
@@ -3659,8 +3659,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="185" column="0" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
           <folding>
-            <element signature="e#11956#11957#0" expanded="true" />
-            <element signature="e#12000#12001#0" expanded="true" />
+            <element signature="e#11649#11650#0" expanded="true" />
+            <element signature="e#11693#11694#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3713,25 +3713,25 @@
             <element signature="e#1944#1945#0" expanded="true" />
             <element signature="e#1978#1979#0" expanded="true" />
             <element signature="method#scaleZoomBasedOnTwoFingerRotation#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#boundZoomAtMaxMag#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#getWorlPositionRelativeToCamera#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#solveFor2DZoomDisplacement#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#getDirectionAnglesOfPoint#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#getWorldPoint#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectHorizonPtOnSphereRadius#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#moveBasedOnTwoFingerRotation#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#getNewScreenPtBasedOnPrevScreenPt#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#18454#18455#0" expanded="true" />
-            <element signature="e#18492#18493#0" expanded="true" />
-            <element signature="e#18666#18667#0" expanded="true" />
-            <element signature="e#18701#18702#0" expanded="true" />
-            <element signature="e#18735#18736#0" expanded="true" />
-            <element signature="e#18768#18769#0" expanded="true" />
-            <element signature="e#19066#19067#0" expanded="true" />
-            <element signature="e#19113#19114#0" expanded="true" />
-            <element signature="e#19159#19160#0" expanded="true" />
-            <element signature="e#19204#19205#0" expanded="true" />
+            <element signature="e#18522#18523#0" expanded="true" />
+            <element signature="e#18560#18561#0" expanded="true" />
+            <element signature="e#18734#18735#0" expanded="true" />
+            <element signature="e#18769#18770#0" expanded="true" />
+            <element signature="e#18803#18804#0" expanded="true" />
+            <element signature="e#18836#18837#0" expanded="true" />
+            <element signature="e#19134#19135#0" expanded="true" />
+            <element signature="e#19181#19182#0" expanded="true" />
+            <element signature="e#19227#19228#0" expanded="true" />
+            <element signature="e#19272#19273#0" expanded="true" />
             <element signature="method#updateCameraRotation#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#screenPointToRelativeDirection#0;class#MyGLRenderer#0" expanded="false" />
@@ -3745,8 +3745,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="185" column="0" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
           <folding>
-            <element signature="e#11956#11957#0" expanded="true" />
-            <element signature="e#12000#12001#0" expanded="true" />
+            <element signature="e#11649#11650#0" expanded="true" />
+            <element signature="e#11693#11694#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3799,25 +3799,25 @@
             <element signature="e#1944#1945#0" expanded="true" />
             <element signature="e#1978#1979#0" expanded="true" />
             <element signature="method#scaleZoomBasedOnTwoFingerRotation#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#boundZoomAtMaxMag#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#getWorlPositionRelativeToCamera#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#solveFor2DZoomDisplacement#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#getDirectionAnglesOfPoint#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#getWorldPoint#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectHorizonPtOnSphereRadius#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#moveBasedOnTwoFingerRotation#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#getNewScreenPtBasedOnPrevScreenPt#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#18454#18455#0" expanded="true" />
-            <element signature="e#18492#18493#0" expanded="true" />
-            <element signature="e#18666#18667#0" expanded="true" />
-            <element signature="e#18701#18702#0" expanded="true" />
-            <element signature="e#18735#18736#0" expanded="true" />
-            <element signature="e#18768#18769#0" expanded="true" />
-            <element signature="e#19066#19067#0" expanded="true" />
-            <element signature="e#19113#19114#0" expanded="true" />
-            <element signature="e#19159#19160#0" expanded="true" />
-            <element signature="e#19204#19205#0" expanded="true" />
+            <element signature="e#18522#18523#0" expanded="true" />
+            <element signature="e#18560#18561#0" expanded="true" />
+            <element signature="e#18734#18735#0" expanded="true" />
+            <element signature="e#18769#18770#0" expanded="true" />
+            <element signature="e#18803#18804#0" expanded="true" />
+            <element signature="e#18836#18837#0" expanded="true" />
+            <element signature="e#19134#19135#0" expanded="true" />
+            <element signature="e#19181#19182#0" expanded="true" />
+            <element signature="e#19227#19228#0" expanded="true" />
+            <element signature="e#19272#19273#0" expanded="true" />
             <element signature="method#updateCameraRotation#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#screenPointToRelativeDirection#0;class#MyGLRenderer#0" expanded="false" />
@@ -3831,8 +3831,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="185" column="0" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
           <folding>
-            <element signature="e#11956#11957#0" expanded="true" />
-            <element signature="e#12000#12001#0" expanded="true" />
+            <element signature="e#11649#11650#0" expanded="true" />
+            <element signature="e#11693#11694#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3881,8 +3881,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="124" column="26" selection-start-line="124" selection-start-column="26" selection-end-line="124" selection-end-column="26" />
           <folding>
-            <element signature="e#11956#11957#0" expanded="true" />
-            <element signature="e#12000#12001#0" expanded="true" />
+            <element signature="e#11649#11650#0" expanded="true" />
+            <element signature="e#11693#11694#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3924,8 +3924,8 @@
         <state vertical-scroll-proportion="0.8559671">
           <caret line="180" column="4" selection-start-line="180" selection-start-column="4" selection-end-line="180" selection-end-column="4" />
           <folding>
-            <element signature="e#11956#11957#0" expanded="true" />
-            <element signature="e#12000#12001#0" expanded="true" />
+            <element signature="e#11649#11650#0" expanded="true" />
+            <element signature="e#11693#11694#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -4106,42 +4106,42 @@
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="200" column="26" selection-start-line="200" selection-start-column="26" selection-end-line="200" selection-end-column="26" />
+          <caret line="95" column="56" selection-start-line="95" selection-start-column="56" selection-end-line="95" selection-end-column="56" />
           <folding>
-            <element signature="e#11956#11957#0" expanded="true" />
-            <element signature="e#12000#12001#0" expanded="true" />
+            <element signature="e#11649#11650#0" expanded="true" />
+            <element signature="e#11693#11694#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5733882">
-          <caret line="345" column="0" selection-start-line="345" selection-start-column="0" selection-end-line="345" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.4791155">
+          <caret line="336" column="57" selection-start-line="336" selection-start-column="57" selection-end-line="336" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1944#1945#0" expanded="true" />
             <element signature="e#1978#1979#0" expanded="true" />
             <element signature="method#scaleZoomBasedOnTwoFingerRotation#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#boundZoomAtMaxMag#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#getWorlPositionRelativeToCamera#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#solveFor2DZoomDisplacement#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#getDirectionAnglesOfPoint#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#getWorldPoint#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectHorizonPtOnSphereRadius#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#moveBasedOnTwoFingerRotation#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#getNewScreenPtBasedOnPrevScreenPt#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#18454#18455#0" expanded="true" />
-            <element signature="e#18492#18493#0" expanded="true" />
-            <element signature="e#18666#18667#0" expanded="true" />
-            <element signature="e#18701#18702#0" expanded="true" />
-            <element signature="e#18735#18736#0" expanded="true" />
-            <element signature="e#18768#18769#0" expanded="true" />
-            <element signature="e#19066#19067#0" expanded="true" />
-            <element signature="e#19113#19114#0" expanded="true" />
-            <element signature="e#19159#19160#0" expanded="true" />
-            <element signature="e#19204#19205#0" expanded="true" />
+            <element signature="e#18522#18523#0" expanded="true" />
+            <element signature="e#18560#18561#0" expanded="true" />
+            <element signature="e#18734#18735#0" expanded="true" />
+            <element signature="e#18769#18770#0" expanded="true" />
+            <element signature="e#18803#18804#0" expanded="true" />
+            <element signature="e#18836#18837#0" expanded="true" />
+            <element signature="e#19134#19135#0" expanded="true" />
+            <element signature="e#19181#19182#0" expanded="true" />
+            <element signature="e#19227#19228#0" expanded="true" />
+            <element signature="e#19272#19273#0" expanded="true" />
             <element signature="method#updateCameraRotation#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#screenPointToRelativeDirection#0;class#MyGLRenderer#0" expanded="false" />
