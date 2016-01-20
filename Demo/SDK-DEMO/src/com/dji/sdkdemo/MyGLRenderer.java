@@ -124,22 +124,11 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         float[] prev_p1 = getWorlPositionRelativeToCamera(prev_p1x, prev_p1y);
         float[] prev_p2 = getWorlPositionRelativeToCamera(prev_p2x, prev_p2y);
 
-        // get new screen pts
-        float[] world_p1 = getWorlPositionRelativeToCamera(p1x, p1y);
-        float[] world_p2 = getWorlPositionRelativeToCamera(p2x, p2y);
+        float[] screen_p1 = getNewScreenPtBasedOnPrevScreenPt(p1x, p1y);
+        float[] screen_p2 = getNewScreenPtBasedOnPrevScreenPt(p2x, p2y);
 
-        world_p1 = new float[]{world_p1[0], world_p1[1], world_p1[2], 1};
-        world_p2 = new float[]{world_p2[0], world_p2[1], world_p2[2], 1};
-        float[] screen_p1 = multiplyMV(mProjectionMatrix, world_p1);
-        float[] screen_p2 = multiplyMV(mProjectionMatrix, world_p2);
-
-        p1x = (screen_p1[0]/screen_p1[3] +1.0f) /2.0f * GL_SURFACE_WIDTH;
-        p2x = (screen_p2[0]/screen_p2[3] +1.0f) /2.0f * GL_SURFACE_WIDTH;
-        p1y = (-screen_p1[1]/screen_p1[3] +1.0f) /2.0f * GL_SURFACE_HEIGHT;
-        p2y = (-screen_p2[1]/screen_p2[3] +1.0f) /2.0f * GL_SURFACE_HEIGHT;
-
-        float[] disp_xz = solveFor2DZoomDisplacement(prev_p1[0], -prev_p1[2], prev_p2[0], -prev_p2[2], p1x, p2x, GL_SURFACE_WIDTH, FRUST_NEAR_SCALE_X, 1.0f);
-        float[] disp_yz = solveFor2DZoomDisplacement(prev_p1[1], -prev_p1[2], prev_p2[1], -prev_p2[2], p1y, p2y, GL_SURFACE_HEIGHT, FRUST_NEAR_SCALE_Y, -1.0f);
+        float[] disp_xz = solveFor2DZoomDisplacement(prev_p1[0], -prev_p1[2], prev_p2[0], -prev_p2[2], screen_p1[0], screen_p2[0], GL_SURFACE_WIDTH, FRUST_NEAR_SCALE_X, 1.0f);
+        float[] disp_yz = solveFor2DZoomDisplacement(prev_p1[1], -prev_p1[2], prev_p2[1], -prev_p2[2], screen_p1[1], screen_p2[1], GL_SURFACE_HEIGHT, FRUST_NEAR_SCALE_Y, -1.0f);
 
         float disp_z;
         if (abs(disp_xz[1]) < .00000001) disp_z = disp_yz[1];
@@ -335,6 +324,59 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         camera_phi += beta;
     }
 
+    public void moveBasedOnTwoFingerDrag(float prevX, float prevY, float x, float y){
+        float[] prev_p = getWorlPositionRelativeToCamera(prevX, prevY);
+
+        float[] screen_p = getNewScreenPtBasedOnPrevScreenPt(prevX, prevY);
+
+        float disp_x =solveFor2DTwoFingerDragDisplacement(prev_p[0], prevX, screen_p[0],  GL_SURFACE_WIDTH, FRUST_NEAR_SCALE_X, 1.0f);
+        float disp_z =solveFor2DTwoFingerDragDisplacement(prev_p[1], prevY, screen_p[1],  GL_SURFACE_HEIGHT, FRUST_NEAR_SCALE_Y, -1.0f);
+
+        float[] dispV = new float[]{-disp_x, 0, disp_z, 1};
+
+        dispV = boundZoomAtMaxMag(dispV);
+
+        float[] cameraRotationM = getCameraRotationMatrix(camera_theta, camera_phi);
+        float[] translateV = multiplyMV(cameraRotationM, dispV);
+
+        if (!passPendingBoundsCheck(translateV)) return;
+
+        float[] temp = addArrays(cameraTranslationV, translateV);
+
+        temp[3] =  1;
+        cameraTranslationV = clipTranslationVector(temp);
+    }
+
+    // meant to handle cases where the pts go past the horizon
+    // in that case, the old screen pt does not correspond to the world pt
+    // so we want to find the new screen pt based on the world pt we have
+    private float[] getNewScreenPtBasedOnPrevScreenPt(float old_x, float old_y){
+        // get new screen pts
+        float[] world_p = getWorlPositionRelativeToCamera(old_x, old_y);
+
+        world_p = new float[]{world_p[0], world_p[1], world_p[2], 1};
+        float[] screen_p = multiplyMV(mProjectionMatrix, world_p);
+
+        float x = (screen_p[0]/screen_p[3] +1.0f) /2.0f * GL_SURFACE_WIDTH;
+        float y = (-screen_p[1]/screen_p[3] +1.0f) /2.0f * GL_SURFACE_HEIGHT;
+
+        return new float[]{x, y};
+    }
+
+    private float solveFor2DTwoFingerDragDisplacement(float a1, float prevX, float x, float dimension_size, float frust_near_scale, float sign){
+        // scale all points to range between -1 and 1
+        float alpha = sign * (2.0f * prevX/dimension_size - 1.0f) * frust_near_scale;
+        float alpha_ = sign * (2.0f * x/dimension_size - 1.0f) * frust_near_scale;
+
+        float a1_ = alpha_/alpha * a1;
+
+        return a1_ - a1;
+    }
+
+    public void moveBasedOnTwoFingerDragAtConstAlt(float prevX, float prevY, float x, float y){
+
+    }
+
     private boolean passPendingBoundsCheck(float[] translateDeltaV) {
         if (( (floatEquals(cameraTranslationV[1], MIN_ALTITUDE)|| cameraTranslationV[1] < MIN_ALTITUDE) && cameraTranslationV[1] + translateDeltaV[1] < cameraTranslationV[1]) ||
             ( floatEquals(cameraTranslationV[0], -MAX_DIST) && cameraTranslationV[0] + translateDeltaV[0] < -MAX_DIST) ||
@@ -454,6 +496,85 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         System.arraycopy(projectorTranslationV, 0, cameraTranslationV, 0, projectorTranslationV.length);
     }
 
+    public void updateCameraRotation1(float p1x, float p1y, float p2x, float p2y, float start_theta, float start_phi){
+        float[] p1 = screenPointToWorldDirection(p1x, p1y, start_theta, start_phi);
+        float[] p2 = screenPointToWorldDirection(p2x, p2y);
+
+        p1 = new float[]{p1[0], p1[1], p1[2]};
+        p2 = new float[]{p2[0], p2[1], p2[2]};
+        p1 = normalizeV(p1);
+        p2 = normalizeV(p2);
+
+        p1 = new float[]{p1[0], p1[1], p1[2], 1};
+        p2 = new float[]{p2[0], p2[1], p2[2], 1};
+
+        float min_error = 10000000;
+        float best_phi = 0;
+        float best_theta = 0;
+
+        for (int theta = 0; theta > -91; theta -= 10){
+            for (int phi = 0; phi < 360; phi += 10){
+                float error = rotateP1ToP2AndFindError(p1, p2, phi, theta);
+
+                if (error < min_error){
+                    min_error = error;
+                    best_phi = phi;
+                    best_theta = theta;
+                }
+            }
+        }
+
+        for (int theta = (int) (best_theta + 5); theta > best_theta - 5; theta -= 1){
+            for (int phi = (int) (best_phi - 5); phi < best_phi + 5; phi += 1){
+                float error = rotateP1ToP2AndFindError(p1, p2, phi, theta);
+
+                if (error < min_error){
+                    min_error = error;
+                    best_phi = phi;
+                    best_theta = theta;
+                }
+            }
+        }
+
+        for (float theta = best_theta + .5f; theta > best_theta - .5f; theta -= .05){
+            for (float phi = best_phi - .5f; phi < best_phi + .5f; phi += .05){
+                float error = rotateP1ToP2AndFindError(p1, p2, phi, theta);
+
+                if (error < min_error){
+                    min_error = error;
+                    best_phi = phi;
+                    best_theta = theta;
+                }
+            }
+        }
+
+        camera_phi = (start_phi - best_phi) % 360;
+        camera_theta = max((start_theta + best_theta) % 360, -89.999f);
+
+    }
+
+    // input 4D unit vectors p1 and p2
+    // rotates p1 by phi and theta
+    // computes error between p1' and p2
+    private float rotateP1ToP2AndFindError(float[] p1, float[] p2, float phi, float theta){
+        // rotate p1 by angles and compute the error between the new p1 and p2
+        float[] phiRotationMatrix = getRotationMatrix(phi, new float[]{0, 1, 0});
+        float[] p1_ = multiplyMV(phiRotationMatrix, p1);
+        float[] u = multiplyMV(phiRotationMatrix, new float[]{1, 0, 0, 1});
+        float[] thetaRotationMatrix = getRotationMatrix(theta, new float[]{u[0], u[1], u[2]});
+        float[] new_p1 = multiplyMV(thetaRotationMatrix, p1_);
+
+        // change to 3D and normalize p1 and p2
+        new_p1 = new float[]{new_p1[0], new_p1[1], new_p1[2]};
+        p2 = new float[]{p2[0], p2[1], p2[2]};
+        new_p1 = normalizeV(new_p1);
+        p2 = normalizeV(p2);
+
+        float error = (float) sqrt(pow(new_p1[0] - p2[0], 2) + pow(new_p1[1] - p2[1], 2) + pow(new_p1[2] - p2[2], 2));
+
+        return error;
+    }
+
     public void updateCameraRotation(float p1x, float p1y, float p2x, float p2y, float gest_start_y, float gest_start_theta){
         // get world coordinates from screen coordinates
         float[] p1 = screenPointToWorldDirection(p1x, p1y); // relative direction
@@ -544,6 +665,18 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         float[] world_v = multiplyMV(mInverseProjectionMatrix, v);
 
         float[] cameraRotationM = getCameraRotationMatrix(camera_theta, camera_phi);
+        world_v = OperationsHelper.multiplyMV(cameraRotationM, world_v);
+
+        return world_v;
+    }
+
+    private float[] screenPointToWorldDirection(float x, float y, float theta, float phi){
+        float[] v = {(2.0f * x/GL_SURFACE_WIDTH - 1.0f), -(2.0f * y / GL_SURFACE_HEIGHT - 1.0f), 0, 1};
+
+        float[] mInverseProjectionMatrix = getInverse(mProjectionMatrix);
+        float[] world_v = multiplyMV(mInverseProjectionMatrix, v);
+
+        float[] cameraRotationM = getCameraRotationMatrix(theta, phi);
         world_v = OperationsHelper.multiplyMV(cameraRotationM, world_v);
 
         return world_v;
