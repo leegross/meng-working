@@ -69,10 +69,10 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         mHemisphere = new Hemisphere(mContext);
         mSurfaceTexture = new SurfaceTexture(mHemisphere.getTextureHandle());
 
-        camera_theta = 0;//-89.999f;
-        camera_phi = 180;
-        projector_theta = 0;//-89.999f;
-        projector_phi = 180;
+        camera_theta = -45;//-89.999f;
+        camera_phi = 0;
+        projector_theta = -45;//-89.999f;
+        projector_phi = 0;
         camera_theta_initialized = false;
         camera_phi_initialized = false;
 
@@ -531,8 +531,10 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     }
 
     public void updateCameraRotation1(float p1x, float p1y, float p2x, float p2y, float start_theta, float start_phi){
-        float[] p1 = screenPointToWorldDirection(p1x, p1y, start_theta, start_phi);
-        float[] p2 = screenPointToWorldDirection(p2x, p2y);
+//        float[] p1 = screenPointToWorldDirection(p1x, p1y, start_theta, start_phi);
+//        float[] p1 = screenPointToRelativeDirection(p1x, p1y);
+        float[] p1 = screenPointToWorldDirectionForRotation(p1x, p1y, start_theta, start_phi);
+        float[] p2 = screenPointToWorldDirectionForRotation(p2x, p2y, start_theta, start_phi);
 
         p1 = new float[]{p1[0], p1[1], p1[2]};
         p2 = new float[]{p2[0], p2[1], p2[2]};
@@ -542,14 +544,59 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         p1 = new float[]{p1[0], p1[1], p1[2], 1};
         p2 = new float[]{p2[0], p2[1], p2[2], 1};
 
+        float error1 = rotateP1ToP2AndFindError(p1, p2, 50, -34);
+        float error2 = rotateP1ToP2AndFindError(p1, p2, 41, -44);
+
         float min_error = 10000000;
         float best_phi = 0;
         float best_theta = 0;
 
-        for (int theta = 0; theta > -91; theta -= 10){
-            for (int phi = 0; phi < 360; phi += 10){
+        float[] new_best_params;
+
+        new_best_params = randomname(0, -90, 20, -180, 180, 20, p1, p2, best_phi, best_theta, min_error);
+        min_error = new_best_params[0];
+        best_phi = new_best_params[1];
+        best_theta = new_best_params[2];
+
+        new_best_params = randomname(best_theta + 20, best_theta - 20, 5f, best_phi - 20, best_phi + 20, 5f, p1, p2, best_phi, best_theta, min_error);
+        min_error = new_best_params[0];
+        best_phi = new_best_params[1];
+        best_theta = new_best_params[2];
+
+        new_best_params = randomname(best_theta + 5f, best_theta - 5f, 1f, best_phi - 5f, best_phi + 5f, 1f, p1, p2, best_phi, best_theta, min_error);
+        min_error = new_best_params[0];
+        best_phi = new_best_params[1];
+        best_theta = new_best_params[2];
+
+        new_best_params = randomname(best_theta + 1f, best_theta - 1f, .1f, best_phi - 1f, best_phi + 1f, .1f, p1, p2, best_phi, best_theta, min_error);
+        min_error = new_best_params[0];
+        best_phi = new_best_params[1];
+        best_theta = new_best_params[2];
+
+        camera_phi = start_phi + best_phi;
+        camera_theta = min(0, max(start_theta - best_theta, -89.999f));
+//        camera_phi = best_phi;
+//        camera_theta = min(0, max(best_theta, -89.999f));
+
+    }
+
+    private float[] randomname(float theta_max, float theta_min, float theta_inc, float phi_min, float phi_max, float phi_inc, float[] p1, float[] p2, float best_phi, float best_theta, float min_error){
+
+        for (float theta = theta_max; theta > theta_min; theta -= theta_inc){
+            for (float phi = phi_min; phi < phi_max; phi += phi_inc){
                 float error = rotateP1ToP2AndFindError(p1, p2, phi, theta);
 
+//                // if the difference is small
+//                // pick the angles that are closer to the current camera angles
+//                if (abs(error - min_error) < .0001){
+//                    float dist_best = (float) sqrt(pow(best_phi - camera_phi, 2) + pow(best_theta - camera_theta, 2));
+//                    float dist_new = (float) sqrt(pow(phi - camera_phi, 2) + pow(theta - camera_theta, 2));
+//                    if (dist_new < dist_best){
+//                        min_error = error;
+//                        best_phi = phi;
+//                        best_theta = theta;
+//                    }
+//                } else
                 if (error < min_error){
                     min_error = error;
                     best_phi = phi;
@@ -558,33 +605,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
             }
         }
 
-        for (int theta = (int) (best_theta + 5); theta > best_theta - 5; theta -= 1){
-            for (int phi = (int) (best_phi - 5); phi < best_phi + 5; phi += 1){
-                float error = rotateP1ToP2AndFindError(p1, p2, phi, theta);
-
-                if (error < min_error){
-                    min_error = error;
-                    best_phi = phi;
-                    best_theta = theta;
-                }
-            }
-        }
-
-        for (float theta = best_theta + .5f; theta > best_theta - .5f; theta -= .05){
-            for (float phi = best_phi - .5f; phi < best_phi + .5f; phi += .05){
-                float error = rotateP1ToP2AndFindError(p1, p2, phi, theta);
-
-                if (error < min_error){
-                    min_error = error;
-                    best_phi = phi;
-                    best_theta = theta;
-                }
-            }
-        }
-
-        camera_phi = (start_phi - best_phi) % 360;
-        camera_theta = max((start_theta + best_theta) % 360, -89.999f);
-
+        return new float[]{min_error, best_phi, best_theta};
     }
 
     // input 4D unit vectors p1 and p2
@@ -592,11 +613,13 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     // computes error between p1' and p2
     private float rotateP1ToP2AndFindError(float[] p1, float[] p2, float phi, float theta){
         // rotate p1 by angles and compute the error between the new p1 and p2
-        float[] phiRotationMatrix = getRotationMatrix(phi, new float[]{0, 1, 0});
-        float[] p1_ = multiplyMV(phiRotationMatrix, p1);
-        float[] u = multiplyMV(phiRotationMatrix, new float[]{1, 0, 0, 1});
-        float[] thetaRotationMatrix = getRotationMatrix(theta, new float[]{u[0], u[1], u[2]});
-        float[] new_p1 = multiplyMV(thetaRotationMatrix, p1_);
+//        float[] phiRotationMatrix = getRotationMatrix(-phi, new float[]{0, 1, 0});
+//        float[] p1_ = multiplyMV(phiRotationMatrix, p1);
+//        float[] u = multiplyMV(phiRotationMatrix, new float[]{1, 0, 0, 1});
+//        float[] thetaRotationMatrix = getRotationMatrix(theta, new float[]{u[0], u[1], u[2]});
+//        float[] new_p1 = multiplyMV(thetaRotationMatrix, p1_);
+        float[] rotationM = getInverse(getCameraRotationMatrix(-theta, phi));
+        float[] new_p1 = multiplyMV(rotationM, p1);
 
         // change to 3D and normalize p1 and p2
         new_p1 = new float[]{new_p1[0], new_p1[1], new_p1[2]};
@@ -604,7 +627,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         new_p1 = normalizeV(new_p1);
         p2 = normalizeV(p2);
 
-        float error = (float) sqrt(pow(new_p1[0] - p2[0], 2) + pow(new_p1[1] - p2[1], 2) + pow(new_p1[2] - p2[2], 2));
+        float error = (float) (pow(new_p1[0] - p2[0], 2) + pow(new_p1[1] - p2[1], 2) + pow(new_p1[2] - p2[2], 2));
 
         return error;
     }
@@ -704,13 +727,13 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         return world_v;
     }
 
-    private float[] screenPointToWorldDirection(float x, float y, float theta, float phi){
+    private float[] screenPointToWorldDirectionForRotation(float x, float y, float theta, float phi){
         float[] v = {(2.0f * x/GL_SURFACE_WIDTH - 1.0f), -(2.0f * y / GL_SURFACE_HEIGHT - 1.0f), 0, 1};
 
         float[] mInverseProjectionMatrix = getInverse(mProjectionMatrix);
         float[] world_v = multiplyMV(mInverseProjectionMatrix, v);
 
-        float[] cameraRotationM = getCameraRotationMatrix(theta, phi);
+        float[] cameraRotationM = getInverse(getCameraRotationMatrix(-theta, phi));
         world_v = OperationsHelper.multiplyMV(cameraRotationM, world_v);
 
         return world_v;

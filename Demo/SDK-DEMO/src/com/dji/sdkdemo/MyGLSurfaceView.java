@@ -100,24 +100,23 @@ class MyGLSurfaceView extends GLSurfaceView {
                     float move_x = (p1x - prevX1) - (p2x - prevX2);
                     float move_y = (p1y - prevY1) - (p2y - prevY2);
                     float move = (float) sqrt(move_x*move_x + move_y*move_y);
-
-                    prevMoveAvg = prevMoveAvg * .9f + move * .1f;
-
-                    Log.d("move", "" + prevMoveAvg);
-
-//                    if (prevMoveAvg < 4){
-
-                    if (dragAtConstAlt){
-                        mRenderer.moveBasedOnTwoFingerDragAtConstAlt(prevX1, prevY1, p1x, p1y);
-                    } else {
-                        mRenderer.moveBasedOnTwoFingerDrag(prevX1, prevY1, p1x, p1y);
-                    }
-//
-
-//                        break;
-//                    }
-
                     float rotation_angle = computeRotationAngle(p1x, p1y, p2x, p2y, prevX1, prevY1, prevX2, prevY2);
+
+
+                    prevMoveAvg = prevMoveAvg * .8f + move * .2f;
+
+                    Log.d("move_avg", "" + (int) (prevMoveAvg * 10) + ", move " + move + ", rotation " + abs(rotation_angle * 10) + ", combined " + (int) (prevMoveAvg * abs(rotation_angle * 10.0f) * 10));
+
+                    if (prevMoveAvg * 10 < 25){
+                        if (dragAtConstAlt){
+                        mRenderer.moveBasedOnTwoFingerDragAtConstAlt(prevX1, prevY1, p1x, p1y);
+                        } else {
+                        mRenderer.moveBasedOnTwoFingerDrag(prevX1, prevY1, p1x, p1y);
+                        }
+                        break;
+                    }
+
+
                     float[] rotationPt = computeRotationPoint(p1x, p1y, p2x, p2y);
                     float rx = rotationPt[0];
                     float ry = rotationPt[1];
@@ -210,10 +209,10 @@ class MyGLSurfaceView extends GLSurfaceView {
 //                    gestStartX = 0;
 //                    gestStartY = GL_SURFACE_HEIGHT;
 //                    x = SURFACE__HORIZONTAL_CENTER;
-//                    y = SURFACE_VERTICAL_CENTER;
+//                    y =  SURFACE_VERTICAL_CENTER;
 //                    mRenderer.updateCameraRotation(prevX, prevY, x, y, gestStartY, gestStartTheta);
-//                    mRenderer.updateCameraRotation1(gestStartX, gestStartY, x, y, gestStartTheta, gestStartPhi);
-                    mRenderer.updateCameraRotation1(prevX, prevY, x, y, mRenderer.getThetaCamera(), mRenderer.getPhiCamera());
+                    mRenderer.updateCameraRotation1(gestStartX, gestStartY, x, y, gestStartTheta, gestStartPhi);
+//                    mRenderer.updateCameraRotation1(prevX, prevY, x, y, mRenderer.getThetaCamera(), mRenderer.getPhiCamera());
 
                     break;
                 case MotionEvent.ACTION_UP:
