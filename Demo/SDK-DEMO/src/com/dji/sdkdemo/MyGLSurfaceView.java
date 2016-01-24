@@ -107,7 +107,7 @@ class MyGLSurfaceView extends GLSurfaceView {
 
                     Log.d("move_avg", "" + (int) (prevMoveAvg * 10) + ", move " + move + ", rotation " + abs(rotation_angle * 10) + ", combined " + (int) (prevMoveAvg * abs(rotation_angle * 10.0f) * 10));
 
-                    if (prevMoveAvg * 10 < 25){
+                    if (prevMoveAvg * 10 < 28){
                         if (dragAtConstAlt){
                         mRenderer.moveBasedOnTwoFingerDragAtConstAlt(prevX1, prevY1, p1x, p1y);
                         } else {
@@ -210,9 +210,7 @@ class MyGLSurfaceView extends GLSurfaceView {
 //                    gestStartY = 0;
 //                    x = SURFACE__HORIZONTAL_CENTER;
 //                    y =  7/8.0f * GL_SURFACE_HEIGHT;
-//                    mRenderer.updateCameraRotation(prevX, prevY, x, y, gestStartY, gestStartTheta);
                     mRenderer.updateCameraRotation1(gestStartX, gestStartY, x, y, gestStartTheta, gestStartPhi);
-//                    mRenderer.updateCameraRotation1(prevX, prevY, x, y, mRenderer.getThetaCamera(), mRenderer.getPhiCamera());
 
                     break;
                 case MotionEvent.ACTION_UP:

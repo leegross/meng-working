@@ -542,11 +542,6 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         p1 = new float[]{p1[0], p1[1], p1[2], 1};
         p2 = new float[]{p2[0], p2[1], p2[2], 1};
 
-        float error1 = rotateP1ToP2AndFindError(p1, p2, -180, 0);
-        float error2 = rotateP1ToP2AndFindError(p1, p2, 0, -46);
-        float error3 = rotateP1ToP2AndFindError(p1, p2, 0, -40);
-
-
         float min_error = 10000000;
         float best_phi = 0;
         float best_theta = 0;
@@ -583,9 +578,9 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         float new_phi = start_phi + best_phi;
         float new_theta = min(0, max(start_theta - best_theta, -89.999f));
 
-        if (sqrt(pow(new_phi - camera_phi, 2) + pow(new_theta - camera_theta, 2)) > 20){
-            return;
-        }
+//        if (sqrt(pow(new_phi - camera_phi, 2) + pow(new_theta - camera_theta, 2)) > 20){
+//            return;
+//        }
 
         camera_phi = new_phi;
         camera_theta = new_theta;
@@ -642,47 +637,6 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         float error = (float) (pow(new_p1[0] - p2[0], 2) + pow(new_p1[1] - p2[1], 2) + pow(new_p1[2] - p2[2], 2));
 
         return error;
-    }
-
-    public void updateCameraRotation(float p1x, float p1y, float p2x, float p2y, float gest_start_y, float gest_start_theta){
-        // get world coordinates from screen coordinates
-        float[] p1 = screenPointToWorldDirection(p1x, p1y); // relative direction
-        float[] p2 = screenPointToWorldDirection(p2x, p2y); // actual direction - given the orientation of the drone
-//        float[] p1 = screenPointToWorldDirection(SURFACE__HORIZONTAL_CENTER, GL_SURFACE_HEIGHT); // relative direction
-//        float[] p2 = screenPointToWorldDirection(SURFACE__HORIZONTAL_CENTER, SURFACE_VERTICAL_CENTER); // actual direction - given the orientation of the drone
-//
-        // change to 3D and normalize p1 and p2
-        p1 = new float[]{p1[0], p1[1], p1[2]};
-        p2 = new float[]{p2[0], p2[1], p2[2]};
-        p1 = normalizeV(p1);
-        p2 = normalizeV(p2);
-
-        float new_phi = 0;
-        float new_theta = 0;
-
-        float fov_y = HORIZONTAL_FOV / ASPECT_RATIO;
-
-        // if we're below 60 degrees, only allow pitch
-        // otherwise compute points to both yaw and pitch
-        float theta1 = -(gest_start_y-SURFACE_VERTICAL_CENTER)/GL_SURFACE_HEIGHT * fov_y + gest_start_theta;
-        if ( false){//theta1 < -60){
-            new_phi = 0;
-            new_theta = -(p2y - p1y)/GL_SURFACE_HEIGHT * fov_y;
-        } else {
-            int num_iter = 0;
-//            while (num_iter < 2) {
-                float[] phi_theta_p1__ = computeDeltaPhiAndThetaBetweenTwoUnitVectors(p1, p2);
-                new_phi = phi_theta_p1__[0];
-                new_theta = phi_theta_p1__[1];
-                p1 = new float[] {phi_theta_p1__[2], phi_theta_p1__[3], phi_theta_p1__[4]};
-//                camera_phi += new_phi;
-//                camera_theta = max(camera_theta - new_theta, -89.999f);
-                num_iter += 1;
-//            }
-        }
-
-        camera_phi += new_phi;
-        camera_theta = max(camera_theta - new_theta, -89.999f);
     }
 
     // returns delta angles phi, theta and a vector p1__
