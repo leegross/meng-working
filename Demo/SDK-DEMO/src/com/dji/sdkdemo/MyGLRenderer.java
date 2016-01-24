@@ -530,7 +530,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         System.arraycopy(projectorTranslationV, 0, cameraTranslationV, 0, projectorTranslationV.length);
     }
 
-    public void updateCameraRotation1(float p1x, float p1y, float p2x, float p2y, float start_theta, float start_phi){
+    public void updateCameraRotation(float p1x, float p1y, float p2x, float p2y, float start_theta, float start_phi){
         float[] p1 = screenPointToWorldDirectionForRotation(p1x, p1y, start_theta, start_phi);
         float[] p2 = screenPointToWorldDirectionForRotation(p2x, p2y, start_theta, start_phi);
 

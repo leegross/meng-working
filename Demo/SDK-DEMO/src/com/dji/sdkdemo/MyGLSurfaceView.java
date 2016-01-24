@@ -6,14 +6,9 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 
-import static com.dji.sdkdemo.Constants.*;
-import static com.dji.sdkdemo.util.OperationsHelper.magnitude;
-import static java.lang.Math.atan;
 import static java.lang.Math.cos;
-import static java.lang.Math.log;
 import static java.lang.Math.pow;
 import static java.lang.Math.sin;
-import static java.lang.Math.tan;
 import static java.lang.Math.toDegrees;
 import static java.lang.Math.toRadians;
 import static java.lang.StrictMath.abs;
@@ -29,6 +24,7 @@ class MyGLSurfaceView extends GLSurfaceView {
     private DroneWrapper mDroneWrapper;
 
     private boolean isGestureInProgress;
+    private boolean isTwoFingerGesture;
 
     float mPrevDelta = 0;
 
@@ -88,6 +84,7 @@ class MyGLSurfaceView extends GLSurfaceView {
             float p2y = e.getY(1);
             switch (e.getActionMasked()) {
                 case MotionEvent.ACTION_POINTER_DOWN:
+                    isTwoFingerGesture = true;
                     gestStartX1 = p1x;
                     gestStartY1 = p1y;
                     gestStartX2 = p2x;
@@ -204,16 +201,20 @@ class MyGLSurfaceView extends GLSurfaceView {
                     gestStartY = y;
                     gestStartTheta = mRenderer.getThetaCamera();
                     gestStartPhi = mRenderer.getPhiCamera();
+
+                    isTwoFingerGesture = false;
                     break;
                 case MotionEvent.ACTION_MOVE:
 //                    gestStartX = SURFACE__HORIZONTAL_CENTER;
 //                    gestStartY = 0;
 //                    x = SURFACE__HORIZONTAL_CENTER;
 //                    y =  7/8.0f * GL_SURFACE_HEIGHT;
-                    mRenderer.updateCameraRotation1(gestStartX, gestStartY, x, y, gestStartTheta, gestStartPhi);
+                    if (isTwoFingerGesture) break;
+                    mRenderer.updateCameraRotation(gestStartX, gestStartY, x, y, gestStartTheta, gestStartPhi);
 
                     break;
                 case MotionEvent.ACTION_UP:
+                    if (isTwoFingerGesture) break;
                     mDroneWrapper.setYawAngle(mRenderer.getPhiCamera());
                     mDroneWrapper.setGimbalPitch((int) mRenderer.getThetaCamera());
                     isGestureInProgress = false;

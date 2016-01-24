@@ -92,10 +92,10 @@
       <file leaf-file-name="MyGLSurfaceView.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44717446">
-              <caret line="213" column="0" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.33169532">
+              <caret line="212" column="0" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
               <folding>
-                <element signature="e#9473#9504#0" expanded="false" />
+                <element signature="e#9501#9532#0" expanded="false" />
                 <element signature="method#computeRotationPoint#0;class#MyGLSurfaceView#0" expanded="false" />
               </folding>
             </state>
@@ -145,7 +145,7 @@
                 <element signature="e#20339#20340#0" expanded="true" />
                 <element signature="e#20383#20384#0" expanded="true" />
                 <element signature="e#20424#20425#0" expanded="true" />
-                <element signature="e#23809#23856#0" expanded="false" />
+                <element signature="e#23808#23855#0" expanded="false" />
                 <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#screenPointToWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
@@ -2915,8 +2915,8 @@
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/util/OperationsHelper.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/TouchControllerActivity.java" />
-        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java" />
+        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java" />
       </list>
     </option>
   </component>
@@ -3455,7 +3455,7 @@
           <option name="timeStamp" value="172" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="832" />
+      <option name="time" value="835" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -3465,7 +3465,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="165" column="54" selection-start-line="165" selection-start-column="54" selection-end-line="165" selection-end-column="54" />
           <folding>
-            <element signature="e#9473#9504#0" expanded="false" />
+            <element signature="e#9501#9532#0" expanded="false" />
             <element signature="method#computeRotationPoint#0;class#MyGLSurfaceView#0" expanded="false" />
           </folding>
         </state>
@@ -3575,7 +3575,7 @@
             <element signature="e#20339#20340#0" expanded="true" />
             <element signature="e#20383#20384#0" expanded="true" />
             <element signature="e#20424#20425#0" expanded="true" />
-            <element signature="e#23809#23856#0" expanded="false" />
+            <element signature="e#23808#23855#0" expanded="false" />
             <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#screenPointToWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
@@ -3589,7 +3589,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="165" column="54" selection-start-line="165" selection-start-column="54" selection-end-line="165" selection-end-column="54" />
           <folding>
-            <element signature="e#9473#9504#0" expanded="false" />
+            <element signature="e#9501#9532#0" expanded="false" />
             <element signature="method#computeRotationPoint#0;class#MyGLSurfaceView#0" expanded="false" />
           </folding>
         </state>
@@ -3699,7 +3699,7 @@
             <element signature="e#20339#20340#0" expanded="true" />
             <element signature="e#20383#20384#0" expanded="true" />
             <element signature="e#20424#20425#0" expanded="true" />
-            <element signature="e#23809#23856#0" expanded="false" />
+            <element signature="e#23808#23855#0" expanded="false" />
             <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#screenPointToWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
@@ -3713,7 +3713,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="185" column="0" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
           <folding>
-            <element signature="e#9473#9504#0" expanded="false" />
+            <element signature="e#9501#9532#0" expanded="false" />
             <element signature="method#computeRotationPoint#0;class#MyGLSurfaceView#0" expanded="false" />
           </folding>
         </state>
@@ -3823,7 +3823,7 @@
             <element signature="e#20339#20340#0" expanded="true" />
             <element signature="e#20383#20384#0" expanded="true" />
             <element signature="e#20424#20425#0" expanded="true" />
-            <element signature="e#23809#23856#0" expanded="false" />
+            <element signature="e#23808#23855#0" expanded="false" />
             <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#screenPointToWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
@@ -3837,7 +3837,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="185" column="0" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
           <folding>
-            <element signature="e#9473#9504#0" expanded="false" />
+            <element signature="e#9501#9532#0" expanded="false" />
             <element signature="method#computeRotationPoint#0;class#MyGLSurfaceView#0" expanded="false" />
           </folding>
         </state>
@@ -3947,7 +3947,7 @@
             <element signature="e#20339#20340#0" expanded="true" />
             <element signature="e#20383#20384#0" expanded="true" />
             <element signature="e#20424#20425#0" expanded="true" />
-            <element signature="e#23809#23856#0" expanded="false" />
+            <element signature="e#23808#23855#0" expanded="false" />
             <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#screenPointToWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
@@ -3961,7 +3961,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="185" column="0" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
           <folding>
-            <element signature="e#9473#9504#0" expanded="false" />
+            <element signature="e#9501#9532#0" expanded="false" />
             <element signature="method#computeRotationPoint#0;class#MyGLSurfaceView#0" expanded="false" />
           </folding>
         </state>
@@ -4044,7 +4044,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="124" column="26" selection-start-line="124" selection-start-column="26" selection-end-line="124" selection-end-column="26" />
           <folding>
-            <element signature="e#9473#9504#0" expanded="false" />
+            <element signature="e#9501#9532#0" expanded="false" />
             <element signature="method#computeRotationPoint#0;class#MyGLSurfaceView#0" expanded="false" />
           </folding>
         </state>
@@ -4120,7 +4120,7 @@
         <state vertical-scroll-proportion="0.8559671">
           <caret line="180" column="4" selection-start-line="180" selection-start-column="4" selection-end-line="180" selection-end-column="4" />
           <folding>
-            <element signature="e#9473#9504#0" expanded="false" />
+            <element signature="e#9501#9532#0" expanded="false" />
             <element signature="method#computeRotationPoint#0;class#MyGLSurfaceView#0" expanded="false" />
           </folding>
         </state>
@@ -4364,7 +4364,7 @@
             <element signature="e#20339#20340#0" expanded="true" />
             <element signature="e#20383#20384#0" expanded="true" />
             <element signature="e#20424#20425#0" expanded="true" />
-            <element signature="e#23809#23856#0" expanded="false" />
+            <element signature="e#23808#23855#0" expanded="false" />
             <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#screenPointToWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
@@ -4375,10 +4375,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44717446">
-          <caret line="213" column="0" selection-start-line="213" selection-start-column="0" selection-end-line="213" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.33169532">
+          <caret line="212" column="0" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
           <folding>
-            <element signature="e#9473#9504#0" expanded="false" />
+            <element signature="e#9501#9532#0" expanded="false" />
             <element signature="method#computeRotationPoint#0;class#MyGLSurfaceView#0" expanded="false" />
           </folding>
         </state>
