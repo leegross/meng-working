@@ -26,7 +26,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9c2fb097-3e27-43c5-9229-9d241b4244a9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/MyGLRenderer.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/MyGLRenderer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/MyGLSurfaceView.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/MyGLSurfaceView.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug-unaligned.apk" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug.apk" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
@@ -88,20 +87,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyGLSurfaceView.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MyGLSurfaceView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44226044">
-              <caret line="209" column="21" selection-start-line="209" selection-start-column="21" selection-end-line="209" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="208" column="0" selection-start-line="208" selection-start-column="2" selection-end-line="211" selection-end-column="54" />
               <folding>
-                <element signature="e#9692#9723#0" expanded="false" />
+                <element signature="e#9704#9735#0" expanded="false" />
                 <element signature="method#computeRotationPoint#0;class#MyGLSurfaceView#0" expanded="false" />
-                <element signature="e#12939#12940#0" expanded="true" />
-                <element signature="e#12983#12984#0" expanded="true" />
-                <element signature="e#13024#13025#0" expanded="true" />
-                <element signature="e#13056#13057#0" expanded="true" />
-                <element signature="e#13274#13275#0" expanded="true" />
-                <element signature="e#13308#13309#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -112,31 +105,25 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="77" column="53" selection-start-line="77" selection-start-column="53" selection-end-line="77" selection-end-column="53" />
-              <folding>
-                <element signature="e#2361#2703#0" expanded="true" />
-                <element signature="e#2702#2703#0" expanded="true" />
-                <element signature="e#4379#4716#0" expanded="true" />
-                <element signature="e#4715#4716#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyGLRenderer.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MyGLRenderer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="735" column="70" selection-start-line="735" selection-start-column="70" selection-end-line="735" selection-end-column="70" />
+            <state vertical-scroll-proportion="0.2948403">
+              <caret line="585" column="86" selection-start-line="585" selection-start-column="86" selection-end-line="585" selection-end-column="86" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1944#1945#0" expanded="true" />
-                <element signature="e#1978#1979#0" expanded="true" />
-                <element signature="method#transformMatrix#0;class#MyGLRenderer#0" expanded="false" />
+                <element signature="method#onDrawFrame#0;class#MyGLRenderer#0" expanded="false" />
+                <element signature="method#getCameraRotationMatrix#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#moveBasedOnCameraZoom#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#scaleZoomBasedOnTwoFingerRotation#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#boundTranslationAtMaxMagnitude#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#getWorlPositionRelativeToCamera#0;class#MyGLRenderer#0" expanded="false" />
-                <element signature="method#solveFor2DZoomDisplacement#0;class#MyGLRenderer#0" expanded="false" />
+                <element signature="method#getDirectionAnglesOfPoint#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#getWorldPoint#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#projectHorizonPtOnSphereRadius#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#moveBasedOnTwoFingerRotation#0;class#MyGLRenderer#0" expanded="false" />
@@ -147,14 +134,15 @@
                 <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
-                <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-                <element signature="method#setProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
+                <element signature="e#19589#19590#0" expanded="true" />
+                <element signature="e#19627#19628#0" expanded="true" />
+                <element signature="e#19870#19871#0" expanded="true" />
+                <element signature="e#19903#19904#0" expanded="true" />
                 <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
-                <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
+                <element signature="e#20383#20384#0" expanded="true" />
+                <element signature="e#20424#20425#0" expanded="true" />
                 <element signature="method#setProjectorTranslationV#0;class#MyGLRenderer#0" expanded="false" />
-                <element signature="method#resetCameraParameters#0;class#MyGLRenderer#0" expanded="false" />
-                <element signature="method#randomname#0;class#MyGLRenderer#0" expanded="false" />
-                <element signature="e#23456#23503#0" expanded="false" />
+                <element signature="e#24001#24048#0" expanded="false" />
                 <element signature="method#updateCameraRotation#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#screenPointToWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
@@ -168,7 +156,7 @@
       <file leaf-file-name="activity_my_waypoints.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.413794">
+            <state vertical-scroll-proportion="0.0">
               <caret line="135" column="39" selection-start-line="135" selection-start-column="39" selection-end-line="135" selection-end-column="39" />
               <folding />
             </state>
@@ -184,18 +172,51 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="265" column="34" selection-start-line="265" selection-start-column="34" selection-end-line="265" selection-end-column="34" />
               <folding>
+                <element signature="imports" expanded="false" />
                 <element signature="method#initMainControllerState#0;class#DroneWrapper#0" expanded="false" />
+                <element signature="e#3895#4474#0" expanded="false" />
+                <element signature="e#4473#4474#0" expanded="false" />
                 <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
+                <element signature="e#5187#5188#0" expanded="false" />
+                <element signature="e#5221#5222#0" expanded="false" />
                 <element signature="method#takeOff#0;class#DroneWrapper#0" expanded="false" />
+                <element signature="e#5394#5713#0" expanded="false" />
+                <element signature="e#5712#5713#0" expanded="false" />
+                <element signature="e#5936#6298#0" expanded="false" />
+                <element signature="e#6297#6298#0" expanded="false" />
                 <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
+                <element signature="e#6433#6724#0" expanded="false" />
+                <element signature="e#6723#6724#0" expanded="false" />
                 <element signature="e#6734#6831#0" expanded="false" />
+                <element signature="e#11280#11610#0" expanded="false" />
+                <element signature="e#11609#11610#0" expanded="false" />
                 <element signature="method#startTask#0;class#DroneWrapper#0" expanded="false" />
+                <element signature="e#11754#12050#0" expanded="false" />
+                <element signature="e#12049#12050#0" expanded="false" />
+                <element signature="e#12275#12634#0" expanded="false" />
+                <element signature="e#12633#12634#0" expanded="false" />
+                <element signature="e#12771#13066#0" expanded="false" />
+                <element signature="e#13065#13066#0" expanded="false" />
                 <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
+                <element signature="e#13332#13602#0" expanded="false" />
+                <element signature="e#13601#13602#0" expanded="false" />
                 <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
+                <element signature="e#13804#14152#0" expanded="false" />
+                <element signature="e#14151#14152#0" expanded="false" />
                 <element signature="method#resume#0;class#DroneWrapper#0" expanded="false" />
                 <element signature="method#pause#0;class#DroneWrapper#0" expanded="false" />
                 <element signature="method#droneUpdatesAreInitialized#0;class#DroneWrapper#0" expanded="false" />
+                <element signature="e#14699#14700#0" expanded="false" />
+                <element signature="e#14737#14738#0" expanded="false" />
+                <element signature="e#14778#14779#0" expanded="false" />
+                <element signature="e#14816#14817#0" expanded="false" />
+                <element signature="e#14858#14859#0" expanded="false" />
+                <element signature="e#14897#14898#0" expanded="false" />
+                <element signature="e#14940#14941#0" expanded="false" />
+                <element signature="e#14981#14982#0" expanded="false" />
                 <element signature="method#getGimbalMinPitchAngle#0;class#DroneWrapper#0" expanded="false" />
+                <element signature="e#15257#15258#0" expanded="false" />
+                <element signature="e#15291#15292#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -2892,8 +2913,8 @@
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/util/OperationsHelper.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/TouchControllerActivity.java" />
-        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java" />
+        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java" />
       </list>
     </option>
   </component>
@@ -3348,35 +3369,35 @@
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45046234" sideWeight="0.49427754" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42536327" sideWeight="0.4914163" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45046234" sideWeight="0.50572246" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3989432" sideWeight="0.50858366" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.49713877" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3989432" sideWeight="0.50858366" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.49713877" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24177396" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42536327" sideWeight="0.4914163" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3989432" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3989432" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -3432,7 +3453,7 @@
           <option name="timeStamp" value="172" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="815" />
+      <option name="time" value="832" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -3442,14 +3463,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="165" column="54" selection-start-line="165" selection-start-column="54" selection-end-line="165" selection-end-column="54" />
           <folding>
-            <element signature="e#9692#9723#0" expanded="false" />
+            <element signature="e#9704#9735#0" expanded="false" />
             <element signature="method#computeRotationPoint#0;class#MyGLSurfaceView#0" expanded="false" />
-            <element signature="e#12939#12940#0" expanded="true" />
-            <element signature="e#12983#12984#0" expanded="true" />
-            <element signature="e#13024#13025#0" expanded="true" />
-            <element signature="e#13056#13057#0" expanded="true" />
-            <element signature="e#13274#13275#0" expanded="true" />
-            <element signature="e#13308#13309#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3470,18 +3485,51 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="133" column="0" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="method#initMainControllerState#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#3895#4474#0" expanded="false" />
+            <element signature="e#4473#4474#0" expanded="false" />
             <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#5187#5188#0" expanded="false" />
+            <element signature="e#5221#5222#0" expanded="false" />
             <element signature="method#takeOff#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#5394#5713#0" expanded="false" />
+            <element signature="e#5712#5713#0" expanded="false" />
+            <element signature="e#5936#6298#0" expanded="false" />
+            <element signature="e#6297#6298#0" expanded="false" />
             <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#6433#6724#0" expanded="false" />
+            <element signature="e#6723#6724#0" expanded="false" />
             <element signature="e#6734#6831#0" expanded="false" />
+            <element signature="e#11280#11610#0" expanded="false" />
+            <element signature="e#11609#11610#0" expanded="false" />
             <element signature="method#startTask#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#11754#12050#0" expanded="false" />
+            <element signature="e#12049#12050#0" expanded="false" />
+            <element signature="e#12275#12634#0" expanded="false" />
+            <element signature="e#12633#12634#0" expanded="false" />
+            <element signature="e#12771#13066#0" expanded="false" />
+            <element signature="e#13065#13066#0" expanded="false" />
             <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#13332#13602#0" expanded="false" />
+            <element signature="e#13601#13602#0" expanded="false" />
             <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#13804#14152#0" expanded="false" />
+            <element signature="e#14151#14152#0" expanded="false" />
             <element signature="method#resume#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#pause#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#droneUpdatesAreInitialized#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#14699#14700#0" expanded="false" />
+            <element signature="e#14737#14738#0" expanded="false" />
+            <element signature="e#14778#14779#0" expanded="false" />
+            <element signature="e#14816#14817#0" expanded="false" />
+            <element signature="e#14858#14859#0" expanded="false" />
+            <element signature="e#14897#14898#0" expanded="false" />
+            <element signature="e#14940#14941#0" expanded="false" />
+            <element signature="e#14981#14982#0" expanded="false" />
             <element signature="method#getGimbalMinPitchAngle#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#15257#15258#0" expanded="false" />
+            <element signature="e#15291#15292#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3499,14 +3547,13 @@
           <caret line="251" column="10" selection-start-line="251" selection-start-column="10" selection-end-line="251" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1944#1945#0" expanded="true" />
-            <element signature="e#1978#1979#0" expanded="true" />
-            <element signature="method#transformMatrix#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#onDrawFrame#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#getCameraRotationMatrix#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#moveBasedOnCameraZoom#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#scaleZoomBasedOnTwoFingerRotation#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#boundTranslationAtMaxMagnitude#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#getWorlPositionRelativeToCamera#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#solveFor2DZoomDisplacement#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#getDirectionAnglesOfPoint#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#getWorldPoint#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectHorizonPtOnSphereRadius#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#moveBasedOnTwoFingerRotation#0;class#MyGLRenderer#0" expanded="false" />
@@ -3517,14 +3564,15 @@
             <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#19589#19590#0" expanded="true" />
+            <element signature="e#19627#19628#0" expanded="true" />
+            <element signature="e#19870#19871#0" expanded="true" />
+            <element signature="e#19903#19904#0" expanded="true" />
             <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#20383#20384#0" expanded="true" />
+            <element signature="e#20424#20425#0" expanded="true" />
             <element signature="method#setProjectorTranslationV#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#resetCameraParameters#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#randomname#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#23456#23503#0" expanded="false" />
+            <element signature="e#24001#24048#0" expanded="false" />
             <element signature="method#updateCameraRotation#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#screenPointToWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
@@ -3539,14 +3587,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="165" column="54" selection-start-line="165" selection-start-column="54" selection-end-line="165" selection-end-column="54" />
           <folding>
-            <element signature="e#9692#9723#0" expanded="false" />
+            <element signature="e#9704#9735#0" expanded="false" />
             <element signature="method#computeRotationPoint#0;class#MyGLSurfaceView#0" expanded="false" />
-            <element signature="e#12939#12940#0" expanded="true" />
-            <element signature="e#12983#12984#0" expanded="true" />
-            <element signature="e#13024#13025#0" expanded="true" />
-            <element signature="e#13056#13057#0" expanded="true" />
-            <element signature="e#13274#13275#0" expanded="true" />
-            <element signature="e#13308#13309#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3567,18 +3609,51 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="98" column="33" selection-start-line="98" selection-start-column="33" selection-end-line="98" selection-end-column="33" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="method#initMainControllerState#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#3895#4474#0" expanded="false" />
+            <element signature="e#4473#4474#0" expanded="false" />
             <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#5187#5188#0" expanded="false" />
+            <element signature="e#5221#5222#0" expanded="false" />
             <element signature="method#takeOff#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#5394#5713#0" expanded="false" />
+            <element signature="e#5712#5713#0" expanded="false" />
+            <element signature="e#5936#6298#0" expanded="false" />
+            <element signature="e#6297#6298#0" expanded="false" />
             <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#6433#6724#0" expanded="false" />
+            <element signature="e#6723#6724#0" expanded="false" />
             <element signature="e#6734#6831#0" expanded="false" />
+            <element signature="e#11280#11610#0" expanded="false" />
+            <element signature="e#11609#11610#0" expanded="false" />
             <element signature="method#startTask#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#11754#12050#0" expanded="false" />
+            <element signature="e#12049#12050#0" expanded="false" />
+            <element signature="e#12275#12634#0" expanded="false" />
+            <element signature="e#12633#12634#0" expanded="false" />
+            <element signature="e#12771#13066#0" expanded="false" />
+            <element signature="e#13065#13066#0" expanded="false" />
             <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#13332#13602#0" expanded="false" />
+            <element signature="e#13601#13602#0" expanded="false" />
             <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#13804#14152#0" expanded="false" />
+            <element signature="e#14151#14152#0" expanded="false" />
             <element signature="method#resume#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#pause#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#droneUpdatesAreInitialized#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#14699#14700#0" expanded="false" />
+            <element signature="e#14737#14738#0" expanded="false" />
+            <element signature="e#14778#14779#0" expanded="false" />
+            <element signature="e#14816#14817#0" expanded="false" />
+            <element signature="e#14858#14859#0" expanded="false" />
+            <element signature="e#14897#14898#0" expanded="false" />
+            <element signature="e#14940#14941#0" expanded="false" />
+            <element signature="e#14981#14982#0" expanded="false" />
             <element signature="method#getGimbalMinPitchAngle#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#15257#15258#0" expanded="false" />
+            <element signature="e#15291#15292#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3596,14 +3671,13 @@
           <caret line="255" column="0" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1944#1945#0" expanded="true" />
-            <element signature="e#1978#1979#0" expanded="true" />
-            <element signature="method#transformMatrix#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#onDrawFrame#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#getCameraRotationMatrix#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#moveBasedOnCameraZoom#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#scaleZoomBasedOnTwoFingerRotation#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#boundTranslationAtMaxMagnitude#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#getWorlPositionRelativeToCamera#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#solveFor2DZoomDisplacement#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#getDirectionAnglesOfPoint#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#getWorldPoint#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectHorizonPtOnSphereRadius#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#moveBasedOnTwoFingerRotation#0;class#MyGLRenderer#0" expanded="false" />
@@ -3614,14 +3688,15 @@
             <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#19589#19590#0" expanded="true" />
+            <element signature="e#19627#19628#0" expanded="true" />
+            <element signature="e#19870#19871#0" expanded="true" />
+            <element signature="e#19903#19904#0" expanded="true" />
             <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#20383#20384#0" expanded="true" />
+            <element signature="e#20424#20425#0" expanded="true" />
             <element signature="method#setProjectorTranslationV#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#resetCameraParameters#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#randomname#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#23456#23503#0" expanded="false" />
+            <element signature="e#24001#24048#0" expanded="false" />
             <element signature="method#updateCameraRotation#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#screenPointToWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
@@ -3636,14 +3711,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="185" column="0" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
           <folding>
-            <element signature="e#9692#9723#0" expanded="false" />
+            <element signature="e#9704#9735#0" expanded="false" />
             <element signature="method#computeRotationPoint#0;class#MyGLSurfaceView#0" expanded="false" />
-            <element signature="e#12939#12940#0" expanded="true" />
-            <element signature="e#12983#12984#0" expanded="true" />
-            <element signature="e#13024#13025#0" expanded="true" />
-            <element signature="e#13056#13057#0" expanded="true" />
-            <element signature="e#13274#13275#0" expanded="true" />
-            <element signature="e#13308#13309#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3664,18 +3733,51 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="93" column="21" selection-start-line="93" selection-start-column="21" selection-end-line="93" selection-end-column="21" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="method#initMainControllerState#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#3895#4474#0" expanded="false" />
+            <element signature="e#4473#4474#0" expanded="false" />
             <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#5187#5188#0" expanded="false" />
+            <element signature="e#5221#5222#0" expanded="false" />
             <element signature="method#takeOff#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#5394#5713#0" expanded="false" />
+            <element signature="e#5712#5713#0" expanded="false" />
+            <element signature="e#5936#6298#0" expanded="false" />
+            <element signature="e#6297#6298#0" expanded="false" />
             <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#6433#6724#0" expanded="false" />
+            <element signature="e#6723#6724#0" expanded="false" />
             <element signature="e#6734#6831#0" expanded="false" />
+            <element signature="e#11280#11610#0" expanded="false" />
+            <element signature="e#11609#11610#0" expanded="false" />
             <element signature="method#startTask#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#11754#12050#0" expanded="false" />
+            <element signature="e#12049#12050#0" expanded="false" />
+            <element signature="e#12275#12634#0" expanded="false" />
+            <element signature="e#12633#12634#0" expanded="false" />
+            <element signature="e#12771#13066#0" expanded="false" />
+            <element signature="e#13065#13066#0" expanded="false" />
             <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#13332#13602#0" expanded="false" />
+            <element signature="e#13601#13602#0" expanded="false" />
             <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#13804#14152#0" expanded="false" />
+            <element signature="e#14151#14152#0" expanded="false" />
             <element signature="method#resume#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#pause#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#droneUpdatesAreInitialized#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#14699#14700#0" expanded="false" />
+            <element signature="e#14737#14738#0" expanded="false" />
+            <element signature="e#14778#14779#0" expanded="false" />
+            <element signature="e#14816#14817#0" expanded="false" />
+            <element signature="e#14858#14859#0" expanded="false" />
+            <element signature="e#14897#14898#0" expanded="false" />
+            <element signature="e#14940#14941#0" expanded="false" />
+            <element signature="e#14981#14982#0" expanded="false" />
             <element signature="method#getGimbalMinPitchAngle#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#15257#15258#0" expanded="false" />
+            <element signature="e#15291#15292#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3693,14 +3795,13 @@
           <caret line="255" column="0" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1944#1945#0" expanded="true" />
-            <element signature="e#1978#1979#0" expanded="true" />
-            <element signature="method#transformMatrix#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#onDrawFrame#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#getCameraRotationMatrix#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#moveBasedOnCameraZoom#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#scaleZoomBasedOnTwoFingerRotation#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#boundTranslationAtMaxMagnitude#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#getWorlPositionRelativeToCamera#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#solveFor2DZoomDisplacement#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#getDirectionAnglesOfPoint#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#getWorldPoint#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectHorizonPtOnSphereRadius#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#moveBasedOnTwoFingerRotation#0;class#MyGLRenderer#0" expanded="false" />
@@ -3711,14 +3812,15 @@
             <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#19589#19590#0" expanded="true" />
+            <element signature="e#19627#19628#0" expanded="true" />
+            <element signature="e#19870#19871#0" expanded="true" />
+            <element signature="e#19903#19904#0" expanded="true" />
             <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#20383#20384#0" expanded="true" />
+            <element signature="e#20424#20425#0" expanded="true" />
             <element signature="method#setProjectorTranslationV#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#resetCameraParameters#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#randomname#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#23456#23503#0" expanded="false" />
+            <element signature="e#24001#24048#0" expanded="false" />
             <element signature="method#updateCameraRotation#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#screenPointToWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
@@ -3733,14 +3835,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="185" column="0" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
           <folding>
-            <element signature="e#9692#9723#0" expanded="false" />
+            <element signature="e#9704#9735#0" expanded="false" />
             <element signature="method#computeRotationPoint#0;class#MyGLSurfaceView#0" expanded="false" />
-            <element signature="e#12939#12940#0" expanded="true" />
-            <element signature="e#12983#12984#0" expanded="true" />
-            <element signature="e#13024#13025#0" expanded="true" />
-            <element signature="e#13056#13057#0" expanded="true" />
-            <element signature="e#13274#13275#0" expanded="true" />
-            <element signature="e#13308#13309#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3761,18 +3857,51 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="93" column="21" selection-start-line="93" selection-start-column="21" selection-end-line="93" selection-end-column="21" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="method#initMainControllerState#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#3895#4474#0" expanded="false" />
+            <element signature="e#4473#4474#0" expanded="false" />
             <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#5187#5188#0" expanded="false" />
+            <element signature="e#5221#5222#0" expanded="false" />
             <element signature="method#takeOff#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#5394#5713#0" expanded="false" />
+            <element signature="e#5712#5713#0" expanded="false" />
+            <element signature="e#5936#6298#0" expanded="false" />
+            <element signature="e#6297#6298#0" expanded="false" />
             <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#6433#6724#0" expanded="false" />
+            <element signature="e#6723#6724#0" expanded="false" />
             <element signature="e#6734#6831#0" expanded="false" />
+            <element signature="e#11280#11610#0" expanded="false" />
+            <element signature="e#11609#11610#0" expanded="false" />
             <element signature="method#startTask#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#11754#12050#0" expanded="false" />
+            <element signature="e#12049#12050#0" expanded="false" />
+            <element signature="e#12275#12634#0" expanded="false" />
+            <element signature="e#12633#12634#0" expanded="false" />
+            <element signature="e#12771#13066#0" expanded="false" />
+            <element signature="e#13065#13066#0" expanded="false" />
             <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#13332#13602#0" expanded="false" />
+            <element signature="e#13601#13602#0" expanded="false" />
             <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#13804#14152#0" expanded="false" />
+            <element signature="e#14151#14152#0" expanded="false" />
             <element signature="method#resume#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#pause#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#droneUpdatesAreInitialized#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#14699#14700#0" expanded="false" />
+            <element signature="e#14737#14738#0" expanded="false" />
+            <element signature="e#14778#14779#0" expanded="false" />
+            <element signature="e#14816#14817#0" expanded="false" />
+            <element signature="e#14858#14859#0" expanded="false" />
+            <element signature="e#14897#14898#0" expanded="false" />
+            <element signature="e#14940#14941#0" expanded="false" />
+            <element signature="e#14981#14982#0" expanded="false" />
             <element signature="method#getGimbalMinPitchAngle#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#15257#15258#0" expanded="false" />
+            <element signature="e#15291#15292#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3790,14 +3919,13 @@
           <caret line="255" column="0" selection-start-line="255" selection-start-column="0" selection-end-line="255" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1944#1945#0" expanded="true" />
-            <element signature="e#1978#1979#0" expanded="true" />
-            <element signature="method#transformMatrix#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#onDrawFrame#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#getCameraRotationMatrix#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#moveBasedOnCameraZoom#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#scaleZoomBasedOnTwoFingerRotation#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#boundTranslationAtMaxMagnitude#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#getWorlPositionRelativeToCamera#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#solveFor2DZoomDisplacement#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#getDirectionAnglesOfPoint#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#getWorldPoint#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectHorizonPtOnSphereRadius#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#moveBasedOnTwoFingerRotation#0;class#MyGLRenderer#0" expanded="false" />
@@ -3808,14 +3936,15 @@
             <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#19589#19590#0" expanded="true" />
+            <element signature="e#19627#19628#0" expanded="true" />
+            <element signature="e#19870#19871#0" expanded="true" />
+            <element signature="e#19903#19904#0" expanded="true" />
             <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#20383#20384#0" expanded="true" />
+            <element signature="e#20424#20425#0" expanded="true" />
             <element signature="method#setProjectorTranslationV#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#resetCameraParameters#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#randomname#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#23456#23503#0" expanded="false" />
+            <element signature="e#24001#24048#0" expanded="false" />
             <element signature="method#updateCameraRotation#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#screenPointToWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
@@ -3830,14 +3959,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="185" column="0" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
           <folding>
-            <element signature="e#9692#9723#0" expanded="false" />
+            <element signature="e#9704#9735#0" expanded="false" />
             <element signature="method#computeRotationPoint#0;class#MyGLSurfaceView#0" expanded="false" />
-            <element signature="e#12939#12940#0" expanded="true" />
-            <element signature="e#12983#12984#0" expanded="true" />
-            <element signature="e#13024#13025#0" expanded="true" />
-            <element signature="e#13056#13057#0" expanded="true" />
-            <element signature="e#13274#13275#0" expanded="true" />
-            <element signature="e#13308#13309#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3858,18 +3981,51 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="160" column="0" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="method#initMainControllerState#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#3895#4474#0" expanded="false" />
+            <element signature="e#4473#4474#0" expanded="false" />
             <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#5187#5188#0" expanded="false" />
+            <element signature="e#5221#5222#0" expanded="false" />
             <element signature="method#takeOff#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#5394#5713#0" expanded="false" />
+            <element signature="e#5712#5713#0" expanded="false" />
+            <element signature="e#5936#6298#0" expanded="false" />
+            <element signature="e#6297#6298#0" expanded="false" />
             <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#6433#6724#0" expanded="false" />
+            <element signature="e#6723#6724#0" expanded="false" />
             <element signature="e#6734#6831#0" expanded="false" />
+            <element signature="e#11280#11610#0" expanded="false" />
+            <element signature="e#11609#11610#0" expanded="false" />
             <element signature="method#startTask#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#11754#12050#0" expanded="false" />
+            <element signature="e#12049#12050#0" expanded="false" />
+            <element signature="e#12275#12634#0" expanded="false" />
+            <element signature="e#12633#12634#0" expanded="false" />
+            <element signature="e#12771#13066#0" expanded="false" />
+            <element signature="e#13065#13066#0" expanded="false" />
             <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#13332#13602#0" expanded="false" />
+            <element signature="e#13601#13602#0" expanded="false" />
             <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#13804#14152#0" expanded="false" />
+            <element signature="e#14151#14152#0" expanded="false" />
             <element signature="method#resume#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#pause#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#droneUpdatesAreInitialized#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#14699#14700#0" expanded="false" />
+            <element signature="e#14737#14738#0" expanded="false" />
+            <element signature="e#14778#14779#0" expanded="false" />
+            <element signature="e#14816#14817#0" expanded="false" />
+            <element signature="e#14858#14859#0" expanded="false" />
+            <element signature="e#14897#14898#0" expanded="false" />
+            <element signature="e#14940#14941#0" expanded="false" />
+            <element signature="e#14981#14982#0" expanded="false" />
             <element signature="method#getGimbalMinPitchAngle#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#15257#15258#0" expanded="false" />
+            <element signature="e#15291#15292#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3886,14 +4042,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="124" column="26" selection-start-line="124" selection-start-column="26" selection-end-line="124" selection-end-column="26" />
           <folding>
-            <element signature="e#9692#9723#0" expanded="false" />
+            <element signature="e#9704#9735#0" expanded="false" />
             <element signature="method#computeRotationPoint#0;class#MyGLSurfaceView#0" expanded="false" />
-            <element signature="e#12939#12940#0" expanded="true" />
-            <element signature="e#12983#12984#0" expanded="true" />
-            <element signature="e#13024#13025#0" expanded="true" />
-            <element signature="e#13056#13057#0" expanded="true" />
-            <element signature="e#13274#13275#0" expanded="true" />
-            <element signature="e#13308#13309#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3914,18 +4064,51 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="59" selection-end-column="9" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="method#initMainControllerState#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#3895#4474#0" expanded="false" />
+            <element signature="e#4473#4474#0" expanded="false" />
             <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#5187#5188#0" expanded="false" />
+            <element signature="e#5221#5222#0" expanded="false" />
             <element signature="method#takeOff#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#5394#5713#0" expanded="false" />
+            <element signature="e#5712#5713#0" expanded="false" />
+            <element signature="e#5936#6298#0" expanded="false" />
+            <element signature="e#6297#6298#0" expanded="false" />
             <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#6433#6724#0" expanded="false" />
+            <element signature="e#6723#6724#0" expanded="false" />
             <element signature="e#6734#6831#0" expanded="false" />
+            <element signature="e#11280#11610#0" expanded="false" />
+            <element signature="e#11609#11610#0" expanded="false" />
             <element signature="method#startTask#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#11754#12050#0" expanded="false" />
+            <element signature="e#12049#12050#0" expanded="false" />
+            <element signature="e#12275#12634#0" expanded="false" />
+            <element signature="e#12633#12634#0" expanded="false" />
+            <element signature="e#12771#13066#0" expanded="false" />
+            <element signature="e#13065#13066#0" expanded="false" />
             <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#13332#13602#0" expanded="false" />
+            <element signature="e#13601#13602#0" expanded="false" />
             <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#13804#14152#0" expanded="false" />
+            <element signature="e#14151#14152#0" expanded="false" />
             <element signature="method#resume#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#pause#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#droneUpdatesAreInitialized#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#14699#14700#0" expanded="false" />
+            <element signature="e#14737#14738#0" expanded="false" />
+            <element signature="e#14778#14779#0" expanded="false" />
+            <element signature="e#14816#14817#0" expanded="false" />
+            <element signature="e#14858#14859#0" expanded="false" />
+            <element signature="e#14897#14898#0" expanded="false" />
+            <element signature="e#14940#14941#0" expanded="false" />
+            <element signature="e#14981#14982#0" expanded="false" />
             <element signature="method#getGimbalMinPitchAngle#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#15257#15258#0" expanded="false" />
+            <element signature="e#15291#15292#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3935,14 +4118,8 @@
         <state vertical-scroll-proportion="0.8559671">
           <caret line="180" column="4" selection-start-line="180" selection-start-column="4" selection-end-line="180" selection-end-column="4" />
           <folding>
-            <element signature="e#9692#9723#0" expanded="false" />
+            <element signature="e#9704#9735#0" expanded="false" />
             <element signature="method#computeRotationPoint#0;class#MyGLSurfaceView#0" expanded="false" />
-            <element signature="e#12939#12940#0" expanded="true" />
-            <element signature="e#12983#12984#0" expanded="true" />
-            <element signature="e#13024#13025#0" expanded="true" />
-            <element signature="e#13056#13057#0" expanded="true" />
-            <element signature="e#13274#13275#0" expanded="true" />
-            <element signature="e#13308#13309#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3973,15 +4150,8 @@
         <state vertical-scroll-proportion="0.59375">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Library/Android/sdk/platforms/android-17/android.jar!/android/view/ViewGroup.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -4022,7 +4192,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4038,18 +4207,51 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="265" column="34" selection-start-line="265" selection-start-column="34" selection-end-line="265" selection-end-column="34" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="method#initMainControllerState#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#3895#4474#0" expanded="false" />
+            <element signature="e#4473#4474#0" expanded="false" />
             <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#5187#5188#0" expanded="false" />
+            <element signature="e#5221#5222#0" expanded="false" />
             <element signature="method#takeOff#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#5394#5713#0" expanded="false" />
+            <element signature="e#5712#5713#0" expanded="false" />
+            <element signature="e#5936#6298#0" expanded="false" />
+            <element signature="e#6297#6298#0" expanded="false" />
             <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#6433#6724#0" expanded="false" />
+            <element signature="e#6723#6724#0" expanded="false" />
             <element signature="e#6734#6831#0" expanded="false" />
+            <element signature="e#11280#11610#0" expanded="false" />
+            <element signature="e#11609#11610#0" expanded="false" />
             <element signature="method#startTask#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#11754#12050#0" expanded="false" />
+            <element signature="e#12049#12050#0" expanded="false" />
+            <element signature="e#12275#12634#0" expanded="false" />
+            <element signature="e#12633#12634#0" expanded="false" />
+            <element signature="e#12771#13066#0" expanded="false" />
+            <element signature="e#13065#13066#0" expanded="false" />
             <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#13332#13602#0" expanded="false" />
+            <element signature="e#13601#13602#0" expanded="false" />
             <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#13804#14152#0" expanded="false" />
+            <element signature="e#14151#14152#0" expanded="false" />
             <element signature="method#resume#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#pause#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#droneUpdatesAreInitialized#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#14699#14700#0" expanded="false" />
+            <element signature="e#14737#14738#0" expanded="false" />
+            <element signature="e#14778#14779#0" expanded="false" />
+            <element signature="e#14816#14817#0" expanded="false" />
+            <element signature="e#14858#14859#0" expanded="false" />
+            <element signature="e#14897#14898#0" expanded="false" />
+            <element signature="e#14940#14941#0" expanded="false" />
+            <element signature="e#14981#14982#0" expanded="false" />
             <element signature="method#getGimbalMinPitchAngle#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="e#15257#15258#0" expanded="false" />
+            <element signature="e#15291#15292#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -4066,7 +4268,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38069704">
           <caret line="76" column="22" selection-start-line="76" selection-start-column="22" selection-end-line="76" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4074,7 +4275,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4082,17 +4282,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.2706186">
           <caret line="72" column="5" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3178#3179#0" expanded="true" />
-            <element signature="e#3216#3217#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.413794">
+        <state vertical-scroll-proportion="0.0">
           <caret line="135" column="39" selection-start-line="135" selection-start-column="39" selection-end-line="135" selection-end-column="39" />
           <folding />
         </state>
@@ -4115,37 +4310,50 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="77" column="53" selection-start-line="77" selection-start-column="53" selection-end-line="77" selection-end-column="53" />
-          <folding>
-            <element signature="e#2361#2703#0" expanded="true" />
-            <element signature="e#2702#2703#0" expanded="true" />
-            <element signature="e#4379#4716#0" expanded="true" />
-            <element signature="e#4715#4716#0" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Library/Android/sdk/platforms/android-17/android.jar!/android/view/ViewGroup.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/Library/Android/sdk/platforms/android-17/android.jar!/android/view/View.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.5">
+        <state vertical-scroll-proportion="0.0">
           <caret line="408" column="19" selection-start-line="408" selection-start-column="19" selection-end-line="408" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java">
+    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="735" column="70" selection-start-line="735" selection-start-column="70" selection-end-line="735" selection-end-column="70" />
+          <caret line="208" column="0" selection-start-line="208" selection-start-column="2" selection-end-line="211" selection-end-column="54" />
+          <folding>
+            <element signature="e#9704#9735#0" expanded="false" />
+            <element signature="method#computeRotationPoint#0;class#MyGLSurfaceView#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2948403">
+          <caret line="585" column="86" selection-start-line="585" selection-start-column="86" selection-end-line="585" selection-end-column="86" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1944#1945#0" expanded="true" />
-            <element signature="e#1978#1979#0" expanded="true" />
-            <element signature="method#transformMatrix#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#onDrawFrame#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#getCameraRotationMatrix#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#moveBasedOnCameraZoom#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#scaleZoomBasedOnTwoFingerRotation#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#boundTranslationAtMaxMagnitude#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#getWorlPositionRelativeToCamera#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#solveFor2DZoomDisplacement#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#getDirectionAnglesOfPoint#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#getWorldPoint#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectHorizonPtOnSphereRadius#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#moveBasedOnTwoFingerRotation#0;class#MyGLRenderer#0" expanded="false" />
@@ -4156,36 +4364,20 @@
             <element signature="method#passPendingBoundsCheck#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#clipTranslationVector#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#onSurfaceChanged#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#loadShader#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setProjectorRotationAngles#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#19589#19590#0" expanded="true" />
+            <element signature="e#19627#19628#0" expanded="true" />
+            <element signature="e#19870#19871#0" expanded="true" />
+            <element signature="e#19903#19904#0" expanded="true" />
             <element signature="method#setInitialCameraTheta#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#setInitialCameraPhi#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#20383#20384#0" expanded="true" />
+            <element signature="e#20424#20425#0" expanded="true" />
             <element signature="method#setProjectorTranslationV#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#resetCameraParameters#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#randomname#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#23456#23503#0" expanded="false" />
+            <element signature="e#24001#24048#0" expanded="false" />
             <element signature="method#updateCameraRotation#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#screenPointToWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#projectorInfoToString#0;class#MyGLRenderer#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44226044">
-          <caret line="209" column="21" selection-start-line="209" selection-start-column="21" selection-end-line="209" selection-end-column="21" />
-          <folding>
-            <element signature="e#9692#9723#0" expanded="false" />
-            <element signature="method#computeRotationPoint#0;class#MyGLSurfaceView#0" expanded="false" />
-            <element signature="e#12939#12940#0" expanded="true" />
-            <element signature="e#12983#12984#0" expanded="true" />
-            <element signature="e#13024#13025#0" expanded="true" />
-            <element signature="e#13056#13057#0" expanded="true" />
-            <element signature="e#13274#13275#0" expanded="true" />
-            <element signature="e#13308#13309#0" expanded="true" />
           </folding>
         </state>
       </provider>

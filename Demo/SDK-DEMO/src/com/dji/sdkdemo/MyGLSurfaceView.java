@@ -206,10 +206,10 @@ class MyGLSurfaceView extends GLSurfaceView {
                     gestStartPhi = mRenderer.getPhiCamera();
                     break;
                 case MotionEvent.ACTION_MOVE:
-//                    gestStartX = 0;
-//                    gestStartY = GL_SURFACE_HEIGHT;
+//                    gestStartX = SURFACE__HORIZONTAL_CENTER;
+//                    gestStartY = 0;
 //                    x = SURFACE__HORIZONTAL_CENTER;
-//                    y =  SURFACE_VERTICAL_CENTER;
+//                    y =  7/8.0f * GL_SURFACE_HEIGHT;
 //                    mRenderer.updateCameraRotation(prevX, prevY, x, y, gestStartY, gestStartTheta);
                     mRenderer.updateCameraRotation1(gestStartX, gestStartY, x, y, gestStartTheta, gestStartPhi);
 //                    mRenderer.updateCameraRotation1(prevX, prevY, x, y, mRenderer.getThetaCamera(), mRenderer.getPhiCamera());

@@ -531,8 +531,6 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     }
 
     public void updateCameraRotation1(float p1x, float p1y, float p2x, float p2y, float start_theta, float start_phi){
-//        float[] p1 = screenPointToWorldDirection(p1x, p1y, start_theta, start_phi);
-//        float[] p1 = screenPointToRelativeDirection(p1x, p1y);
         float[] p1 = screenPointToWorldDirectionForRotation(p1x, p1y, start_theta, start_phi);
         float[] p2 = screenPointToWorldDirectionForRotation(p2x, p2y, start_theta, start_phi);
 
@@ -544,8 +542,10 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         p1 = new float[]{p1[0], p1[1], p1[2], 1};
         p2 = new float[]{p2[0], p2[1], p2[2], 1};
 
-        float error1 = rotateP1ToP2AndFindError(p1, p2, 50, -34);
-        float error2 = rotateP1ToP2AndFindError(p1, p2, 41, -44);
+        float error1 = rotateP1ToP2AndFindError(p1, p2, -180, 0);
+        float error2 = rotateP1ToP2AndFindError(p1, p2, 0, -46);
+        float error3 = rotateP1ToP2AndFindError(p1, p2, 0, -40);
+
 
         float min_error = 10000000;
         float best_phi = 0;
@@ -553,37 +553,49 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
         float[] new_best_params;
 
-        new_best_params = randomname(0, -90, 20, -180, 180, 20, p1, p2, best_phi, best_theta, min_error);
+        float phi_guess = camera_phi - start_phi;
+        float theta_guess = start_theta - camera_theta;
+        new_best_params = findBestAnglesAtGranularity(theta_guess + 15, theta_guess - 15, phi_guess - 15, phi_guess + 15, 5, p1, p2, best_phi, best_theta, min_error, start_theta);
         min_error = new_best_params[0];
         best_phi = new_best_params[1];
         best_theta = new_best_params[2];
 
-        new_best_params = randomname(best_theta + 20, best_theta - 20, 5f, best_phi - 20, best_phi + 20, 5f, p1, p2, best_phi, best_theta, min_error);
+        new_best_params = findBestAnglesAtGranularity(0, -90, -180, 180, 20, p1, p2, best_phi, best_theta, min_error, start_theta);
         min_error = new_best_params[0];
         best_phi = new_best_params[1];
         best_theta = new_best_params[2];
 
-        new_best_params = randomname(best_theta + 5f, best_theta - 5f, 1f, best_phi - 5f, best_phi + 5f, 1f, p1, p2, best_phi, best_theta, min_error);
+        new_best_params = findBestAnglesAtGranularity(best_theta + 20, best_theta - 20, best_phi - 20, best_phi + 20, 5f, p1, p2, best_phi, best_theta, min_error, start_theta);
         min_error = new_best_params[0];
         best_phi = new_best_params[1];
         best_theta = new_best_params[2];
 
-        new_best_params = randomname(best_theta + 1f, best_theta - 1f, .1f, best_phi - 1f, best_phi + 1f, .1f, p1, p2, best_phi, best_theta, min_error);
+        new_best_params = findBestAnglesAtGranularity(best_theta + 5f, best_theta - 5f, best_phi - 5f, best_phi + 5f, 1f, p1, p2, best_phi, best_theta, min_error, start_theta);
         min_error = new_best_params[0];
         best_phi = new_best_params[1];
         best_theta = new_best_params[2];
 
-        camera_phi = start_phi + best_phi;
-        camera_theta = min(0, max(start_theta - best_theta, -89.999f));
-//        camera_phi = best_phi;
-//        camera_theta = min(0, max(best_theta, -89.999f));
+        new_best_params = findBestAnglesAtGranularity(best_theta + 1f, best_theta - 1f, best_phi - 1f, best_phi + 1f, .1f, p1, p2, best_phi, best_theta, min_error, start_theta);
+        min_error = new_best_params[0];
+        best_phi = new_best_params[1];
+        best_theta = new_best_params[2];
+
+        float new_phi = start_phi + best_phi;
+        float new_theta = min(0, max(start_theta - best_theta, -89.999f));
+
+        if (sqrt(pow(new_phi - camera_phi, 2) + pow(new_theta - camera_theta, 2)) > 20){
+            return;
+        }
+
+        camera_phi = new_phi;
+        camera_theta = new_theta;
 
     }
 
-    private float[] randomname(float theta_max, float theta_min, float theta_inc, float phi_min, float phi_max, float phi_inc, float[] p1, float[] p2, float best_phi, float best_theta, float min_error){
+    private float[] findBestAnglesAtGranularity(float theta_max, float theta_min, float phi_min, float phi_max, float increment, float[] p1, float[] p2, float best_phi, float best_theta, float min_error, float start_theta){
 
-        for (float theta = theta_max; theta > theta_min; theta -= theta_inc){
-            for (float phi = phi_min; phi < phi_max; phi += phi_inc){
+        for (float theta = theta_max; theta > theta_min; theta -= increment){
+            for (float phi = phi_min; phi < phi_max; phi += increment){
                 float error = rotateP1ToP2AndFindError(p1, p2, phi, theta);
 
 //                // if the difference is small
