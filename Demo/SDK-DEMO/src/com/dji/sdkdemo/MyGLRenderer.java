@@ -70,9 +70,9 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         mSurfaceTexture = new SurfaceTexture(mHemisphere.getTextureHandle());
 
         camera_theta = -45;//-89.999f;
-        camera_phi = 0;
+        camera_phi = 0;//180;
         projector_theta = -45;//-89.999f;
-        projector_phi = 0;
+        projector_phi = 0;//180;
         camera_theta_initialized = false;
         camera_phi_initialized = false;
 
@@ -137,7 +137,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         float[] dispV = new float[]{-disp_xz[0], -disp_yz[0], disp_z, 1};
 
         dispV = boundTranslationAtMaxMagnitude(dispV, .03f);
-        dispV = scaleZoomBasedOnTwoFingerRotation(dispV, avg_two_finger_rotation_angle);
+//        dispV = scaleZoomBasedOnTwoFingerRotation(dispV, avg_two_finger_rotation_angle);
 
         float[] cameraRotationM = getCameraRotationMatrix(camera_theta, camera_phi);
         float[] translateV = multiplyMV(cameraRotationM, dispV);
@@ -575,6 +575,9 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         best_phi = new_best_params[1];
         best_theta = new_best_params[2];
 
+        if (p1[2] > 0){
+            best_theta = -best_theta;
+        }
         float new_phi = start_phi + best_phi;
         float new_theta = min(0, max(start_theta - best_theta, -89.999f));
 

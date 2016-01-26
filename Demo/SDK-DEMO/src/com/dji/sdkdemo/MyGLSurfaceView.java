@@ -6,6 +6,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 
+import static com.dji.sdkdemo.Constants.*;
 import static java.lang.Math.cos;
 import static java.lang.Math.pow;
 import static java.lang.Math.sin;
@@ -104,20 +105,24 @@ class MyGLSurfaceView extends GLSurfaceView {
 
                     Log.d("move_avg", "" + (int) (prevMoveAvg * 10) + ", move " + move + ", rotation " + abs(rotation_angle * 10) + ", combined " + (int) (prevMoveAvg * abs(rotation_angle * 10.0f) * 10));
 
-                    if (prevMoveAvg * 10 < 28){
+//                    if (prevMoveAvg * 10 < 28){
                         if (dragAtConstAlt){
-                        mRenderer.moveBasedOnTwoFingerDragAtConstAlt(prevX1, prevY1, p1x, p1y);
+                            mRenderer.moveBasedOnTwoFingerDragAtConstAlt((prevX1 + prevX2)/2.0f, (prevY1 + prevY2)/2.0f, (p1x+p2x)/2.0f, (p1y+p2y)/2.0f);
                         } else {
-                        mRenderer.moveBasedOnTwoFingerDrag(prevX1, prevY1, p1x, p1y);
+                            mRenderer.moveBasedOnTwoFingerDrag((prevX1 + prevX2)/2.0f, (prevY1 + prevY2)/2.0f, (p1x+p2x)/2.0f, (p1y+p2y)/2.0f);
                         }
-                        break;
-                    }
-
+//                        break;
+//                    }
 
                     float[] rotationPt = computeRotationPoint(p1x, p1y, p2x, p2y);
                     float rx = rotationPt[0];
                     float ry = rotationPt[1];
-                    mRenderer.moveBasedOnTwoFingerRotation(rx, ry, rotation_angle);
+
+                    float finger_dist = (float) sqrt(pow(p1x-p2x, 2) + pow(p1y - p2y, 2));
+                    Log.d("finger_dist", "" + finger_dist);
+                    if (finger_dist > 220) {
+//                        mRenderer.moveBasedOnTwoFingerRotation(rx, ry, rotation_angle);
+                    }
 
                     twoFingerRotationAvg = twoFingerRotationAvg * .97f + rotation_angle * .03f;
 
@@ -142,6 +147,14 @@ class MyGLSurfaceView extends GLSurfaceView {
                         float new_prev_p2x = (float) (new_prev_p1x + mag_prev * cos(toRadians(angle_current)));
                         float new_prev_p2y = (float) (new_prev_p1y + mag_prev * sin(toRadians(angle_current)));
 
+                        // slide by avg translation
+                        float slide_x = ((p2x - new_prev_p2x) + (p1x - new_prev_p1x))/2.0f;
+                        float slide_y = ((p2y - new_prev_p2y) + (p1y - new_prev_p1y))/2.0f;
+                        new_prev_p1x += slide_x;
+                        new_prev_p1y += slide_y;
+                        new_prev_p2x += slide_x;
+                        new_prev_p2y += slide_y;
+
                         mRenderer.moveBasedOnCameraZoom(p1x, p1y, p2x, p2y, new_prev_p1x, new_prev_p1y, new_prev_p2x, new_prev_p2y, twoFingerRotationAvg);
                     } else {
                         float mag_prev = (float) (sqrt(pow(prevX2 - prevX1, 2) + pow(prevY2 - prevY1, 2)));
@@ -161,6 +174,14 @@ class MyGLSurfaceView extends GLSurfaceView {
                         }
                         float new_prev_p1x = (float) (new_prev_p2x - mag_prev * cos(toRadians(angle_current)));
                         float new_prev_p1y = (float) (new_prev_p2y - mag_prev * sin(toRadians(angle_current)));
+
+                        // slide by avg translation
+                        float slide_x = ((p2x - new_prev_p2x) + (p1x - new_prev_p1x))/2.0f;
+                        float slide_y = ((p2y - new_prev_p2y) + (p1y - new_prev_p1y))/2.0f;
+                        new_prev_p1x += slide_x;
+                        new_prev_p1y += slide_y;
+                        new_prev_p2x += slide_x;
+                        new_prev_p2y += slide_y;
 
                         mRenderer.moveBasedOnCameraZoom(p1x, p1y, p2x, p2y, new_prev_p1x, new_prev_p1y, new_prev_p2x, new_prev_p2y, twoFingerRotationAvg);
                     }
@@ -206,9 +227,9 @@ class MyGLSurfaceView extends GLSurfaceView {
                     break;
                 case MotionEvent.ACTION_MOVE:
 //                    gestStartX = SURFACE__HORIZONTAL_CENTER;
-//                    gestStartY = 0;
+//                    gestStartY = SURFACE_VERTICAL_CENTER;
 //                    x = SURFACE__HORIZONTAL_CENTER;
-//                    y =  7/8.0f * GL_SURFACE_HEIGHT;
+//                    y =  0;
                     if (isTwoFingerGesture) break;
                     mRenderer.updateCameraRotation(gestStartX, gestStartY, x, y, gestStartTheta, gestStartPhi);
 
