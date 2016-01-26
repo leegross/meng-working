@@ -14,6 +14,8 @@ import static java.lang.Math.toDegrees;
 import static java.lang.Math.toRadians;
 import static java.lang.StrictMath.abs;
 import static java.lang.StrictMath.atan2;
+import static java.lang.StrictMath.max;
+import static java.lang.StrictMath.min;
 import static java.lang.StrictMath.sqrt;
 
 /**
@@ -45,11 +47,11 @@ class MyGLSurfaceView extends GLSurfaceView {
     private float prevX2;
     private float prevY2;
 
-    private float prevMoveAvg;
-
-    private float twoFingerRotationAvg;
+    private float twoFingerRotationTotal;
 
     private boolean dragAtConstAlt;
+
+    private int currentGesture;
 
     public MyGLSurfaceView(Context context, AttributeSet attrs){
         super(context, attrs);
@@ -86,12 +88,12 @@ class MyGLSurfaceView extends GLSurfaceView {
             switch (e.getActionMasked()) {
                 case MotionEvent.ACTION_POINTER_DOWN:
                     isTwoFingerGesture = true;
+                    currentGesture = NOT_DECIDED;
                     gestStartX1 = p1x;
                     gestStartY1 = p1y;
                     gestStartX2 = p2x;
                     gestStartY2 = p2y;
-                    twoFingerRotationAvg = 0;
-                    prevMoveAvg = 0;
+                    twoFingerRotationTotal = 0;
                     break;
                 case MotionEvent.ACTION_MOVE:
 
@@ -100,91 +102,37 @@ class MyGLSurfaceView extends GLSurfaceView {
                     float move = (float) sqrt(move_x*move_x + move_y*move_y);
                     float rotation_angle = computeRotationAngle(p1x, p1y, p2x, p2y, prevX1, prevY1, prevX2, prevY2);
 
+                    float finger_dist = (float) sqrt(pow(p1x-p2x, 2) + pow(p1y - p2y, 2));
 
-                    prevMoveAvg = prevMoveAvg * .8f + move * .2f;
-
-                    Log.d("move_avg", "" + (int) (prevMoveAvg * 10) + ", move " + move + ", rotation " + abs(rotation_angle * 10) + ", combined " + (int) (prevMoveAvg * abs(rotation_angle * 10.0f) * 10));
-
-//                    if (prevMoveAvg * 10 < 28){
-                        if (dragAtConstAlt){
-                            mRenderer.moveBasedOnTwoFingerDragAtConstAlt((prevX1 + prevX2)/2.0f, (prevY1 + prevY2)/2.0f, (p1x+p2x)/2.0f, (p1y+p2y)/2.0f);
-                        } else {
-                            mRenderer.moveBasedOnTwoFingerDrag((prevX1 + prevX2)/2.0f, (prevY1 + prevY2)/2.0f, (p1x+p2x)/2.0f, (p1y+p2y)/2.0f);
+                    float p1_move = (float) sqrt(pow(p1x- gestStartX1, 2) + pow(p1y- gestStartY1, 2));
+                    float p2_move = (float) sqrt(pow(p2x- gestStartX2, 2) + pow(p2y- gestStartY2, 2));
+                    if (currentGesture == NOT_DECIDED && max(p1_move, p2_move) < 60){
+                        break;
+                    } else if (currentGesture == NOT_DECIDED){
+                        if (min(p1_move, p2_move) < 25){
+                            currentGesture = ORBIT;
+                        } else{
+                            currentGesture = ZOOM_AND_TRANSLATE;
                         }
-//                        break;
-//                    }
+                    }
+                    twoFingerRotationTotal += rotation_angle;
+
+                    Log.d("total_rotation", " , min finger move: " + min(p1_move, p2_move) + ", max: " + max(p1_move, p2_move) + ", rotation: " + twoFingerRotationTotal);
+
+
 
                     float[] rotationPt = computeRotationPoint(p1x, p1y, p2x, p2y);
                     float rx = rotationPt[0];
                     float ry = rotationPt[1];
 
-                    float finger_dist = (float) sqrt(pow(p1x-p2x, 2) + pow(p1y - p2y, 2));
-                    Log.d("finger_dist", "" + finger_dist);
-                    if (finger_dist > 220) {
-//                        mRenderer.moveBasedOnTwoFingerRotation(rx, ry, rotation_angle);
+                    if (currentGesture == ZOOM_AND_TRANSLATE){
+                        twoFingerDrag(p1x, p1y, p2x, p2y);
+
+                        zoomGesture(p1x, p1y, p2x, p2y, rx, ry);
+                    } else if (currentGesture == ORBIT){
+                        mRenderer.moveBasedOnTwoFingerRotation(rx, ry, rotation_angle);
                     }
 
-                    twoFingerRotationAvg = twoFingerRotationAvg * .97f + rotation_angle * .03f;
-
-                    // if fixed pt for two finger rotation is p1
-                    // else fixed pt for two finger rotation is p2
-                    if (abs(rx - p1x) < .00000001 && abs(ry - p1y) < .00000001 ){
-                        float mag_prev = (float) (sqrt(pow(prevX2 - prevX1, 2) + pow(prevY2 - prevY1, 2)));
-                        float angle_current = (float) toDegrees(atan2(p2y - p1y, p2x - p1x));
-
-                        // project the fixed pt onto the line of the current pts
-                        // add the second prev pt at the angle of the prev pt to the new fixed pt
-                        float m = (p2y - p1y)/(p2x - p1x);
-                        float new_prev_p1x = (prevY1 - p1y + 1/m * prevX1 + m * p1x)/(1/m + m);
-                        if (abs(m) < .00001){
-                            new_prev_p1x = prevX1;
-                        }
-                        float new_prev_p1y = p1y + m * (new_prev_p1x - p1x);
-                        if (abs(p2x - p1x) < .0001){
-                            new_prev_p1x = p1x;
-                            new_prev_p1y = prevY1;
-                        }
-                        float new_prev_p2x = (float) (new_prev_p1x + mag_prev * cos(toRadians(angle_current)));
-                        float new_prev_p2y = (float) (new_prev_p1y + mag_prev * sin(toRadians(angle_current)));
-
-                        // slide by avg translation
-                        float slide_x = ((p2x - new_prev_p2x) + (p1x - new_prev_p1x))/2.0f;
-                        float slide_y = ((p2y - new_prev_p2y) + (p1y - new_prev_p1y))/2.0f;
-                        new_prev_p1x += slide_x;
-                        new_prev_p1y += slide_y;
-                        new_prev_p2x += slide_x;
-                        new_prev_p2y += slide_y;
-
-                        mRenderer.moveBasedOnCameraZoom(p1x, p1y, p2x, p2y, new_prev_p1x, new_prev_p1y, new_prev_p2x, new_prev_p2y, twoFingerRotationAvg);
-                    } else {
-                        float mag_prev = (float) (sqrt(pow(prevX2 - prevX1, 2) + pow(prevY2 - prevY1, 2)));
-                        float angle_current = (float) toDegrees(atan2(p2y - p1y, p2x - p1x));
-
-                        // project the fixed pt onto the line of the current pts
-                        // add the second prev pt at the angle of the prev pt to the new fixed pt
-                        float m = (p2y - p1y)/(p2x - p1x);
-                        float new_prev_p2x = (prevY2 - p2y + 1/m * prevX2 + m * p2x)/(1/m + m);
-                        if (abs(m) < .00001){
-                            new_prev_p2x = prevX2;
-                        }
-                        float new_prev_p2y = p2y + m * (new_prev_p2x - p2x);
-                        if (abs(p2x - p1x) < .0001){
-                            new_prev_p2x = p2x;
-                            new_prev_p2y = prevY2;
-                        }
-                        float new_prev_p1x = (float) (new_prev_p2x - mag_prev * cos(toRadians(angle_current)));
-                        float new_prev_p1y = (float) (new_prev_p2y - mag_prev * sin(toRadians(angle_current)));
-
-                        // slide by avg translation
-                        float slide_x = ((p2x - new_prev_p2x) + (p1x - new_prev_p1x))/2.0f;
-                        float slide_y = ((p2y - new_prev_p2y) + (p1y - new_prev_p1y))/2.0f;
-                        new_prev_p1x += slide_x;
-                        new_prev_p1y += slide_y;
-                        new_prev_p2x += slide_x;
-                        new_prev_p2y += slide_y;
-
-                        mRenderer.moveBasedOnCameraZoom(p1x, p1y, p2x, p2y, new_prev_p1x, new_prev_p1y, new_prev_p2x, new_prev_p2y, twoFingerRotationAvg);
-                    }
 
                     break;
                 case MotionEvent.ACTION_POINTER_UP:
@@ -248,6 +196,79 @@ class MyGLSurfaceView extends GLSurfaceView {
         }
 
         return true;
+    }
+
+    private void twoFingerDrag(float p1x, float p1y, float p2x, float p2y){
+        if (dragAtConstAlt){
+            mRenderer.moveBasedOnTwoFingerDragAtConstAlt((prevX1 + prevX2)/2.0f, (prevY1 + prevY2)/2.0f, (p1x+p2x)/2.0f, (p1y+p2y)/2.0f);
+        } else {
+            mRenderer.moveBasedOnTwoFingerDrag((prevX1 + prevX2)/2.0f, (prevY1 + prevY2)/2.0f, (p1x+p2x)/2.0f, (p1y+p2y)/2.0f);
+        }
+    }
+
+    private void zoomGesture(float p1x, float p1y, float p2x, float p2y, float rx, float ry){
+        if (dragAtConstAlt){ // don't zoom if cost altitude flag is enabled
+            return;
+        }
+        // if fixed pt for two finger rotation is p1
+        // else fixed pt for two finger rotation is p2
+        if (abs(rx - p1x) < .00000001 && abs(ry - p1y) < .00000001 ){
+            float mag_prev = (float) (sqrt(pow(prevX2 - prevX1, 2) + pow(prevY2 - prevY1, 2)));
+            float angle_current = (float) toDegrees(atan2(p2y - p1y, p2x - p1x));
+
+            // project the fixed pt onto the line of the current pts
+            // add the second prev pt at the angle of the prev pt to the new fixed pt
+            float m = (p2y - p1y)/(p2x - p1x);
+            float new_prev_p1x = (prevY1 - p1y + 1/m * prevX1 + m * p1x)/(1/m + m);
+            if (abs(m) < .00001){
+                new_prev_p1x = prevX1;
+            }
+            float new_prev_p1y = p1y + m * (new_prev_p1x - p1x);
+            if (abs(p2x - p1x) < .0001){
+                new_prev_p1x = p1x;
+                new_prev_p1y = prevY1;
+            }
+            float new_prev_p2x = (float) (new_prev_p1x + mag_prev * cos(toRadians(angle_current)));
+            float new_prev_p2y = (float) (new_prev_p1y + mag_prev * sin(toRadians(angle_current)));
+
+            // slide by avg translation
+            float slide_x = ((p2x - new_prev_p2x) + (p1x - new_prev_p1x))/2.0f;
+            float slide_y = ((p2y - new_prev_p2y) + (p1y - new_prev_p1y))/2.0f;
+            new_prev_p1x += slide_x;
+            new_prev_p1y += slide_y;
+            new_prev_p2x += slide_x;
+            new_prev_p2y += slide_y;
+
+            mRenderer.moveBasedOnCameraZoom(p1x, p1y, p2x, p2y, new_prev_p1x, new_prev_p1y, new_prev_p2x, new_prev_p2y);
+        } else {
+            float mag_prev = (float) (sqrt(pow(prevX2 - prevX1, 2) + pow(prevY2 - prevY1, 2)));
+            float angle_current = (float) toDegrees(atan2(p2y - p1y, p2x - p1x));
+
+            // project the fixed pt onto the line of the current pts
+            // add the second prev pt at the angle of the prev pt to the new fixed pt
+            float m = (p2y - p1y)/(p2x - p1x);
+            float new_prev_p2x = (prevY2 - p2y + 1/m * prevX2 + m * p2x)/(1/m + m);
+            if (abs(m) < .00001){
+                new_prev_p2x = prevX2;
+            }
+            float new_prev_p2y = p2y + m * (new_prev_p2x - p2x);
+            if (abs(p2x - p1x) < .0001){
+                new_prev_p2x = p2x;
+                new_prev_p2y = prevY2;
+            }
+            float new_prev_p1x = (float) (new_prev_p2x - mag_prev * cos(toRadians(angle_current)));
+            float new_prev_p1y = (float) (new_prev_p2y - mag_prev * sin(toRadians(angle_current)));
+
+            // slide by avg translation
+            float slide_x = ((p2x - new_prev_p2x) + (p1x - new_prev_p1x))/2.0f;
+            float slide_y = ((p2y - new_prev_p2y) + (p1y - new_prev_p1y))/2.0f;
+            new_prev_p1x += slide_x;
+            new_prev_p1y += slide_y;
+            new_prev_p2x += slide_x;
+            new_prev_p2y += slide_y;
+
+            mRenderer.moveBasedOnCameraZoom(p1x, p1y, p2x, p2y, new_prev_p1x, new_prev_p1y, new_prev_p2x, new_prev_p2y);
+        }
     }
 
     private float computeRotationAngle(float x1, float y1, float x2, float y2, float prevx1, float prevy1, float prevx2, float prevy2){

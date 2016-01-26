@@ -35,6 +35,8 @@ public class Constants {
     public static float FRUST_NEAR_SCALE_X = (float) (FRUST_NEAR * tan(toRadians(EMPIRICAL_HORIZONTAL_FOV)/2.0f));
     public static float FRUST_NEAR_SCALE_Y = (float) (FRUST_NEAR * tan(toRadians(HORIZONTAL_FOV/ASPECT_RATIO)/2.0f));
 
-
+    public static int NOT_DECIDED = -1;
+    public static int ORBIT = 0;
+    public static int ZOOM_AND_TRANSLATE = 1;
 
 }
