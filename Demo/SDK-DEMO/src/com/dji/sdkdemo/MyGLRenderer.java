@@ -69,10 +69,10 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         mHemisphere = new Hemisphere(mContext);
         mSurfaceTexture = new SurfaceTexture(mHemisphere.getTextureHandle());
 
-        camera_theta = 0;//-89.999f;
-        camera_phi = 0;//180;
-        projector_theta = 0;//-89.999f;
-        projector_phi = 0;//180;
+        camera_theta = -89.999f;
+        camera_phi = 90;
+        projector_theta = -89.999f;
+        projector_phi = 90;
         camera_theta_initialized = false;
         camera_phi_initialized = false;
 
@@ -531,8 +531,8 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     }
 
     public void updateCameraRotation(float p1x, float p1y, float p2x, float p2y, float start_theta, float start_phi){
-        float[] p1 = screenPointToWorldDirectionForRotation(p1x, p1y, start_theta, start_phi);
-        float[] p2 = screenPointToWorldDirectionForRotation(p2x, p2y, start_theta, start_phi);
+        float[] p1 = screenPointToWorldDirectionForRotation(p1x, p1y, start_theta, 0);
+        float[] p2 = screenPointToWorldDirectionForRotation(p2x, p2y, start_theta, 0);
 
         p1 = new float[]{p1[0], p1[1], p1[2]};
         p2 = new float[]{p2[0], p2[1], p2[2]};
@@ -575,9 +575,6 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         best_phi = new_best_params[1];
         best_theta = new_best_params[2];
 
-        if (p1[2] > 0){
-            best_theta = -best_theta;
-        }
         float new_phi = start_phi + best_phi;
         float new_theta = min(0, max(start_theta - best_theta, -89.999f));
 

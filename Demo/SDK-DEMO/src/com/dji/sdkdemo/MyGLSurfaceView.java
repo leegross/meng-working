@@ -97,9 +97,6 @@ class MyGLSurfaceView extends GLSurfaceView {
                     break;
                 case MotionEvent.ACTION_MOVE:
 
-                    float move_x = (p1x - prevX1) - (p2x - prevX2);
-                    float move_y = (p1y - prevY1) - (p2y - prevY2);
-                    float move = (float) sqrt(move_x*move_x + move_y*move_y);
                     float rotation_angle = computeRotationAngle(p1x, p1y, p2x, p2y, prevX1, prevY1, prevX2, prevY2);
 
                     float finger_dist = (float) sqrt(pow(p1x-p2x, 2) + pow(p1y - p2y, 2));
