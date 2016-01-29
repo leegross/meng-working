@@ -125,6 +125,7 @@ public class TouchControllerActivity extends DemoBaseActivity
     }
 
     private void initResetCameraTask(){
+
         mCameraResetTimer = new Timer();
         mCameraResetTimer.schedule(new TimerTask() {
 

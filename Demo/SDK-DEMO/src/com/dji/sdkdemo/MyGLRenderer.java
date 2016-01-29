@@ -527,6 +527,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     public void resetCameraParameters(){
         camera_phi = projector_phi;
         camera_theta = projector_theta;
+        if (projectorTranslationV == null || cameraTranslationV == null) return;
         System.arraycopy(projectorTranslationV, 0, cameraTranslationV, 0, projectorTranslationV.length);
     }
 
