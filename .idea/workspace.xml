@@ -27,6 +27,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9c2fb097-3e27-43c5-9229-9d241b4244a9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/MyGLRenderer.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/MyGLRenderer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/MyGLSurfaceView.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/MyGLSurfaceView.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug-unaligned.apk" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug.apk" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$4.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$4.class" />
@@ -42,9 +43,12 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/dex/debug/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/res/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/TouchControllerActivity.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/TouchControllerActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/res/raw/per_pixel_fragment_shader.glsl" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/res/raw/per_pixel_fragment_shader.glsl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DJI-SDK-Android-V2.4.0.iws" />
@@ -79,7 +83,7 @@
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+              <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -87,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="per_pixel_fragment_shader.glsl" pinned="false" current-in-tab="false">
+      <file leaf-file-name="per_pixel_fragment_shader.glsl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/raw/per_pixel_fragment_shader.glsl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.22113022">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -101,7 +105,7 @@
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="344" column="9" selection-start-line="344" selection-start-column="9" selection-end-line="344" selection-end-column="9" />
+              <caret line="184" column="48" selection-start-line="184" selection-start-column="48" selection-end-line="184" selection-end-column="48" />
               <folding>
                 <element signature="method#zoomGesture#0;class#MyGLSurfaceView#0" expanded="false" />
                 <element signature="method#computeRotationAngle#0;class#MyGLSurfaceView#0" expanded="false" />
@@ -111,10 +115,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TouchControllerActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TouchControllerActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/TouchControllerActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4791155">
+            <state vertical-scroll-proportion="0.0">
               <caret line="133" column="0" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
               <folding>
                 <element signature="e#4380#4717#0" expanded="true" />
@@ -128,7 +132,7 @@
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="529" column="0" selection-start-line="529" selection-start-column="0" selection-end-line="529" selection-end-column="0" />
+              <caret line="74" column="26" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#onDrawFrame#0;class#MyGLRenderer#0" expanded="false" />
@@ -140,19 +144,19 @@
                 <element signature="method#getNewScreenPtBasedOnPrevScreenPt#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#solveFor2DTwoFingerDragDisplacement#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#moveBasedOnTwoFingerDragAtConstAlt#0;class#MyGLRenderer#0" expanded="false" />
-                <element signature="e#19544#19545#0" expanded="true" />
-                <element signature="e#19582#19583#0" expanded="true" />
-                <element signature="e#19756#19757#0" expanded="true" />
-                <element signature="e#19791#19792#0" expanded="true" />
-                <element signature="e#19825#19826#0" expanded="true" />
-                <element signature="e#19858#19859#0" expanded="true" />
-                <element signature="e#20156#20157#0" expanded="true" />
-                <element signature="e#20203#20204#0" expanded="true" />
-                <element signature="e#20249#20250#0" expanded="true" />
-                <element signature="e#20294#20295#0" expanded="true" />
-                <element signature="e#20338#20339#0" expanded="true" />
-                <element signature="e#20379#20380#0" expanded="true" />
-                <element signature="e#23828#23875#0" expanded="false" />
+                <element signature="e#19550#19551#0" expanded="true" />
+                <element signature="e#19588#19589#0" expanded="true" />
+                <element signature="e#19762#19763#0" expanded="true" />
+                <element signature="e#19797#19798#0" expanded="true" />
+                <element signature="e#19831#19832#0" expanded="true" />
+                <element signature="e#19864#19865#0" expanded="true" />
+                <element signature="e#20162#20163#0" expanded="true" />
+                <element signature="e#20209#20210#0" expanded="true" />
+                <element signature="e#20255#20256#0" expanded="true" />
+                <element signature="e#20300#20301#0" expanded="true" />
+                <element signature="e#20344#20345#0" expanded="true" />
+                <element signature="e#20385#20386#0" expanded="true" />
+                <element signature="e#23834#23881#0" expanded="false" />
                 <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#screenPointToWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
@@ -2884,13 +2888,13 @@
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Hemisphere.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/Temp.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java" />
-        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/res/raw/per_pixel_fragment_shader.glsl" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/util/OperationsHelper.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml" />
-        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java" />
-        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java" />
-        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/TouchControllerActivity.java" />
+        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java" />
+        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java" />
+        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java" />
+        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/res/raw/per_pixel_fragment_shader.glsl" />
       </list>
     </option>
   </component>
@@ -3342,7 +3346,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -3351,7 +3355,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45046234" sideWeight="0.49427754" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297568" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42536327" sideWeight="0.4914163" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.42536327" sideWeight="0.4914163" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45046234" sideWeight="0.50572246" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -3429,7 +3433,7 @@
           <option name="timeStamp" value="172" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="855" />
+      <option name="time" value="857" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -3488,19 +3492,19 @@
             <element signature="method#getNewScreenPtBasedOnPrevScreenPt#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#solveFor2DTwoFingerDragDisplacement#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#moveBasedOnTwoFingerDragAtConstAlt#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#19544#19545#0" expanded="true" />
-            <element signature="e#19582#19583#0" expanded="true" />
-            <element signature="e#19756#19757#0" expanded="true" />
-            <element signature="e#19791#19792#0" expanded="true" />
-            <element signature="e#19825#19826#0" expanded="true" />
-            <element signature="e#19858#19859#0" expanded="true" />
-            <element signature="e#20156#20157#0" expanded="true" />
-            <element signature="e#20203#20204#0" expanded="true" />
-            <element signature="e#20249#20250#0" expanded="true" />
-            <element signature="e#20294#20295#0" expanded="true" />
-            <element signature="e#20338#20339#0" expanded="true" />
-            <element signature="e#20379#20380#0" expanded="true" />
-            <element signature="e#23828#23875#0" expanded="false" />
+            <element signature="e#19550#19551#0" expanded="true" />
+            <element signature="e#19588#19589#0" expanded="true" />
+            <element signature="e#19762#19763#0" expanded="true" />
+            <element signature="e#19797#19798#0" expanded="true" />
+            <element signature="e#19831#19832#0" expanded="true" />
+            <element signature="e#19864#19865#0" expanded="true" />
+            <element signature="e#20162#20163#0" expanded="true" />
+            <element signature="e#20209#20210#0" expanded="true" />
+            <element signature="e#20255#20256#0" expanded="true" />
+            <element signature="e#20300#20301#0" expanded="true" />
+            <element signature="e#20344#20345#0" expanded="true" />
+            <element signature="e#20385#20386#0" expanded="true" />
+            <element signature="e#23834#23881#0" expanded="false" />
             <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#screenPointToWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
@@ -3575,19 +3579,19 @@
             <element signature="method#getNewScreenPtBasedOnPrevScreenPt#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#solveFor2DTwoFingerDragDisplacement#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#moveBasedOnTwoFingerDragAtConstAlt#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#19544#19545#0" expanded="true" />
-            <element signature="e#19582#19583#0" expanded="true" />
-            <element signature="e#19756#19757#0" expanded="true" />
-            <element signature="e#19791#19792#0" expanded="true" />
-            <element signature="e#19825#19826#0" expanded="true" />
-            <element signature="e#19858#19859#0" expanded="true" />
-            <element signature="e#20156#20157#0" expanded="true" />
-            <element signature="e#20203#20204#0" expanded="true" />
-            <element signature="e#20249#20250#0" expanded="true" />
-            <element signature="e#20294#20295#0" expanded="true" />
-            <element signature="e#20338#20339#0" expanded="true" />
-            <element signature="e#20379#20380#0" expanded="true" />
-            <element signature="e#23828#23875#0" expanded="false" />
+            <element signature="e#19550#19551#0" expanded="true" />
+            <element signature="e#19588#19589#0" expanded="true" />
+            <element signature="e#19762#19763#0" expanded="true" />
+            <element signature="e#19797#19798#0" expanded="true" />
+            <element signature="e#19831#19832#0" expanded="true" />
+            <element signature="e#19864#19865#0" expanded="true" />
+            <element signature="e#20162#20163#0" expanded="true" />
+            <element signature="e#20209#20210#0" expanded="true" />
+            <element signature="e#20255#20256#0" expanded="true" />
+            <element signature="e#20300#20301#0" expanded="true" />
+            <element signature="e#20344#20345#0" expanded="true" />
+            <element signature="e#20385#20386#0" expanded="true" />
+            <element signature="e#23834#23881#0" expanded="false" />
             <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#screenPointToWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
@@ -3662,19 +3666,19 @@
             <element signature="method#getNewScreenPtBasedOnPrevScreenPt#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#solveFor2DTwoFingerDragDisplacement#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#moveBasedOnTwoFingerDragAtConstAlt#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#19544#19545#0" expanded="true" />
-            <element signature="e#19582#19583#0" expanded="true" />
-            <element signature="e#19756#19757#0" expanded="true" />
-            <element signature="e#19791#19792#0" expanded="true" />
-            <element signature="e#19825#19826#0" expanded="true" />
-            <element signature="e#19858#19859#0" expanded="true" />
-            <element signature="e#20156#20157#0" expanded="true" />
-            <element signature="e#20203#20204#0" expanded="true" />
-            <element signature="e#20249#20250#0" expanded="true" />
-            <element signature="e#20294#20295#0" expanded="true" />
-            <element signature="e#20338#20339#0" expanded="true" />
-            <element signature="e#20379#20380#0" expanded="true" />
-            <element signature="e#23828#23875#0" expanded="false" />
+            <element signature="e#19550#19551#0" expanded="true" />
+            <element signature="e#19588#19589#0" expanded="true" />
+            <element signature="e#19762#19763#0" expanded="true" />
+            <element signature="e#19797#19798#0" expanded="true" />
+            <element signature="e#19831#19832#0" expanded="true" />
+            <element signature="e#19864#19865#0" expanded="true" />
+            <element signature="e#20162#20163#0" expanded="true" />
+            <element signature="e#20209#20210#0" expanded="true" />
+            <element signature="e#20255#20256#0" expanded="true" />
+            <element signature="e#20300#20301#0" expanded="true" />
+            <element signature="e#20344#20345#0" expanded="true" />
+            <element signature="e#20385#20386#0" expanded="true" />
+            <element signature="e#23834#23881#0" expanded="false" />
             <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#screenPointToWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
@@ -3749,19 +3753,19 @@
             <element signature="method#getNewScreenPtBasedOnPrevScreenPt#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#solveFor2DTwoFingerDragDisplacement#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#moveBasedOnTwoFingerDragAtConstAlt#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#19544#19545#0" expanded="true" />
-            <element signature="e#19582#19583#0" expanded="true" />
-            <element signature="e#19756#19757#0" expanded="true" />
-            <element signature="e#19791#19792#0" expanded="true" />
-            <element signature="e#19825#19826#0" expanded="true" />
-            <element signature="e#19858#19859#0" expanded="true" />
-            <element signature="e#20156#20157#0" expanded="true" />
-            <element signature="e#20203#20204#0" expanded="true" />
-            <element signature="e#20249#20250#0" expanded="true" />
-            <element signature="e#20294#20295#0" expanded="true" />
-            <element signature="e#20338#20339#0" expanded="true" />
-            <element signature="e#20379#20380#0" expanded="true" />
-            <element signature="e#23828#23875#0" expanded="false" />
+            <element signature="e#19550#19551#0" expanded="true" />
+            <element signature="e#19588#19589#0" expanded="true" />
+            <element signature="e#19762#19763#0" expanded="true" />
+            <element signature="e#19797#19798#0" expanded="true" />
+            <element signature="e#19831#19832#0" expanded="true" />
+            <element signature="e#19864#19865#0" expanded="true" />
+            <element signature="e#20162#20163#0" expanded="true" />
+            <element signature="e#20209#20210#0" expanded="true" />
+            <element signature="e#20255#20256#0" expanded="true" />
+            <element signature="e#20300#20301#0" expanded="true" />
+            <element signature="e#20344#20345#0" expanded="true" />
+            <element signature="e#20385#20386#0" expanded="true" />
+            <element signature="e#23834#23881#0" expanded="false" />
             <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#screenPointToWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
@@ -3955,14 +3959,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/raw/per_pixel_fragment_shader.glsl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Library/Android/sdk/platforms/android-17/android.jar!/java/lang/StrictMath.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38069704">
@@ -4016,16 +4012,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -4055,10 +4041,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/TouchControllerActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="133" column="0" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+          <folding>
+            <element signature="e#4380#4717#0" expanded="true" />
+            <element signature="e#4716#4717#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="529" column="0" selection-start-line="529" selection-start-column="0" selection-end-line="529" selection-end-column="0" />
+          <caret line="74" column="26" selection-start-line="74" selection-start-column="26" selection-end-line="74" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#onDrawFrame#0;class#MyGLRenderer#0" expanded="false" />
@@ -4070,19 +4067,19 @@
             <element signature="method#getNewScreenPtBasedOnPrevScreenPt#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#solveFor2DTwoFingerDragDisplacement#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#moveBasedOnTwoFingerDragAtConstAlt#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#19544#19545#0" expanded="true" />
-            <element signature="e#19582#19583#0" expanded="true" />
-            <element signature="e#19756#19757#0" expanded="true" />
-            <element signature="e#19791#19792#0" expanded="true" />
-            <element signature="e#19825#19826#0" expanded="true" />
-            <element signature="e#19858#19859#0" expanded="true" />
-            <element signature="e#20156#20157#0" expanded="true" />
-            <element signature="e#20203#20204#0" expanded="true" />
-            <element signature="e#20249#20250#0" expanded="true" />
-            <element signature="e#20294#20295#0" expanded="true" />
-            <element signature="e#20338#20339#0" expanded="true" />
-            <element signature="e#20379#20380#0" expanded="true" />
-            <element signature="e#23828#23875#0" expanded="false" />
+            <element signature="e#19550#19551#0" expanded="true" />
+            <element signature="e#19588#19589#0" expanded="true" />
+            <element signature="e#19762#19763#0" expanded="true" />
+            <element signature="e#19797#19798#0" expanded="true" />
+            <element signature="e#19831#19832#0" expanded="true" />
+            <element signature="e#19864#19865#0" expanded="true" />
+            <element signature="e#20162#20163#0" expanded="true" />
+            <element signature="e#20209#20210#0" expanded="true" />
+            <element signature="e#20255#20256#0" expanded="true" />
+            <element signature="e#20300#20301#0" expanded="true" />
+            <element signature="e#20344#20345#0" expanded="true" />
+            <element signature="e#20385#20386#0" expanded="true" />
+            <element signature="e#23834#23881#0" expanded="false" />
             <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#screenPointToWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#cameraInfoToString#0;class#MyGLRenderer#0" expanded="false" />
@@ -4094,7 +4091,7 @@
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="344" column="9" selection-start-line="344" selection-start-column="9" selection-end-line="344" selection-end-column="9" />
+          <caret line="184" column="48" selection-start-line="184" selection-start-column="48" selection-end-line="184" selection-end-column="48" />
           <folding>
             <element signature="method#zoomGesture#0;class#MyGLSurfaceView#0" expanded="false" />
             <element signature="method#computeRotationAngle#0;class#MyGLSurfaceView#0" expanded="false" />
@@ -4103,14 +4100,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/TouchControllerActivity.java">
+    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4791155">
-          <caret line="133" column="0" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="50" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
           <folding>
-            <element signature="e#4380#4717#0" expanded="true" />
-            <element signature="e#4716#4717#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/raw/per_pixel_fragment_shader.glsl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22113022">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

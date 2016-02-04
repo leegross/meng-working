@@ -94,6 +94,7 @@ class MyGLSurfaceView extends GLSurfaceView {
                     gestStartX2 = p2x;
                     gestStartY2 = p2y;
                     twoFingerRotationTotal = 0;
+                    isGestureInProgress = true;
                     break;
                 case MotionEvent.ACTION_MOVE:
 
@@ -138,6 +139,7 @@ class MyGLSurfaceView extends GLSurfaceView {
                     float y_translate = cameraTranslationV[1];
                     float z_translate = cameraTranslationV[2];
                     float heading = mRenderer.getPhiCamera();
+                    isGestureInProgress = false;
 
                     mDroneWrapper.setNewGPSCoordinates(x_translate, y_translate, z_translate, heading);
 
@@ -180,10 +182,10 @@ class MyGLSurfaceView extends GLSurfaceView {
 
                     break;
                 case MotionEvent.ACTION_UP:
+                    isGestureInProgress = false;
                     if (isTwoFingerGesture) break;
                     mDroneWrapper.setYawAngle(mRenderer.getPhiCamera());
                     mDroneWrapper.setGimbalPitch((int) mRenderer.getThetaCamera());
-                    isGestureInProgress = false;
 
                     break;
             }

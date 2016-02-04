@@ -29,7 +29,7 @@ public class Constants {
 
     // used to determine whether to use an image or the stream for the texture
     // don't forget to change code in fragment shader
-    public static boolean USE_CAMERA_STREAM = false;
+    public static boolean USE_CAMERA_STREAM = true;
 
     public static float EMPIRICAL_HORIZONTAL_FOV = 82.947968f;
     public static float FRUST_NEAR_SCALE_X = (float) (FRUST_NEAR * tan(toRadians(EMPIRICAL_HORIZONTAL_FOV)/2.0f));
