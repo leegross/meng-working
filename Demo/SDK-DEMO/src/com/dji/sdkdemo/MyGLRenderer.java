@@ -69,15 +69,15 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         mHemisphere = new Hemisphere(mContext);
         mSurfaceTexture = new SurfaceTexture(mHemisphere.getTextureHandle());
 
-        camera_theta = 0;//-89.999f;
-        camera_phi = 0;
-        projector_theta = 0;//-89.999f;
-        projector_phi = 0;
+        camera_theta = -45;//-89.999f;
+        camera_phi = 45;
+        projector_theta = -45;//-89.999f;
+        projector_phi = 45;
         camera_theta_initialized = false;
         camera_phi_initialized = false;
 
-        cameraTranslationV = new float[]{0, STARTING_ALTITUDE, 0, 1};
-        projectorTranslationV = new float[]{0, STARTING_ALTITUDE, 0, 1};
+        cameraTranslationV = new float[]{10, STARTING_ALTITUDE, 0, 1};
+        projectorTranslationV = new float[]{10, STARTING_ALTITUDE, 0, 1};
     }
 
     public void onDrawFrame(GL10 unused) {
@@ -136,7 +136,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
         float[] dispV = new float[]{-disp_xz[0], -disp_yz[0], disp_z, 1};
 
-        dispV = boundTranslationAtMaxMagnitude(dispV, .03f);
+        dispV = boundTranslationAtMaxMagnitude(dispV);
 //        dispV = scaleZoomBasedOnTwoFingerRotation(dispV, avg_two_finger_rotation_angle);
 
         float[] cameraRotationM = getCameraRotationMatrix(camera_theta, camera_phi);
@@ -160,7 +160,8 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         return scaleVtoMag(zoomV, new_mag_scale * current_mag);
     }
 
-    private float[] boundTranslationAtMaxMagnitude(float[] zoomV, float max_mag){
+    private float[] boundTranslationAtMaxMagnitude(float[] zoomV){
+        float max_mag = 1f;
         float[] result = zoomV.clone();
         // cap zoom at a maximum magnitude
         float[] dispV3D = new float[]{zoomV[0], zoomV[1], zoomV[2]};
@@ -312,6 +313,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
         // shift the point
         float[] tempCameraTransV = cameraTranslationV.clone();
+        tempCameraTransV[3] = 1.0f;
         tempCameraTransV = multiplyMV(translationInv, tempCameraTransV);
 
         // rotate about y axis
@@ -345,7 +347,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
         float[] dispV = new float[]{-disp_x, -disp_y, 0, 1};
 
-        dispV = boundTranslationAtMaxMagnitude(dispV, .03f);
+        dispV = boundTranslationAtMaxMagnitude(dispV);
 
         float[] cameraRotationM = getCameraRotationMatrix(camera_theta, camera_phi);
         float[] translateV = multiplyMV(cameraRotationM, dispV);
@@ -401,7 +403,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
 
         float[] dispV = new float[]{-disp_x, 0, -disp_z, 1};
 
-        float[] translateV = boundTranslationAtMaxMagnitude(dispV, .03f);
+        float[] translateV = boundTranslationAtMaxMagnitude(dispV);
 
         if (!passPendingBoundsCheck(translateV)) return;
 
@@ -521,7 +523,7 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
     }
 
     public void setProjectorTranslationV(float x, float y, float z){
-        projectorTranslationV = new float[]{x, y, z, 0};
+        projectorTranslationV = new float[]{x, y, z, 1};
     }
 
     public void resetCameraParameters(){

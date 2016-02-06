@@ -23,7 +23,7 @@ public class Constants {
     public static float MAX_DIST = 30;
     public static float MIN_ALTITUDE = .5f;
 
-    public static float STARTING_ALTITUDE = 1.1f;
+    public static float STARTING_ALTITUDE = 10;//1.1f;
 
     public static double EARTHS_RADIUS_IN_METERS = 6371393;
 
