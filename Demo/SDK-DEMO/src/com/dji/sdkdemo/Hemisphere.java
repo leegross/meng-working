@@ -178,8 +178,8 @@ public class Hemisphere {
                 heightMapVertexData[offset++] = (float) -cos(Math.PI * xRatio);
 
                 // Add some fancy colors.
-                heightMapVertexData[offset++] = xRatio;
-                heightMapVertexData[offset++] = yRatio;
+                heightMapVertexData[offset++] = .1f;
+                heightMapVertexData[offset++] = .7f;
                 heightMapVertexData[offset++] = 1f;
                 heightMapVertexData[offset++] = 1f;
 
@@ -200,9 +200,9 @@ public class Hemisphere {
         heightMapVertexData[offset++] = 1;
 
         // Add some fancy colors.
-        heightMapVertexData[offset++] = 1f;
         heightMapVertexData[offset++] = 0f;
-        heightMapVertexData[offset++] = 1f;
+        heightMapVertexData[offset++] = .5f;
+        heightMapVertexData[offset++] = .2f;
         heightMapVertexData[offset++] = 1f;
 
         // add texture coordinates

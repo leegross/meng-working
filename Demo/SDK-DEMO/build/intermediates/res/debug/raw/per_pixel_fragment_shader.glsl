@@ -18,8 +18,8 @@ varying vec3 v_Normal;         	// Interpolated normal for this fragment.
 // The entry point for our fragment shader.
 void main()
 {
-    //gl_FragColor = v_Color;
-    gl_FragColor = vec4(0, 1, 0, 1);
+//    gl_FragColor = v_Color;
+    gl_FragColor = vec4(1, 1, 1, 1);
 
 
     vec4 pic = u_MVPMatrix_projector * vec4(v_Position, 1);
@@ -34,8 +34,9 @@ void main()
         gl_FragColor = texture2D(u_Texture, pic.xy);
         //gl_FragColor = vec4(0, 0, 1, 1);
     } else {
-        gl_FragColor = vec4(0, 0, 0, 1);
-        gl_FragColor = vec4(v_Texture.x, v_Texture.y, 0, 1);
+//        gl_FragColor = vec4(0, 1, 0, 1);
+//        gl_FragColor = vec4(v_Texture.x, v_Texture.y, 0, 1);
+        gl_FragColor = v_Color;
     }
 
     //gl_FragColor = texture2D(u_Texture, v_Texture);
