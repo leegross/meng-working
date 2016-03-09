@@ -256,7 +256,8 @@ public class DroneWrapper {
 
         mTask.RemoveAllWaypoint();
 
-        DJIGroundStationWaypoint mWayPoint1 = createWaypoint(latitude, longitude, altitude + 2.0f, heading);
+//        DJIGroundStationWaypoint mWayPoint1 = createWaypoint(latitude, longitude, altitude + 2.0f, heading);
+        DJIGroundStationWaypoint mWayPoint1 = createWaypoint(currentLatitude, currentLongitude, currentAltitude, heading);
         mTask.addWaypoint(mWayPoint1);
 
 

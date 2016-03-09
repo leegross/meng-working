@@ -37,7 +37,6 @@ public class TouchControllerActivity extends DemoBaseActivity
 
     private DroneWrapper droneWrapper;
     private Timer mTimer;
-    private Timer mCameraResetTimer;
     private Thread uiUpdateThread;
 
 
@@ -122,22 +121,6 @@ public class TouchControllerActivity extends DemoBaseActivity
                 }
             }
         }.start();
-    }
-
-    private void initResetCameraTask(){
-
-        mCameraResetTimer = new Timer();
-        mCameraResetTimer.schedule(new TimerTask() {
-
-            @Override
-            public void run() {
-                if (mGLView != null && !mGLView.isGestureInProgress()) {
-                    if (mGLView.getRenderer() != null) {
-                        mGLView.getRenderer().resetCameraParameters();
-                    }
-                }
-            }
-        }, 0, 300);
     }
 
     private void initUIUpdateThread(){
@@ -225,7 +208,6 @@ public class TouchControllerActivity extends DemoBaseActivity
 
         DJIDrone.getDjiGimbal().startUpdateTimer(1000);
 
-        initResetCameraTask(); // resets camera so that is it where the projector is
     }
 
     @Override
@@ -245,12 +227,6 @@ public class TouchControllerActivity extends DemoBaseActivity
         }
 
         droneWrapper.pause();
-
-        if(mCameraResetTimer!=null) {
-            mCameraResetTimer.cancel();
-            mCameraResetTimer.purge();
-            mCameraResetTimer = null;
-        }
 
         DJIDrone.getDjiGimbal().stopUpdateTimer();
 

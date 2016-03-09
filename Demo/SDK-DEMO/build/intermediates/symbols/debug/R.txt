@@ -122,9 +122,13 @@ int raw flyc_param_infos 0x7f060007
 int raw iframe_1280_3s 0x7f060008
 int raw iframe_1280_ins 0x7f060009
 int raw iframe_960_3s 0x7f06000a
-int raw per_pixel_fragment_shader 0x7f06000b
-int raw per_pixel_vertex_shader 0x7f06000c
-int raw sample_img 0x7f06000d
+int raw one_finger_drag 0x7f06000b
+int raw per_pixel_fragment_shader 0x7f06000c
+int raw per_pixel_vertex_shader 0x7f06000d
+int raw pinch 0x7f06000e
+int raw rotate 0x7f06000f
+int raw sample_img 0x7f060010
+int raw two_finger_drag 0x7f060011
 int string Bind 0x7f0a0000
 int string Bind_Failed 0x7f0a0001
 int string Bind_Success 0x7f0a0002

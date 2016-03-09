@@ -69,9 +69,9 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         mHemisphere = new Hemisphere(mContext);
         mSurfaceTexture = new SurfaceTexture(mHemisphere.getTextureHandle());
 
-        camera_theta = 0;//-89.999f;
+        camera_theta = -20.6f;//-89.999f;
         camera_phi = 45;
-        projector_theta = 0;//-89.999f;
+        projector_theta = -20.6f;//-89.999f;
         projector_phi = 45;
         camera_theta_initialized = false;
         camera_phi_initialized = false;
@@ -522,8 +522,11 @@ public class MyGLRenderer implements GLSurfaceView.Renderer {
         return cameraTranslationV;
     }
 
-    public void setProjectorTranslationV(float x, float y, float z){
-        projectorTranslationV = new float[]{x, y, z, 1};
+    public void setProjectorTranslationV(float x, float y, float z, boolean isGestureInProgress){
+        if (!isGestureInProgress){
+            projectorTranslationV = new float[]{x, y, z, 1};
+            resetCameraParameters();
+        }
     }
 
     public void resetCameraParameters(){

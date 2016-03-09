@@ -337,7 +337,7 @@ class MyGLSurfaceView extends GLSurfaceView {
         float z = mDroneWrapper.getCurrentLatitudeInMeters();
 
         mRenderer.setProjectorRotationAngles(currentGimbalPitch, currentYaw);
-        mRenderer.setProjectorTranslationV(x, y, z);
+        mRenderer.setProjectorTranslationV(x, y, z, isGestureInProgress);
 
         if (mDroneWrapper.droneUpdatesAreInitialized() && !mRenderer.isCameraPhiInitailized()) {
             mRenderer.setInitialCameraPhi(currentYaw);

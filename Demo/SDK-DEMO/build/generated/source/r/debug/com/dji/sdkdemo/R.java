@@ -184,9 +184,13 @@ containing a value of this type.
         public static final int iframe_1280_3s=0x7f060008;
         public static final int iframe_1280_ins=0x7f060009;
         public static final int iframe_960_3s=0x7f06000a;
-        public static final int per_pixel_fragment_shader=0x7f06000b;
-        public static final int per_pixel_vertex_shader=0x7f06000c;
-        public static final int sample_img=0x7f06000d;
+        public static final int one_finger_drag=0x7f06000b;
+        public static final int per_pixel_fragment_shader=0x7f06000c;
+        public static final int per_pixel_vertex_shader=0x7f06000d;
+        public static final int pinch=0x7f06000e;
+        public static final int rotate=0x7f06000f;
+        public static final int sample_img=0x7f060010;
+        public static final int two_finger_drag=0x7f060011;
     }
     public static final class string {
         public static final int Bind=0x7f0a0000;
