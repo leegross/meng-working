@@ -19,3 +19,5 @@ The DroneWrapper is the interface between DJI API and the project. It handles mo
 Hemisphere creates the hemisphere in openGL
 
 Constants contains all of the constants for the project. From there you can change the sizes of the screen, whether the image projected on the hemisphere is a constant image or the live feed from the drone, as well as other variables. 
+
+Note: sometimes the flight status values on the bottom right panel fail to update upon app start. If this happens, hit the back button and re-enter the live-feed view.
