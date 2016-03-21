@@ -10,7 +10,7 @@ The main files of the project are:
 
 TouchControllerActivity is the controller of the project and is where the drone wrapper and the surfaceview are instantiated
 
-MyGLSurfaceView handles all of the touch gestures and it also instantiates the renderer
+MyGLSurfaceView handles all of the touch gestures and it also instantiates the renderer. For a more detailed description of the computations and their derivations, refer to the appendix section in the thesis (Multi-Touch Through-the-Lens Drone Control)
 
 MyGLRenderer creates the openGL world and also represents the projector and camera (which represent the location/orientation of the drone and the current view)
 
