@@ -34,6 +34,7 @@ import static java.lang.StrictMath.toRadians;
 /**
  * Created by leegross on 11/3/15.
  */
+// handles most of the DJI controls
 public class DroneWrapper {
 
     // current drone parameters
@@ -193,70 +194,9 @@ public class DroneWrapper {
         });
     }
 
-//    private void addWaypoint(double latitude, double longitude, float altitude, short heading){
-//        mTask.RemoveAllWaypoint();
-//        DJIGroundStationWaypoint mWayPoint1 = new DJIGroundStationWaypoint(latitude, longitude);
-//        mWayPoint1.action.actionRepeat = 1;
-//        mWayPoint1.altitude = (currentAltitude+altitude)/2;
-//        mWayPoint1.heading = 0;
-//        mWayPoint1.actionTimeout = 10;
-//        mWayPoint1.turnMode = 1;
-//        mWayPoint1.dampingDistance = 1.5f;
-//        mWayPoint1.hasAction = true;
-//
-//        mWayPoint1.addAction(DJIGroundStationTypeDef.GroundStationOnWayPointAction.Way_Point_Action_Gimbal_Pitch, 0);
-//
-//
-//        mTask.addWaypoint(mWayPoint1);
-//
-//        DJIGroundStationWaypoint mWayPoint2 = new DJIGroundStationWaypoint(latitude, longitude);
-//        mWayPoint2.action.actionRepeat = 1;
-//        mWayPoint2.altitude = altitude;
-//        mWayPoint2.heading = 0;
-//        mWayPoint2.actionTimeout = 10;
-//        mWayPoint2.turnMode = 1;
-//        mWayPoint2.dampingDistance = 1.5f;
-//        mWayPoint2.hasAction = true;
-//
-//        mWayPoint2.addAction(DJIGroundStationTypeDef.GroundStationOnWayPointAction.Way_Point_Action_Craft_Yaw, heading);
-//
-//
-//        mTask.addWaypoint(mWayPoint2);
-//
-//        mTask.finishAction = DJIGroundStationTypeDef.DJIGroundStationFinishAction.None;
-//        mTask.movingMode = DJIGroundStationTypeDef.DJIGroundStationMovingMode.GSHeadingUsingWaypointHeading;
-//        mTask.pathMode = DJIGroundStationTypeDef.DJIGroundStationPathMode.Point_To_Point;
-//        mTask.wayPointCount = mTask.getAllWaypoint().size();
-//
-//        uploadWaypoint();
-//    }
-
     private void addWaypoint(double latitude, double longitude, float altitude, short heading){
-        // there is a limitation that we must have two waypoints
-        // and that each waypoint must be at least 2 meters away from the previous waypoint
-        // therefore, for every waypoint we want to set, we set a midpoint along the way
-        // if the midpoint is less than two meters away from the current location,
-        // we make the drone fly two meters away and then back to where it needs to go
-
-        // check if lat and log are at least 4 meters away from current location
-        // if they are, just give the first waypoint the midpoint coordinates
-        // otherwise, give the second waypoint an altitude that is 2 meters above the second waypoint
-        double lat_midpoint;
-        double long_midpoint;
-        float alt_midpoint;
-//        if (dist < 4) {
-            lat_midpoint = (currentLatitude + latitude)/2.0f;
-            long_midpoint = (currentLongitude + longitude)/2.0f;
-            alt_midpoint = altitude + 2.0f;
-//        } else {
-//            lat_midpoint = (currentLatitude + latitude)/2.0f;
-//            long_midpoint = (currentLongitude + longitude)/2.0f;
-//            alt_midpoint = (currentAltitude+altitude)/2;
-//        }
-
         mTask.RemoveAllWaypoint();
 
-//        DJIGroundStationWaypoint mWayPoint1 = createWaypoint(latitude, longitude, altitude + 2.0f, heading);
         DJIGroundStationWaypoint mWayPoint1 = createWaypoint(currentLatitude, currentLongitude, currentAltitude, heading);
         mTask.addWaypoint(mWayPoint1);
 

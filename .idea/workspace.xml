@@ -25,57 +25,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c2fb097-3e27-43c5-9229-9d241b4244a9" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$5$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$8$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$8.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/Constants.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/Constants.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$10.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$10.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$11.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$11.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$12$1.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$12$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$12.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$12.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$7.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$8.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$9.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/DroneWrapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/Hemisphere.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/Hemisphere.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/MyGLRenderer.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/MyGLRenderer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/MyGLSurfaceView.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/MyGLSurfaceView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R$raw.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R$raw.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R$string.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R$style.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R$styleable.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R$xml.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R$xml.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/Rectangle.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/Rectangle.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug-unaligned.apk" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug-unaligned.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug.apk" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/outputs/apk/SDK-DEMO-debug.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$1.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$2.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$3$1$1.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$3$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$3$1.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$3$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$3.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$4.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$5.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$6.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$7.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$Task.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity$Task.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity.class" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/classes/debug/com/dji/sdkdemo/TouchControllerActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/dex/debug/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/res/resources-debug.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.2.1/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Hemisphere.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Hemisphere.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/generated/source/r/debug/com/dji/sdkdemo/R.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/generated/source/r/debug/com/dji/sdkdemo/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/symbols/debug/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/TouchControllerActivity.java" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/TouchControllerActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/incremental/mergeResources/debug/merger.xml" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/incremental/mergeResources/debug/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/res/debug/raw/per_pixel_fragment_shader.glsl" afterPath="$PROJECT_DIR$/Demo/SDK-DEMO/build/intermediates/res/debug/raw/per_pixel_fragment_shader.glsl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="DJI-SDK-Android-V2.4.0.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -105,11 +59,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6995885">
-              <caret line="34" column="52" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="37" column="28" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -127,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Hemisphere.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Hemisphere.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Hemisphere.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="71" column="87" selection-start-line="71" selection-start-column="87" selection-end-line="71" selection-end-column="87" />
+            <state vertical-scroll-proportion="0.14403293">
+              <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -140,8 +94,8 @@
       <file leaf-file-name="MyGLSurfaceView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.666667">
-              <caret line="203" column="30" selection-start-line="203" selection-start-column="30" selection-end-line="203" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="340" column="0" selection-start-line="340" selection-start-column="0" selection-end-line="340" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -160,20 +114,20 @@
       <file leaf-file-name="MyGLRenderer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="12.777778">
-              <caret line="71" column="29" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="39" column="69" selection-start-line="39" selection-start-column="69" selection-end-line="39" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#getWorlPositionRelativeToCamera#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#solveFor2DZoomDisplacement#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#getNewScreenPtBasedOnPrevScreenPt#0;class#MyGLRenderer#0" expanded="false" />
-                <element signature="e#19595#19596#0" expanded="true" />
-                <element signature="e#19633#19634#0" expanded="true" />
-                <element signature="e#19876#19877#0" expanded="true" />
-                <element signature="e#19909#19910#0" expanded="true" />
-                <element signature="e#20389#20390#0" expanded="true" />
-                <element signature="e#20430#20431#0" expanded="true" />
-                <element signature="e#23994#24041#0" expanded="false" />
+                <element signature="e#19810#19811#0" expanded="true" />
+                <element signature="e#19848#19849#0" expanded="true" />
+                <element signature="e#20091#20092#0" expanded="true" />
+                <element signature="e#20124#20125#0" expanded="true" />
+                <element signature="e#20604#20605#0" expanded="true" />
+                <element signature="e#20645#20646#0" expanded="true" />
+                <element signature="e#24209#24256#0" expanded="false" />
                 <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
                 <element signature="method#screenPointToWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
               </folding>
@@ -198,13 +152,12 @@
         <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="260" column="38" selection-start-line="260" selection-start-column="38" selection-end-line="260" selection-end-column="38" />
+              <caret line="196" column="95" selection-start-line="196" selection-start-column="95" selection-end-line="196" selection-end-column="95" />
               <folding>
                 <element signature="method#initMainControllerState#0;class#DroneWrapper#0" expanded="false" />
                 <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
                 <element signature="method#takeOff#0;class#DroneWrapper#0" expanded="false" />
                 <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
-                <element signature="e#6734#6831#0" expanded="false" />
                 <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
                 <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
                 <element signature="method#pause#0;class#DroneWrapper#0" expanded="false" />
@@ -2901,13 +2854,13 @@
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/Temp.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/util/OperationsHelper.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/res/layout/activity_my_waypoints.xml" />
-        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/TouchControllerActivity.java" />
-        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java" />
-        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Hemisphere.java" />
-        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/res/raw/per_pixel_fragment_shader.glsl" />
         <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java" />
+        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java" />
+        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java" />
+        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java" />
+        <option value="$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Hemisphere.java" />
       </list>
     </option>
   </component>
@@ -3435,13 +3388,13 @@
             <element signature="method#getWorlPositionRelativeToCamera#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#solveFor2DZoomDisplacement#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#getNewScreenPtBasedOnPrevScreenPt#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#19595#19596#0" expanded="true" />
-            <element signature="e#19633#19634#0" expanded="true" />
-            <element signature="e#19876#19877#0" expanded="true" />
-            <element signature="e#19909#19910#0" expanded="true" />
-            <element signature="e#20389#20390#0" expanded="true" />
-            <element signature="e#20430#20431#0" expanded="true" />
-            <element signature="e#23994#24041#0" expanded="false" />
+            <element signature="e#19810#19811#0" expanded="true" />
+            <element signature="e#19848#19849#0" expanded="true" />
+            <element signature="e#20091#20092#0" expanded="true" />
+            <element signature="e#20124#20125#0" expanded="true" />
+            <element signature="e#20604#20605#0" expanded="true" />
+            <element signature="e#20645#20646#0" expanded="true" />
+            <element signature="e#24209#24256#0" expanded="false" />
             <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#screenPointToWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
           </folding>
@@ -3476,7 +3429,6 @@
             <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#takeOff#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
-            <element signature="e#6734#6831#0" expanded="false" />
             <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#pause#0;class#DroneWrapper#0" expanded="false" />
@@ -3502,13 +3454,13 @@
             <element signature="method#getWorlPositionRelativeToCamera#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#solveFor2DZoomDisplacement#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#getNewScreenPtBasedOnPrevScreenPt#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#19595#19596#0" expanded="true" />
-            <element signature="e#19633#19634#0" expanded="true" />
-            <element signature="e#19876#19877#0" expanded="true" />
-            <element signature="e#19909#19910#0" expanded="true" />
-            <element signature="e#20389#20390#0" expanded="true" />
-            <element signature="e#20430#20431#0" expanded="true" />
-            <element signature="e#23994#24041#0" expanded="false" />
+            <element signature="e#19810#19811#0" expanded="true" />
+            <element signature="e#19848#19849#0" expanded="true" />
+            <element signature="e#20091#20092#0" expanded="true" />
+            <element signature="e#20124#20125#0" expanded="true" />
+            <element signature="e#20604#20605#0" expanded="true" />
+            <element signature="e#20645#20646#0" expanded="true" />
+            <element signature="e#24209#24256#0" expanded="false" />
             <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#screenPointToWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
           </folding>
@@ -3543,7 +3495,6 @@
             <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#takeOff#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
-            <element signature="e#6734#6831#0" expanded="false" />
             <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#pause#0;class#DroneWrapper#0" expanded="false" />
@@ -3569,13 +3520,13 @@
             <element signature="method#getWorlPositionRelativeToCamera#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#solveFor2DZoomDisplacement#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#getNewScreenPtBasedOnPrevScreenPt#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#19595#19596#0" expanded="true" />
-            <element signature="e#19633#19634#0" expanded="true" />
-            <element signature="e#19876#19877#0" expanded="true" />
-            <element signature="e#19909#19910#0" expanded="true" />
-            <element signature="e#20389#20390#0" expanded="true" />
-            <element signature="e#20430#20431#0" expanded="true" />
-            <element signature="e#23994#24041#0" expanded="false" />
+            <element signature="e#19810#19811#0" expanded="true" />
+            <element signature="e#19848#19849#0" expanded="true" />
+            <element signature="e#20091#20092#0" expanded="true" />
+            <element signature="e#20124#20125#0" expanded="true" />
+            <element signature="e#20604#20605#0" expanded="true" />
+            <element signature="e#20645#20646#0" expanded="true" />
+            <element signature="e#24209#24256#0" expanded="false" />
             <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#screenPointToWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
           </folding>
@@ -3610,7 +3561,6 @@
             <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#takeOff#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
-            <element signature="e#6734#6831#0" expanded="false" />
             <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#pause#0;class#DroneWrapper#0" expanded="false" />
@@ -3636,13 +3586,13 @@
             <element signature="method#getWorlPositionRelativeToCamera#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#solveFor2DZoomDisplacement#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#getNewScreenPtBasedOnPrevScreenPt#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#19595#19596#0" expanded="true" />
-            <element signature="e#19633#19634#0" expanded="true" />
-            <element signature="e#19876#19877#0" expanded="true" />
-            <element signature="e#19909#19910#0" expanded="true" />
-            <element signature="e#20389#20390#0" expanded="true" />
-            <element signature="e#20430#20431#0" expanded="true" />
-            <element signature="e#23994#24041#0" expanded="false" />
+            <element signature="e#19810#19811#0" expanded="true" />
+            <element signature="e#19848#19849#0" expanded="true" />
+            <element signature="e#20091#20092#0" expanded="true" />
+            <element signature="e#20124#20125#0" expanded="true" />
+            <element signature="e#20604#20605#0" expanded="true" />
+            <element signature="e#20645#20646#0" expanded="true" />
+            <element signature="e#24209#24256#0" expanded="false" />
             <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
             <element signature="method#screenPointToWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
           </folding>
@@ -3677,7 +3627,6 @@
             <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#takeOff#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
-            <element signature="e#6734#6831#0" expanded="false" />
             <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#pause#0;class#DroneWrapper#0" expanded="false" />
@@ -3722,7 +3671,6 @@
             <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#takeOff#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
-            <element signature="e#6734#6831#0" expanded="false" />
             <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
             <element signature="method#pause#0;class#DroneWrapper#0" expanded="false" />
@@ -3857,25 +3805,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="260" column="38" selection-start-line="260" selection-start-column="38" selection-end-line="260" selection-end-column="38" />
-          <folding>
-            <element signature="method#initMainControllerState#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#takeOff#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
-            <element signature="e#6734#6831#0" expanded="false" />
-            <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#pause#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#droneUpdatesAreInitialized#0;class#DroneWrapper#0" expanded="false" />
-            <element signature="method#getGimbalMinPitchAngle#0;class#DroneWrapper#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/raw/colorful_grid.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -3885,14 +3814,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="43" column="68" selection-start-line="43" selection-start-column="68" selection-end-line="43" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.666667">
-          <caret line="203" column="30" selection-start-line="203" selection-start-column="30" selection-end-line="203" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -3908,36 +3829,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="12.777778">
-          <caret line="71" column="29" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getWorlPositionRelativeToCamera#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#solveFor2DZoomDisplacement#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#getNewScreenPtBasedOnPrevScreenPt#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="e#19595#19596#0" expanded="true" />
-            <element signature="e#19633#19634#0" expanded="true" />
-            <element signature="e#19876#19877#0" expanded="true" />
-            <element signature="e#19909#19910#0" expanded="true" />
-            <element signature="e#20389#20390#0" expanded="true" />
-            <element signature="e#20430#20431#0" expanded="true" />
-            <element signature="e#23994#24041#0" expanded="false" />
-            <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
-            <element signature="method#screenPointToWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Hemisphere.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="87" selection-start-line="71" selection-start-column="87" selection-end-line="71" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/res/raw/per_pixel_fragment_shader.glsl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -3948,11 +3839,67 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6995885">
-          <caret line="34" column="52" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="28" selection-start-line="37" selection-start-column="28" selection-end-line="37" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLSurfaceView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="340" column="0" selection-start-line="340" selection-start-column="0" selection-end-line="340" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/MyGLRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="69" selection-start-line="39" selection-start-column="69" selection-end-line="39" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getWorlPositionRelativeToCamera#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#solveFor2DZoomDisplacement#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#getNewScreenPtBasedOnPrevScreenPt#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="e#19810#19811#0" expanded="true" />
+            <element signature="e#19848#19849#0" expanded="true" />
+            <element signature="e#20091#20092#0" expanded="true" />
+            <element signature="e#20124#20125#0" expanded="true" />
+            <element signature="e#20604#20605#0" expanded="true" />
+            <element signature="e#20645#20646#0" expanded="true" />
+            <element signature="e#24209#24256#0" expanded="false" />
+            <element signature="method#computeDeltaPhiAndThetaBetweenTwoUnitVectors#0;class#MyGLRenderer#0" expanded="false" />
+            <element signature="method#screenPointToWorldDirection#0;class#MyGLRenderer#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/DroneWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="196" column="95" selection-start-line="196" selection-start-column="95" selection-end-line="196" selection-end-column="95" />
+          <folding>
+            <element signature="method#initMainControllerState#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="method#checkGetHomePoint#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="method#takeOff#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="method#openGs#1;class#DroneWrapper#0" expanded="false" />
+            <element signature="method#setGimbalPitch#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="method#setYawAngle#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="method#pause#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="method#droneUpdatesAreInitialized#0;class#DroneWrapper#0" expanded="false" />
+            <element signature="method#getGimbalMinPitchAngle#0;class#DroneWrapper#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Demo/SDK-DEMO/src/com/dji/sdkdemo/Hemisphere.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14403293">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>

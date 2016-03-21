@@ -35,6 +35,9 @@ import static java.lang.StrictMath.toDegrees;
 /**
  * Created by leegross on 9/14/15.
  */
+// handles the orientation and position of the projector and the camera
+// the projector represents the position/orientation of the actual drone
+// the camera represents the position/orientation of the current view
 public class MyGLRenderer implements GLSurfaceView.Renderer {
 
     private final float[] mProjectionMatrix = new float[16];

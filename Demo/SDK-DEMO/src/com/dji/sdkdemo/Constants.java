@@ -28,7 +28,7 @@ public class Constants {
     public static double EARTHS_RADIUS_IN_METERS = 6371393;
 
     // used to determine whether to use an image or the stream for the texture
-    // don't forget to change code in fragment shader
+    // don't forget to change code in fragment shader (res/raw/per_pixel_fragment_shader.glsl)
     public static boolean USE_CAMERA_STREAM = true;
 
     public static float EMPIRICAL_HORIZONTAL_FOV = 82.947968f;

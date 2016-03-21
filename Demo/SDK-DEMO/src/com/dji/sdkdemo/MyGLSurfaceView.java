@@ -53,6 +53,8 @@ class MyGLSurfaceView extends GLSurfaceView {
 
     private int currentGesture;
 
+    // instantiates myGLRenderer and handles all touch inputs
+
     public MyGLSurfaceView(Context context, AttributeSet attrs){
         super(context, attrs);
 
@@ -100,10 +102,10 @@ class MyGLSurfaceView extends GLSurfaceView {
 
                     float rotation_angle = computeRotationAngle(p1x, p1y, p2x, p2y, prevX1, prevY1, prevX2, prevY2);
 
-                    float finger_dist = (float) sqrt(pow(p1x-p2x, 2) + pow(p1y - p2y, 2));
-
                     float p1_move = (float) sqrt(pow(p1x- gestStartX1, 2) + pow(p1y- gestStartY1, 2));
                     float p2_move = (float) sqrt(pow(p2x- gestStartX2, 2) + pow(p2y- gestStartY2, 2));
+
+                    // determine whether gesture is the two finger rotation or pinch and two finger drag
                     if (currentGesture == NOT_DECIDED && max(p1_move, p2_move) < 60){
                         break;
                     } else if (currentGesture == NOT_DECIDED){
@@ -114,8 +116,6 @@ class MyGLSurfaceView extends GLSurfaceView {
                         }
                     }
                     twoFingerRotationTotal += rotation_angle;
-
-                    Log.d("total_rotation", " , min finger move: " + min(p1_move, p2_move) + ", max: " + max(p1_move, p2_move) + ", rotation: " + twoFingerRotationTotal);
 
 
 
@@ -134,6 +134,7 @@ class MyGLSurfaceView extends GLSurfaceView {
 
                     break;
                 case MotionEvent.ACTION_POINTER_UP:
+                    // when fingers are lifted, send commands to drone
                     float[] cameraTranslationV = mRenderer.getCameraTranslation();
                     float x_translate = cameraTranslationV[0];
                     float y_translate = cameraTranslationV[1];
@@ -173,10 +174,6 @@ class MyGLSurfaceView extends GLSurfaceView {
                     isTwoFingerGesture = false;
                     break;
                 case MotionEvent.ACTION_MOVE:
-//                    gestStartX = SURFACE__HORIZONTAL_CENTER;
-//                    gestStartY = SURFACE_VERTICAL_CENTER;
-//                    x = SURFACE__HORIZONTAL_CENTER;
-//                    y =  0;
                     if (isTwoFingerGesture) break;
                     mRenderer.updateCameraRotation(gestStartX, gestStartY, x, y, gestStartTheta, gestStartPhi);
 
@@ -274,21 +271,6 @@ class MyGLSurfaceView extends GLSurfaceView {
         // compute rotation angle
         float[] fixed_p = computeRotationPoint(x1, y1, x2, y2);
 
-//        float[] prev_world_p;
-//        float[] world_p;
-//        if (abs(fixed_p[0] - x1) < .0001 && abs(fixed_p[1] - y1) < .0001){
-//            prev_world_p = mRenderer.getWorldPoint(prevx2, prevy2);
-//            world_p = mRenderer.getWorldPoint(x2, y2);
-//        } else {
-//            prev_world_p = mRenderer.getWorldPoint(prevx1, prevy1);
-//            world_p = mRenderer.getWorldPoint(x1, y1);
-//        }
-//
-//        float[] fixed_world_p = mRenderer.getWorldPoint(fixed_p[0], fixed_p[1]);
-//        float angle_start = (float) atan2(fixed_world_p[2] - prev_world_p[2], fixed_world_p[0] - prev_world_p[0]);
-//        float angle_end = (float) atan2(fixed_world_p[2] - world_p[2], fixed_world_p[0] - world_p[0]);
-//        float rotation_angle = (float) toDegrees(angle_end - angle_start);
-
         float rotation_angle;
         if (abs(fixed_p[0] - x1) < .0001 && abs(fixed_p[1] - y1) < .0001){
             float angle_start = (float) atan2(fixed_p[1] - prevy2, fixed_p[0] - prevx2);
@@ -310,8 +292,6 @@ class MyGLSurfaceView extends GLSurfaceView {
     }
 
     private float[] computeRotationPoint(float x1, float y1, float x2, float y2){
-//        float p1_move = (float) sqrt(pow(x1- gestStartX1, 2) + pow(y1- gestStartY1, 2));
-//        float p2_move = (float) sqrt(pow(x2- gestStartX2, 2) + pow(y2- gestStartY2, 2));
         float p1_move = (float) sqrt(pow(x1- prevX1, 2) + pow(y1- prevY1, 2));
         float p2_move = (float) sqrt(pow(x2- prevX2, 2) + pow(y2- prevY2, 2));
 
@@ -357,10 +337,6 @@ class MyGLSurfaceView extends GLSurfaceView {
 
     public void updateZoomScale(float new_scale) {
         scale = new_scale;
-    }
-
-    public boolean isGestureInProgress() {
-        return isGestureInProgress;
     }
 
     public void setDragAtConstAlt(boolean b){

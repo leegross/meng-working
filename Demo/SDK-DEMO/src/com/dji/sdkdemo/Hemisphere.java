@@ -20,6 +20,7 @@ import static java.lang.StrictMath.cos;
 /**
  * Created by leegross on 11/9/15.
  */
+// draws the openGL hemisphere
 public class Hemisphere {
 
     private final int mTextureDataHandle;
